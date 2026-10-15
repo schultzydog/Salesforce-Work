@@ -1,0 +1,333 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    min-height: 20rem;
+}
+
+.list-view {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+    background: #f3f3f3;
+    border: 1px solid #dddbda;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.list-header {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem 0.5rem;
+    background: #f3f3f3;
+}
+
+.list-header-main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.list-title-block {
+    min-width: 0;
+}
+
+.list-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.list-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #080707;
+}
+
+.list-meta {
+    margin: 0.25rem 0 0 2.75rem;
+    color: #706e6b;
+    font-size: 0.75rem;
+}
+
+.list-header-controls {
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+}
+
+.header-control {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 1rem;
+}
+
+.header-control:last-child {
+    padding-right: 0;
+}
+
+.header-control lightning-combobox {
+    width: 13.5rem;
+}
+
+.header-control:last-child lightning-combobox {
+    width: 18rem;
+}
+
+/* Head is not in the vertical scroller — only .table-body scrolls vertically.
+   .table-x owns horizontal scroll so both tables move together sideways. */
+.table-shell {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    background: #f3f3f3;
+}
+
+.table-x {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior: none;
+    background: #f3f3f3;
+}
+
+.table-head {
+    flex-shrink: 0;
+    background: #f3f3f3;
+    /* Match the body's vertical scrollbar gutter so columns line up. */
+    padding-right: var(--body-scrollbar-width, 0px);
+}
+
+.table-body {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: none;
+    background: #f3f3f3;
+}
+
+table.list-table {
+    width: 100%;
+    /* No large min-width: that forced horizontal scroll on zoom and kept the
+       date column wide enough that time never wrapped. Columns may compress
+       on small viewports instead; date/time wrap is handled below. */
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table.list-table th,
+table.list-table td {
+    padding: 0.35rem 0.75rem;
+    vertical-align: middle;
+    border: none;
+    border-bottom: 1px solid #dddbda;
+    text-align: left;
+    font-size: 0.8125rem;
+    color: #080707;
+}
+
+table.list-table thead {
+    background: #f3f3f3;
+}
+
+table.list-table th {
+    background: #f3f3f3;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #080707;
+}
+
+table.list-table th.header-box:hover {
+    background-color: #ffffff;
+}
+
+table.list-table th.sortable {
+    cursor: pointer;
+}
+
+.sort-arrow {
+    visibility: hidden;
+    margin-left: 0.15rem;
+    vertical-align: middle;
+    transform: scale(0.78);
+    transform-origin: center;
+    --slds-c-icon-color-foreground-default: #0176d3;
+    --slds-c-icon-color-foreground: #0176d3;
+    --sds-c-icon-color-foreground-default: #0176d3;
+}
+
+table.list-table th.sortable:hover .sort-arrow {
+    visibility: visible;
+}
+
+table.list-table tbody tr {
+    background: #ffffff;
+}
+
+table.list-table tbody tr:hover {
+    background: #f3f2f2;
+}
+
+table.list-table a {
+    color: #0176d3;
+    text-decoration: none;
+}
+
+table.list-table a:hover {
+    text-decoration: underline;
+}
+
+.header-label {
+    margin-right: 0.25rem;
+}
+
+.col-num {
+    width: 2.5%;
+    color: #706e6b;
+}
+
+table.list-table th.col-num,
+table.list-table td.col-num {
+    text-align: center;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+.col-date {
+    width: 12%;
+}
+
+table.list-table th.col-date,
+table.list-table td.col-date {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+    vertical-align: top;
+}
+
+/*
+ * Fixed tables ignore % width unless the cell is forced to clip. max-width: 0
+ * + overflow:hidden makes the column actually shrink on zoom so the time can
+ * wrap under the date; without it, text stayed one line and painted over Subject.
+ */
+table.list-table td.col-date {
+    max-width: 0;
+    overflow: hidden;
+}
+
+.date-primary {
+    white-space: normal;
+    line-height: 1.25;
+}
+
+/* Each piece stays intact; the break happens between date and time only. */
+.date-line,
+.time-sep,
+.time-line {
+    white-space: nowrap;
+}
+
+.time-line {
+    color: #3e3e3c;
+}
+
+.day-sub {
+    display: block;
+    color: #706e6b;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-subject {
+    width: 19%;
+}
+
+.col-contacts {
+    width: 15%;
+}
+
+.col-account {
+    width: 13%;
+}
+
+.col-project,
+.col-task {
+    width: 16%;
+}
+
+.col-hours {
+    width: 6%;
+}
+
+.col-delete {
+    width: 2.5%;
+    text-align: center;
+}
+
+.empty-state {
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+    color: #706e6b;
+}
+
+.group-row .group-spacer {
+    background: #f3f3f3;
+    border: none;
+    padding: 0.1rem 0.75rem;
+}
+
+.time-entry-group {
+    background: #f3f3f3;
+    border: none;
+    white-space: normal;
+    padding: 0.15rem 0.45rem 0.1rem;
+}
+
+.group-caption {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.group-rule {
+    flex: 1 1 auto;
+    min-width: 0.5rem;
+    height: 0;
+    border-top: 1px solid #706e6b;
+}
+
+.group-label {
+    flex: 0 0 auto;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: #3e3e3c;
+    white-space: nowrap;
+}
+
+table.list-table th.header-box {
+    border: 1px solid #c9c7c5;
+}
+
+table.list-table th.header-box.col-num {
+    border-left: none;
+}
+
+table.list-table th.header-box.col-delete {
+    border-right: none;
+}

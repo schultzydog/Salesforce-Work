@@ -1,0 +1,402 @@
+<!--
+  @description       : 
+-->
+<aura:component controller="ContactPreferencesCtlr" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" >
+    
+    <aura:attribute name="toggleSpinner" type="boolean" default="false"/>
+    <aura:attribute name="showNone" type="boolean" default="false"/>
+    <aura:attribute name="key" type="String" />
+    <aura:attribute name="id" type="String" />
+    <aura:attribute name="HelpText" type="String" />
+    <aura:attribute name="accountOwnerEmail" type="String" />
+    <aura:attribute name="contactEmail1" type="String" />
+    <aura:attribute name="contactEmail2" type="String" />
+    <aura:attribute name="contactEmail3" type="String" />
+    <aura:attribute name="contactEmailInput" type="String" />
+    <aura:attribute name="isCommunity" type="Boolean" default="true" />
+    <aura:attribute name="scroll" type="Boolean" default="false" />
+    <aura:attribute name="showModal" type="Boolean" default="false" />
+    <aura:attribute name="wrappers" type="ContactPreferencesCtlr.RootWrapper[]" />
+    <aura:attribute name="contactid" type="String" />
+    <aura:attribute name="firstname" type="String" />
+    <aura:attribute name="isRobot" type="Boolean" default="false"/>
+    <aura:attribute name="isPress" type="Boolean" default="false"/>
+    <aura:attribute name="ownerName" type="String" default="false"/>
+    <aura:attribute name="display" type="boolean" default="false"/>
+    <aura:attribute name="enabled" type="boolean" default="false"/>
+    <aura:attribute name="isLicenseSalesforce" type="boolean" default="false"/>
+    <aura:attribute name="showEmailValidation" type="boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.toggleSpinner}">
+        <div class="slds-spinner_container">
+            <div class="slds-spinner_brand  slds-spinner slds-spinner_large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!or ( v.enabled, not(v.isCommunity) )}">
+        <aura:if isTrue="{! and( v.isCommunity , v.isRobot ) }">
+            <div class="{!'cmp-wrapper slds-p-around-custom-phone-'+$Browser.isPhone}">
+                <div class="text-wrapper">
+                    <aura:if isTrue="{!v.isCommunity}">
+                        These preferences control the email distribution of Eurasia Group content for more than one person.  It’s therefore required that you contact your Client Services Representative {!v.ownerName} at <a href="{!'mailto:'+v.accountOwnerEmail+'?Subject='}" target="_top">{!v.accountOwnerEmail}</a> to make any changes to email preferences.  Thank you.
+                    </aura:if>
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{! and( !v.isCommunity, v.showNone ) }">
+            <div>
+                <div class="none-outer">
+                    <div class="none-inner">
+                        There are no account preferences selected for this contact's account
+                    </div>
+                </div>    
+            </div>
+        </aura:if>
+        <aura:if isTrue="{! and( v.display , or(!v.isRobot , !v.isCommunity ) ) }">
+            
+            <aura:if isTrue="{! and( v.isCommunity,v.showModal)}">
+                <div class="demo-only" style="height: 24rem;position:absolute;">
+                    <section role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal_prompt" aria-modal="true">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header .slds-theme_info slds-theme_alert-texture">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                                    <lightning:icon iconName="utility:close" />
+                                    <span class="slds-assistive-text">Close</span>
+                                </button>
+                                <h2 class="slds-text-heading_medium" id="prompt-heading-id">Welcome {!v.firstname}</h2>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium" id="prompt-message-wrapper">
+                                <p>From your computer, please proceed to your unique email preferences management page by clicking continue.  If you are not {!v.firstname}, please contact Client Services (clientservices@eurasiagroup.net) to request your unique link.</p>
+                            </div>
+                            <footer class="slds-modal__footer slds-theme_default">
+                                <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}">Continue</button>
+                            </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{! and( v.isCommunity,v.showEmailValidation)}">
+                <div class="demo-only" style="height: 24rem;position:absolute;">
+                    <section role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal_prompt" aria-modal="true">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header .slds-theme_info slds-theme_alert-texture">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                                    X<lightning:icon iconName="utility:close" />
+                                    <span class="slds-assistive-text">Close</span>
+                                </button>
+                                <h2 class="slds-text-heading_medium" id="prompt-heading-id">Verify Email</h2>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium" id="prompt-message-wrapper">
+                                <p>Please enter your email address to validate your preference selection change:</p>
+                                <p><lightning:input value="{!v.contactEmailInput}" /></p>
+                            </div>
+                            <footer class="slds-modal__footer slds-theme_default">
+                                <button class="slds-button slds-button_neutral" onclick="{!c.closeEmailValidation}">Cancel</button>
+                                <button class="slds-button slds-button_neutral" onclick="{!c.continueEmailValidation}">Continue</button>
+                            </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+            </aura:if>
+            
+            <div class="{!'cmp-wrapper slds-p-around-custom-phone-'+$Browser.isPhone}">
+                <div class="text-wrapper">
+                    <aura:if isTrue="{!v.isCommunity}">
+                        {!v.HelpText}
+                    </aura:if>
+                    <aura:if isTrue="{!!v.isCommunity}">
+                        <aura:if isTrue="{!v.isLicenseSalesforce}">
+                            <div class="slds-float_left" style="padding:7px;">
+                                <a onclick="{!c.expandAll}">Expand All</a> | <a onclick="{!c.collapseAll}">Collapse All</a>
+                            </div>
+                        </aura:if>
+                    </aura:if>
+                    <div class="slds-float_right">
+                        <aura:if isTrue="{!!v.isCommunity}">
+                            <aura:if isTrue="{!v.isLicenseSalesforce}">
+                                <a class="slds-button slds-button_neutral" onclick="{!c.selectAll}" >Select All</a>
+                                <a class="slds-button slds-button_neutral" onclick="{!c.clearAll}" >Clear All</a>
+                            </aura:if>
+                        </aura:if>
+                        <aura:if isTrue="{!or( (v.isCommunity), v.isLicenseSalesforce )}">
+                            <a class="slds-button slds-button_neutral" onclick="{!c.save}" >Save</a>
+                            <aura:if isTrue="{!v.isCommunity}">
+                                <a class="slds-button slds-button_neutral" href="{!'mailto:'+v.accountOwnerEmail+'?Subject=Subscription%20Request'}" target="_top">Email Account Manager</a>
+                            </aura:if>
+                        </aura:if>
+                    </div>
+                </div>
+                <br/>
+                <aura:if isTrue="{!!v.isCommunity}">
+                    <aura:if isTrue="{!v.isLicenseSalesforce}">
+                        <br/>
+                        <div class="text-wrapper">
+                            <div class="slds-float_right">
+                                <a class="slds-button slds-button_neutral" onclick="{!c.doBrazil}" >Brazil</a>
+                                <a class="slds-button slds-button_neutral" onclick="{!c.doDM}" >Developed Markets</a>
+                                <a class="slds-button slds-button_neutral" onclick="{!c.doEM}" >Emerging Markets</a>
+                                <a class="slds-button slds-button_neutral" onclick="{!c.doEMFM}" >Emerging + Frontier Markets</a>
+                                <br/>
+                                <div class="slds-float_right">
+                                    <a class="slds-button slds-button_neutral" onclick="{!c.doMacro}" >Macro</a>
+                                    <!--<a class="slds-button slds-button_neutral" onclick="{!c.doMacroT1}" >Macro + EMs T1</a>-->
+                                    <!--<a class="slds-button slds-button_neutral" onclick="{!c.doMacroT2}" >Macro + EMs T2</a>-->
+                                    <a class="slds-button slds-button_neutral" onclick="{!c.doStarter}" >Starter</a>
+                                    <!--<a class="slds-button slds-button_neutral" onclick="{!c.doUSChinaTech}" >US-China Tech</a>-->
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                    </aura:if>
+                </aura:if>
+                <aura:if isTrue="{!v.isCommunity}">
+                    <table class="slds-table" style="margin-top:25px;margin-bottom:10px;border-collapse:inherit;">
+                        <tr class="row">
+                            <th >
+                                
+                            </th>
+                            <th >
+                            </th>
+                            <th class="{!'table-left-cell slds-text-title_caps th-left table-left-bigger-'+v.isPress}" style="max-width:150px">
+                                <div class="" style="white-space: initial;">
+                                    <div class="{!'slds-form-element header-phone-'+$Browser.isPhone}">
+                                        Email Alerts
+                                    </div>
+                                </div>
+                            </th>
+                            <aura:if isTrue="{!!v.isPress}">
+                                <th class="table-right-cell slds-text-title_caps th-right" style="max-width:150px">
+                                    <div class="" style="white-space: initial;">
+                                        <div class="{!'slds-form-element header-phone-'+$Browser.isPhone}">				
+                                            Include in daily summary
+                                        </div>
+                                    </div>
+                                </th>
+                            </aura:if>
+                        </tr>
+                    </table>
+                    <aura:set attribute="else">
+                        <table class="slds-table" style="margin-top:25px;margin-bottom:10px;border-collapse:inherit;">
+                            <tr class="row">
+                                <th>
+                                    
+                                </th>
+                                <th class="{!'label-cell label-cell-phone-'+$Browser.isPhone}">
+                                    
+                                </th>
+                                <th class="{!'table-left-cell slds-text-title_caps th-left table-left-bigger-'+v.isPress}">
+                                    <div class="slds-truncate">
+                                        <div class="slds-form-element">
+                                            <table>
+                                                <aura:if isTrue="{!!v.isCommunity}">
+                                                    <tr >
+                                                        <span style="color:white;">Individual</span>
+                                                    </tr>
+                                                </aura:if>
+                                                <tr >
+                                                    <div class="center">
+                                                        <div class="slds-button-group" role="group">
+                                                            <a class="slds-button slds-button_neutral checkButton" onclick="{!c.checkAllIndAll}" >
+                                                                <lightning:icon iconName="utility:check" size="x-small"/>
+                                                            </a>
+                                                            <a class="slds-button slds-button_neutral checkButton" onclick="{!c.uncheckAllIndAll}" >
+                                                                <lightning:icon iconName="utility:close" size="x-small"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </th>
+                                <aura:if isTrue="{!!v.isPress}">
+                                    <th class="table-right-cell slds-text-title_caps th-right" >
+                                        <div class="slds-truncate" >
+                                            <div class="slds-form-element">
+                                                <table>
+                                                    <aura:if isTrue="{!!v.isCommunity}">
+                                                        <tr >
+                                                            <span style="color:white;">Summary</span>
+                                                        </tr>
+                                                    </aura:if>
+                                                    <tr >
+                                                        <div class="center">
+                                                            <div class="slds-button-group" role="group">
+                                                                <a class="slds-button slds-button_neutral checkButton" onclick="{!c.checkAllDailyAll}" >
+                                                                    <lightning:icon iconName="utility:check" size="x-small"/>
+                                                                </a>
+                                                                <a class="slds-button slds-button_neutral checkButton" onclick="{!c.uncheckAllDailyAll}" >
+                                                                    <lightning:icon iconName="utility:close" size="x-small"/>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </aura:if>
+                            </tr>
+                        </table>
+                    </aura:set>
+                </aura:if>
+                <div class="{!'table-wrapper-'+v.scroll}">
+                    <aura:iteration items="{!v.wrappers}" var="wrapper" indexVar="i">
+                        
+                        <table class="slds-table slds-table_bordered row-wrapper" style="table-layout:fixed;">
+                            <tr class="row">
+                                <th class="icon-cell">
+                                    <div class="slds-float_left padded-header" style="cursor: pointer;" data-id="{!i}" onclick="{!c.toggle}">
+                                        <div class="slds-show add" id="{!'add-'+i}">
+                                            <lightning:icon iconName="utility:add" size="x-small" alternativeText="Indicates add"/>
+                                        </div>
+                                        <div class="slds-hide dash" id="{!'dash-'+i}">
+                                            <lightning:icon iconName="utility:dash" size="x-small" alternativeText="Indicates dash"/>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="{!'label-cell label-cell-phone-'+$Browser.isPhone}">
+                                    <div class="{!'section-header padded-header group-header-phone-'+$Browser.isPhone}">{!wrapper.root.Name}<!-- - {!wrapper.indState}/{!wrapper.dailyState} --></div>
+                                </th>
+                                <th class="{!'table-left-cell slds-text-title_caps th-left th-left-'+wrapper.indState + ' table-left-bigger-'+v.isPress}">
+                                    <div class="slds-truncate">
+                                        <div class="slds-form-element">
+                                            <label class="slds-checkbox_toggle slds-grid" style="width: 100%;">
+                                                <table>
+                                                    
+                                                    <tr >
+                                                        <div class="center">
+                                                            <div class="slds-button-group" role="group">
+                                                                <a class="{!'slds-button slds-button_neutral-phone-'+$Browser.isPhone+' checkButton check-button-'+wrapper.indState}" onclick="{!c.checkAllInd}" data-id="{!'ind-'+wrapper.root.Id}">
+                                                                    <lightning:icon iconName="utility:check" size="x-small"/>
+                                                                </a>
+                                                                <a class="{!'slds-button slds-button_neutral-phone-'+$Browser.isPhone+' checkButton x-button-'+wrapper.indState}" onclick="{!c.uncheckAllInd}" data-id="{!'ind-'+wrapper.root.Id}">
+                                                                    <lightning:icon iconName="utility:close" size="x-small"/>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </tr>
+                                                </table>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </th>
+                                <aura:if isTrue="{!!v.isPress}">
+                                    <!--
+                                    <th class="{!'table-right-cell slds-text-title_caps th-right th-right-'+wrapper.dailyState}" style="{! (wrapper.root.Name == 'egX Publications') ? 'background-color:white;' : ''}">
+                                        <div class="slds-truncate" style="{! wrapper.root.Name == 'egX Publications' ? 'display:none;' : ''}">
+                                    -->    
+                                    <th class="{!'table-right-cell slds-text-title_caps th-right th-right-'+wrapper.dailyState}" >
+                                        <div class="slds-truncate">
+										    <div class="slds-form-element">
+                                                <label class="slds-checkbox_toggle slds-grid" style="width: 100%;">
+                                                    <table>
+                                                        
+                                                        <tr >
+                                                            <div class="center">
+                                                                <div class="slds-button-group" role="group">
+                                                                    <a class="{!'slds-button slds-button_neutral-phone-'+$Browser.isPhone+' checkButton check-button-'+wrapper.dailyState}" onclick="{!c.checkAllDaily}" data-id="{!'daily-'+wrapper.root.Id}">
+                                                                        <lightning:icon iconName="utility:check" size="x-small"/>
+                                                                    </a>
+                                                                    <a class="{!'slds-button slds-button_neutral-phone-'+$Browser.isPhone+' checkButton x-button-'+wrapper.dailyState}" onclick="{!c.uncheckAllDaily}" data-id="{!'daily-'+wrapper.root.Id}">
+                                                                        <lightning:icon iconName="utility:close" size="x-small"/>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </tr>
+                                                    </table>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </aura:if>
+                            </tr>
+                            
+                            <aura:iteration items="{!wrapper.libs}" var="lWrap" >
+                                <aura:if isTrue="{!or(v.isCommunity == false, lWrap.lib.Exclusive_List__c == false)}">
+                                    <tr class="{!'row slds-hide row-'+i}" aura:id="{!i}">
+                                        <td class="icon-cell">
+                                        </td>
+                                        <td class="{!'label-cell label-cell-phone-'+$Browser.isPhone}">
+                                            <div class="{!'section-header padded-sub-header sub-group-header-phone-'+$Browser.isPhone}">{!lWrap.lib.Name}</div>
+                                        </td>
+                                        
+                                        <aura:if isTrue="{!lWrap.state == 'N/A'}">
+                                            <td class="{!'table-left-cell slds-text-title_caps th-left th-left-'+wrapper.indState+' table-left-bigger-'+v.isPress}" scope="col">
+                                                <div>	
+                                                    N/A
+                                                </div>
+                                            </td>
+                                            <aura:if isTrue="{!!v.isPress}">
+                                                <!--
+             									<td class="{!'table-right-cell slds-text-title_caps th-right th-right-'+wrapper.dailyState}" scope="col" style="{! or(wrapper.root.Name == 'egX Publications', and(v.isCommunity == false, lWrap.lib.Exclusive_List__c == true)) ? 'background-color:white;' : ''}">
+                                                    <div style="{! or(wrapper.root.Name == 'egX Publications', and(v.isCommunity == false, lWrap.lib.Exclusive_List__c == true)) ? 'display:none;' : ''}">
+                                                -->
+                                                <td class="{!'table-right-cell slds-text-title_caps th-right th-right-'+wrapper.dailyState}" scope="col" style="{! (lWrap.lib.No_Summary_Emails_Option__c == true) ? 'background-color:white;' : ''}">
+                                                    <div style="{! (lWrap.lib.No_Summary_Emails_Option__c == true) ? 'display:none;' : ''}">
+											        N/A
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            
+                                            <aura:set attribute="else">
+                                                
+                                                <td class="{!'table-left-cell slds-text-title_caps th-left th-left-'+wrapper.indState+' table-left-bigger-'+v.isPress}" scope="col">
+                                                    <div class="slds-truncate" >
+                                                        <lightning:input name="ind"
+                                                                         type="checkbox"
+                                                                         messageToggleActive=""
+                                                                         messageToggleInactive=""
+                                                                         checked="{!lWrap.ind}" 
+                                                                         onchange="{!c.check}"/>
+                                                        <!--<span class="slds-form-element__label slds-m-bottom_none" style="margin-left:10px;color:white;"> Daily Summaries</span>-->
+                                                    </div>
+                                                </td>
+                                                <aura:if isTrue="{!!v.isPress}">
+                                                    <!--
+                                                    <td class="{!'table-right-cell slds-text-title_caps th-right th-right-'+wrapper.dailyState}" scope="col" style="{! or(wrapper.root.Name == 'egX Publications', and(v.isCommunity == false, lWrap.lib.Exclusive_List__c == true)) ? 'background-color:white;' : ''}">
+                                                        <div class="slds-truncate" style="{! or(wrapper.root.Name == 'egX Publications', and(v.isCommunity == false, lWrap.lib.Exclusive_List__c == true)) ? 'display:none;' : ''}">
+                                                    -->
+                                                    <td class="{!'table-right-cell slds-text-title_caps th-right th-right-'+wrapper.dailyState}" scope="col" style="{! (lWrap.lib.No_Summary_Emails_Option__c == true) ? 'background-color:white;' : ''}">
+                                                        <div class="slds-truncate" style="{! (lWrap.lib.No_Summary_Emails_Option__c == true) ? 'display:none;' : ''}">
+                                                            <lightning:input name="daily"
+                                                                             type="checkbox"
+                                                                             messageToggleActive=""
+                                                                             messageToggleInactive=""
+                                                                             checked="{!lWrap.daily}" 
+                                                                             onchange="{!c.check}"/>
+                                                            <!--<span class="slds-form-element__label slds-m-bottom_none" style="margin-left:10px;color:white;"> Individual Emails</span>-->
+                                                        </div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:set>
+                                        </aura:if>
+                                        
+                                    </tr>
+                                </aura:if>
+                            </aura:iteration>
+                        </table>
+                        
+                    </aura:iteration>
+                </div>
+                <br/>
+                <div class="text-wrapper">
+                    <div class="slds-float_right">
+                        <a class="slds-button slds-button_neutral" onclick="{!c.save}" >Save</a>
+                        <aura:if isTrue="{!v.isCommunity}">
+                            <a class="slds-button slds-button_neutral" href="{!'mailto:'+v.accountOwnerEmail+'?Subject=Subscription%20Request'}" target="_top">Email Account Manager</a>
+                        </aura:if>
+                    </div>
+                </div>
+            </div>
+            
+        </aura:if>
+    </aura:if>
+</aura:component>

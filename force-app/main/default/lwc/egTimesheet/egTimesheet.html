@@ -1,0 +1,374 @@
+<template>
+    <div class="timesheet-app">
+        <div class="slds-card slds-card_boundary slds-p-around_small">
+            <div class="slds-page-header">
+                <div class="slds-page-header__row">
+                    <div class="slds-page-header__col-title">
+                        <div class="slds-media slds-media_center">
+                            <div class="slds-media__figure">
+                                <lightning-icon icon-name="standard:business_hours" size="medium"></lightning-icon>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-page-header__name">
+                                    <div class="slds-page-header__name-title">
+                                        <h1>
+                                            <span class="slds-page-header__title slds-truncate" title="">EG Timesheets</span>
+                                        </h1>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-page-header__col-actions">
+                        <div class="slds-page-header__controls">
+                            <div class="slds-page-header__control">
+                                <!-- <lightning-button label={saveButtonLabel} disabled={saveButtonDisabled} onclick={save}>
+                                </lightning-button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div if:true={error}
+                class="slds-card slds-card_boundary slds-p-around_small slds-text-align_center slds-m-vertical_small error">
+                {error}
+            </div>
+            <div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-stretch slds-m-top_small stretch">
+                <template if:true={wrapper}>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4 slds-p-bottom_x-small">
+                        <div class="slds-card slds-card_boundary slds-p-around_small">
+                            <div class="slds-page-header">
+                                <div class="slds-page-header__row">
+                                    <div class="slds-page-header__col-title">
+
+                                        <div class="slds-media slds-media_center">
+                                            <div class="slds-media__figure">
+                                                <div class="slds-grid slds-gutters slds-grid_vertical-align-center">
+                                                    <div class="slds-col">
+                                                        <div
+                                                            class="slds-text-heading_large slds-text-color_weak weekly-timesheet">
+                                                            Timesheet for
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-col">
+                                                        <div class="calendar-item">
+                                                            <div class="date">
+                                                                <div class="month">
+                                                                    <lightning-formatted-date-time
+                                                                        value={wrapper.startDate} month="short"
+                                                                        time-zone="UTC">
+                                                                    </lightning-formatted-date-time>
+                                                                </div>
+                                                                <div class="day">
+                                                                    <div class="slds-text-align_center">
+                                                                        <lightning-formatted-date-time
+                                                                            value={wrapper.startDate} day="numeric"
+                                                                            time-zone="UTC">
+                                                                        </lightning-formatted-date-time>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="label">
+                                                                    <div
+                                                                        class="slds-text-title_caps slds-text-align_center very-small">
+                                                                        Sunday
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-col" style="padding-left: 0; padding-right: 0;">
+                                                        <div
+                                                            class="slds-text-heading_large slds-text-color_weak weekly-timesheet">
+                                                            -
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-col">
+                                                        <div class="calendar-item">
+                                                            <div class="date">
+                                                                <div class="month">
+                                                                    <lightning-formatted-date-time
+                                                                        value={wrapper.endDate} month="short"
+                                                                        time-zone="UTC">
+                                                                    </lightning-formatted-date-time>
+                                                                </div>
+                                                                <div class="day">
+                                                                    <div class="slds-text-align_center">
+                                                                        <lightning-formatted-date-time
+                                                                            value={wrapper.endDate} day="numeric"
+                                                                            time-zone="UTC">
+                                                                        </lightning-formatted-date-time>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="label">
+                                                                    <div
+                                                                        class="slds-text-title_caps slds-text-align_center very-small">
+                                                                        Saturday
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-media__body slds-text-align_right">
+                                                <div class="slds-grid slds-grid_align-end slds-grid_vertical-align-center" >
+                                                    <div class="slds-col">
+                                                        <lightning-button-icon icon-name="utility:back"
+                                                            alternative-text="Back" title="Back" onclick={handleBack}
+                                                            disabled={isWorking} class="slds-m-left_x-small">
+                                                        </lightning-button-icon>
+                                                    </div>
+                                                    <div class="slds-col">
+                                                        <lightning-button variant="neutral" label="TODAY" title="Today"
+                                                            onclick={handleToday} disabled={isWorking}
+                                                            class="slds-m-left_x-small">
+                                                        </lightning-button>
+                                                    </div>
+                                                    <div class="slds-col">
+                                                        <lightning-button-icon icon-name="utility:forward"
+                                                            alternative-text="Next" title="Next" onclick={handleNext}
+                                                            disabled={isWorking} class="slds-m-left_x-small">
+                                                        </lightning-button-icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timesheet-area">
+                                <template if:true={isChanging}>
+                                    <div class="slds-spinner_container" style="margin-top: 92px; margin-bottom: 4px;">
+                                        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                                    </div>
+                                </template>
+
+                                <template if:true={isTimesheetAdmin}>
+                                    <div class="slds-m-top_small" style="width: 50%;">
+                                        <c-eg-custom-lookup type="User" value={wrapper.timeCardUser.Id}
+                                        selection={wrapper.timeCardUser.Name} additional-style="max-width: 400px;"
+                                        icon-name="standard:user" placeholder="Manage another User's Timesheet..."
+                                        disabled={isWorking} onselect={handleChange}>
+                                        </c-eg-custom-lookup>
+                                    </div>
+                                </template>
+
+                                <template if:true={projectAndTaskGuidance}>
+                                    <div class="slds-m-top_small slds-m-left_x-small">
+                                        <div class="slds-media xslds-media_center">
+                                            <div class="slds-media__figure slds-m-right_xx-small">
+                                                <i class="fa fa-info-circle"></i>
+                                            </div>
+                                            <div class="slds-media__body">
+                                                <div class="slds-text-body_small">
+                                                    <lightning-formatted-rich-text value={projectAndTaskGuidance}></lightning-formatted-rich-text>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                                
+
+                                <div if:true={wrapper.timeCardUser.Id} class="slds-p-top_small">
+                                    <table
+                                        class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-width">
+                                        <thead>
+                                            <tr class="no-border">
+                                                <td class="no-border slds-text-align_center slds-text-align_left"></td>
+                                                <td class="no-border slds-text-align_center slds-text-align_left"></td>
+                                                <td class="no-border slds-text-align_center slds-text-title_caps very-small"
+                                                    style="width: 5%;">Sun</td>
+                                                <td class="no-border slds-text-align_center slds-text-title_caps very-small"
+                                                    style="width: 5%;">Mon</td>
+                                                <td class="no-border slds-text-align_center slds-text-title_caps very-small"
+                                                    style="width: 5%;">Tue</td>
+                                                <td class="no-border slds-text-align_center slds-text-title_caps very-small"
+                                                    style="width: 5%;">Wed</td>
+                                                <td class="no-border slds-text-align_center slds-text-title_caps very-small"
+                                                    style="width: 5%;">Thu</td>
+                                                <td class="no-border slds-text-align_center slds-text-title_caps very-small"
+                                                    style="width: 5%;">Fri</td>
+                                                <td class="no-border slds-text-align_center slds-text-title_caps very-small"
+                                                    style="width: 5%;">Sat</td>
+                                                <td class="no-border slds-text-align_center"></td>
+                                            </tr>
+                                            <tr class="">
+                                                <th class="slds-text-align_left">
+                                                    <div class="slds-p-left_xx-small">Project</div>
+                                                </th>
+                                                <th class="slds-text-align_left">
+                                                    <div class="slds-p-left_xx-small">Task</div>
+                                                </th>
+                                                <template for:each={wrapper.dates} for:item="date" for:index="i">
+                                                    <th key={date} class="slds-text-align_center"><b>{date}</b></th>
+                                                </template>
+                                                <th class="slds-text-align_center" style="width: 15%;">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <template for:each={wrapper.rows} for:item="row" for:index="row_index">
+                                                <tr key={row.index} data-rowid={row_index}>
+                                                    <td style="max-width: 200px;">
+                                                        <c-eg-custom-lookup type="EG_Project__c" value={row.projectId}
+                                                            selection={row.projectName} additional-style="max-width: 400px;"                                                            
+                                                            icon-name="standard:work_step" placeholder="Type to search client projects"
+                                                            additional-params={wrapper.projectLookupParams} onselect={handleChange}>
+                                                        </c-eg-custom-lookup>
+                                                    </td>
+                                                    <td style="max-width: 200px;">
+                                                        <c-eg-custom-lookup type="EG_Project_Task__c" value={row.taskId}
+                                                            selection={row.taskName} additional-style="max-width: 400px;"
+                                                            icon-name="standard:work_order_item" placeholder="Select Task"
+                                                            disabled={row.noProject} filter-value={row.projectId}
+                                                            filter-field="EG_Project__c" onselect={handleChange}>
+                                                        </c-eg-custom-lookup>
+                                                    </td>
+                                                    <template for:each={row.cells} for:item="c" for:index="cell_index">
+                                                        <td class={c.cellClass} key={c.index}>
+                                                            <lightning-input type="number" value={c.hours} step="any"
+                                                                variant="label-hidden" data-rowid={row_index}
+                                                                data-cellid={cell_index} onchange={handleChange}
+                                                                onfocus={handleFocus} class="input-text-align_center"
+                                                                disabled={row.hoursDisabled}></lightning-input>
+                                                        </td>
+                                                    </template>
+                                                    <td class="slds-text-align_center cell-center">
+                                                        <b>{row.rowTotal}</b>
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                            <tr class="row-center">
+                                                <th>
+                                                    <div class="slds-truncate"><b>Timesheet Totals</b></div>
+                                                </th>
+                                                <td>
+                                                    <div class="slds-truncate"></div>
+                                                </td>
+                                                <template for:each={columnTotals} for:item="t" for:index="i">
+                                                    <td class={t.cellClass} key={t.index}><b>{t.total}</b></td>
+                                                </template>
+                                                <td class="slds-text-align_center">
+                                                    <div class="slds-truncate"><b>{weeklyTotal}</b><div class="status-icon"><i class={weeklyTotalIconClass}></i></div></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="slds-p-vertical_medium slds-p-horizontal_large">
+                                    <a onclick={prefill} class={isWorkingClass}><i class="fal fa-file-import"></i></a>
+                                    &nbsp;
+                                    <a onclick={prefill} class={isWorkingClass}>Prefill Projects and Tasks from last week</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right column -->
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4 fill slds-p-bottom_x-small">
+                        <div if:true={showWorkingLocations} class="slds-card slds-card_boundary slds-p-around_small">
+                            <div class="">
+                                <div class="slds-media slds-media_center slds-m-bottom_x-small">
+                                    <div class="slds-media__figure icon-large">
+                                        <i class="fad fa-calendar-day"></i>
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <span class="slds-text-heading_medium">Working Location</span>
+                                    </div>
+                                </div>
+
+                                <div class="working-locations">
+                                    <div class="slds-media slds-media_center slds-m-bottom_xx-small">
+                                        <div class="slds-media__figure date-label">
+                                            <div class="location monday">
+                                                <div class="slds-text-align_center slds-text-title_caps very-small">Mon</div>
+                                                <div class="slds-text-align_center"><b>{wrapper.locationDateLabelMonday}</b></div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <lightning-combobox name="Location_Monday__c"
+                                            value={wrapper.timeCard.Location_Monday__c}
+                                            placeholder={wrapper.locationPlaceholderMonday}
+                                            variant="label-hidden"
+                                            options={locationOptions}
+                                            disabled={isChanging}
+                                            onchange={handleChange}></lightning-combobox>
+                                        </div>
+                                    </div>
+                                    <div class="slds-media slds-media_center slds-m-bottom_xx-small">
+                                        <div class="slds-media__figure date-label">
+                                            <div class="slds-text-align_center slds-text-title_caps very-small">Tue</div>
+                                            <div class="slds-text-align_center"><b>{wrapper.locationDateLabelTuesday}</b></div>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <lightning-combobox name="Location_Tuesday__c"
+                                            value={wrapper.timeCard.Location_Tuesday__c}
+                                            placeholder={wrapper.locationPlaceholderTuesday}
+                                            variant="label-hidden"
+                                            options={locationOptions}
+                                            disabled={isChanging}
+                                            onchange={handleChange}></lightning-combobox>
+                                        </div>
+                                    </div>
+                                    <div class="slds-media slds-media_center slds-m-bottom_xx-small">
+                                        <div class="slds-media__figure date-label">
+                                            <div class="slds-text-align_center slds-text-title_caps very-small">Wed</div>
+                                            <div class="slds-text-align_center"><b>{wrapper.locationDateLabelWednesday}</b></div>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <lightning-combobox name="Location_Wednesday__c"
+                                            value={wrapper.timeCard.Location_Wednesday__c}
+                                            placeholder={wrapper.locationPlaceholderWednesday}
+                                            variant="label-hidden"
+                                            options={locationOptions}
+                                            disabled={isChanging}
+                                            onchange={handleChange}></lightning-combobox>
+                                        </div>
+                                    </div>
+                                    <div class="slds-media slds-media_center slds-m-bottom_xx-small">
+                                        <div class="slds-media__figure date-label">
+                                            <div class="slds-text-align_center slds-text-title_caps very-small">Thu</div>
+                                            <div class="slds-text-align_center"><b>{wrapper.locationDateLabelThursday}</b></div>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <lightning-combobox name="Location_Thursday__c"
+                                            value={wrapper.timeCard.Location_Thursday__c}
+                                            placeholder={wrapper.locationPlaceholderThursday}
+                                            variant="label-hidden"
+                                            options={locationOptions}
+                                            disabled={isChanging}
+                                            onchange={handleChange}></lightning-combobox>
+                                        </div>
+                                    </div>
+                                    <div class="slds-media slds-media_center slds-m-bottom_xx-small">
+                                        <div class="slds-media__figure date-label">
+                                            <div class="slds-text-align_center slds-text-title_caps very-small">Fri</div>
+                                            <div class="slds-text-align_center"><b>{wrapper.locationDateLabelFriday}</b></div>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <lightning-combobox name="Location_Friday__c"
+                                            value={wrapper.timeCard.Location_Friday__c}
+                                            placeholder={wrapper.locationPlaceholderFriday}
+                                            variant="label-hidden"
+                                            options={locationOptions}
+                                            disabled={isChanging}
+                                            onchange={handleChange}></lightning-combobox>                                                                                        
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="slds-card slds-card_boundary slds-p-around_small">
+                            <template if:true={wrapper.timeCardUser.Id}>
+                                <c-eg-timesheet-metrics timecard-id={wrapper.timeCardId} onselectdate={selectDate} userid={wrapper.timeCardUser.Id}></c-eg-timesheet-metrics>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

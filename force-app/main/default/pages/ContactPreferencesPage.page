@@ -1,0 +1,23 @@
+<apex:page standardController="Contact" extensions="ContactPreferencesCtlr" showHeader="false" sidebar="false">
+    
+    <apex:includeLightning />
+
+    <div id="lightning" />
+
+    <script>
+
+        var contactid = "{!Contact.Id}";
+
+        $Lightning.use("c:ContactPreferencesApp", function() {
+          $Lightning.createComponent("c:ContactPreferencesCmp",
+          {
+            contactid : contactid
+          },
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+    
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Research_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Status__c, &quot;Enabled&quot;) &amp;&amp;  Worldflow_Email_Access__c &amp;&amp; Number_of_Active_Prefs__c &gt; 0 &amp;&amp;  DATEVALUE(Worldflow_Last_Email_Sent__c) &gt; Today() - 30 &amp;&amp; NOT(Worldflow_Hard_Bounce__c) , 
+&quot;Is Receiving Research&quot;, 
+IF(DATEVALUE(Worldflow_Last_Email_Sent__c) &lt; Today() - 30,&quot;No Longer Receiving Research&quot;, &quot;Not Receiving Research&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field can take up to 24 hours to display the user&apos;s actual research status.</inlineHelpText>
+    <label>Research Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

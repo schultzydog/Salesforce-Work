@@ -1,0 +1,103 @@
+:host {
+    display: block;
+    background: transparent;
+    height: 100%;
+    min-height: 100%;
+}
+
+.list-view {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+    background: #f3f3f3;
+    border: 1px solid #dddbda;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.list-header {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    background: #f3f3f3;
+}
+
+.list-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.list-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #080707;
+}
+
+.list-meta {
+    margin: 0.25rem 0 0 2.25rem;
+    color: #706e6b;
+    font-size: 0.75rem;
+}
+
+.panel-body {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    padding: 0.75rem;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card {
+    background: #ffffff;
+    border: 1px solid #dddbda;
+    padding: 0.5rem 0.75rem 0.75rem;
+    flex: 1 1 auto;
+}
+
+.form-card lightning-input,
+.form-card lightning-textarea,
+.form-card lightning-record-picker {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.group-caption {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0.15rem 0 0.5rem;
+}
+
+.group-rule {
+    flex: 1 1 auto;
+    min-width: 0.5rem;
+    height: 0;
+    border-top: 1px solid #706e6b;
+}
+
+.group-label {
+    flex: 0 0 auto;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: #3e3e3c;
+    white-space: nowrap;
+}
+
+.form-actions {
+    margin-top: 0.5rem;
+}
+
+.empty-state {
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+    color: #706e6b;
+    font-size: 0.8125rem;
+}

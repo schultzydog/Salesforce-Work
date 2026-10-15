@@ -1,0 +1,105 @@
+<template>
+    <lightning-modal-header label="Enrich Contact Info"></lightning-modal-header>
+    <lightning-modal-body>
+        <template if:true={isLoading}>
+            <div class="slds-align_absolute-center slds-p-around_large">
+                <lightning-spinner alternative-text="Searching public sources" size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:true={errorMessage}>
+            <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                {errorMessage}
+            </div>
+        </template>
+
+        <template if:true={result}>
+            <section class="slds-m-bottom_medium">
+                <p class="slds-text-title_caps slds-m-bottom_xx-small">This contact</p>
+                <p class="slds-text-heading_small">{result.contact.name}</p>
+                <p class="slds-text-body_small muted">
+                    <template if:true={result.contact.title}>{result.contact.title} · </template>
+                    <template if:true={result.contact.accountName}>{result.contact.accountName} · </template>
+                    <template if:true={result.contact.email}>{result.contact.email}</template>
+                    <template if:true={result.contact.phone}> · {result.contact.phone}</template>
+                    <template if:true={result.contact.mobilePhone}> · {result.contact.mobilePhone}</template>
+                </p>
+                <p class="slds-text-body_small muted slds-m-top_x-small">
+                    Query: {result.query}
+                    <template if:true={result.totalResults}> · {result.totalResults} results</template>
+                </p>
+            </section>
+
+            <template if:true={hasKnowledge}>
+                <section class="slds-box slds-m-bottom_medium">
+                    <p class="slds-text-title_caps slds-m-bottom_xx-small">Knowledge graph</p>
+                    <p class="slds-text-heading_small">{result.knowledgeTitle}</p>
+                    <template if:true={result.knowledgeType}>
+                        <p class="slds-text-body_small muted">{result.knowledgeType}</p>
+                    </template>
+                    <template if:true={result.knowledgeDescription}>
+                        <p class="slds-m-top_x-small">{result.knowledgeDescription}</p>
+                    </template>
+                    <template if:true={result.knowledgeSource}>
+                        <p class="slds-text-body_small muted slds-m-top_x-small">Source: {result.knowledgeSource}</p>
+                    </template>
+                </section>
+            </template>
+
+            <section class="slds-m-bottom_medium">
+                <p class="slds-text-title_caps slds-m-bottom_small">What we found</p>
+                <template if:false={hasFacts}>
+                    <p class="muted">No structured facts yet. Check the sources below.</p>
+                </template>
+                <template for:each={result.facts} for:item="fact">
+                    <div key={fact.rowId} class="fact-row">
+                        <lightning-input
+                            type="checkbox"
+                            label={fact.label}
+                            checked={fact.alreadyOnRecord}
+                            disabled
+                        ></lightning-input>
+                        <div class="fact-value">
+                            <template if:true={fact.sourceUrl}>
+                                <a href={fact.sourceUrl} target="_blank" rel="noopener noreferrer">{fact.value}</a>
+                            </template>
+                            <template if:false={fact.sourceUrl}>
+                                <span>{fact.value}</span>
+                            </template>
+                            <p class="slds-text-body_small muted">
+                                {fact.sourceLabel}
+                                <template if:true={fact.alreadyOnRecord}> · already on the contact</template>
+                            </p>
+                        </div>
+                    </div>
+                </template>
+            </section>
+
+            <section>
+                <p class="slds-text-title_caps slds-m-bottom_small">Sources</p>
+                <template if:false={hasSources}>
+                    <p class="muted">SerpAPI did not return organic results for this query.</p>
+                </template>
+                <template for:each={result.sources} for:item="hit">
+                    <article key={hit.url} class="slds-box slds-m-bottom_small">
+                        <p class="slds-text-body_small kind-pill">{hit.kind}</p>
+                        <a href={hit.url} target="_blank" rel="noopener noreferrer" class="slds-text-heading_small">
+                            {hit.title}
+                        </a>
+                        <p class="slds-text-body_small muted">{hit.displayedLink}</p>
+                        <p class="slds-m-top_xx-small">{hit.snippet}</p>
+                    </article>
+                </template>
+            </section>
+        </template>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button
+            class="slds-m-right_small"
+            label="Apply selected"
+            disabled
+            title="Write-back is the next step"
+        ></lightning-button>
+        <lightning-button variant="brand" label="Close" onclick={handleClose}></lightning-button>
+    </lightning-modal-footer>
+</template>

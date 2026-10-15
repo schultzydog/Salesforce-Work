@@ -1,0 +1,55 @@
+<template>
+    <template if:true={loading}>
+        <div class="loading">
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </div>
+    </template>
+    <div class="metrics-container">
+        <div class="slds-media slds-media_center slds-m-bottom_x-small">
+            <div class="slds-media__figure icon-large">
+                <i class="fad fa-calendar-check"></i>
+            </div>
+            <div class="slds-media__body">
+                <span class="slds-text-heading_medium">{complianceYear} Compliance</span>
+            </div>
+        </div>
+
+        <template if:true={showDetails}>
+            <div class="forty-filter right slds-m-bottom_x-small">
+                <lightning-input type="toggle" label="Only Show Weeks &lt; 40 Hours" name="filter" onchange={toggleSwitch} message-toggle-active="" message-toggle-inactive=""></lightning-input>
+            </div>
+
+            <div class="slds-table--header-fixed_container" style="height:350px; width: 100%">
+                <div class="slds-scrollable_y" style="height:100%; width: 100%">
+                    <div class="slds-cell-fixed" style="font-weight: 700; left: 42px; top: 8px; position: absolute; background: transparent;">Week Start</div>
+                    <div class="slds-cell-fixed" style="font-weight: 700; left: calc(100% - 78px); top: 8px; position: absolute; background: transparent;">Hours</div>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" style="border-top: none;"
+                aria-label="">
+                <tbody>
+                    <template for:each={rows} for:item="row">
+                        <tr key={row.start} class="slds-hint-parent">
+                            <th data-label="Week Start" scope="row" style="width: 120px;">
+                                <div class="slds-text-align_right" title="Week Start">
+                                    <a data-date={row.startDate} onclick={selectDate}>{row.start}</a>
+                                </div>
+                            </th>
+                            <td data-label="Account Name">
+                                <div class="slds-text-align_right" title="Hours">{row.hours}&nbsp;
+                                    <template if:true={row.isFuture}>
+                                        <i class="fal fa-star-half-alt warning"></i>
+                                    </template>
+                                    <template if:false={row.isFuture}>
+                                        <i if:true={row.compliance} class="fas fa-badge-check success"></i>
+                                        <i if:false={row.compliance} class="fas fa-times fail"></i>
+                                    </template>
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+            </div>
+            </div>
+        </template>
+    </div>
+</template>

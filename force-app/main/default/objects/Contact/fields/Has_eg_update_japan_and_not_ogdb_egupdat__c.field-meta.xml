@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_eg_update_japan_and_not_ogdb_egupdat__c</fullName>
+    <formula>Number_of_eg_update_Japanese_prefs__c &gt; 0  &amp;&amp;  Number_of_Daily_Brief_prefs__c &lt; 1 &amp;&amp;   Number_of_eg_update_prefs__c &lt; 2</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Has eg update japan and not ogdb/egupdat</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

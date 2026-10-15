@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Outbound Change Set: Outlook Event Review panel (EG-Sandbox → Production)
+
+  PURPOSE
+    Ship the Event Review page + Outlook inbox panel work, without the
+    timesheet / egEventLogic / External-ID-format sweeping change.
+
+  IMPORTANT — External ID entanglement
+    The Apex currently deployed in EG-Sandbox for these classes ALSO contains
+    the fifth-part External ID (event Id in the key). Salesforce change sets
+    pull from the org, not from an older file revision. Adding the Apex
+    members below WILL include that key-format change unless you first
+    redeploy 4-part-key versions of those classes.
+
+    Safe with zero External ID risk: use package-ui-only.xml instead.
+
+  EXCLUDED (needs manager approval — do not add to this change set)
+    - egTimesheet_Ctlr, egTimesheet LWC, egTimesheet_Ctlr_Tests
+    - egEventLogic, EventTrigger
+    - EG_Time_Entry__c.Start_Time__c
+    - backfill-event-entry-key.apex / migrate scripts (run manually)
+    - blogic_Event
+-->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Page + panel UI -->
+    <types>
+        <members>egOutlookEventReview</members>
+        <members>outlookTimeEntry</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Outlook_Event_Review</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Outlook_Event_Review</members>
+        <name>FlexiPage</name>
+    </types>
+
+    <!-- Apex that backs the page and the Outlook panel -->
+    <types>
+        <members>OutlookEventReviewController</members>
+        <members>OutlookEventReviewControllerTest</members>
+        <members>TimeEntryController</members>
+        <members>TimeEntryControllerTest</members>
+        <members>TimeEntryService</members>
+        <members>TimeEntryServiceTest</members>
+        <members>TimeEntryRequest</members>
+        <members>TimeEntryKey</members>
+        <members>TimeEntryKeyTest</members>
+        <members>TimeEntrySelector</members>
+        <members>TimeEntrySummary</members>
+        <members>TimeCardSelector</members>
+        <members>TimeCardSelectorTest</members>
+        <members>ProjectSelector</members>
+        <members>ProjectTaskSelector</members>
+        <members>egCustomLookup_Ctlr</members>
+        <members>egCustomLookup_Ctlr_Tests</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>egCustomLookup</members>
+        <name>LightningComponentBundle</name>
+    </types>
+
+    <!-- Field the page uses as the Event ↔ entry link (not the old Activity lookup) -->
+    <types>
+        <members>EG_Time_Entry__c.Source_Event_Id__c</members>
+        <members>EG_Time_Entry__c.Time_Entry_Source__c</members>
+        <name>CustomField</name>
+    </types>
+
+    <types>
+        <members>Outlook_Time_Entry_User</members>
+        <name>PermissionSet</name>
+    </types>
+
+    <types>
+        <members>EG_Time_Entry__c-EG Time Entry Layout</members>
+        <name>Layout</name>
+    </types>
+
+    <version>62.0</version>
+</Package>

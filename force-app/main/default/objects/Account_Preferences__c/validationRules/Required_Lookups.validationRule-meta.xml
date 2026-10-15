@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Lookups</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+OR( OR( ISNULL(Account__c), ISBLANK(Account__c)) , OR( ISNULL( Library__c ), ISBLANK( Library__c ) ) ),
+$Profile.Id &lt;&gt; &apos;00e3A000001qOGe&apos;
+)</errorConditionFormula>
+    <errorMessage>You need to select both an Account and a Subscription Option</errorMessage>
+</ValidationRule>

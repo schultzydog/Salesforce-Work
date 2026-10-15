@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Library_Group__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Contains(DL_Category__c , &apos;Sub-Saharan Africa&apos;)
+	,&apos;Sub-Saharan Africa&apos;
+	, IF(
+			 Contains(DL_Category__c , &apos;North America&apos;)
+			 , &apos;North America&apos;
+			 , IF( Contains(DL_Category__c , &apos;Middle East/North Africa&apos;)
+					,&apos;Middle East/North Africa&apos;
+					,  IF( Contains(DL_Category__c , &apos;Latin America&apos;)
+							,&apos;Latin America&apos;
+							,  IF( Contains(DL_Category__c , &apos;Japan&apos;)
+									,&apos;Japan&apos;
+									, IF( Contains(DL_Category__c , &apos;Global Strategy&apos;)
+										,&apos;Global Strategy&apos;
+										, IF( Contains(DL_Category__c , &apos;Global Macro&apos;)
+											,&apos;Global Macro&apos;
+												, IF( Contains(DL_Category__c , &apos;Geo-Technology&apos;)
+													,&apos;Geo-Technology&apos;
+													,  IF( Contains(DL_Category__c , &apos;Europe&apos;)
+														,&apos;Europe&apos;
+														, IF( Contains(DL_Category__c , &apos;Eurasia&apos;)
+															,&apos;Eurasia&apos;
+															, IF( Contains(DL_Category__c , &apos;Energy, Climate &amp; Resources&apos;)
+																,&apos;Energy, Climate &amp; Resources&apos;
+																, IF( Contains(DL_Category__c , &apos;Data &amp; Analytics&apos;)
+																	,&apos;Data &amp; Analytics&apos;
+																	, IF( Contains(DL_Category__c , &apos;Asia&apos;)
+																	,&apos;Asia&apos;
+																	, DL_Category__c
+																	)
+																)
+															)
+														)
+													)
+											)
+										)
+									)
+								)
+						)
+				)
+	
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Library Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

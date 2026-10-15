@@ -1,0 +1,134 @@
+:host {
+    --sds-c-button-brand-text-color: #ffffff;
+    --sds-c-button-brand-text-color-hover: #eeeeee;
+    --sds-c-button-brand-text-color-active: #eeeeee;
+    
+    --dxp-s-form-element-label-color: #777777;
+    --dxp-s-form-element-label-font-size: 0.875rem;
+    
+    --sds-c-accordion-heading-text-color: #00205b;
+    --slds-c-accordion-summary-color-background: #f5f5f5;
+}
+
+.slds-table{
+    font-size: 0.875rem;
+    border-top: none;
+}
+.slds-table,
+.slds-table thead,
+.slds-table thead tr,
+.slds-table thead tr,
+.slds-table thead th,
+.slds-table thead th,
+.slds-table thead td,
+.slds-table thead td,
+.slds-table tbody,
+.slds-table tbody tr,
+.slds-table tbody tr,
+.slds-table tbody th,
+.slds-table tbody th,
+.slds-table tbody td,
+.slds-table tbody td{
+    background-color: transparent;
+}
+.slds-table thead{
+    border-top-color: transparent;
+}
+
+.slds-card__header-title{
+    font-weight: 400;
+}
+.hidden-in-form{
+    visibility: hidden;
+}
+.error, .red{
+    color: rgb(186, 5, 23);
+}
+.success, .green{
+    color: rgb(69, 198, 90);
+}
+.warning, .yellow{
+    color: #fe9339;
+}
+.disabled{
+    color: #777777;
+}
+.new-subscriber-form label{
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #777
+}
+.width_small{
+    width: 100px;
+}
+.font-size_small{
+    font-size: 0.75rem;
+}
+.subscriber-modal_min-height{
+    min-height: 342px;
+}
+.pref-height{
+    height: 1200px;
+}
+.width-60{
+    width: 60%;
+}
+.width-50{
+    width: 50%;
+}
+.width-40{
+    width: 40%;
+}
+.width-20{
+    width: 20%;
+}
+.negative-margins{
+    margin-bottom: -1rem;
+    padding-bottom: 3px;
+    margin-right: -0.5rem;
+}
+.slds-table:not(.slds-no-row-hover) tbody tr:focus>td, .slds-table:not(.slds-no-row-hover) tbody tr:focus>th, .slds-table:not(.slds-no-row-hover) tbody tr:hover>td, .slds-table:not(.slds-no-row-hover) tbody tr:hover>th {
+    background-color: #f3f3f3;
+}
+.th-title{
+    color: #444;
+    font-weight: 700;
+    line-height: normal;
+}
+.padding-right_extra{
+    padding-right: 1rem;
+}
+.font-size_875{
+    font-size: 0.875rem;
+}
+.slds-text-body_x-small{
+    font-size: 0.6rem;
+}
+.slds-accordion__summary{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.section-all{
+    margin: auto;
+    max-width: 24px;
+    background: #acffb9;
+}.section-some{
+    margin: auto;
+    max-width: 24px;
+    background: #fffda2;
+}.section-none{
+    margin: auto;
+    max-width: 24px;
+    background: #ffc5cc;
+}
+.disabled{
+    color: #cccccc;
+}
+.pref-state{
+    font-size: 8px;
+    color: #999;
+    position: relative;
+}
+.preferences-modal_min-height{
+    min-height: 60px;
+}

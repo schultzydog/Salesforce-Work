@@ -1,0 +1,25 @@
+# Salesforce CLI local state: org auth, aliases and cached org data.
+.sf/
+.sfdx/
+.localdevserver/
+deploy-options.json
+
+# Retrieve snapshots. These were the stand-in for version history before this
+# repo existed; git history replaces them. Kept on disk, out of the repo.
+app-audit/
+app-check/
+client-portal-retirement/
+kb4-audit/
+kb4-flow/
+lwc-check/
+metadata-audit/
+metadata-audit2/
+metadata-audit3/
+nc-audit/
+org-live-check/
+
+# CLI output from those retrieves and deploys.
+*.log
+
+# Node
+node_modules/

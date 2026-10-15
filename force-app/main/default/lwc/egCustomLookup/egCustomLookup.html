@@ -1,0 +1,94 @@
+<template>
+    <div class="slds-form-element" style={additionalStyle}>
+        <!-- Label -->
+        <template if:true={label}>
+            <label class="slds-form-element__label" for="combobox-input" id="combobox-label">{label}</label>
+        </template>
+
+        <div class="slds-form-element__control">
+            <div class={comboboxContainerClass}>
+                <div class={comboboxClass}>
+
+                    <!-- Search Input -->
+                    <template if:false={value}>
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                            role="none">
+                            <lightning-input id="combobox-input" type="text" value={queryString} 
+                                role="combobox" placeholder={placeholder}
+                                variant="label-hidden" onfocus={inputOnFocus} onblur={inputOnBlur}
+                                onchange={handleSearch} autocomplete="off" disabled={disabled} 
+                                aria-autocomplete="list" aria-controls="listbox" 
+                                aria-expanded={showList} aria-haspopup="listbox">
+                            </lightning-input>
+                        </div>
+                    </template>
+
+                    <!-- Selected Value -->
+                    <template if:true={value}>
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
+                            role="none">
+                            <span
+                                class="slds-icon_container slds-combobox__input-entity-icon"
+                                title="object">
+                                <lightning-icon icon-name={iconName} size="small"></lightning-icon>
+                            </span>
+                            <button type="button"  title={selection}
+                                class="slds-input_faux slds-combobox__input slds-combobox__input-value"
+                                aria-labelledby="combobox-label combobox-value">
+                                <span class="slds-truncate" id="combobox-value">{selection}</span>
+                            </button>
+                            <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+                                title="Remove selected option" onclick={remove} disabled={disabled}>
+                                <lightning-icon icon-name="utility:close" size="x-small"></lightning-icon>
+                            </button>
+                        </div>
+                    </template>
+
+                    <!-- Dropdown Listbox -->
+                    <div id="listbox" class="slds-dropdown slds-dropdown_length-with-icon-5 slds-dropdown_fluid"
+                        role="listbox" style="min-width: fit-content; left: 0; transform: none;">
+                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                            <template if:true={isWorking}>
+                                <lightning-spinner size="small"></lightning-spinner>
+                            </template>
+                            <template if:false={results}>
+                                <li role="presentation" class="slds-listbox__item">
+                                    <div aria-selected="true" id="option0" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_term slds-has-focus" role="option">
+                                      <span class="slds-media__figure slds-listbox__option-icon">
+                                      </span>
+                                      <span class="slds-media__body">
+                                        <span class="slds-listbox__option-text slds-listbox__option-text_entity">
+                                            <template if:true={isWorking}>
+                                                Searching...
+                                            </template>
+                                            <template if:false={isWorking}>
+                                                No Results
+                                            </template>
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </li>                                
+                            </template>
+                            <template if:true={results}>
+                                <template for:each={results} for:item="result" for:index="i">
+                                    <li key={result.Id} role="presentation" class="slds-listbox__item" onmousedown={select} data-index={i} data-id={result.Id} data-name={result.Name}>
+                                        <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_center slds-media_small"
+                                            role="option">
+                                            <span class="slds-media__figure slds-listbox__option-icon">
+                                                <lightning-icon icon-name={iconName} size="x-small">
+                                                </lightning-icon>
+                                            </span>
+                                            <span class="slds-media__body">
+                                                <span class="slds-truncate" title={result.Name}>{result.Name}</span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

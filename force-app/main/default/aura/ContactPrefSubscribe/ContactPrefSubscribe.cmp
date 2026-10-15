@@ -1,0 +1,28 @@
+<aura:component controller="ContactPrefSubscribeCtlr" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable"
+                access="global" >
+	
+    <aura:attribute name="toggleSpinner" type="boolean" default="false"/>
+    <aura:attribute name="key" type="String" />
+    <aura:attribute name="library" type="String" />
+    <aura:attribute name="id" type="String" />
+    <aura:attribute name="name" type="String" />
+    <aura:attribute name="message" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.toggleSpinner}">
+        <div class="slds-spinner_container">
+            <div class="slds-spinner_brand  slds-spinner slds-spinner_large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!!v.toggleSpinner}">
+        <center><a href="https://www.eurasiagroup.net/" target="_blank"><img style="height:100px;width:auto;" src="{!$Resource.subscribelogo}" alt="Eurasia Group Logo" /></a></center>
+        <center class="title">{!v.message}</center>    
+    </aura:if>
+</aura:component>

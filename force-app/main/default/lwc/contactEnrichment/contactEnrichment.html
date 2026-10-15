@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contact enrichment" icon-name="standard:search">
+        <lightning-button
+            slot="actions"
+            variant="brand"
+            label="Enrich Contact Info"
+            onclick={handleOpen}
+        ></lightning-button>
+        <p class="slds-p-horizontal_medium slds-p-bottom_small slds-text-body_small">
+            Runs a public Google search through SerpAPI and shows what it finds. Nothing is written to the contact yet.
+        </p>
+    </lightning-card>
+</template>

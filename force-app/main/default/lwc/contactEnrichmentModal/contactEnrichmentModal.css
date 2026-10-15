@@ -1,0 +1,26 @@
+.muted {
+    color: #706e6b;
+}
+
+.fact-row {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.fact-row lightning-input {
+    min-width: 8rem;
+}
+
+.fact-value {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0.125rem;
+}
+
+.kind-pill {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #706e6b;
+}

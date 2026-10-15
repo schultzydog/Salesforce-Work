@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Time__c</fullName>
+    <description>Start time of the meeting this entry logs, taken from Event.StartDateTime. Date__c remains the authoritative date and is what resolves the weekly time card; this field only distinguishes two meetings on the same project, task and day so each can hold its own entry. Left blank on entries typed straight into the timesheet, which have no meeting and stay at one row per project, task and day.</description>
+    <externalId>false</externalId>
+    <label>Start Time</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Time</type>
+</CustomField>

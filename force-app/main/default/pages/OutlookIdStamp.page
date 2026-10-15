@@ -1,0 +1,18 @@
+<apex:page
+    controller="OutlookIdStampController"
+    showHeader="true"
+    sidebar="false"
+    title="Outlook iCal UID"
+>
+    <div style="padding: 1.5rem; font-family: 'Salesforce Sans', Arial, sans-serif;">
+        <h1 style="font-size: 1.25rem; margin: 0 0 0.75rem;">Outlook iCal UID</h1>
+        <p style="font-size: 0.95rem; color: {!IF(ok, '#2e844a', '#ba0517')};">
+            {!message}
+        </p>
+        <apex:outputPanel layout="block" rendered="{!eventId != null}">
+            <p>
+                <apex:outputLink value="/{!eventId}">Open the Event</apex:outputLink>
+            </p>
+        </apex:outputPanel>
+    </div>
+</apex:page>

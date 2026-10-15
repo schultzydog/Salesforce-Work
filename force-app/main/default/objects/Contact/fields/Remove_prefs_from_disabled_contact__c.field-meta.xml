@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remove_prefs_from_disabled_contact__c</fullName>
+    <formula>ISPICKVAL(Status__c, &apos;Disabled&apos;) &amp;&amp; TODAY() -datevalue(Latest_Status_Disablement_date__c) &gt; 120</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Remove prefs from disabled contact</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

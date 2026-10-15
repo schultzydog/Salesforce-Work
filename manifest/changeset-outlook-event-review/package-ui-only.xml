@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Outbound Change Set: Outlook Event Review UI only
+
+  Sticky column headers + page title ("Outlook Event Review and Time Entry").
+  No Apex. No External ID / timesheet / automation changes.
+
+  Use this if the Apex behind the page is already in production, or if you
+  only want the cosmetic/UX pieces while the larger Apex waits on approval.
+-->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>egOutlookEventReview</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Outlook_Event_Review</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Outlook_Event_Review</members>
+        <name>FlexiPage</name>
+    </types>
+    <version>62.0</version>
+</Package>
