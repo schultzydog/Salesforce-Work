@@ -84,10 +84,24 @@ public without sharing class egTimesheet_Ctlr {
 
         System.debug('timeCards:' + timeCards);
 
+        EG_Time_Card_Compliance__c tComp = new EG_Time_Card_Compliance__c();
+        tComp.Name = timeCardUser.Name + ' ' + wrapper.startDate.year();
+        tComp.OwnerId = timeCardUser.Id;
+        tComp.Year__c = String.valueOf(wrapper.startDate.year());
+        tComp.Annual_Timecard_Compliance_Start_Date__c = firstMonday(wrapper.startDate.year());
+        if (depts.size() > 0) {
+            tComp.Department__c = depts[0].Id;
+        }
+        tComp.External_Id__c = tComp.OwnerId + '' + tComp.Year__c;
+
+        upsert tComp External_Id__c;
+
         EG_Time_Card__c timeCard;
         if (!timeCards.isEmpty()){
             //We should only ever have 1 Time Card per user per week...
             timeCard = timeCards[0];
+            timeCard.EG_Time_Card_Compliance__r = new EG_Time_Card_Compliance__c (External_Id__c = tComp.External_Id__c);
+            upsert timeCard;
         } else {
             //Create a new Time Card for this user for this week...    
             timeCard = new EG_Time_Card__c();
@@ -96,6 +110,7 @@ public without sharing class egTimesheet_Ctlr {
             timeCard.Start_Date__c = wrapper.startDate;
             timeCard.End_Date__c = wrapper.endDate;
             timeCard.TimeCardExternalId__c = timeCardUserId + '' + timeCard.Start_Date__c;
+            timeCard.EG_Time_Card_Compliance__r = new EG_Time_Card_Compliance__c (External_Id__c = tComp.External_Id__c);
             if (depts.size() > 0) {
                 timeCard.Department__c = depts[0].Id;
             }
@@ -294,9 +309,6 @@ public without sharing class egTimesheet_Ctlr {
                     timeEntry.Date__c = d;
                     timeEntry.Hours_Worked__c = timeMap.get(key).get(i);
                     timeEntry.ExternalID__c = externalId;
-                    if (!existingEntryMap.containsKey(externalId)) {
-                        timeEntry.Time_Entry_Source__c = 'Timesheet';
-                    }
                     entriesToUpsert.add(timeEntry);
                     currentEntries.add(externalId);
                 }
@@ -417,4 +429,23 @@ public without sharing class egTimesheet_Ctlr {
 
     }
 
+    public static Date firstMonday(Integer year) {
+
+        Date first = Date.newInstance(year, 1, 1);
+        
+        DateTime dt = (DateTime) first;
+        dt = dt.addHours(-5);
+        String dayOfWeek = dt.format('E');
+
+        while (dayOfWeek != 'Mon') {
+            first = first.addDays(1);
+            dt = (DateTime) first;
+            dt = dt.addHours(-5);
+            dayOfWeek = dt.format('E');
+        }
+
+        return first.addDays(-1);
+
+    }
+    
 }

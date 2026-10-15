@@ -21,11 +21,19 @@ private class egTimesheet_Ctlr_Tests {
 
         System.runAs(u) {
 
+            EG_Time_Card_Compliance__c comp = new EG_Time_Card_Compliance__c();
+            comp.name = u.Name;
+            comp.OwnerId = u.Id;
+            comp.Year__c = String.valueOf(Date.today().toStartOfWeek().year());
+            comp.External_Id__c = u.Id + comp.Year__c;
+            insert comp;
+
             EG_Time_Card__c card = new EG_Time_Card__c();
             card.OwnerId = u.Id;
             card.Start_Date__c = Date.today().toStartOfWeek();
             card.End_Date__c = Date.today().toStartOfWeek().addDays(6);
             card.Name = 'test';
+            card.EG_Time_Card_Compliance__c = comp.Id;
             insert card;
             
             EG_Time_Entry__c entry1 = new EG_Time_Entry__c();
@@ -121,5 +129,5 @@ private class egTimesheet_Ctlr_Tests {
                 'Only the active project and task pair should be copied forward.');
         }
     }
-
+    
 }
