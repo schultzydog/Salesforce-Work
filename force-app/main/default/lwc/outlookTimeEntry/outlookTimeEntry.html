@@ -53,7 +53,6 @@
                         <p class={matchStatusClass}>{matchStatus}</p>
                     </template>
 
-                    <div class={fieldsClass}>
                     <lightning-input
                         type="date"
                         label="Date"
@@ -63,53 +62,72 @@
                         required
                     ></lightning-input>
 
-                    <lightning-record-picker
-                        label="Account"
-                        object-api-name="Account"
-                        value={accountId}
-                        placeholder="Search accounts"
-                        disabled={isFieldsLocked}
-                        onchange={handleAccountChange}
-                    ></lightning-record-picker>
-
-                    <template lwc:if={showProjectPicker}>
-                        <lightning-record-picker
-                            label="Project"
-                            object-api-name="EG_Project__c"
-                            value={projectId}
-                            filter={projectFilter}
-                            placeholder="Search projects"
-                            disabled={isFieldsLocked}
-                            onchange={handleProjectChange}
-                        ></lightning-record-picker>
-                    </template>
-                    <template lwc:else>
+                    <template lwc:if={isFieldsLocked}>
+                        <lightning-input
+                            label="Account"
+                            value=""
+                            placeholder="Search accounts"
+                            disabled
+                        ></lightning-input>
                         <lightning-input
                             label="Project"
                             value=""
                             placeholder="Select an account first"
                             disabled
                         ></lightning-input>
-                    </template>
-
-                    <template lwc:if={showTaskPicker}>
-                        <lightning-record-picker
-                            label="Project Task"
-                            object-api-name="EG_Project_Task__c"
-                            value={projectTaskId}
-                            filter={taskFilter}
-                            placeholder="Search project tasks"
-                            disabled={isFieldsLocked}
-                            onchange={handleTaskChange}
-                        ></lightning-record-picker>
-                    </template>
-                    <template lwc:else>
                         <lightning-input
                             label="Project Task"
                             value=""
                             placeholder="Select a project first"
                             disabled
                         ></lightning-input>
+                    </template>
+                    <template lwc:else>
+                        <lightning-record-picker
+                            label="Account"
+                            object-api-name="Account"
+                            value={accountId}
+                            placeholder="Search accounts"
+                            onchange={handleAccountChange}
+                        ></lightning-record-picker>
+
+                        <template lwc:if={showProjectPicker}>
+                            <lightning-record-picker
+                                label="Project"
+                                object-api-name="EG_Project__c"
+                                value={projectId}
+                                filter={projectFilter}
+                                placeholder="Search projects"
+                                onchange={handleProjectChange}
+                            ></lightning-record-picker>
+                        </template>
+                        <template lwc:else>
+                            <lightning-input
+                                label="Project"
+                                value=""
+                                placeholder="Select an account first"
+                                disabled
+                            ></lightning-input>
+                        </template>
+
+                        <template lwc:if={showTaskPicker}>
+                            <lightning-record-picker
+                                label="Project Task"
+                                object-api-name="EG_Project_Task__c"
+                                value={projectTaskId}
+                                filter={taskFilter}
+                                placeholder="Search project tasks"
+                                onchange={handleTaskChange}
+                            ></lightning-record-picker>
+                        </template>
+                        <template lwc:else>
+                            <lightning-input
+                                label="Project Task"
+                                value=""
+                                placeholder="Select a project first"
+                                disabled
+                            ></lightning-input>
+                        </template>
                     </template>
 
                     <lightning-input
@@ -140,7 +158,6 @@
                             onclick={handleSubmit}
                             disabled={isSubmitDisabled}
                         ></lightning-button>
-                    </div>
                     </div>
 
                     <template lwc:if={isSubmitting}>

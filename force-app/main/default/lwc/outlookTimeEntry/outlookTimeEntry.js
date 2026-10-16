@@ -152,10 +152,6 @@ export default class OutlookTimeEntry extends LightningElement {
         return this.isEvent && !this.matchedEventId;
     }
 
-    get fieldsClass() {
-        return this.isFieldsLocked ? 'entry-fields entry-fields_locked' : 'entry-fields';
-    }
-
     get matchStatus() {
         if (!this.matchedEventId) {
             return 'No matching Salesforce event. A time entry cannot be created until this event exists in Salesforce.';
