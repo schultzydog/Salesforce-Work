@@ -1,0 +1,6 @@
+{!Account.OwnerFirstName}, 
+
+{!01I3A000002LhY8.00N3A00000C3JP5} has been assigned as an Analyst to {!Contact.FirstName} {!Contact.LastName} with a {!01I3A000002LhY8.00N3A00000C3JP7} contact frequency.
+
+Click on below link to open the contact record.
+{!Contact.Link}

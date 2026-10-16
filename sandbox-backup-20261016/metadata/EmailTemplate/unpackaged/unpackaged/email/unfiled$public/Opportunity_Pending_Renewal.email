@@ -1,0 +1,16 @@
+Dear {!Opportunity.OwnerFirstName},
+
+Your renewal opportunity for {!Opportunity.Name} at the amount of {!Opportunity.Amount} is {!Opportunity.Days_until_next_renewal_due__c} from renewal with a status of {!Opportunity.StageName}. 
+
+Please start the renewal conversation with your POC {!Opportunity.Primary_Client_Contact__c} and update the opportunity to reflect the status here: {!Opportunity.Link}
+
+A reminder of the targeted Stage for the 7 days leading up to renewal:
+
+3 months       - Gather Client Feedback
+2 1/2 months - Draft Renewal Documents
+2 months       - Negotiations/Draft Contract Sent for Client Review
+1 1/2 months - Contract Sent
+1 month or less     - Contract Received/Change Opportunity to Win
+
+Thanks,
+Sales Ops

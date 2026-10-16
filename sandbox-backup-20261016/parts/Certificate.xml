@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Migrated_SAML_Cert</members>
+        <members>Migrated_SAML_Cert2</members>
+        <members>SAML_Cert</members>
+        <members>SAML_Cert26</members>
+        <name>Certificate</name>
+    </types>
+    <version>62.0</version>
+</Package>

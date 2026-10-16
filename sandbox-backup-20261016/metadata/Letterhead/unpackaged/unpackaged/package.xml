@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Blank</members>
+        <members>Eurasia_Group_Logo</members>
+        <members>Japan_Summit</members>
+        <name>Letterhead</name>
+    </types>
+    <version>62.0</version>
+</Package>

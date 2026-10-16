@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>EndDateTime__c</fullName>
+        <formula>DATETIMEVALUE(Text(CventEvents__pkg_EndDate__c )+&quot; &quot;+  LEFT(TEXT(CventEvents__pkg_EndTime__c ),8)  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EndDateTime</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>StartDateTime__c</fullName>
+        <formula>DATETIMEVALUE(Text(CventEvents__pkg_StartDate__c )+&quot; &quot;+  LEFT(TEXT(CventEvents__pkg_StartTime__c),8)  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>StartDateTime</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+</CustomObject>

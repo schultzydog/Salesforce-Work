@@ -1,0 +1,26 @@
+<aura:component controller="ActivityHistoryController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="recordId" type="String" />
+    
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="data" type="ActivityHistoryController.ActivityWrapper[]" />
+    <aura:attribute name="sortBy" type="String"/>
+    <aura:attribute name="sortDirection" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card title="ActivityHistory" iconName="standard:task">
+        
+        <!--Lightning data table markup-->
+        <lightning:datatable aura:id="accountTable"
+                             keyField="Id"
+                             hideCheckboxColumn="true"
+                             columns="{!v.columns}"
+                             data="{!v.data}"
+                             sortedBy="{!v.sortBy}"
+                             sortedDirection="{!v.sortDirection}"
+                             onsort="{!c.handleSort}"/>
+        
+    </lightning:card>
+    
+</aura:component>

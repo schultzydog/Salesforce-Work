@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aerospace &amp; Defense</fullName>
+        <default>false</default>
+        <label>Aerospace &amp; Defense</label>
+    </customValue>
+    <customValue>
+        <fullName>Africa Weekly</fullName>
+        <default>false</default>
+        <label>Africa Weekly</label>
+    </customValue>
+    <customValue>
+        <fullName>Algeria</fullName>
+        <default>false</default>
+        <label>Algeria</label>
+    </customValue>
+    <customValue>
+        <fullName>Alternative Energy/Climate</fullName>
+        <default>false</default>
+        <label>Alternative Energy/Climate</label>
+    </customValue>
+    <customValue>
+        <fullName>Angola</fullName>
+        <default>false</default>
+        <label>Angola</label>
+    </customValue>
+    <customValue>
+        <fullName>Argentina</fullName>
+        <default>false</default>
+        <label>Argentina</label>
+    </customValue>
+    <customValue>
+        <fullName>Azerbaijan</fullName>
+        <default>false</default>
+        <label>Azerbaijan</label>
+    </customValue>
+    <customValue>
+        <fullName>Bahrain</fullName>
+        <default>false</default>
+        <label>Bahrain</label>
+    </customValue>
+    <customValue>
+        <fullName>Bangladesh</fullName>
+        <default>false</default>
+        <label>Bangladesh</label>
+    </customValue>
+    <customValue>
+        <fullName>Bolivia</fullName>
+        <default>false</default>
+        <label>Bolivia</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil</fullName>
+        <default>false</default>
+        <label>Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil Daily</fullName>
+        <default>false</default>
+        <label>Brazil Daily</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil Regulatory</fullName>
+        <default>false</default>
+        <label>Brazil Regulatory</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada</fullName>
+        <default>false</default>
+        <label>Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>Chile</fullName>
+        <default>false</default>
+        <label>Chile</label>
+    </customValue>
+    <customValue>
+        <fullName>China</fullName>
+        <default>false</default>
+        <label>China</label>
+    </customValue>
+    <customValue>
+        <fullName>China Weekly</fullName>
+        <default>false</default>
+        <label>China Weekly</label>
+    </customValue>
+    <customValue>
+        <fullName>Colombia</fullName>
+        <default>false</default>
+        <label>Colombia</label>
+    </customValue>
+    <customValue>
+        <fullName>Congo, Democratic Republic Of</fullName>
+        <default>false</default>
+        <label>Congo, Democratic Republic Of</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer &amp; Retail</fullName>
+        <default>false</default>
+        <label>Consumer &amp; Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Costa Rica</fullName>
+        <default>false</default>
+        <label>Costa Rica</label>
+    </customValue>
+    <customValue>
+        <fullName>Crypto Ledger</fullName>
+        <default>false</default>
+        <label>Crypto Ledger</label>
+    </customValue>
+    <customValue>
+        <fullName>Daily Brief</fullName>
+        <default>false</default>
+        <label>Daily Brief</label>
+    </customValue>
+    <customValue>
+        <fullName>Daily Research Summary - Japanese</fullName>
+        <default>false</default>
+        <label>Daily Research Summary - Japanese</label>
+    </customValue>
+    <customValue>
+        <fullName>Dominican Republic</fullName>
+        <default>false</default>
+        <label>Dominican Republic</label>
+    </customValue>
+    <customValue>
+        <fullName>Ecuador</fullName>
+        <default>false</default>
+        <label>Ecuador</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Exclusive</fullName>
+        <default>false</default>
+        <label>EG Exclusive</label>
+    </customValue>
+    <customValue>
+        <fullName>eg update</fullName>
+        <default>false</default>
+        <label>eg update</label>
+    </customValue>
+    <customValue>
+        <fullName>eg update Japanese</fullName>
+        <default>false</default>
+        <label>eg update Japanese</label>
+    </customValue>
+    <customValue>
+        <fullName>Egypt</fullName>
+        <default>false</default>
+        <label>Egypt</label>
+    </customValue>
+    <customValue>
+        <fullName>El Salvador</fullName>
+        <default>false</default>
+        <label>El Salvador</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy, Climate &amp; Resources</fullName>
+        <default>false</default>
+        <label>Energy, Climate &amp; Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Ethiopia</fullName>
+        <default>false</default>
+        <label>Ethiopia</label>
+    </customValue>
+    <customValue>
+        <fullName>EU</fullName>
+        <default>false</default>
+        <label>EU</label>
+    </customValue>
+    <customValue>
+        <fullName>﻿﻿Europe Weekly</fullName>
+        <default>false</default>
+        <label>﻿﻿Europe Weekly</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Institutions Group</fullName>
+        <default>false</default>
+        <label>Financial Institutions Group</label>
+    </customValue>
+    <customValue>
+        <fullName>France</fullName>
+        <default>false</default>
+        <label>France</label>
+    </customValue>
+    <customValue>
+        <fullName>Geoeconomics</fullName>
+        <default>false</default>
+        <label>Geoeconomics</label>
+    </customValue>
+    <customValue>
+        <fullName>Georgia</fullName>
+        <default>false</default>
+        <label>Georgia</label>
+    </customValue>
+    <customValue>
+        <fullName>Geo-Tech Download</fullName>
+        <default>false</default>
+        <label>Geo-Tech Download</label>
+    </customValue>
+    <customValue>
+        <fullName>Geo-Technology</fullName>
+        <default>false</default>
+        <label>Geo-Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Germany</fullName>
+        <default>false</default>
+        <label>Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>Ghana</fullName>
+        <default>false</default>
+        <label>Ghana</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Macro</fullName>
+        <default>false</default>
+        <label>Global Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>Greece</fullName>
+        <default>false</default>
+        <label>Greece</label>
+    </customValue>
+    <customValue>
+        <fullName>Guatemala</fullName>
+        <default>false</default>
+        <label>Guatemala</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare &amp; Medical Devices</fullName>
+        <default>false</default>
+        <label>Healthcare &amp; Medical Devices</label>
+    </customValue>
+    <customValue>
+        <fullName>Honduras</fullName>
+        <default>false</default>
+        <label>Honduras</label>
+    </customValue>
+    <customValue>
+        <fullName>Hong Kong</fullName>
+        <default>false</default>
+        <label>Hong Kong</label>
+    </customValue>
+    <customValue>
+        <fullName>Hungary</fullName>
+        <default>false</default>
+        <label>Hungary</label>
+    </customValue>
+    <customValue>
+        <fullName>India</fullName>
+        <default>false</default>
+        <label>India</label>
+    </customValue>
+    <customValue>
+        <fullName>Indonesia</fullName>
+        <default>false</default>
+        <label>Indonesia</label>
+    </customValue>
+    <customValue>
+        <fullName>Iran</fullName>
+        <default>false</default>
+        <label>Iran</label>
+    </customValue>
+    <customValue>
+        <fullName>Iraq</fullName>
+        <default>false</default>
+        <label>Iraq</label>
+    </customValue>
+    <customValue>
+        <fullName>Israel</fullName>
+        <default>false</default>
+        <label>Israel</label>
+    </customValue>
+    <customValue>
+        <fullName>Italy</fullName>
+        <default>false</default>
+        <label>Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>Ivory Coast</fullName>
+        <default>false</default>
+        <label>Ivory Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan</fullName>
+        <default>false</default>
+        <label>Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan Angle - English</fullName>
+        <default>false</default>
+        <label>Japan Angle - English</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan Angle - Japanese</fullName>
+        <default>false</default>
+        <label>Japan Angle - Japanese</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan Conference Call</fullName>
+        <default>false</default>
+        <label>Japan Conference Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Jordan</fullName>
+        <default>false</default>
+        <label>Jordan</label>
+    </customValue>
+    <customValue>
+        <fullName>Kazakhstan</fullName>
+        <default>false</default>
+        <label>Kazakhstan</label>
+    </customValue>
+    <customValue>
+        <fullName>Kenya</fullName>
+        <default>false</default>
+        <label>Kenya</label>
+    </customValue>
+    <customValue>
+        <fullName>Kuwait</fullName>
+        <default>false</default>
+        <label>Kuwait</label>
+    </customValue>
+    <customValue>
+        <fullName>LATAM Daily</fullName>
+        <default>false</default>
+        <label>LATAM Daily</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin America Weekly</fullName>
+        <default>false</default>
+        <label>Latin America Weekly</label>
+    </customValue>
+    <customValue>
+        <fullName>Leaders Call</fullName>
+        <default>false</default>
+        <label>Leaders Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Lebanon</fullName>
+        <default>false</default>
+        <label>Lebanon</label>
+    </customValue>
+    <customValue>
+        <fullName>Letter from the Chairman</fullName>
+        <default>false</default>
+        <label>Letter from the Chairman</label>
+    </customValue>
+    <customValue>
+        <fullName>Letter from Washington, Global edition</fullName>
+        <default>false</default>
+        <label>Letter from Washington, Global edition</label>
+    </customValue>
+    <customValue>
+        <fullName>Letter from Washington, Japan edition – English</fullName>
+        <default>false</default>
+        <label>Letter from Washington, Japan edition – English</label>
+    </customValue>
+    <customValue>
+        <fullName>Letter from Washington, Japan edition – Japanese</fullName>
+        <default>false</default>
+        <label>Letter from Washington, Japan edition – Japanese</label>
+    </customValue>
+    <customValue>
+        <fullName>Libya</fullName>
+        <default>false</default>
+        <label>Libya</label>
+    </customValue>
+    <customValue>
+        <fullName>Malaysia</fullName>
+        <default>false</default>
+        <label>Malaysia</label>
+    </customValue>
+    <customValue>
+        <fullName>MENA Weekly</fullName>
+        <default>false</default>
+        <label>MENA Weekly</label>
+    </customValue>
+    <customValue>
+        <fullName>Mexico</fullName>
+        <default>false</default>
+        <label>Mexico</label>
+    </customValue>
+    <customValue>
+        <fullName>Mexico Daily</fullName>
+        <default>false</default>
+        <label>Mexico Daily</label>
+    </customValue>
+    <customValue>
+        <fullName>Morocco</fullName>
+        <default>false</default>
+        <label>Morocco</label>
+    </customValue>
+    <customValue>
+        <fullName>Mozambique</fullName>
+        <default>false</default>
+        <label>Mozambique</label>
+    </customValue>
+    <customValue>
+        <fullName>Myanmar (Burma)</fullName>
+        <default>false</default>
+        <label>Myanmar (Burma)</label>
+    </customValue>
+    <customValue>
+        <fullName>Natural Gas</fullName>
+        <default>false</default>
+        <label>Natural Gas</label>
+    </customValue>
+    <customValue>
+        <fullName>Nigeria</fullName>
+        <default>false</default>
+        <label>Nigeria</label>
+    </customValue>
+    <customValue>
+        <fullName>North Korea</fullName>
+        <default>false</default>
+        <label>North Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil</fullName>
+        <default>false</default>
+        <label>Oil</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil Markets Weekly</fullName>
+        <default>false</default>
+        <label>Oil Markets Weekly</label>
+    </customValue>
+    <customValue>
+        <fullName>Oman</fullName>
+        <default>false</default>
+        <label>Oman</label>
+    </customValue>
+    <customValue>
+        <fullName>Pakistan</fullName>
+        <default>false</default>
+        <label>Pakistan</label>
+    </customValue>
+    <customValue>
+        <fullName>Panama</fullName>
+        <default>false</default>
+        <label>Panama</label>
+    </customValue>
+    <customValue>
+        <fullName>Peru</fullName>
+        <default>false</default>
+        <label>Peru</label>
+    </customValue>
+    <customValue>
+        <fullName>Philippines</fullName>
+        <default>false</default>
+        <label>Philippines</label>
+    </customValue>
+    <customValue>
+        <fullName>Poland</fullName>
+        <default>false</default>
+        <label>Poland</label>
+    </customValue>
+    <customValue>
+        <fullName>Political Risk Data (GPRI &amp; Trajectories)</fullName>
+        <default>false</default>
+        <label>Political Risk Data (GPRI &amp; Trajectories)</label>
+    </customValue>
+    <customValue>
+        <fullName>Political Risk Monitor</fullName>
+        <default>false</default>
+        <label>Political Risk Monitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Portugal</fullName>
+        <default>false</default>
+        <label>Portugal</label>
+    </customValue>
+    <customValue>
+        <fullName>Power &amp; Utilities</fullName>
+        <default>false</default>
+        <label>Power &amp; Utilities</label>
+    </customValue>
+    <customValue>
+        <fullName>Qatar</fullName>
+        <default>false</default>
+        <label>Qatar</label>
+    </customValue>
+    <customValue>
+        <fullName>Russia</fullName>
+        <default>false</default>
+        <label>Russia</label>
+    </customValue>
+    <customValue>
+        <fullName>Russia - Ukraine Crisis Watch</fullName>
+        <default>false</default>
+        <label>Russia - Ukraine Crisis Watch</label>
+    </customValue>
+    <customValue>
+        <fullName>Sanctions Monthly</fullName>
+        <default>false</default>
+        <label>Sanctions Monthly</label>
+    </customValue>
+    <customValue>
+        <fullName>Saudi Arabia</fullName>
+        <default>false</default>
+        <label>Saudi Arabia</label>
+    </customValue>
+    <customValue>
+        <fullName>Senegal</fullName>
+        <default>false</default>
+        <label>Senegal</label>
+    </customValue>
+    <customValue>
+        <fullName>Singapore</fullName>
+        <default>false</default>
+        <label>Singapore</label>
+    </customValue>
+    <customValue>
+        <fullName>South Africa</fullName>
+        <default>false</default>
+        <label>South Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>Southeast Asia Bimonthly</fullName>
+        <default>false</default>
+        <label>Southeast Asia Bimonthly</label>
+    </customValue>
+    <customValue>
+        <fullName>South Korea</fullName>
+        <default>false</default>
+        <label>South Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>Spain</fullName>
+        <default>false</default>
+        <label>Spain</label>
+    </customValue>
+    <customValue>
+        <fullName>Sri Lanka</fullName>
+        <default>false</default>
+        <label>Sri Lanka</label>
+    </customValue>
+    <customValue>
+        <fullName>Sustainability</fullName>
+        <default>false</default>
+        <label>Sustainability</label>
+    </customValue>
+    <customValue>
+        <fullName>Syria</fullName>
+        <default>false</default>
+        <label>Syria</label>
+    </customValue>
+    <customValue>
+        <fullName>Taiwan</fullName>
+        <default>false</default>
+        <label>Taiwan</label>
+    </customValue>
+    <customValue>
+        <fullName>Tanzania</fullName>
+        <default>false</default>
+        <label>Tanzania</label>
+    </customValue>
+    <customValue>
+        <fullName>Thailand</fullName>
+        <default>false</default>
+        <label>Thailand</label>
+    </customValue>
+    <customValue>
+        <fullName>Top 10 Most Read</fullName>
+        <default>false</default>
+        <label>Top 10 Most Read</label>
+    </customValue>
+    <customValue>
+        <fullName>Top Calls</fullName>
+        <default>false</default>
+        <label>Top Calls</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade &amp; Supply Chain</fullName>
+        <default>false</default>
+        <label>Trade &amp; Supply Chain</label>
+    </customValue>
+    <customValue>
+        <fullName>Trajectory Scorecard</fullName>
+        <default>false</default>
+        <label>Trajectory Scorecard</label>
+    </customValue>
+    <customValue>
+        <fullName>Tunisia</fullName>
+        <default>false</default>
+        <label>Tunisia</label>
+    </customValue>
+    <customValue>
+        <fullName>Turkey</fullName>
+        <default>false</default>
+        <label>Turkey</label>
+    </customValue>
+    <customValue>
+        <fullName>Two Sigma Exclusive</fullName>
+        <default>false</default>
+        <label>Two Sigma Exclusive</label>
+    </customValue>
+    <customValue>
+        <fullName>UK</fullName>
+        <default>false</default>
+        <label>UK</label>
+    </customValue>
+    <customValue>
+        <fullName>Ukraine</fullName>
+        <default>false</default>
+        <label>Ukraine</label>
+    </customValue>
+    <customValue>
+        <fullName>United Arab Emirates</fullName>
+        <default>false</default>
+        <label>United Arab Emirates</label>
+    </customValue>
+    <customValue>
+        <fullName>US</fullName>
+        <default>false</default>
+        <label>US</label>
+    </customValue>
+    <customValue>
+        <fullName>US Daily</fullName>
+        <default>false</default>
+        <label>US Daily</label>
+    </customValue>
+    <customValue>
+        <fullName>Venezuela</fullName>
+        <default>false</default>
+        <label>Venezuela</label>
+    </customValue>
+    <customValue>
+        <fullName>Vietnam</fullName>
+        <default>false</default>
+        <label>Vietnam</label>
+    </customValue>
+    <customValue>
+        <fullName>Weathervane</fullName>
+        <default>false</default>
+        <label>Weathervane</label>
+    </customValue>
+    <customValue>
+        <fullName>Zambia</fullName>
+        <default>false</default>
+        <label>Zambia</label>
+    </customValue>
+    <customValue>
+        <fullName>Zimbabwe</fullName>
+        <default>false</default>
+        <label>Zimbabwe</label>
+    </customValue>
+    <customValue>
+        <fullName>Russia - Ukraine Crisis</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Russia - Ukraine Crisis</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial &amp; Consumer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Industrial &amp; Consumer</label>
+    </customValue>
+    <masterLabel>Libraries</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

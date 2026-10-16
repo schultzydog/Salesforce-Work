@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Contact</object>
+        <objectField>Account</objectField>
+        <userField>Account</userField>
+    </accessMappings>
+    <name>Client Portal - Admin Role</name>
+    <profiles>client portal (external)</profiles>
+</SharingSet>

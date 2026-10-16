@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Reminder to action x days remaining before renewal</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>Opportunity: Pending Renewal</name>
+    <style>freeForm</style>
+    <subject>Renewal Reminder: {!Opportunity.Account} ({!Opportunity.Days_until_next_renewal_due__c} days)</subject>
+    <textOnly>Dear {!Opportunity.OwnerFirstName},
+
+Your renewal opportunity for {!Opportunity.Name} at the amount of {!Opportunity.Amount} is {!Opportunity.Days_until_next_renewal_due__c} from renewal with a status of {!Opportunity.StageName}. Please start the renewal conversation with your POC {!Opportunity.Primary_Client_Contact__c} and update the opportunity to reflect the status here: {!Opportunity.Link}
+
+A reminder of the targeted Stage for the 7 days leading up to renewal:
+
+3 months       - Gather Client Feedback
+2 1/2 months - Draft Renewal Documents
+2 months       - Negotiations/Draft Contract Sent for Client Review
+1 1/2 months - Contract Sent
+1 month or less     - Contract Received/Change Opportunity to Win
+
+Thanks,
+Sales Ops</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

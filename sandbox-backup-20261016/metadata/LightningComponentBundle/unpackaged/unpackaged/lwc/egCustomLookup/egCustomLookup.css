@@ -1,0 +1,9 @@
+.full-width{
+    width: 100%;
+}
+input[disabled]:hover { 
+    cursor: default; 
+}
+.slds-input_faux{
+    padding-left: 2rem !important;
+}

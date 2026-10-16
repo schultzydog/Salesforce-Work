@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Contacts$Contact_ID_18_Digit__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account$Business_Line__c</field>
+    </columns>
+    <columns>
+        <field>Account$Industry</field>
+    </columns>
+    <columns>
+        <field>Account$Type</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Contact_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account$ShippingCountry</field>
+    </columns>
+    <currency>USD</currency>
+    <description>All contacts with &quot;Industrial &amp; Consumer&quot; as an active preference.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Contacts.Contact_Preferences__r$Account_Preferences__c.Library__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Healthcare &amp; Medical Devices</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Enabled</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Contacts subscribed to I&amp;C</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Preferences_and_Account_Owners_EG__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

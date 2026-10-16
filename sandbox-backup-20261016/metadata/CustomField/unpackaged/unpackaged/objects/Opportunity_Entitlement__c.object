@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Preference__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Account Preference</label>
+        <referenceTo>Account_Preferences__c</referenceTo>
+        <relationshipName>Opportunity_Preferences</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Opportunity_Preferences</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Library__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Library</label>
+        <referenceTo>Library__c</referenceTo>
+        <relationshipLabel>Opportunity Entitlements</relationshipLabel>
+        <relationshipName>Opportunity_Entitlements</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <label>Opportunity Product</label>
+        <referenceTo>OpportunityLineItem</referenceTo>
+        <relationshipLabel>Opportunity Entitlements</relationshipLabel>
+        <relationshipName>Opportunity_Entitlements</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>Opportunity_Preferences</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+</CustomObject>

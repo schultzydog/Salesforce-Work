@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New Sale</fullName>
+        <default>true</default>
+        <label>New Sale</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Renewal</fullName>
+        <default>false</default>
+        <label>Renewal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voting</fullName>
+        <default>false</default>
+        <label>Voting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trial Conversion</fullName>
+        <default>false</default>
+        <label>Trial Conversion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trial</fullName>
+        <default>false</default>
+        <label>Trial</label>
+    </standardValue>
+</StandardValueSet>

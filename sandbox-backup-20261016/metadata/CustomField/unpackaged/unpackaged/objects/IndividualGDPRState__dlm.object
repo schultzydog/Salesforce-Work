@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CreatedBy__c</fullName>
+        <label>Created By</label>
+        <length>60</length>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Created By</labelOverride>
+            <masterLabel>Created By</masterLabel>
+            <refAttrDeveloperName>CreatedBy</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>CreatedDate__c</fullName>
+        <label>Created Date</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Created Date</labelOverride>
+            <masterLabel>Created Date</masterLabel>
+            <refAttrDeveloperName>CreatedDate</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DataSourceObject__c</fullName>
+        <label>Data Source Object</label>
+        <length>60</length>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Data Source Object</labelOverride>
+            <masterLabel>Data Source Object</masterLabel>
+            <refAttrDeveloperName>DataSourceObject</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>DataSource__c</fullName>
+        <label>Data Source</label>
+        <length>60</length>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Data Source</labelOverride>
+            <masterLabel>Data Source</masterLabel>
+            <refAttrDeveloperName>DataSource</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutProcessing__c</fullName>
+        <label>Do Not Process</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Do Not Process</labelOverride>
+            <masterLabel>Do Not Process</masterLabel>
+            <refAttrDeveloperName>HasOptedOutProcessing</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>Id__c</fullName>
+        <label>Id</label>
+        <length>60</length>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Id</labelOverride>
+            <masterLabel>Id</masterLabel>
+            <primaryIndexOrder>1</primaryIndexOrder>
+            <refAttrDeveloperName>Id</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>IndividualId__c</fullName>
+        <label>Individual Id</label>
+        <length>60</length>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Individual Id</labelOverride>
+            <masterLabel>Individual Id</masterLabel>
+            <refAttrDeveloperName>IndividualId</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>LastModifiedBy__c</fullName>
+        <label>Last Modified By</label>
+        <length>60</length>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Last Modified By</labelOverride>
+            <masterLabel>Last Modified By</masterLabel>
+            <refAttrDeveloperName>LastModifiedBy</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>LastModifiedDate__c</fullName>
+        <label>Last Modified Date</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Last Modified Date</labelOverride>
+            <masterLabel>Last Modified Date</masterLabel>
+            <refAttrDeveloperName>LastModifiedDate</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>OptOutProcessRequestCompletionDate__c</fullName>
+        <label>Opt Out Process Request Completion Date</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Opt Out Process Request Completion Date</labelOverride>
+            <masterLabel>Opt Out Process Request Completion Date</masterLabel>
+            <refAttrDeveloperName>OptOutProcessRequestCompletionDate</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>OptOutProcessRequestDate__c</fullName>
+        <label>Opt Out Process Request Date</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Opt Out Process Request Date</labelOverride>
+            <masterLabel>Opt Out Process Request Date</masterLabel>
+            <refAttrDeveloperName>OptOutProcessRequestDate</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SendIndividualDataRequestCompletionDate__c</fullName>
+        <label>SendIndividualDataRequestCompletionDate</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>SendIndividualDataRequestCompletionDate</labelOverride>
+            <masterLabel>SendIndividualDataRequestCompletionDate</masterLabel>
+            <refAttrDeveloperName>SendIndividualDataRequestCompletionDate</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SendIndividualDataRequestDate__c</fullName>
+        <label>Send Individual Data Request Date</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Send Individual Data Request Date</labelOverride>
+            <masterLabel>Send Individual Data Request Date</masterLabel>
+            <refAttrDeveloperName>SendIndividualDataRequestDate</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SendIndividualData__c</fullName>
+        <label>Export Individual&apos;s Data</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Export Individual&apos;s Data</labelOverride>
+            <masterLabel>Export Individual&apos;s Data</masterLabel>
+            <refAttrDeveloperName>SendIndividualData</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>ShouldForgetRequestCompletionDate__c</fullName>
+        <label>Should Forget Request Completion Date</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Should Forget Request Completion Date</labelOverride>
+            <masterLabel>Should Forget Request Completion Date</masterLabel>
+            <refAttrDeveloperName>ShouldForgetRequestCompletionDate</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ShouldForgetRequestDate__c</fullName>
+        <label>Should Forget Request Date</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Should Forget Request Date</labelOverride>
+            <masterLabel>Should Forget Request Date</masterLabel>
+            <refAttrDeveloperName>ShouldForgetRequestDate</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ShouldForget__c</fullName>
+        <label>Forget This Individual</label>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Forget This Individual</labelOverride>
+            <masterLabel>Forget This Individual</masterLabel>
+            <refAttrDeveloperName>ShouldForget</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Number</type>
+    </fields>
+    <fields>
+        <fullName>TenantId__c</fullName>
+        <label>Tenant Id</label>
+        <length>60</length>
+        <mktDataModelFieldAttributes>
+            <definitionCreationType>System</definitionCreationType>
+            <invalidMergeActionType>Drop</invalidMergeActionType>
+            <isDynamicLookup>false</isDynamicLookup>
+            <labelOverride>Tenant Id</labelOverride>
+            <masterLabel>Tenant Id</masterLabel>
+            <refAttrDeveloperName>TenantId</refAttrDeveloperName>
+            <usageTag>None</usageTag>
+        </mktDataModelFieldAttributes>
+        <required>false</required>
+        <type>Text</type>
+    </fields>
+    <mktDataModelAttributes>
+        <creationType>System</creationType>
+        <dataModelTaxonomy>Salesforce_SFDCReferenceModel_0_93</dataModelTaxonomy>
+        <dataSpaceName>default</dataSpaceName>
+        <isEnabled>true</isEnabled>
+        <isSegmentable>false</isSegmentable>
+        <isUsedForMetrics>false</isUsedForMetrics>
+        <labelOverride>IndividualGDPRState</labelOverride>
+        <masterLabel>IndividualGDPRState</masterLabel>
+        <objectCategory>Salesforce_SFDCReferenceModel_0_93.Profile</objectCategory>
+        <referenceEntityName>IndividualGDPRState</referenceEntityName>
+    </mktDataModelAttributes>
+</CustomObject>

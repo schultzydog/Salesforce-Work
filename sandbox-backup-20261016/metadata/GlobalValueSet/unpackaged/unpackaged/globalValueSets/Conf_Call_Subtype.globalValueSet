@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>EG Speaker Call</fullName>
+        <default>false</default>
+        <label>EG Speaker Call</label>
+    </customValue>
+    <customValue>
+        <fullName>External Speaker Call</fullName>
+        <default>false</default>
+        <label>External Speaker Call</label>
+    </customValue>
+    <customValue>
+        <fullName>External Speaker Call w/VIP</fullName>
+        <default>false</default>
+        <label>External Speaker Call w/VIP</label>
+    </customValue>
+    <customValue>
+        <fullName>Top Risks Call</fullName>
+        <default>false</default>
+        <label>Top Risks Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Press conference</fullName>
+        <default>false</default>
+        <label>Press conference</label>
+    </customValue>
+    <masterLabel>Conf Call Subtype</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account-Account Layout</members>
+        <members>AccountBrand-Account Brand Layout</members>
+        <members>AccountTeamMember-Account Team Member Layout</members>
+        <members>Account_Preferences__c-Account Preference Layout</members>
+        <members>Account_Snapshot__c-Account Snapshot Layout</members>
+        <members>ActionPlan-Action Plan Layout</members>
+        <members>ActionPlanItemDependency-Action Plan Item Dependency Layout</members>
+        <members>ActionPlanTemplate-Action Plan Template Layout</members>
+        <members>ActionPlanTemplateItem-Action Plan Template Item Layout</members>
+        <members>ActionPlanTemplateItemValue-Action Plan Template Item Value Layout</members>
+        <members>ActionPlanTemplateVersion-Action Plan Template Version Layout</members>
+        <members>ActionPlnTmplItmDependency-Action Plan Template Item Dependency Layout</members>
+        <members>AlternativePaymentMethod-Alternative Payment Method Layout</members>
+        <members>Analyst_Appearance__c-Analyst Appearance Layout</members>
+        <members>ApprovalSubmission-Approval Submission Layout</members>
+        <members>ApprovalSubmissionDetail-Approval Submission Detail Layout</members>
+        <members>ApprovalWorkItem-Approval Work Item Layout</members>
+        <members>Asset-Asset Layout</members>
+        <members>AssetRelationship-Asset Relationship Layout</members>
+        <members>AssociatedLocation-Associated Location Layout</members>
+        <members>AuthorizationFormConsent-Authorization Form Consent Layout</members>
+        <members>AuthorizationFormDataUse-Authorization Form Data Use Layout</members>
+        <members>BCT__c-BCT Tracker Entry Layout</members>
+        <members>Billing_Schedule_Entry__c-Billing schedule entry Layout</members>
+        <members>BusinessBrand-Business Brand Layout</members>
+        <members>Campaign-Campaign Layout</members>
+        <members>Campaign-Parent Campaign Layout</members>
+        <members>CampaignMember-Campaign Member Page Layout</members>
+        <members>CampaignMemberStatus-Campaign Member Status Layout</members>
+        <members>Candidate__c-Candidate Layout</members>
+        <members>CardPaymentMethod-Card Payment Method Layout</members>
+        <members>Case-Case Layout</members>
+        <members>CaseClose-Close Case Layout</members>
+        <members>Client__c-Client%2FOpportunity Layout</members>
+        <members>CollaborationGroup-Group Layout</members>
+        <members>CommSubscriptionConsent-Communication Subscription Consent Layout</members>
+        <members>CommunityMemberLayout-Community Member Layout</members>
+        <members>Competitor__c-Competitor Layout</members>
+        <members>Conference_Call_Department__c-Conference Call Department Layout</members>
+        <members>Conference_Call_Speaker__c-Conference Call Attendee Layout</members>
+        <members>Conference_Call_Staging__c-Conference Call Staging Layout</members>
+        <members>Conference_Call__c-EG Event Layout</members>
+        <members>Connector__c-Connector Layout</members>
+        <members>Contact-Standard Layout</members>
+        <members>Contact-VVIP</members>
+        <members>ContactPointAddress-Contact Point Address Layout</members>
+        <members>ContactPointEmail-Contact Point Email Layout</members>
+        <members>ContactPointPhone-Contact Point Phone Layout</members>
+        <members>ContactRequest-Contact Request Layout</members>
+        <members>Contact_Enablement_History__c-Conact Enablement History Layout</members>
+        <members>Contact_Preferences__c-Contact Preferences Layout</members>
+        <members>ContentAsset-Asset File Layout</members>
+        <members>ContentVersion-Content Version Layout</members>
+        <members>Contract_Adjustments__c-Contract Adjustment Layout</members>
+        <members>Contract_Code__c-Contract Code Layout</members>
+        <members>Contract__c-Outlaw Contract Layout</members>
+        <members>Country_Rating__c-Trajectory Layout</members>
+        <members>CreditMemo-Credit Memo Layout</members>
+        <members>CreditMemoLine-Credit Memo Line Layout</members>
+        <members>CspTrustedSite-Content Security Policy Trusted Site Layout</members>
+        <members>Customer-Customer Layout</members>
+        <members>Customer_Id__c-Customer Id Layout</members>
+        <members>DataQueryWorkspace-Query Editor Layout</members>
+        <members>DataSpace-Data Space Layout</members>
+        <members>DelegatedAccount-External Managed Account Layout</members>
+        <members>Deliverable__c-Deliverable Layout</members>
+        <members>Department__c-Department Layout</members>
+        <members>Destination__c-Destination Layout</members>
+        <members>DigitalWallet-Digital Wallet Layout</members>
+        <members>DuplicateRecordItem-Duplicate Record Item Layout</members>
+        <members>DuplicateRecordSet-Duplicate Record Set Layout</members>
+        <members>EG_Event_Registrant__c-EG Event Attendee Layout</members>
+        <members>EG_Event_Survey_Submission__c-EG Event Survey Submission Layout</members>
+        <members>EG_In_Media__mdt-EG In Media Layout</members>
+        <members>EG_Project_Task__c-EG Project Task Layout</members>
+        <members>EG_Project__c-EG Project Layout</members>
+        <members>EG_Time_Card__c-EG Time Card Layout</members>
+        <members>EG_Time_Entry__c-EG Time Entry Layout</members>
+        <members>EmailMessage-Email Message Layout</members>
+        <members>Error_Log__c-Error Log Layout</members>
+        <members>Event-Event Layout</members>
+        <members>FeedItem-Feed Item Layout</members>
+        <members>FeedItem-TEST</members>
+        <members>FlowInterview-Flow Interview Layout</members>
+        <members>FlowOrchestration-Orchestration Layout</members>
+        <members>FlowOrchestrationWorkItem-Orchestration Work Item Layout</members>
+        <members>FlowRecord-Flow Layout</members>
+        <members>FlowRecordVersionOccurrence-%5F%5FMISSING LABEL%5F%5F PropertyFile - val FlowRecordVersionOccurrence not found in section StandardLayouts</members>
+        <members>Global-Global Layout</members>
+        <members>Global-Research</members>
+        <members>Idea-Idea Layout</members>
+        <members>IframeWhiteListUrl-Trusted Domain for Inline Frames Layout</members>
+        <members>Image-Image Layout</members>
+        <members>Individual-Individual Layout</members>
+        <members>Invoice-Invoice Layout</members>
+        <members>InvoiceLine-Invoice Line Layout</members>
+        <members>Invoice_Payment__c-Invoice Payment Layout</members>
+        <members>Invoice__c-Invoice Layout</members>
+        <members>Key_Analytic_Assumption__c-Key Analytic Assumption Layout</members>
+        <members>Key_Event__c-Key Event Layout</members>
+        <members>Key_Signpost__c-Key Signpost Layout</members>
+        <members>KnowBe4_Module__c-KnowBe4 Module Layout</members>
+        <members>KnowBe4_User_Result__c-KnowBe4 User Result Layout</members>
+        <members>LSG_Agenda_Item_Opportunity__c-LSG Agenda Item Opportunity Layout</members>
+        <members>LSG_Agenda_Item__c-LSG Agenda Item Layout</members>
+        <members>LSG_Agenda__c-LSG Agenda Layout</members>
+        <members>Lead-Basic</members>
+        <members>Lead-Lead Layout</members>
+        <members>Leader__c-Leader Layout</members>
+        <members>Library_Product__c-Product Library Layout</members>
+        <members>Library__c-Country</members>
+        <members>Library__c-Library Layout</members>
+        <members>Library__c-Practice Group</members>
+        <members>Library__c-Region</members>
+        <members>Library__c-Region Permission</members>
+        <members>Library__c-Sector Permission</members>
+        <members>ListEmail-List Email Layout</members>
+        <members>LiveChatTranscriptActive-Chat Transcript %28In Progress%29 Layout</members>
+        <members>LiveChatTranscriptWaiting-Chat Transcript %28Waiting%29 Layout</members>
+        <members>Location-Location Layout</members>
+        <members>Macro-Macro Layout</members>
+        <members>Media_Appearance__c-Media Appearance Layout</members>
+        <members>Member__c-Member Layout</members>
+        <members>Morning_Meeting_Note__c-Morring Meeting Note Layout</members>
+        <members>Opportunity-Admin</members>
+        <members>Opportunity-Opportunity Layout</members>
+        <members>Opportunity-Renewal Opp Layout</members>
+        <members>OpportunityContactRole-Opportunity Contact Role Layout</members>
+        <members>OpportunityLineItem-EG Layout</members>
+        <members>OpportunityLineItemSchedule-Line Item Schedule Layout</members>
+        <members>OpportunitySplit-Opportunity Split Layout</members>
+        <members>OpportunityTeamMember-Opportunity Team Member Layout</members>
+        <members>Opportunity_Entitlement__c-Opportunity Preference Layout</members>
+        <members>Opportunity_Request__c-Opportunity Request Layout</members>
+        <members>Opportunity_Snapshot__c-Opportunity Snapshot Layout</members>
+        <members>Order-Order Layout</members>
+        <members>OrderAdjustmentGroup-Order Adjustment Group Layout</members>
+        <members>OrderAdjustmentGroupSummary-Order Adjustment Group Summary Layout</members>
+        <members>OrderDeliveryGroup-Order Delivery Group Layout</members>
+        <members>OrderDeliveryGroupSummary-Order Delivery Group Summary Layout</members>
+        <members>OrderDeliveryMethod-Order Delivery Method Layout</members>
+        <members>OrderItem-Order Product Layout</members>
+        <members>OrderItemAdjustmentLineItem-Order Product Adjustment Line Item Layout</members>
+        <members>OrderItemAdjustmentLineSummary-Order Product Adjustment Line Item Summary Layout</members>
+        <members>OrderItemSummary-Order Product Summary Layout</members>
+        <members>OrderItemSummaryChange-Order Product Summary Change Layout</members>
+        <members>OrderItemSummaryRelationship-Order Product Summary Relationship Layout</members>
+        <members>OrderItemTaxLineItem-Order Product Tax Line Item Layout</members>
+        <members>OrderItemTaxLineItemSummary-Order Product Tax Line Item Summary Layout</members>
+        <members>OrderPaymentSummary-Order Payment Summary Layout</members>
+        <members>OrderPaymentSummaryReference-Order Payment Summary Reference Layout</members>
+        <members>OrderSummary-Order Summary Layout</members>
+        <members>OrderSummaryRelationship-Order Summary Relationship Layout</members>
+        <members>Outlook-Standard</members>
+        <members>PV_Entry__c-PV Entry Layout</members>
+        <members>PartyConsent-Party Consent Layout</members>
+        <members>Payment-Payment Layout</members>
+        <members>PaymentAuthAdjustment-Payment Authorization Adjustment Layout</members>
+        <members>PaymentAuthorization-Payment Authorization Layout</members>
+        <members>PaymentGateway-Payment Gateway Layout</members>
+        <members>PaymentGatewayLog-Payment Gateway Log Layout</members>
+        <members>PaymentGroup-Payment Group Layout</members>
+        <members>PaymentLineInvoice-Payment Line Invoice Layout</members>
+        <members>Political_Risk_Analysis__c-Political Risk Analysis Layout</members>
+        <members>Portal_Setting__mdt-Portal Setting Layout</members>
+        <members>Practice_Group__c-Practice Group Layout</members>
+        <members>Pricebook2-Price Book Layout</members>
+        <members>PricebookEntry-Price Book Entry Layout</members>
+        <members>ProcessException-Process Exception Layout</members>
+        <members>Product2-Product Layout</members>
+        <members>Project__c-Project Layout</members>
+        <members>Publication_Reviews__c-Publication Review Layout</members>
+        <members>Publication__c-Publication Layout</members>
+        <members>QuickText-Quick Text Layout</members>
+        <members>Quote-Quote Layout</members>
+        <members>QuoteLineItem-Quote Line Item Layout</members>
+        <members>Race_to_the_Top__c-Racer Layout</members>
+        <members>RawInvoicePayment__c-RawInvoicePayment Layout</members>
+        <members>RawInvoice__c-RawInvoice Layout</members>
+        <members>RawPublication__c-RawPublication Layout</members>
+        <members>Refund-Refund Layout</members>
+        <members>RefundLinePayment-Refund Line Payment Layout</members>
+        <members>Regional_Analysis__c-Regional Analysis Layout</members>
+        <members>Reporter__c-Reporter Layout</members>
+        <members>SLR_Entry__c-SLR Line Layout</members>
+        <members>SalesChannel-Sales Channel Layout</members>
+        <members>SalesforceContract-Salesforce Contract Layout</members>
+        <members>Scan_Code__c-Scan Code Layout</members>
+        <members>Scorecard-Scorecard Layout</members>
+        <members>ScorecardAssociation-Scorecard Association Layout</members>
+        <members>ScorecardMetric-Scorecard Metric Layout</members>
+        <members>Seller-Seller Layout</members>
+        <members>SiqExchangeConnection-Exchange Connection Layout</members>
+        <members>SiteIframeWhiteListUrl-Trusted Domains for Inline Frames Layout</members>
+        <members>Solution-Solution Layout</members>
+        <members>Survey-Survey Layout</members>
+        <members>SurveyInvitation-Survey Invitation Layout</members>
+        <members>SurveyQuestion-Survey Question Layout</members>
+        <members>SurveyVersion-Survey Version Layout</members>
+        <members>Task-Entitlements Review</members>
+        <members>Task-Task Layout</members>
+        <members>Tax_Rate__c-Tax Rate Layout</members>
+        <members>Timesheets_Setting__mdt-Timesheets Setting Layout</members>
+        <members>Top_Risk__c-Top Risk Entry Layout</members>
+        <members>Travel_Request__c-Travel Approval Request Layout</members>
+        <members>User-User Layout</members>
+        <members>UserAlt-User Profile Layout</members>
+        <members>ah_businesscard__Apex_Callout_Config__mdt-Apex Callout Config Layout</members>
+        <members>ah_businesscard__Document_Parsing_Config__mdt-Document Parsing Configuration Layout</members>
+        <members>ah_businesscard__Document_Scan_Role__mdt-Document Scan Role Layout</members>
+        <members>egX_Daily_Blueprint_w_o_Conference_Call__mdt-egX Daily Exception Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>62.0</version>
+</Package>

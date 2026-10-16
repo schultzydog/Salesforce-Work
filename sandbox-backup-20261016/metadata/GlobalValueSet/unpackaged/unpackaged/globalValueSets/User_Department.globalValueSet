@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Brazil/Latin America Client Services</fullName>
+        <default>false</default>
+        <label>Brazil/Latin America Client Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Communications &amp; Marketing</fullName>
+        <default>false</default>
+        <label>Communications &amp; Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Consumer &amp; Retail</fullName>
+        <default>false</default>
+        <label>Corporates Consumer &amp; Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Energy &amp; Resources</fullName>
+        <default>false</default>
+        <label>Corporates Energy &amp; Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates General</fullName>
+        <default>false</default>
+        <label>Corporates General</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Geostrategy</fullName>
+        <default>false</default>
+        <label>Corporates Geostrategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Geo-technology</fullName>
+        <default>false</default>
+        <label>Corporates Geo-technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Global Environment &amp; Sustainability</fullName>
+        <default>false</default>
+        <label>Corporates Global Environment &amp; Sustainability</label>
+    </customValue>
+    <customValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive Management</fullName>
+        <default>false</default>
+        <label>Executive Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance</fullName>
+        <default>false</default>
+        <label>Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Markets</fullName>
+        <default>false</default>
+        <label>Global Markets</label>
+    </customValue>
+    <customValue>
+        <fullName>GZERO Media</fullName>
+        <default>false</default>
+        <label>GZERO Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Human Resources</fullName>
+        <default>false</default>
+        <label>Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Information Technology</fullName>
+        <default>false</default>
+        <label>Information Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan Client Services</fullName>
+        <default>false</default>
+        <label>Japan Client Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of the President</fullName>
+        <default>false</default>
+        <label>Office of the President</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Africa</fullName>
+        <default>false</default>
+        <label>Research Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Brazil</fullName>
+        <default>false</default>
+        <label>Research Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>Research China &amp; Northeast Asia</fullName>
+        <default>false</default>
+        <label>Research China &amp; Northeast Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Editorial</fullName>
+        <default>false</default>
+        <label>Research Editorial</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Eurasia</fullName>
+        <default>false</default>
+        <label>Research Eurasia</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Europe</fullName>
+        <default>false</default>
+        <label>Research Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Geoeconomics</fullName>
+        <default>false</default>
+        <label>Research Geoeconomics</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Global Macro</fullName>
+        <default>false</default>
+        <label>Research Global Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Latin America</fullName>
+        <default>false</default>
+        <label>Research Latin America</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Management</fullName>
+        <default>false</default>
+        <label>Research Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Middle East &amp; North Africa</fullName>
+        <default>false</default>
+        <label>Research Middle East &amp; North Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>Research South Asia</fullName>
+        <default>false</default>
+        <label>Research South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Southeast Asia</fullName>
+        <default>false</default>
+        <label>Research Southeast Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Trade &amp; Supply Chains</fullName>
+        <default>false</default>
+        <label>Research Trade &amp; Supply Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Research United States</fullName>
+        <default>false</default>
+        <label>Research United States</label>
+    </customValue>
+    <customValue>
+        <fullName>Shared Services &amp; Operations</fullName>
+        <default>false</default>
+        <label>Shared Services &amp; Operations</label>
+    </customValue>
+    <customValue>
+        <fullName>Unassigned</fullName>
+        <default>false</default>
+        <label>Unassigned</label>
+    </customValue>
+    <customValue>
+        <fullName>Research South &amp; Southeast Asia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Research South &amp; Southeast Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade and Customs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Trade and Customs</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Aerospace &amp; Defense</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporates Aerospace &amp; Defense</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Professional Services, Philanthropy &amp; Non-Profit, Public Sector (PPP)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporates Professional Services, Philanthropy &amp; Non-Profit, Public Sector (PPP)</label>
+    </customValue>
+    <customValue>
+        <fullName>Research General</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Research General</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Industrial &amp; Consumer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporates Industrial &amp; Consumer</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Financial Institutions Group</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporates Financial Institutions Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Healthcare &amp; Medical Devices</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporates Healthcare &amp; Medical Devices</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates Healthcare</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporates Healthcare</label>
+    </customValue>
+    <masterLabel>User Department</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

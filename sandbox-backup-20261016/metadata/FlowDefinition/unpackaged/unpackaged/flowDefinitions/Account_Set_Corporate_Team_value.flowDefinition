@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>11</activeVersionNumber>
+    <description>This flow sets the Corporate Team value on account which aligns to the Client Services Team field on the owner&apos;s user record</description>
+    <masterLabel>Account: Set Client Services Team value</masterLabel>
+</FlowDefinition>

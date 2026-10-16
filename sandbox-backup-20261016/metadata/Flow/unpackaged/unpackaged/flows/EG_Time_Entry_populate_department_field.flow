@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>sets the time entry department field equal to the user department field on the owner record</description>
+    <environments>Default</environments>
+    <interviewLabel>EG Time Entry: populate department field {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EG Time Entry: populate department field</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Department_field</name>
+        <label>Update Department field</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>Opportunity_Owner_Department__c</field>
+            <value>
+                <elementReference>$Record.Opportunity__r.Owner.Department__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opportunity_Owner_Team__c</field>
+            <value>
+                <elementReference>$Record.Opportunity__r.Owner.Client_Services_Team__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Staff_Class__c</field>
+            <value>
+                <elementReference>$Record.EG_Time_Card__r.Owner:User.Staff_Class__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Time_Entry_Department__c</field>
+            <value>
+                <elementReference>$Record.EG_Time_Card__r.Owner:User.Department__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Time_Entry_Team__c</field>
+            <value>
+                <elementReference>$Record.EG_Time_Card__r.Owner:User.Client_Services_Team__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Department_field</targetReference>
+        </connector>
+        <object>EG_Time_Entry__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

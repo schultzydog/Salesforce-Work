@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>Active_EG_Products</fullName>
+        <columns>PRICEBOOK.NAME</columns>
+        <columns>PRODUCT.NAME</columns>
+        <columns>PRODUCT.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRICEBOOK.CURRENCY_ISO_CODE</columns>
+        <columns>PRODUCT.DEFAULT_PRICE</columns>
+        <columns>PRODUCT.ACTIVE</columns>
+        <columns>HAS_DEF_REV_SCHEDULE</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active EG Products</label>
+        <queue>Eurasia Group</queue>
+    </listViews>
+    <listViews>
+        <fullName>Active_Recurring_Products</fullName>
+        <columns>PRODUCT.NAME</columns>
+        <columns>PRODUCT.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT.DEFAULT_PRICE</columns>
+        <columns>PRODUCT.ACTIVE</columns>
+        <columns>PRICEBOOK.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>PRICEBOOK.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Recurring Products</label>
+    </listViews>
+    <listViews>
+        <fullName>Eurasia_Group_custom</fullName>
+        <columns>PRODUCT.NAME</columns>
+        <columns>PRODUCT.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT.DEFAULT_PRICE</columns>
+        <columns>PRODUCT.ACTIVE</columns>
+        <columns>PRODUCT2.FAMILY_ENUM</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>PRICEBOOK.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>PRODUCT.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Eurasia Group custom</label>
+        <queue>Eurasia Group</queue>
+    </listViews>
+    <listViews>
+        <fullName>GZERO</fullName>
+        <columns>PRODUCT.NAME</columns>
+        <columns>PRODUCT.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT.DEFAULT_PRICE</columns>
+        <columns>PRODUCT.ACTIVE</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>PRODUCT.NAME</field>
+            <operation>contains</operation>
+            <value>GZERO</value>
+        </filters>
+        <label>GZERO</label>
+        <queue>Eurasia Group</queue>
+    </listViews>
+    <listViews>
+        <fullName>Poll_products</fullName>
+        <columns>PRODUCT.NAME</columns>
+        <columns>PRODUCT.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT.DEFAULT_PRICE</columns>
+        <columns>PRODUCT.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.FAMILY_ENUM</field>
+            <operation>contains</operation>
+            <value>Poll</value>
+        </filters>
+        <label>Poll products</label>
+    </listViews>
+</CustomObject>

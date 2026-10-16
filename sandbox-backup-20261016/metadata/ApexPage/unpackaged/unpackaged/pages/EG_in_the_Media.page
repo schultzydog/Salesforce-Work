@@ -1,0 +1,4 @@
+<apex:page showHeader="false">
+<c:EG_in_the_Media >
+</c:EG_in_the_Media>
+</apex:page>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EG_Time_Entry__c$Date__c</field>
+    </columns>
+    <columns>
+        <field>EG_Time_Entry__c$Owner__c</field>
+    </columns>
+    <columns>
+        <field>EG_Time_Entry__c$Hours_Worked__c</field>
+    </columns>
+    <columns>
+        <field>EG_Time_Entry__c$EG_Project_Task_Name__c</field>
+    </columns>
+    <columns>
+        <field>EG_Time_Entry__c$Opportunity__c</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Tabular</format>
+    <name>EG Time Entries</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>EG_Time_Entries__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EG_Time_Entry__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

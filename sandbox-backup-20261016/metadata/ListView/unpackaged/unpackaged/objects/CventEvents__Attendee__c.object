@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>Lead_Attendees</fullName>
+        <columns>NAME</columns>
+        <columns>CventEvents__AttendeeName__c</columns>
+        <columns>Attended__c</columns>
+        <columns>CventEvents__AttendingFormat__c</columns>
+        <columns>CventEvents__Email__c</columns>
+        <columns>CventEvents__RegistrationDate__c</columns>
+        <columns>CventEvents__RegistrationPathId__c</columns>
+        <columns>CventEvents__RespondedThrough__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CventEvents__Lead__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>CventEvents__Contact__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Lead Attendees</label>
+    </listViews>
+    <listViews>
+        <fullName>Lead_Attendees_no_reg_date</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CventEvents__AttendeeName__c</columns>
+        <columns>Attended__c</columns>
+        <columns>CventEvents__AttendingFormat__c</columns>
+        <columns>CventEvents__Email__c</columns>
+        <columns>CventEvents__RegistrationDate__c</columns>
+        <columns>CventEvents__RegistrationPathId__c</columns>
+        <columns>CventEvents__RespondedThrough__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CventEvents__Lead__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>CventEvents__Contact__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>CventEvents__RegistrationDate__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Lead Attendees no reg date</label>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Custom</fullName>
+        <default>false</default>
+        <label>Custom</label>
+    </customValue>
+    <customValue>
+        <fullName>50-50</fullName>
+        <default>false</default>
+        <label>50-50</label>
+    </customValue>
+    <customValue>
+        <fullName>One Time</fullName>
+        <default>false</default>
+        <label>One Time</label>
+    </customValue>
+    <customValue>
+        <fullName>Monthly in Advance</fullName>
+        <default>false</default>
+        <label>Monthly in Advance</label>
+    </customValue>
+    <customValue>
+        <fullName>Monthly in Arrears</fullName>
+        <default>false</default>
+        <label>Monthly in Arrears</label>
+    </customValue>
+    <customValue>
+        <fullName>Quarterly in Advance</fullName>
+        <default>false</default>
+        <label>Quarterly in Advance</label>
+    </customValue>
+    <customValue>
+        <fullName>Quarterly in Arrears</fullName>
+        <default>false</default>
+        <label>Quarterly in Arrears</label>
+    </customValue>
+    <customValue>
+        <fullName>Semi-Annually in Adv</fullName>
+        <default>false</default>
+        <label>Semi-Annually in Adv</label>
+    </customValue>
+    <customValue>
+        <fullName>Annually in Advance</fullName>
+        <default>false</default>
+        <label>Annually in Advance</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Billing Cycle</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

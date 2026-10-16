@@ -1,0 +1,287 @@
+.scrollable-area{
+    overflow-y: auto;
+    height: 100%;
+    margin-right: -12px;
+    padding-right: 12px;
+}
+.full-height{
+    height: 100%;
+}
+.almost-full-height{
+    height: calc(100% - 69px);
+}
+.political-risk-menu{
+    z-index: 1;
+    width: 200px;
+    height: calc(100vh - 75px);
+    position: fixed;
+    top: 75px;
+    left: -30px;    
+    background: #1D4F9122;
+}
+.political-risk-menu.menu-is-open{
+    left: 175px;
+    -webkit-transition: left .2s;
+    -moz-transition: left .2s;
+    -o-transition: left .2s;    
+    transition: left .2s;
+}
+.political-risk-menu .navigation-section{
+    background-color: #00A3E0;
+    color: #ffffff;
+}
+.political-risk-menu .slds-list_dotted{
+    color: #00A3E055;
+}
+.political-risk-content{
+    font-size: 0.875rem;
+    margin-left: 0;
+    border: #c9c9c9 solidå 1px;
+    background-color: #ffffff;
+    padding: 32px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+}
+.political-risk-content.menu-is-open{
+    margin-left: 200px;
+    -webkit-transition: margin-left .2s;
+    -moz-transition: margin-left .2s;
+    -o-transition: margin-left .2s;    
+    transition: margin-left .2s;
+}
+.navigation-section{
+    width: 100%;
+	margin-top: 16px;
+    margin-bottom: 8px;
+    background-color: rgb(195, 195, 195);
+    color: #555;
+    padding: 3px;
+	padding-left: 16px;
+}
+.logo img{
+    margin-top: -2px;
+}
+.political-risk-menu .label{
+    margin-left: -3px;
+}
+.political-risk-menu a{
+    font-size: 0.75rem;
+}
+.political-risk-links{
+    color: rgb(195, 195, 195);
+}
+.back-arrow{
+    margin-left: -6px;
+}
+.back-arrow a i{
+    color: #ffffff;
+}
+ul hr{
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: -24px;
+}
+.download-container{
+    margin-left: 9px;
+}
+.region-flag{
+    width: 80px;
+    height: auto;
+    border: #ccc solid 1px;
+}
+.region-flag.medium{
+    width: 32px;
+    height: auto;
+    border: #ccc solid 1px;
+}
+.region-flag.small{
+    width: 24px;
+    height: auto;
+    border: #ccc solid 1px;
+}
+
+.slds-table_bordered {
+    border: 1px solid #e5e5e5;
+}
+.fa-arrow-circle-up{
+    font-size: 20px;
+}
+.arrow-icon{
+    width: 20px;
+    height: 20px;
+    margin-top: -4px;
+}
+.Significantly.negative{
+    font-weight: bold;
+}
+.Negative{
+    font-weight: bold;
+}
+.Neutral{
+    font-weight: bold;
+}
+.Positive{
+    font-weight: bold;
+}
+.Significantly.positive{
+    font-weight: bold;
+}
+
+.Very.low{
+    font-weight: bold;
+}
+.Low{
+    font-weight: bold;
+}
+.Medium{
+    font-weight: bold;
+}
+.High{
+    font-weight: bold;
+}
+.Very.high{
+    font-weight: bold;
+}
+
+.Confidence.low{
+    font-weight: bold;
+}
+.Confidence.medium{
+    font-weight: bold;
+}
+.Confidence.high{
+    font-weight: bold;
+}
+
+.risk-change div:first-child{
+    width: 100%;
+    height: 32px;
+    padding-top: 6px;
+    margin: auto;
+}
+.risk-change .Extremely.positive{
+    background-color: rgb(91, 205, 112) !important;
+}
+.risk-change .Significantly.positive{
+    background-color: rgb(128, 205, 142) !important;
+}
+.risk-change .Positive{
+    background-color: rgb(198, 255, 210) !important;
+}
+.risk-change .Neutral{
+    background-color: #efefef !important;
+    color: #ccc;
+}
+.risk-change .Negative{
+    background-color: rgb(255, 198, 198) !important;
+}
+.risk-change .Significantly.negative{
+    background-color: rgb(252, 152, 152) !important;
+}
+.risk-change .Extremely.negative{
+    background-color: rgb(246, 103, 103) !important;
+}
+
+
+
+.political-risk-content tbody th,
+.political-risk-content tbody td{
+    background-color: rgb(250,250,250);
+    color: #444;
+}
+
+.fa-rotate-45 {
+    filter: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.fa-rotate-135 {
+    filter: none;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.indented-tables{
+    padding-left: 64px;
+}
+
+.is-new,
+.is-new tr,
+.is-new th,
+.is-new td{
+    background-color: rgb(255, 255, 213) !important;
+}
+
+th, tbody td{
+    font-size: 0.875rem;
+}
+.border{
+    border-left: solid 1px #bbb;
+}
+.text-vertical{
+    -moz-transform:rotate(-90deg); /* Firefox */
+  -webkit-transform:rotate(-90deg); /* Webkit */        
+  -ms-transform:rotate(-90deg); /* IE */
+  -o-transform:rotate(-90deg); /* Opera */
+  transform:rotate(-90deg); /* future */
+}
+.vertical-td{
+    height: 100px;
+    text-align: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.top{
+    margin-top: -50px;
+    padding-top: 50px;
+}
+
+
+/* Works on Firefox */
+.scrollable-area {
+    scrollbar-width: thin;
+    scrollbar-color: #999 #ddd8d3;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.scrollable-area::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scrollable-area::-webkit-scrollbar-track {
+    background: #ddd8d3;
+}
+
+.scrollable-area::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #ddd8d3;  /* creates padding around scroll thumb */
+}
+table thead tr th{
+    background-color: #00205B;
+    color: #ffffff;
+}
+
+table tbody tr th table thead tr  th,
+table tbody tr td table thead tr th{
+    background-color: #d8d8d8;
+    color: #444444;
+}
+.slds-text-heading_large{
+    color: #1D4F91;
+    font-weight: 400;
+}
+
+
+.heatmap-table .slds-table--cell-buffer tr>td:last-child, 
+.heatmap-table .heatmap-table .slds-table--cell-buffer tr>th:last-child, 
+.slds-table_cell-buffer tr>td:last-child, 
+.heatmap-table .slds-table_cell-buffer tr>th:last-child {
+    padding-right: 8px !important;
+}

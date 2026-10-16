@@ -1,0 +1,158 @@
+<template>
+    <div class="list-view">
+        <template lwc:if={isEvent}>
+            <header class="list-header">
+                <div class="list-title-row">
+                    <lightning-icon
+                        icon-name="standard:event"
+                        size="small"
+                        alternative-text="Event"
+                    ></lightning-icon>
+                    <h1 class="list-title">Event time entry</h1>
+                </div>
+                <p class="list-meta">{pageMeta}</p>
+            </header>
+        </template>
+        <template lwc:elseif={isEmail}>
+            <header class="list-header">
+                <div class="list-title-row">
+                    <lightning-icon
+                        icon-name="standard:email"
+                        size="small"
+                        alternative-text="Email"
+                    ></lightning-icon>
+                    <h1 class="list-title">Email time entry</h1>
+                </div>
+                <p class="list-meta">{pageMeta}</p>
+            </header>
+        </template>
+        <template lwc:else>
+            <header class="list-header">
+                <div class="list-title-row">
+                    <lightning-icon
+                        icon-name="standard:event"
+                        size="small"
+                        alternative-text="Time entry"
+                    ></lightning-icon>
+                    <h1 class="list-title">Log time</h1>
+                </div>
+                <p class="list-meta">Select an Outlook event or email</p>
+            </header>
+        </template>
+
+        <div class="panel-body">
+            <template lwc:if={isSupportedItem}>
+                <div class="form-card">
+                    <div class="group-caption">
+                        <span class="group-rule"></span>
+                        <span class="group-label">Time entry</span>
+                        <span class="group-rule"></span>
+                    </div>
+
+                    <template lwc:if={showMatchStatus}>
+                        <p class={matchStatusClass}>{matchStatus}</p>
+                    </template>
+
+                    <lightning-input
+                        type="date"
+                        label="Date"
+                        value={workDate}
+                        disabled={isDateReadOnly}
+                        onchange={handleDateChange}
+                        required
+                    ></lightning-input>
+
+                    <lightning-record-picker
+                        label="Account"
+                        object-api-name="Account"
+                        value={accountId}
+                        placeholder="Search accounts"
+                        onchange={handleAccountChange}
+                    ></lightning-record-picker>
+
+                    <template lwc:if={showProjectPicker}>
+                        <lightning-record-picker
+                            label="Project"
+                            object-api-name="EG_Project__c"
+                            value={projectId}
+                            filter={projectFilter}
+                            placeholder="Search projects"
+                            onchange={handleProjectChange}
+                        ></lightning-record-picker>
+                    </template>
+                    <template lwc:else>
+                        <lightning-input
+                            label="Project"
+                            value=""
+                            placeholder="Select an account first"
+                            disabled
+                        ></lightning-input>
+                    </template>
+
+                    <template lwc:if={showTaskPicker}>
+                        <lightning-record-picker
+                            label="Project Task"
+                            object-api-name="EG_Project_Task__c"
+                            value={projectTaskId}
+                            filter={taskFilter}
+                            placeholder="Search project tasks"
+                            onchange={handleTaskChange}
+                        ></lightning-record-picker>
+                    </template>
+                    <template lwc:else>
+                        <lightning-input
+                            label="Project Task"
+                            value=""
+                            placeholder="Select a project first"
+                            disabled
+                        ></lightning-input>
+                    </template>
+
+                    <lightning-input
+                        type="number"
+                        label="Hours"
+                        value={hoursWorked}
+                        step="0.25"
+                        min="0"
+                        formatter="decimal"
+                        onchange={handleHoursChange}
+                        required
+                    ></lightning-input>
+
+                    <lightning-textarea
+                        label="Notes"
+                        value={notes}
+                        onchange={handleNotesChange}
+                    ></lightning-textarea>
+
+                    <div class="form-actions">
+                        <lightning-button
+                            variant="brand"
+                            label={submitLabel}
+                            title={submitLabel}
+                            data-id="submit"
+                            onclick={handleSubmit}
+                            disabled={isSubmitDisabled}
+                        ></lightning-button>
+                    </div>
+
+                    <template lwc:if={isSubmitting}>
+                        <lightning-spinner
+                            alternative-text="Saving"
+                            size="small"
+                        ></lightning-spinner>
+                    </template>
+
+                    <template lwc:if={message}>
+                        <div class={messageClass} role="alert">{message}</div>
+                    </template>
+                </div>
+            </template>
+            <template lwc:else>
+                <p class="empty-state">
+                    Open an Outlook email or calendar event to log time against it.
+                </p>
+            </template>
+        </div>
+    </div>
+</template>

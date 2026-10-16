@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>2166005</fullName>
+        <default>false</default>
+        <label>Advisory - Global</label>
+    </customValue>
+    <customValue>
+        <fullName>2425815</fullName>
+        <default>false</default>
+        <label>Advisory - Developed Markets</label>
+    </customValue>
+    <customValue>
+        <fullName>2425795</fullName>
+        <default>false</default>
+        <label>Advisory -  Limited Global Fallback</label>
+    </customValue>
+    <customValue>
+        <fullName>2425805</fullName>
+        <default>false</default>
+        <label>Advisory  - Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>2425825</fullName>
+        <default>false</default>
+        <label>Advisory - ECR Only</label>
+    </customValue>
+    <customValue>
+        <fullName>2425835</fullName>
+        <default>false</default>
+        <label>Advisory - Emerging/Frontier Markets</label>
+    </customValue>
+    <customValue>
+        <fullName>2425845</fullName>
+        <default>false</default>
+        <label>Advisory - Geotech Only</label>
+    </customValue>
+    <customValue>
+        <fullName>2425855</fullName>
+        <default>false</default>
+        <label>Advisory - Limited with Global Publications</label>
+    </customValue>
+    <customValue>
+        <fullName>2425885</fullName>
+        <default>false</default>
+        <label>Advisory - Single Country</label>
+    </customValue>
+    <customValue>
+        <fullName>2425895</fullName>
+        <default>false</default>
+        <label>Advisory - Single Region/Practice</label>
+    </customValue>
+    <customValue>
+        <fullName>2425905</fullName>
+        <default>false</default>
+        <label>Advisory - Trial</label>
+    </customValue>
+    <customValue>
+        <fullName>2425915</fullName>
+        <default>false</default>
+        <label>Advisory - Voting</label>
+    </customValue>
+    <customValue>
+        <fullName>1528265</fullName>
+        <default>false</default>
+        <label>Custom Client Report</label>
+    </customValue>
+    <customValue>
+        <fullName>2425935</fullName>
+        <default>false</default>
+        <label>eg update (Enterprise)</label>
+    </customValue>
+    <customValue>
+        <fullName>2425945</fullName>
+        <default>false</default>
+        <label>eg update (Individual)</label>
+    </customValue>
+    <customValue>
+        <fullName>2196975</fullName>
+        <default>false</default>
+        <label>Presentation</label>
+    </customValue>
+    <customValue>
+        <fullName>2425785</fullName>
+        <default>false</default>
+        <label>Publications Only - No Advisory</label>
+    </customValue>
+    <customValue>
+        <fullName>2425925</fullName>
+        <default>false</default>
+        <label>Advisory - Other</label>
+    </customValue>
+    <customValue>
+        <fullName>2326295</fullName>
+        <default>false</default>
+        <label>GZERO Sponsorship</label>
+    </customValue>
+    <customValue>
+        <fullName>2324865</fullName>
+        <default>false</default>
+        <label>GZERO Live-streamed Single Event</label>
+    </customValue>
+    <customValue>
+        <fullName>2168345</fullName>
+        <default>false</default>
+        <label>Speaking Event</label>
+    </customValue>
+    <customValue>
+        <fullName>2425865</fullName>
+        <default>false</default>
+        <label>Advisory - Limited/Top Markets (12 Markets)</label>
+    </customValue>
+    <customValue>
+        <fullName>2536945</fullName>
+        <default>false</default>
+        <label>Articles, Books, etc</label>
+    </customValue>
+    <customValue>
+        <fullName>2425875</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Advisory - Limited/Top Markets</label>
+    </customValue>
+    <masterLabel>Project Template</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

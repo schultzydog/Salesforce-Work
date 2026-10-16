@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Active_Library__c</fullName>
+        <formula>Tag__r.Active__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active Library</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <label>Campaign ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Delete_Members__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Delete Members</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EG_Event__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>EG Event</label>
+        <referenceTo>Conference_Call__c</referenceTo>
+        <relationshipLabel>Campaigns</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quant_Product__c</fullName>
+        <formula>Tag__r.Quant_Product__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Quant Product</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Send_Attachments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to denote which contact lists opted to receive emails with attachments instead of links to portal publications</description>
+        <label>Send Attachments</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tag__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Used in campaigns managing member lists of who should receive content about a specific category; represents the category linked to this campaign</description>
+        <label>Tag</label>
+        <referenceTo>Library__c</referenceTo>
+        <relationshipLabel>Campaigns</relationshipLabel>
+        <relationshipName>Campaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>With_Attachments_Campaign__c</fullName>
+        <formula>CONTAINS( Name , &apos;with Attachments&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>With Attachments Campaign</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

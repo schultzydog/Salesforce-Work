@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>LineItemQuantityProductDate</members>
+        <members>LineItemQuantityScheduleDate</members>
+        <members>LineItemRevenueProductDate</members>
+        <members>LineItemRevenueScheduleDate</members>
+        <members>Opp_Rev_by_Date</members>
+        <members>OpportunityLineItemQuantity</members>
+        <members>OpportunityLineItemRevenue</members>
+        <members>OpportunityOverlayRevenue</members>
+        <members>OpportunityQuantity</members>
+        <members>OpportunityQuantityProductDate</members>
+        <members>OpportunityQuantityScheduleDate</members>
+        <members>OpportunityRevenue</members>
+        <members>OpportunityRevenueProductDate</members>
+        <members>OpportunityRevenueScheduleDate</members>
+        <members>OpportunitySplitRevenue</members>
+        <name>ForecastingType</name>
+    </types>
+    <version>62.0</version>
+</Package>

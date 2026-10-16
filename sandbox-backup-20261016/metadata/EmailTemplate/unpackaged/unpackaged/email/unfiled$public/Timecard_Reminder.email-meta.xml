@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Timecard Reminder</name>
+    <style>freeForm</style>
+    <subject>Please complete last week&apos;s timesheet in Salesforce</subject>
+    <textOnly>{!EG_Time_Card__c.OwnerFirstName},
+
+Your Salesforce timesheet for last week is incomplete. Please submit complete by no later than end of day.
+
+• Goal is to be accurate—especially on client work—but we are not looking for you to account minute by minute.
+• If you believe a client project is missing or have any questions about where to log your time, please let Christina W. know.
+
+Complete timesheets here - 
+https://eurasiagroup.lightning.force.com/lightning/n/EG_Timesheets
+
+A guide to internal projects and tasks is available on the Guide to Projects and Tasks in Timesheets.xlsx here - https://eurasiagroup.sharepoint.com/:x:/g/Business%20Development/EbgDxx1SSchFmA5I9Xdl9r8B5_ILALDSeCLLfuFXB8Ljew?e=VaLaTt&amp;ovuser=c5698eff-16b0-4594-92c4-790461230a8b%2Cwehrmann%40eurasiagroup.net&amp;CID=8E8028E2-DBB1-4A98-9979-86189BAD27F9&amp;wdLOR=c9C7477D8-DF49-485F-A5D3-91CFDF4151B1</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

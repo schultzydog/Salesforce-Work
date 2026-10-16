@@ -1,0 +1,15 @@
+<apex:page showHeader="false" sidebar="false" >
+    <title>Brazil Congressional Tracker</title>
+    <apex:includeLightning />    
+    <div id="lightning" />    
+    <script>
+    $Lightning.use("c:egbctTrackerApp", function() {
+        $Lightning.createComponent("c:egBCTTracker",
+          { 
+          },
+          "lightning",
+          function(cmp) {
+          });
+    });
+    </script>
+</apex:page>

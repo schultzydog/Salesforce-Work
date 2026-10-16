@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>true</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Summit</fullName>
+        <default>false</default>
+        <label>Summit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EG Conference Call</fullName>
+        <default>false</default>
+        <label>EG Conference Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Roundtable</fullName>
+        <default>false</default>
+        <label>Roundtable</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WhatsApp/Instant Message</fullName>
+        <default>false</default>
+        <label>WhatsApp/Instant Message</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Briefing</fullName>
+        <default>false</default>
+        <label>Briefing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ian Bremmer event</fullName>
+        <default>false</default>
+        <label>Ian Bremmer event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </standardValue>
+</StandardValueSet>

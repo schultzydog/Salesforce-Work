@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Account_ID_18_Digit__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account$Business_Line__c</field>
+    </columns>
+    <columns>
+        <field>Account$Corporate_Sector_Team__c</field>
+    </columns>
+    <columns>
+        <field>Account$Industry</field>
+    </columns>
+    <columns>
+        <field>Account$Type</field>
+    </columns>
+    <columns>
+        <field>Account$ShippingAddress</field>
+    </columns>
+    <columns>
+        <field>Account$ShippingCountry</field>
+    </columns>
+    <currency>USD</currency>
+    <description>All enabled accounts with &quot;Healthcare &amp; Medical Devices&quot; as an active library.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$Status_Enable_Disable__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Enabled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Preferences__r$Library__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Healthcare &amp; Medical Devices</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Accounts subscribed to Healthcare &amp; MD</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_with_Account_Preference__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

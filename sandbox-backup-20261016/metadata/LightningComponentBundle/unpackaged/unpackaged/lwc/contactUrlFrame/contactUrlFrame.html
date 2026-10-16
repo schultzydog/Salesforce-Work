@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title={cardTitle} icon-name="utility:world">
+        <lightning-button-icon
+            slot="actions"
+            icon-name="utility:new_window"
+            variant="border-filled"
+            alternative-text="Open in new tab"
+            title="Open in new tab"
+            disabled={cannotOpen}
+            onclick={handleOpenInNewTab}
+        ></lightning-button-icon>
+
+        <div class="slds-var-p-horizontal_small slds-var-p-bottom_small">
+            <template lwc:if={isLoading}>
+                <div class="frame-placeholder" style={frameStyle}>
+                    <lightning-spinner
+                        alternative-text="Loading"
+                        size="small"
+                    ></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:elseif={errorMessage}>
+                <div class="slds-var-p-vertical_medium slds-text-color_error">
+                    <lightning-icon
+                        icon-name="utility:error"
+                        variant="error"
+                        size="x-small"
+                    ></lightning-icon>
+                    <span class="slds-var-m-left_x-small">{errorMessage}</span>
+                </div>
+            </template>
+
+            <template lwc:elseif={frameUrl}>
+                <iframe
+                    class="embedded-frame"
+                    src={frameUrl}
+                    title={cardTitle}
+                    style={frameStyle}
+                    sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads"
+                ></iframe>
+            </template>
+
+            <template lwc:else>
+                <div class="slds-var-p-vertical_medium slds-text-color_weak">
+                    This contact is not in Retool yet.
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,3 @@
+This is an automatic email from Salesforce letting you know that {!Account.Name} was just disabled by {!Account.LastModifiedBy}. 
+
+You can view the account record here -{!Account.Link}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Time/Location Reminder</name>
+    <style>freeForm</style>
+    <subject>Please complete last week&apos;s location tracking Salesforce</subject>
+    <textOnly>{!EG_Time_Card__c.OwnerFirstName}
+
+You&apos;re receiving this email because either your time or location tracking are incomplete for last week. On last week&apos;s timecard you currently have:
+{!EG_Time_Card__c.Hours_Worked__c} hours entered {!EG_Time_Card__c.Location_Complete_Ratio__c} days completed
+
+Please complete by no later than end of day.
+
+A guide to internal projects and tasks is available on the Guide to Projects and Tasks in Timesheets.xlsx
+Goal is to be accurate—especially on client work—but we are not looking for you to account minute by minute
+If you believe a client project is missing or have any questions about where to log your time, please let Dan D. or Christina W. know
+
+- This email was sent automatically from Salesforce. If you feel this email reached you in error, or if you are experiencing any issues with the Timesheets app in Salesforce, please reach out to Adam S. with your concerns.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

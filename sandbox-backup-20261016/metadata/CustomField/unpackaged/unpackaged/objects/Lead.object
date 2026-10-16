@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>APAC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>APAC</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Account_Primary_Domain__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Primary Domain</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Account__r.Type)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>this is the account that matches the email domain of this lead</description>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <description>Active lead is defined as one that was created less than 6 months ago or has had an activity logged within the last 6 months</description>
+        <formula>TODAY() -   DATEVALUE(CreatedDate ) &lt; 181 ||
+Today() -  LastActivityDate &lt; 181</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Africa__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Africa</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Apex_Conversion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Apex Conversion</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Asia__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This is for pardot prospecting</description>
+        <label>Asia</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_using_Email_Domain__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Assigned using Email Domain</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attendee_Type__c</fullName>
+        <label>Attendee Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EG Client</fullName>
+                    <default>false</default>
+                    <label>EG Client</label>
+                </value>
+                <value>
+                    <fullName>B3 Client</fullName>
+                    <default>false</default>
+                    <label>B3 Client</label>
+                </value>
+                <value>
+                    <fullName>Media</fullName>
+                    <default>false</default>
+                    <label>Media</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Australia__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This is for pardot prospecting</description>
+        <label>Australia</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BriteVerify_Email_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>BriteVerify Email Status</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BriteVerify_Last_Validation_Date__c</fullName>
+        <label>BriteVerify Last Validation Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BriteVerify_Secondary_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>BriteVerify Secondary Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C_R_Master_List__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>C&amp;R Master List</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Company_Referral_Account_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Referral Account Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Conf_Call_Attended__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Conf Call Attended</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Consumer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Consumer</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Email_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Contact Email Access</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Portal_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Contact Portal Access</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Send_Preferences_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Contact Send Preferences Email</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Status__c</fullName>
+        <defaultValue>&apos;Disabled&apos;</defaultValue>
+        <description>This field is used to hold the default Status value of Disabled. When leads are converted into contacts, this value maps to the contact defaulting the contact to Disabled.</description>
+        <label>Contact Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Disabled</fullName>
+                    <default>false</default>
+                    <label>Disabled</label>
+                </value>
+                <value>
+                    <fullName>Enabled</fullName>
+                    <default>false</default>
+                    <label>Enabled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact_us_form_Interested_In__c</fullName>
+        <label>Contact us form - Interested In</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Contact_us_form_Interested_In</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Conversion_Account_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Conversion Account Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Conversion_Owner_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Conversion Owner Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Convert_to_Enabled_Contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Convert to Enabled Contact</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ConvertedDate_in_last_12_months__c</fullName>
+        <formula>TODAY() - ConvertedDate &lt; 365</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ConvertedDate in last 12 months</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Converted_Contact_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Converted Contact Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Converted_Contact_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Contact_Status__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Converted Contact Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Converted_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Converted Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Corporate_Marketing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Corporate Marketing</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Corporate_Sector_Team__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Department</formula>
+        <label>Corporate Sector Team</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Corporate_email_address__c</fullName>
+        <formula>NOT Personal_email_address__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Corporate email address</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_last_12_months__c</fullName>
+        <formula>NOW() -  CreatedDate &lt; 365</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Created in last 12 months</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_last_week__c</fullName>
+        <formula>now() - CreatedDate &lt; 8</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Created in last week</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_using_card_scanner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created using card scanner</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>DM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Last_Conf_Call_Attendance__c</fullName>
+        <label>Date of Last Conf Call Attendance</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Last_Conf_Call_aggregation__c</fullName>
+        <label>Date of Last Conf Call aggregation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deliver_Full_Content_Emails__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>this field exists to default the converted contact to unchecked</description>
+        <label>Deliver Full Content Emails</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <externalId>false</externalId>
+        <label>Department/Division</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EG_Update_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>LOWER( FirstName )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EG Update Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>EM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ESG__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>ESG</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Email_domain__c</fullName>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE(Email, LEFT(Email, FIND(&quot;@&quot;, Email)), NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email domain</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Energy_Commodities__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Energy / Commodities</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Europe__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Europe</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Form_Message__c</fullName>
+        <inlineHelpText>Message included when form was completed</inlineHelpText>
+        <label>Form Message</label>
+        <length>2550</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Geotech_Prospects__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Geotech Prospects</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Gloma_Prospects_Master_List__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Gloma Prospects Master List</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Gloma_Tech__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Gloma Tech</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Google_this_Company__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://www.google.com/search?q=&quot;&amp; Company  ,&quot;Click here to search&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google this Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Healthcare__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Healthcare</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Japanese_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Japanese Account Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Japanese_Address__c</fullName>
+        <label>Japanese Address</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Japanese_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Japanese First Name</label>
+        <length>120</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Japanese_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Japanese Last Name</label>
+        <length>120</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Japanese_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Japanese Title</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_Date_Time__c</fullName>
+        <formula>LastModifiedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Modified Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LatAm__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>LatAm</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Latest_Assigned_Date__c</fullName>
+        <label>Latest Assigned Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Conversion_Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>ConvertedDate - DATEVALUE(CreatedDate)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Conversion Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Level__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+OR(
+CONTAINS(UPPER( Title ), &quot;CHIEF&quot;),
+CONTAINS(UPPER(Title), &quot;CEO&quot;),
+CONTAINS(UPPER(Title), &quot;CFO&quot;),
+CONTAINS(UPPER(Title), &quot;COO&quot;),
+CONTAINS(UPPER(Title), &quot;CIO&quot;),
+CONTAINS(UPPER(Title), &quot;CTO&quot;),
+CONTAINS(UPPER(Title), &quot;CISO&quot;),
+CONTAINS(UPPER(Title), &quot;CHRO&quot;),
+CONTAINS(UPPER(Title), &quot;PRESIDENT&quot;)
+),
+&quot;C-suite&quot;,
+IF(
+OR(
+CONTAINS(UPPER(Title), &quot;EVP&quot;),
+CONTAINS(UPPER(Title), &quot;EXECUTIVE VICE PRESIDENT&quot;),
+CONTAINS(UPPER(Title), &quot;SVP&quot;),
+CONTAINS(UPPER(Title), &quot;SENIOR VICE PRESIDENT&quot;),
+CONTAINS(UPPER(Title), &quot;VP&quot;),
+CONTAINS(UPPER(Title), &quot;VICE PRESIDENT&quot;),
+CONTAINS(UPPER(Title), &quot;HEAD&quot;),
+CONTAINS(UPPER(Title), &quot;BOARD&quot;),
+CONTAINS(UPPER(Title), &quot;MD&quot;),
+CONTAINS(UPPER(Title), &quot;MANAGING DIRECTOR&quot;),
+CONTAINS(UPPER(Title), &quot;PARTNER&quot;)
+),
+&quot;Senior Leader&quot;,
+IF(
+OR(
+CONTAINS(UPPER(Title), &quot;DIRECTOR&quot;),
+CONTAINS(UPPER(Title), &quot;MANAGER&quot;),
+CONTAINS(UPPER(Title), &quot;PM&quot;),
+CONTAINS(UPPER(Title), &quot;LEAD&quot;),
+CONTAINS(UPPER(Title), &quot;COUNSEL&quot;),
+CONTAINS(UPPER(Title), &quot;ANALYST&quot;),
+CONTAINS(UPPER(Title), &quot;ASSOCIATE&quot;),
+CONTAINS(UPPER(Title), &quot;SPECIALIST&quot;),
+CONTAINS(UPPER(Title), &quot;COORDINATOR&quot;)
+),
+&quot;Working-Level&quot;,
+&quot;No Title&quot;
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Owner_Department__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Department</formula>
+        <label>Lead Owner: Department</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+    Personal_email_address__c,
+    0,
+    (
+        IF(
+            OR(
+                Account_Type__c = &quot;Prospect&quot;,
+                Account_Type__c = &quot;Former Prospect&quot;,
+                Account_Type__c = &quot;Former Client&quot;
+            ),
+            1,
+            0
+        )
+    )
+    +
+    (
+        IF(
+            Conf_Call_Attended__c = 0, 0,
+            IF(Conf_Call_Attended__c &lt; 3, 1, 2)
+        )
+    )
+    +
+    IF(NOT(Personal_email_address__c), 1, 0)
+    +
+    IF(
+        OR(
+            BriteVerify_Email_Status__c = &quot;valid&quot;,
+            BriteVerify_Email_Status__c = &quot;accept_all&quot;
+        ),
+        1,
+        0
+    )
+    +
+    IF(
+        OR(
+            CONTAINS(UPPER(Title), &quot;CHIEF&quot;),
+            CONTAINS(UPPER(Title), &quot;DIRECTOR&quot;),
+            CONTAINS(UPPER(Title), &quot;CEO&quot;),
+            CONTAINS(UPPER(Title), &quot;PRESIDENT&quot;),
+            CONTAINS(UPPER(Title), &quot;EXECUTIVE&quot;),
+            CONTAINS(UPPER(Title), &quot;HEAD&quot;),
+            CONTAINS(UPPER(Title), &quot;BOARD&quot;),
+            CONTAINS(UPPER(Title), &quot;MANAGER&quot;),
+            CONTAINS(UPPER(Title), &quot;CIO&quot;),
+            CONTAINS(UPPER(Title), &quot;COO&quot;),
+            CONTAINS(UPPER(Title), &quot;CFO&quot;),
+            CONTAINS(UPPER(Title), &quot;CTO&quot;),
+            CONTAINS(UPPER(Title), &quot;COUNSEL&quot;)
+        ),
+        1,
+        0
+    )
+    +
+    IF(NOT(ISBLANK(Country)), 1, 0)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MENA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>MENA</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Macro__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Macro</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Region__c</fullName>
+        <label>Marketing Region</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Marketing_Region</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Country__c</fullName>
+        <description>holds the old country value that exists prior to state and country picklist implementation</description>
+        <externalId>false</externalId>
+        <label>Old Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_State__c</fullName>
+        <description>holds the old state value that exists prior to state and country picklist implementation</description>
+        <externalId>false</externalId>
+        <label>Old State</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oslo_Prospect__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Oslo Prospect</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_s_Client_Services_Team__c</fullName>
+        <label>Owner&apos;s Client Services Team</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Brazil/Latin America Client Services</fullName>
+                    <default>false</default>
+                    <label>Brazil/Latin America Client Services</label>
+                </value>
+                <value>
+                    <fullName>Shared Services &amp; Operations</fullName>
+                    <default>false</default>
+                    <label>Shared Services &amp; Operations</label>
+                </value>
+                <value>
+                    <fullName>Corporates</fullName>
+                    <default>false</default>
+                    <label>Corporates</label>
+                </value>
+                <value>
+                    <fullName>Executive Management</fullName>
+                    <default>false</default>
+                    <label>Executive Management</label>
+                </value>
+                <value>
+                    <fullName>Global Markets</fullName>
+                    <default>false</default>
+                    <label>Global Markets</label>
+                </value>
+                <value>
+                    <fullName>GZERO Media</fullName>
+                    <default>false</default>
+                    <label>GZERO Media</label>
+                </value>
+                <value>
+                    <fullName>Japan Client Services</fullName>
+                    <default>false</default>
+                    <label>Japan Client Services</label>
+                </value>
+                <value>
+                    <fullName>Office of the President</fullName>
+                    <default>false</default>
+                    <label>Office of the President</label>
+                </value>
+                <value>
+                    <fullName>Research</fullName>
+                    <default>false</default>
+                    <label>Research</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_s_Department__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner&apos;s Department</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pension_Fund__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is checked for leads imported for the Pension Fund campaign initiative</description>
+        <label>Pension Fund</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Personal_email_address__c</fullName>
+        <formula>CONTAINS( Email , &apos;gmail.co&apos;)  || 
+CONTAINS( Email , &apos;hotmail.co&apos;)  || 
+CONTAINS( Email , &apos;yahoo.&apos;)  || 
+CONTAINS( Email , &apos;outlook.co&apos;)  || 
+CONTAINS( Email , &apos;aol.co&apos;)  || 
+CONTAINS( Email , &apos;@me.co&apos;)  || 
+CONTAINS( Email , &apos;.edu&apos;)  || 
+CONTAINS( Email , &apos;icloud.co&apos;)  || 
+CONTAINS( Email , &apos;mac.co&apos;)  || 
+CONTAINS( Email , &apos;charter.net&apos;)  || 
+CONTAINS( Email , &apos;comcast.net&apos;)  || 
+CONTAINS( Email , &apos;msn.co&apos;)  || 
+CONTAINS( Email , &apos;centurylink.net&apos;) ||
+CONTAINS( Email , &apos;gmai.com&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Personal email address</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Regions_or_subjects_of_interest__c</fullName>
+        <label>Regions or subjects of interest</label>
+        <length>25000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Scandinavia__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This is used for Pardot prospecting</description>
+        <label>Scandinavia</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Seniority_Level__c</fullName>
+        <label>Seniority Level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>C-Suite &amp; Board Leadership</fullName>
+                    <default>false</default>
+                    <label>C-Suite &amp; Board Leadership</label>
+                </value>
+                <value>
+                    <fullName>Senior Executive Leadership</fullName>
+                    <default>false</default>
+                    <label>Senior Executive Leadership</label>
+                </value>
+                <value>
+                    <fullName>Executive Leadership</fullName>
+                    <default>false</default>
+                    <label>Executive Leadership</label>
+                </value>
+                <value>
+                    <fullName>Director or Senior Manager</fullName>
+                    <default>false</default>
+                    <label>Director or Senior Manager</label>
+                </value>
+                <value>
+                    <fullName>Subject-Matter Expert or Advisor</fullName>
+                    <default>false</default>
+                    <label>Subject-Matter Expert or Advisor</label>
+                </value>
+                <value>
+                    <fullName>Program Support</fullName>
+                    <default>false</default>
+                    <label>Program Support</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sophie_Top_Risks__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Sophie Top Risks</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>State_non_picklist__c</fullName>
+        <externalId>false</externalId>
+        <label>State - non picklist</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tech__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Tech</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Buyer__c</fullName>
+        <label>Type of Buyer</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Investor</fullName>
+                    <default>false</default>
+                    <label>Investor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>US_Gloma_Prospects__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>US Gloma Prospects</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>US__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>US</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>UTM_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <label>UTM Campaign</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UTM_Content__c</fullName>
+        <externalId>false</externalId>
+        <label>UTM Content</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UTM_Medium__c</fullName>
+        <externalId>false</externalId>
+        <label>UTM Medium</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UTM_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>UTM Source</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UTM_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>UTM Term</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Under_1_year_old__c</fullName>
+        <formula>NOW() -  CreatedDate &lt; 366</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Under 1 year old</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Unqualified_Reason__c</fullName>
+        <label>Unqualified Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Data</fullName>
+                    <default>false</default>
+                    <label>Data: Personal Email; Invalid Email; Invalid Phone; Duplicate; Spam/Test</label>
+                </value>
+                <value>
+                    <fullName>Engagement</fullName>
+                    <default>false</default>
+                    <label>Engagement: Unreachable; Unresponsive; Opted Out; Not Interested</label>
+                </value>
+                <value>
+                    <fullName>Fit</fullName>
+                    <default>false</default>
+                    <label>Fit: Not ICP; Wrong Role; Use Case Misaligned; Competitor/Partner; Non-Commercial</label>
+                </value>
+                <value>
+                    <fullName>Status</fullName>
+                    <default>false</default>
+                    <label>Status: Left Firm; Role Changed; Acquired/Merged; Company Closed</label>
+                </value>
+                <value>
+                    <fullName>Timing/Budget</fullName>
+                    <default>false</default>
+                    <label>Timing/Budget: No Budget; Budget Frozen; Timeline &gt;12m; Evaluate Later</label>
+                </value>
+                <value>
+                    <fullName>Existing</fullName>
+                    <default>false</default>
+                    <label>Existing: Vendor Locked-In; Internal Solution; Already Committed</label>
+                </value>
+                <value>
+                    <fullName>Compliance/Legal: Sanctions/AML; KYC Failed; Policy Conflict; Jurisdiction Limitation</fullName>
+                    <default>false</default>
+                    <label>Compliance/Legal: Sanctions/AML; KYC Failed; Policy Conflict; Jurisdiction Limitation</label>
+                </value>
+                <value>
+                    <fullName>Operational: Capacity Constraint; Coverage Gap; Feature Gap; Pricing Misaligned</fullName>
+                    <default>false</default>
+                    <label>Operational: Capacity Constraint; Coverage Gap; Feature Gap; Pricing Misaligned</label>
+                </value>
+                <value>
+                    <fullName>Process: Incomplete Info; Missing Consent; Source Unreliable; Misrouted</fullName>
+                    <default>false</default>
+                    <label>Process: Incomplete Info; Missing Consent; Source Unreliable; Misrouted</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Leads1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Zoom_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Zoom State</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dupe__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>dupe</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

@@ -1,0 +1,282 @@
+<template>
+	<div class="page-container">
+
+		<div class="slds-media slds-media_center slds-m-vertical_small slds-m-horizontal_small">
+			<div class="slds-media__figure">
+				<lightning-combobox name="tableType" variant="label-hidden" class="table-select"
+					value={selectedTable} options={tableOptions} onchange={handleTableChange} ></lightning-combobox>			
+			</div>
+			<div class="slds-media__body slds-text-align_right">
+				<lightning-radio-group name="languageType" label="English/Portuguese" options={languageOptions}
+				value={selectedLanugage} variant="label-hidden" onchange={handleLanguageChange}
+				type="button"></lightning-radio-group>
+			</div>
+			<div class="slds-no-flex slds-m-left_medium">
+				<lightning-button-icon icon-name="utility:download" size="medium" variant="bare" onclick={download} alternative-text="Download table as CSV"></lightning-button-icon>
+			</div>
+		</div>
+
+		<div if:true={showTable1} class="table-1">
+			<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout" aria-label="">
+				<thead>
+					<tr class="slds-line-height_reset">
+						<th class="sector" scope="col" data-column="sector" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelSector}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelSector}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconSector}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="proposal" scope="col" data-column="proposal" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelProposal}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelProposal}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconProposal}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="type" scope="col" data-column="type" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelType}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelType}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconType}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="number" scope="col" data-column="number" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelNumber}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelNumber}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconNumber}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="summary" scope="col" data-column="summary" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelSummary}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelSummary}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconSummary}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="status" scope="col" data-column="status" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelStatus}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelStatus}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconStatus}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<!--
+						<th class="likelihood" scope="col" data-column="likelihood" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelLikelihood}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelLikelihood}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconLikelihood}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						-->
+						<th class="likelihoodThisYear" scope="col" data-column="likelihoodThisYear" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelLikelihoodThisYear}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelLikelihoodThisYear}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconLikelihoodThisYear}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="lastModified" scope="col" data-column="lastModified" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelLastModified}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelLastModified}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconLastModified}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<template for:each={rows} for:item="row">
+						<tr key={row.id} class="slds-hint-parent">
+							<th data-label="" scope="row">
+								<div class="slds-cell-wrap" title="">{row.sector}</div>
+							</th>
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.proposal}</div>
+							</td>
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.type}</div>
+							</td>
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.number}</div>
+							</td>
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.summary}</div>
+							</td>
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.status}</div>
+							</td>
+							<!-- 
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.likelihood}</div>
+							</td>
+							-->
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.likelihoodThisYear}</div>
+							</td>
+							<td data-label="">
+								<div class="slds-cell-wrap" title=""><lightning-formatted-date-time value={row.lastModified} time-zone="UTC"
+									year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></div>
+							</td>
+						</tr>
+					</template>
+				</tbody>
+			</table>
+			<div if:false={hasRows} class="slds-m-around_large slds-text-align_center slds-text-color_weak">
+				{labelNoRows}
+			</div>	
+		</div>
+
+		<div if:true={showTable2} class="table-2">
+			<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout" aria-label="">
+				<thead>
+					<tr class="slds-line-height_reset">
+						<!--
+						<th class="type" scope="col" data-column="type" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelType}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelType}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconType}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						-->
+						<th class="number" scope="col" data-column="number" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelNumber}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelNumber}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconNumber}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="summary" scope="col" data-column="summary" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelSummary}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelSummary}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconSummary}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="status" scope="col" data-column="status" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelStatus}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelStatus}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconStatus}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+						<th class="expiration" scope="col" data-column="expiration" onclick={sort}>
+							<div class="slds-cell-wrap" title={labelExpiration}>
+								<div class="slds-media slds-media_center">
+									<div class="slds-media__figure" style="flex-shrink: 1;">
+										{labelExpiration}
+									</div>
+									<div class="slds-media__body">
+										<lightning-icon size="x-small" icon-name={sortIconExpiration}></lightning-icon>
+									</div>
+								</div>
+							</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<template for:each={rows} for:item="row">
+						<tr key={row.id} class="slds-hint-parent">
+							<!--
+							<th data-label="" scope="row">
+								<div class="slds-cell-wrap" title="">{row.type}</div>
+							</th>
+							-->
+							<th data-label="" scope="row">
+								<div class="slds-cell-wrap" title="">{row.number}</div>
+							</th>
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.summary}</div>
+							</td>
+							<td data-label="">
+								<div class="slds-cell-wrap" title="">{row.status}</div>
+							</td>
+							<td data-label="">
+								<div class="slds-cell-wrap" title=""><lightning-formatted-date-time value={row.expiration} time-zone="UTC" year="numeric"
+									month="numeric" day="numeric"></lightning-formatted-date-time></div>
+							</td>
+						</tr>
+					</template>
+				</tbody>
+			</table>
+			<div if:false={hasRows} class="slds-m-around_large slds-text-align_center slds-text-color_weak">
+				{labelNoRows}
+			</div>
+		</div>
+	</div>
+
+	<template if:true={showSpinner}>
+		<div class="slds-spinner_container slds-is-relative slds-p-vertical_xx-large">
+			<lightning-spinner alternative-text="Loading"></lightning-spinner>
+		</div>
+	</template>
+
+</template>

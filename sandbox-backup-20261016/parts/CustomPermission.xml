@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Client_Portal_Self_Service_Administration</members>
+        <members>Send_Media_Appearance_Email</members>
+        <members>View_Product_Tab</members>
+        <name>CustomPermission</name>
+    </types>
+    <version>62.0</version>
+</Package>

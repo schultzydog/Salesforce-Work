@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>GLOMA - Q3 PF Outreach</name>
+    <style>freeForm</style>
+    <subject>Eurasia Group - Post-Pandemic Recovery Framework &amp; US Election Coverage</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+Hope to find you well.
+
+
+
+As we look into H2, we wanted to update you on recent work from our Global Strategy practice following a series of key investments into the group’s personnel and work.
+
+
+
+As part of our effort to map out the recovery to the COVID-19 pandemic and ground market expectations on any individual country’s economic recovery, our Global Strategy team developed a comprehensive framework that measures crisis response effectiveness across countries.
+
+
+
+The framework measures effectiveness across three dimensions – healthcare outcomes, leadership and coordination, and policy responses – and serves as a proxy for the likely future path countries will take out of the crisis in the eventual normalization of economy activity, political stability and social cohesion.
+
+
+
+Among our key findings:
+
+
+Across developed markets:
+
+Singapore, Australia and New Zealand have had the most effective leadership responses to the pandemic so far
+Canada, Germany, and Iceland have also been effective in their management of the crisis domestically and to some extent internationally through coordination efforts
+Conversely, the United States, the United Kingdom and Spain have been the DMs with least effective leadership responses. They lagged other countries in both domestic management and international cooperation efforts (though, it is worth noting the US scores very well on fiscal and monetary policy responses and the UK well on monetary policy response)
+
+Across emerging markets:
+
+The United Arab Emirates and Poland measure as having the most effective leadership responses and international coordination in handling the crisis
+On the other end of the spectrum, Brazil, Mexico, Indonesia, Iran and Turkey rank as the least effective EMs based on our framework
+
+Our framework revealed some surprises, in terms of countries that have outperformed relative to their starting political capacity (Greece, Argentina, South Africa and Ukraine), as well as countries that have underperformed relative to their starting political capacity (the UK, Japan, the US, Qatar and Saudi Arabia)
+
+
+
+
+Our Global Strategy practice continues to be led by Managing Director Alexander Kazan, with the recent addition of Dr. Robert Kahn to lead the firm’s work on the intersection of economics, policy and politics. He has been instrumental to our scenarios analysis around the Covid-19 pandemic and its impact on the global economy and markets.
+
+
+
+Formerly, Dr. Kahn was a Senior Fellow at the Council of Foreign Relations, where he wrote extensively on global macroeconomic policies, sanctions, and debt policy. Kahn has also held various senior-level positions at Citigroup and was Managing Director and head of the Sovereign Advisory Group.
+
+
+
+As we are gearing up for an eventful H2, the focus will firmly be on the US. Jon Lieber, Managing Director for the US and former Economic Policy Advisor to Senate Majority Leader Mitch McConnell will lead our election coverage with a that team integrates deep policy and electoral analysis, expertise in all key policy areas and industry leading capabilities at the intersection of politics, geopolitics and financial markets (see attached for more details).
+
+
+
+We hope you find useful. If you would like to learn more about our Global Strategy work and US election coverage, please do not hesitate to reach out.
+
+
+
+Kindest regards,
+
+
+
+Rachel
+
+
+
+Rachel Gangji | Head of Global Markets Advisory
+
+Eurasia Group | 30-31 Great Sutton Street | 1st Floor | London| EC1V 0NA
+
+t +44 (0)207. 375 6922
+
+gangji@eurasiagroup.net</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

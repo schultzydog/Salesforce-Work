@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Contacts$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.ActivityRelations$Subject</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.ActivityRelations$ActivityDate</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.ActivityRelations*Activity$Assigned_To_Users__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.ActivityRelations$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.ActivityRelations*Activity$Assigned_to_User_Department__c</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Current FY Client Activity Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Contacts.ActivityRelations$ActivityDate</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.Contacts.ActivityRelations$ActivityDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Media_Appearances__c</fullName>
+        <label>Media Appearance</label>
+        <referenceTo>Media_Appearance__c</referenceTo>
+        <relationshipLabel>Reporters</relationshipLabel>
+        <relationshipName>Reporters</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <label>Notes</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Reporter__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <label>Reporter</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Reporter Media Appearances</relationshipLabel>
+        <relationshipName>Reporters</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Report$Id</field>
+    </columns>
+    <columns>
+        <field>Report$Name</field>
+    </columns>
+    <columns>
+        <field>Report$ReportTypeEnumOrId</field>
+    </columns>
+    <columns>
+        <field>Report$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Report$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Report$LastRunDate</field>
+    </columns>
+    <columns>
+        <field>Report$LastModifiedBy</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Tabular</format>
+    <name>Report usage</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Reports_with_Report_Type__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Report$LastRunDate</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Report$LastRunDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

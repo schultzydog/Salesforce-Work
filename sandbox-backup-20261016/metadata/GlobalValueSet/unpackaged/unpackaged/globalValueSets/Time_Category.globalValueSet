@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Internal</fullName>
+        <default>false</default>
+        <label>Internal</label>
+    </customValue>
+    <customValue>
+        <fullName>Client</fullName>
+        <default>true</default>
+        <label>Client</label>
+    </customValue>
+    <customValue>
+        <fullName>General Research</fullName>
+        <default>false</default>
+        <label>General Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Publications</fullName>
+        <default>false</default>
+        <label>Publications</label>
+    </customValue>
+    <customValue>
+        <fullName>GZERO</fullName>
+        <default>false</default>
+        <label>GZERO</label>
+    </customValue>
+    <customValue>
+        <fullName>Time off</fullName>
+        <default>false</default>
+        <label>Time off</label>
+    </customValue>
+    <masterLabel>Time Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

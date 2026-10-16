@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Abbreviation__c</fullName>
+        <externalId>false</externalId>
+        <label>Abbreviation</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <label>Active</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Asia__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Asia</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Category_Abrv__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(Distribution_List_SubCategory__r.Distribution_List_Category__r.Abbreviation__c,Distribution_List_Category__r.Abbreviation__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Category Abrv.</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commodities__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Commodities</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Count_of_Active_Contact_Prefs__c</fullName>
+        <description>Counts all the active contact prefs related to this library</description>
+        <externalId>false</externalId>
+        <label>Count of Active Contact Prefs</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Ind_Email_Prefs_Press_Users__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Count of Ind Email Prefs Press Users</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Individual_Email_Contact_Prefs__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Count of Individual Email Contact Prefs</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Individual_Only_Prefs__c</fullName>
+        <externalId>false</externalId>
+        <label>Count of Individual Only Prefs</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Sum_Email_Prefs_Press_Users__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Count of Sum Email Prefs Press Users</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Summary_Email_Contact_Prefs__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Count of Summary Email Contact Prefs</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Summary_Only_Prefs__c</fullName>
+        <externalId>false</externalId>
+        <label>Count of Summary Only Prefs</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DL_Category_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Distribution_List_SubCategory__r.Distribution_List_Category__r.Name</formula>
+        <label>Distribution List Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DL_Category_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE(Distribution_List_SubCategory__r.Distribution_List_Category__r.Id,Distribution_List_Category__r.Id)</formula>
+        <label>DL_Category_ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DL_Subcategory_Display__c</fullName>
+        <externalId>false</externalId>
+        <formula>Distribution_List_SubCategory__r.Portal_Display_Name__c</formula>
+        <label>DL Subcategory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DM_Major_EM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>ties to the DM + Major EM button on pref edit UI</inlineHelpText>
+        <label>DM + Major EM</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>ties to the Developed Markets button on pref edit UI</inlineHelpText>
+        <label>DM</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Distribution_List_Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Distribution List Category</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Library__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Distribution List Category</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Library__c</referenceTo>
+        <relationshipLabel>Distribution List Sub-Categories</relationshipLabel>
+        <relationshipName>SubCategories</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Distribution_List_SubCategory__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Distribution List Sub-Category</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Library__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Distribution List Sub-Category</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Library__c</referenceTo>
+        <relationshipLabel>Distribution Lists</relationshipLabel>
+        <relationshipName>DistributionLists</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Eurasia_Group_coverage_but_not_in_MSCI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Eurasia Group coverage, but not in MSCI</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Exclusive_List__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This checkbox controls visibility of the library record in that if it is checked, then it will not appear on the account preferences custom interface. 
+
+In conjunction with this field, we leverage the Library Exception custom metadata object to list which accounts and libraries for which we CAN display library records checked as exclusive ilst = true</description>
+        <label>Exclusive List</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Flag_image_URL__c</fullName>
+        <label>Flag image URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Geostrategy__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Geostrategy</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Geotech__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>used for the Geotech quick select button on contact pref UI</description>
+        <label>Geotech</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hide_from_Contact_Preferences_pages__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Hide from Contact Preferences pages</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_for_ALL_prefs_for_Bloomberg__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The clients to be sent to Bloomberg are supposed to entitled to &apos;ALL&apos; preferences.  This checkbox is used to distinguish Library records that are included in the &apos;ALL&apos; preferences designation</description>
+        <label>Include for ALL prefs for Bloomberg</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Individual_Emails_ratio__c</fullName>
+        <formula>Count_of_Individual_Email_Contact_Prefs__c / Count_of_Active_Contact_Prefs__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Individual Emails ratio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Individual_Only_ratio__c</fullName>
+        <formula>Count_of_Individual_Only_Prefs__c / Count_of_Active_Contact_Prefs__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Individual Only ratio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Last_Retool_sync_date__c</fullName>
+        <label>Last Retool sync date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Last_Retool_sync_message__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Retool sync message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_WF_Sync_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last WF Sync Date</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_WF_Sync_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Last WF Sync Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Leaders_Call_Loader__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Leaders Call Loader</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Library_ID_18_Digit__c</fullName>
+        <externalId>false</externalId>
+        <formula>casesafeid(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Library ID 18 Digit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MSCI_EM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>used in the Emerging + Frontier Markets button on pref edit UI</inlineHelpText>
+        <label>MSCI EM</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MSCI_FM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>used in the Emerging + Frontier Markets button on pref edit UI</inlineHelpText>
+        <label>MSCI FM</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Macro_EMs_T1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Macro + EMs T1</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Macro_EMs_T2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Macro + EMs T2</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Macro__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>ties to the Macro button on pref edit UI</inlineHelpText>
+        <label>Macro</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Major_EM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>ties to the DM + Major EM button on pref edit UI</inlineHelpText>
+        <label>Major EM</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>No_Summary_Emails_Option__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>No Summary Emails Option</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Overview_Last_Updated__c</fullName>
+        <label>Overview Last Updated</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Overview_Text__c</fullName>
+        <label>Overview Text</label>
+        <length>50000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Portal_Display_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  CONTAINS(Record_Type_Name__c,&quot;List&quot;), Category_Abrv__c &amp;&quot;: &quot; &amp; Name, Name)</formula>
+        <label>Portal Display Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portal_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>Portal ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Practice_Area__c</fullName>
+        <label>Practice Area</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>User_Department</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Quant_Product__c</fullName>
+        <formula>IF( CONTAINS(SortName__c, &apos;Global Navigator&apos;)||CONTAINS(SortName__c, &apos;Country Portfolio&apos;) ||CONTAINS(SortName__c, &apos;GPRI&apos;),true, false )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Quant Product</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Record_Type_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Record Type Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SortName__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(ISNULL(Distribution_List_SubCategory__r.Name),ISBLANK(Distribution_List_SubCategory__r.Name)),
+if( Record_Type_Name__c = &quot;Portal Region Permission&quot;, 
+  LEFT( &quot;RP - &quot; &amp; Name,80), 
+  if( Record_Type_Name__c = &quot;Portal Sector Permission&quot;, 
+     LEFT( &quot;SP - &quot; &amp; Name,80), 
+     LEFT(Name,80) 
+  )  
+),
+  LEFT( DL_Subcategory_Display__c &amp; &quot; - &quot; &amp;  Name,80)
+)</formula>
+        <label>Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sort_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Sort Order</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Starter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>ties to the Starter button on pref edit UI</inlineHelpText>
+        <label>Starter</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Summary_Emails_ratio__c</fullName>
+        <formula>Count_of_Summary_Email_Contact_Prefs__c / Count_of_Active_Contact_Prefs__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Summary Emails ratio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Summary_Only_ratio__c</fullName>
+        <formula>Count_of_Summary_Only_Prefs__c / Count_of_Active_Contact_Prefs__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Summary Only ratio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>US_China_Tech__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>US-China Tech</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>aristotle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>aristotle</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

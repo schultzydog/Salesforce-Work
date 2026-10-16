@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>7</activeVersionNumber>
+    <description>populates time entry department and opportunity owner department and team pickist fields in order to make for easy filtering in reports</description>
+    <masterLabel>EG Time Entry: populate department and team fields</masterLabel>
+</FlowDefinition>

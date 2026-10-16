@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Customer_Id__c</columns>
+        <columns>Billing_Address_1__c</columns>
+        <columns>Billing_Address_2__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Email_Address__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account__c</field>
+            <operation>equals</operation>
+            <value>United Overseas Bank Limited (UOB)</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Pending_Finance_Approval</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Customer_Id__c</columns>
+        <columns>Billing_Address_1__c</columns>
+        <columns>Email_Address__c</columns>
+        <columns>Contact__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Approval_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending Finance Approval</value>
+        </filters>
+        <label>Pending Finance Approval</label>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Academic Institutions</fullName>
+        <default>false</default>
+        <label>Academic Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates</fullName>
+        <default>false</default>
+        <label>Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial &amp; Investment Institutions</fullName>
+        <default>false</default>
+        <label>Financial &amp; Investment Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>Governments</fullName>
+        <default>false</default>
+        <label>Governments</label>
+    </customValue>
+    <customValue>
+        <fullName>NGOs</fullName>
+        <default>false</default>
+        <label>NGOs</label>
+    </customValue>
+    <masterLabel>Audience</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

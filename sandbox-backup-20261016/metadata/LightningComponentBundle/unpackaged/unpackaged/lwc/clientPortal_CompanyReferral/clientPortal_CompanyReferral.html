@@ -1,0 +1,134 @@
+<template>
+    <div class="slds-container_medium slds-container_center">
+        <div class="welcome">
+            <div class="eurasia-logo slds-text-align_center">
+                <a href="https://www.eurasiagroup.net/" target="_blank"><img src={logoUrl} alt="Eurasia Group Logo" /></a>
+            </div>
+            <div class="slds-p-horizontal_x-large slds-text-align_left intro">
+                <p>
+                    <a href="https://www.eurasiagroup.net/" target="_blank">Eurasia Group</a>'s concise and event-driven research provides forward-looking 
+                    analysis of critical global, regional, country, and industry
+                    developments and trends affecting market and investment
+                    outcomes. Our catalog of country and thematic research spans 88
+                    countries and hundreds of topics.
+                    <span if:true={company.Name}>
+                        <br /><br />
+                        Submit this form to request access to the Eurasia Group research for <b>{company.Name}</b>.
+                        Please note, a valid company email address is required.
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="slds-card slds-card_boundary slds-m-around_large slds-p-around_large form-card">
+            <template if:true={showForm}>
+                <div if:true={company.Company_Logo_URL__c}
+                    class="slds-m-bottom_small slds-text-align_center company-logo">
+                    <img src={company.Company_Logo_URL__c} alt={company.Name} />
+                </div>
+                <lightning-record-edit-form object-api-name="Lead" onsubmit={handleSubmit} onload={handleLoad}>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="FirstName" variant="label-stacked"
+                                class="slds-form-element_1-col" required="true" onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="LastName" variant="label-stacked"
+                                class="slds-form-element_1-col" required="true" onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="Department__c" variant="label-stacked"
+                                class="slds-form-element_1-col" required="true" onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="Title" variant="label-stacked"
+                                class="slds-form-element_1-col" required="true" onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="Email" variant="label-stacked"
+                                class="slds-form-element_1-col" required="true" onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="City" variant="label-stacked"
+                                class="slds-form-element_1-col" onchange={clearErrorMessage} disabled={isWorking}
+                                required="true"> </lightning-input-field>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="Phone" variant="label-stacked"
+                                class="slds-form-element_1-col" onchange={clearErrorMessage} disabled={isWorking}>
+                            </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="State" variant="label-stacked"
+                                class="slds-form-element_1-col" onchange={clearErrorMessage} disabled={isWorking}>
+                            </lightning-input-field>
+                        </div>
+                    </div>
+                    -->
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="country">
+                                    <abbr title="required" class="slds-required">*</abbr>
+                                    Country
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <lightning-input-field 
+                                        field-name="CountryCode" 
+                                        variant="label-hidden"
+                                        class="slds-form-element_1-col"
+                                        required="true"
+                                        onchange={clearErrorMessage}
+                                        disabled={isWorking}>
+                                    </lightning-input-field>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-top_small">
+                            <lightning-button type="submit" label="Submit Request" class="hidden-in-form"
+                                onchange={clearErrorMessage} disabled={isWorking}></lightning-button>
+                        </div>
+                        <div if:true={errorMessage}
+                            class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-top_small">
+                            <div class="error slds-text-align_center">
+                                {errorMessage}
+                            </div>
+                        </div>
+                    </div>
+                </lightning-record-edit-form>
+            </template>
+            <template if:true={formMessage}>
+                <div class="slds-text-align_center">
+                    {formMessage}
+                </div>
+            </template>
+            <div if:true={isWorking}>
+                <div class="slds-spinner_container">
+                    <div role="status" class="slds-spinner slds-spinner_medium">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

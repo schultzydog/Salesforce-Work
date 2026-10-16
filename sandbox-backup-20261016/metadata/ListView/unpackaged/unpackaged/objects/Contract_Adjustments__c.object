@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>New_End_Date__c</columns>
+        <columns>New_Start_Date__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>New_Annualized_Value_OC__c</columns>
+        <columns>Project_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Copy_of_Pending_Approval</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>Original_Contract_Amount_OC__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>Original_Start_Date__c</columns>
+        <columns>Original_End_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Approved Adjustment</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contract_Adjustments</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>Approval_Status__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Contract Adjustments</label>
+    </listViews>
+    <listViews>
+        <fullName>No_Cost_Extensions</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UpSell_DownSell_Amount_OC__c</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>New_End_Date__c</columns>
+        <columns>New_Start_Date__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>New_Annualized_Value_OC__c</columns>
+        <columns>Project_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Contract_Adjustment_Reason__c</field>
+            <operation>equals</operation>
+            <value>No Cost Extension</value>
+        </filters>
+        <label>No Cost Extensions</label>
+    </listViews>
+    <listViews>
+        <fullName>Pending_Finance_Approval</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Approval_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Approval_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending Finance Approval</value>
+        </filters>
+        <label>Pending Finance Approval</label>
+    </listViews>
+    <listViews>
+        <fullName>X2023_Contract_Adj</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>New_End_Date__c</columns>
+        <columns>New_Start_Date__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>New_Annualized_Value_OC__c</columns>
+        <columns>Project_Code__c</columns>
+        <columns>UpSell_DownSell_Amount_OC__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>8/1/2023 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notEqual</operation>
+            <value>EG Testing Grounds</value>
+        </filters>
+        <label>2023 Contract Adj</label>
+    </listViews>
+</CustomObject>

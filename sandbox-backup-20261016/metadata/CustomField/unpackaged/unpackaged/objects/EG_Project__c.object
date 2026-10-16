@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>EG Projects</relationshipLabel>
+        <relationshipName>EG_Projects</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bypass_Automation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Bypass Automation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date__c</fullName>
+        <formula>Linked_Opportunity__r.Contract_End_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Start_Date__c</fullName>
+        <formula>Linked_Opportunity__r.Contract_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Greater_than_1_month_past_end_date__c</fullName>
+        <formula>Today() - Contract_End_Date__c &gt; 31</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Greater than 1 month past end date</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Project__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Show in timesheets dropdown</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Internal__c</fullName>
+        <formula>FIND(&quot;[Internal]&quot;, Name) == 1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Internal?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Linked_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Linked Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>EG Projects</relationshipLabel>
+        <relationshipName>EG_Projects</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Need_Status_Update__c</fullName>
+        <formula>Status_Formula__c  &lt;&gt;  TEXT(Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Need Status Update</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Close_Date__c</fullName>
+        <formula>Linked_Opportunity__r.CloseDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Linked_Opportunity__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Sales_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Linked_Opportunity__r.Type)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Sales Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oppty_Revenue_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Linked_Opportunity__r.RevenueType__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Oppty: Revenue Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Is_Internal__c = FALSE &amp;&amp; NOT ISNULL(Linked_Opportunity__c) &amp;&amp; NOT ISBLANK(Linked_Opportunity__c) , 
+
+IF( Linked_Opportunity__r.IsClosed  &amp;&amp; NOT Linked_Opportunity__r.IsWon, &apos;Inactive&apos;, 
+
+IF(( NOT Linked_Opportunity__r.IsClosed &amp;&amp; Opportunity_Sales_Type__c &lt;&gt; &apos;Renewal&apos;)
+||
+( Opportunity_Sales_Type__c &lt;&gt; &apos;Renewal&apos; &amp;&amp; TODAY()&lt; Contract_End_Date__c + 31)
+||
+( Opportunity_Sales_Type__c = &apos;Renewal&apos; &amp;&amp; (TODAY()&gt;= Contract_Start_Date__c &amp;&amp; TODAY() &lt;  Contract_End_Date__c + 31 ))
+
+
+, &apos;Active&apos;, &apos;Inactive&apos;) ) 
+
+,&apos;Inactive&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status Formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>true</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Today_s_date_compare__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( TODAY() &gt;  Contract_End_Date__c , &apos;Greater than end date&apos;,  
+IF( TODAY() &lt;  Contract_Start_Date__c , &apos;Less than start date&apos;, &apos;between dates&apos;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today&apos;s date compare</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Hours_Worked__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Hours Worked</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Won_oppty_without_project_code__c</fullName>
+        <formula>ISPICKVAL(Linked_Opportunity__r.StageName, &apos;Win&apos;)
+&amp;&amp;
+ ISblank(Linked_Opportunity__r.Project_Code__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Won oppty without project code</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

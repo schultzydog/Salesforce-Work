@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Rule06391746630981648ad47064e789bb2e744520226daa8baedc8427dc2cce1aa2</members>
+        <members>Rule19477a27221b28e721fcbaad3da1515fa27c1a5a8b2c9a897c317258138893ce</members>
+        <members>Rule25600ee7bb01e5d02adb6ba1fd6f820bef2093d7d64bd6cbbfb03036d2d71d85</members>
+        <members>Rule9300387dd143b4936225ff2214197515fc316e3f496d9aa288035249d3d28df3</members>
+        <members>Ruled119723c26f23cb8c4de9affad2a479df882ab700d2330e0443b53a86a34e019</members>
+        <members>Rulee7751fa3f02c3ab80fb3655124e7bd2e71b5eff3909de7d889699063c43e2ff4</members>
+        <name>FieldRestrictionRule</name>
+    </types>
+    <version>62.0</version>
+</Package>

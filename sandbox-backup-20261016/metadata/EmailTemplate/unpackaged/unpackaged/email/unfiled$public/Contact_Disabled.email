@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-GB" style="font-size:12.0pt;font-family:
+&quot;Aptos&quot;,sans-serif;mso-fareast-font-family:Aptos;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Aptos;mso-ansi-language:EN-GB;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">Hi&nbsp;{!Contact.FirstName},</span></div><span lang="EN-GB" style="color: rgb(0, 0, 0); font-family: Aptos, sans-serif; font-size: 12pt;"><div><span lang="EN-GB" style="font-size:12.0pt;font-family:
+&quot;Aptos&quot;,sans-serif;mso-fareast-font-family:Aptos;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Aptos;mso-ansi-language:EN-GB;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"><br></span></div><div><span lang="EN-GB" style="font-size:12.0pt;font-family:
+&quot;Aptos&quot;,sans-serif;mso-fareast-font-family:Aptos;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Aptos;mso-ansi-language:EN-GB;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"><br></span></div></span><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">The user has been removed from our distribution list.</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-GB" style="font-size:12.0pt;font-family:
+&quot;Aptos&quot;,sans-serif;mso-fareast-font-family:Aptos;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Aptos;mso-ansi-language:EN-GB;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"><span lang="EN-GB" style="font-size: 12pt;"><br></span></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-GB" style="font-size:12.0pt;font-family:
+&quot;Aptos&quot;,sans-serif;mso-fareast-font-family:Aptos;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Aptos;mso-ansi-language:EN-GB;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"><span lang="EN-GB" style="font-size: 12pt;">Thank you,</span></span></div><div style=""><span lang="EN-GB" style=""><span lang="EN-GB" style=""><font face="Aptos, sans-serif">{!EmailMessage.FromName}</font></span></span></div>]]></td>
+</tr>
+</table>

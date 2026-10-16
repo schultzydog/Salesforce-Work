@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used by automation for sending monthly email reminder to BD on contract status</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Notice to BD - Action Required: Expired, Late and Upcoming Renewals</name>
+    <style>freeForm</style>
+    <subject>***Action Required: Expired, Late and Upcoming Renewals***</subject>
+    <textOnly>Dear Account Managers,
+
+Please find the current outstanding Renewal Actions report via Salesforce, available here - https://eurasiagroup.lightning.force.com/lightning/r/Report/00O4V000009d6WpUAI/view. You will receive this if you have any Contract with Pending Renewals requiring SF action. For all these you must update the Scope of Work field with description of the delay and any needed next steps.
+
+Expired Contracts (Recurring, Out of contract for 45 days and more)
+
+-Recurring contracts expired for 45 days with an open (or non-existent) opportunity (i.e. not won or closed/lost)
+-Are automatically classified as a Red Flag and presumed “Lost” by Finance.
+
+
+Pending (Late) Renewals (Recurring, Out of contract for 44 days or less)
+
+-Recurring contracts expired for 44 days or less with an open (or non-existent) opportunity (i.e. not won or closed/lost)
+-If client has suggested a loss or downsell, you must classify it as a Red Flag.
+You must update the status and next steps in the Scope of Work field.
+
+
+Upcoming Renewals (Recurring Contracts with upcoming end dates 90 days)
+
+-All renewals upcoming in 90 days should be started (moved out of Not Started Stage)
+-Keep Scope of Work updated with next steps and feedback from client; update required monthly.
+
+
+If you feel you have submitted a renewal, please check Salesforce first to make sure the contract was submitted and is NOT in Draft status.  Also, if there is a contract listed on these tabs that should not be Recurring, please let me/Cassandra and Finance know.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

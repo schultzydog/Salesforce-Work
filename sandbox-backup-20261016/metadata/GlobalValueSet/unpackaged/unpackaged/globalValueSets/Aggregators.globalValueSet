@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bloomberg</fullName>
+        <default>false</default>
+        <label>Bloomberg</label>
+    </customValue>
+    <customValue>
+        <fullName>Factset</fullName>
+        <default>false</default>
+        <label>Factset</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Exchange</fullName>
+        <default>false</default>
+        <label>Research Exchange</label>
+    </customValue>
+    <customValue>
+        <fullName>Visible Alpha</fullName>
+        <default>false</default>
+        <label>Visible Alpha</label>
+    </customValue>
+    <customValue>
+        <fullName>AlphaSense</fullName>
+        <default>false</default>
+        <label>AlphaSense</label>
+    </customValue>
+    <customValue>
+        <fullName>S&amp;P CapIQ</fullName>
+        <default>false</default>
+        <label>S&amp;P CapIQ</label>
+    </customValue>
+    <customValue>
+        <fullName>Gwendra *sentiment platform*</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Gwendra *sentiment platform*</label>
+    </customValue>
+    <customValue>
+        <fullName>Invisage Alpha *directional platform*</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Invisage Alpha *directional platform*</label>
+    </customValue>
+    <customValue>
+        <fullName>KPMG Knowledge Centre *specialist*</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>KPMG Knowledge Centre *specialist*</label>
+    </customValue>
+    <customValue>
+        <fullName>Nucleus 195</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nucleus 195</label>
+    </customValue>
+    <customValue>
+        <fullName>Red Deer (not yet executed)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Red Deer (not yet executed)</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Pool</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Research Pool</label>
+    </customValue>
+    <customValue>
+        <fullName>Research Tree</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Research Tree</label>
+    </customValue>
+    <customValue>
+        <fullName>Telimar  *new December*</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Telimar  *new December*</label>
+    </customValue>
+    <customValue>
+        <fullName>Zacks</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Zacks</label>
+    </customValue>
+    <customValue>
+        <fullName>Refinativ</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Refinativ</label>
+    </customValue>
+    <customValue>
+        <fullName>AlphaTerminal (Beta)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>AlphaTerminal (Beta)</label>
+    </customValue>
+    <customValue>
+        <fullName>Blue Matrix</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Blue Matrix</label>
+    </customValue>
+    <customValue>
+        <fullName>Braksem</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Braksem</label>
+    </customValue>
+    <customValue>
+        <fullName>EMIS *new - December*</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EMIS *new - December*</label>
+    </customValue>
+    <customValue>
+        <fullName>ERIC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ERIC</label>
+    </customValue>
+    <description>List of content aggregation services</description>
+    <masterLabel>Aggregators</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

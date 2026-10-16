@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Lead.Felipe_Marin_share</members>
+        <members>Opportunity.Baena_Share</members>
+        <members>Opportunity.Gerry_Shares</members>
+        <members>Opportunity.OOP_Tracking</members>
+        <members>Top_Risk__c.Share_to_all_users</members>
+        <name>SharingOwnerRule</name>
+    </types>
+    <version>62.0</version>
+</Package>

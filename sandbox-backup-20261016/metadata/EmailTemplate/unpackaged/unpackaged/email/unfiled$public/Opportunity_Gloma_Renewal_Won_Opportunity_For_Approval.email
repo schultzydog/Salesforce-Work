@@ -1,0 +1,13 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">Opportunity Name: {!</span></font><a href="https://Opportunity.Name" target="_blank" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Opportunity.Name</a><font face="arial"><span style="font-size: 12pt;">}
+</span></font><br><font face="arial"><span style="font-size: 12pt;">Opportunity Amount: {!Opportunity.Amount}
+</span></font><br><font face="arial"><span style="font-size: 12pt;">Sales Type: {!Opportunity.Type}&nbsp;</span></font><div style=""><font face="arial"><span style="font-size: 16px;">Renewal Sub-Type: {!Opportunity.Renewal_Sub_type__c}</span></font></div><div style="">Upsell/Downsell Amount (USD):&nbsp;{!Opportunity.UpSell_DownSell_Annualized_Value_USD__c}<br><font face="arial"><span style="font-size: 12pt;">Business Line: {!Opportunity.Business_Line__c}
+</span></font><br><font face="arial"><span style="font-size: 12pt;">Opportunity Owner: {!Opportunity.OwnerFullName}
+</span></font><br><font face="arial"><span style="font-size: 12pt;">Start Date: {!Opportunity.Contract_Start_Date__c}
+</span></font><br><font face="arial"><span style="font-size: 12pt;">End Date: {!Opportunity.Contract_End_Date__c}
+</span></font><br>
+<br><font face="arial"><span style="font-size: 12pt;">Please log in to review and approve the opportunity here: {!Opportunity.Link}</span></font></div>]]></td>
+</tr>
+</table>

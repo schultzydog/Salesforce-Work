@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Africa</fullName>
+        <default>false</default>
+        <label>Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil</fullName>
+        <default>false</default>
+        <label>Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>China &amp; Northeast Asia</fullName>
+        <default>false</default>
+        <label>China &amp; Northeast Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer &amp; Retail</fullName>
+        <default>false</default>
+        <label>Consumer &amp; Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy, Climate &amp; Resources</fullName>
+        <default>false</default>
+        <label>Energy, Climate &amp; Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Geoeconomics</fullName>
+        <default>false</default>
+        <label>Geoeconomics</label>
+    </customValue>
+    <customValue>
+        <fullName>Geostrategy</fullName>
+        <default>false</default>
+        <label>Geostrategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Geo-technology</fullName>
+        <default>false</default>
+        <label>Geo-technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Macro</fullName>
+        <default>false</default>
+        <label>Global Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Sustainability, Biodiversity &amp; Water</fullName>
+        <default>false</default>
+        <label>Global Sustainability, Biodiversity &amp; Water</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin America</fullName>
+        <default>false</default>
+        <label>Latin America</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle East &amp; North Africa</fullName>
+        <default>false</default>
+        <label>Middle East &amp; North Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>North America</fullName>
+        <default>false</default>
+        <label>North America</label>
+    </customValue>
+    <customValue>
+        <fullName>South Asia</fullName>
+        <default>false</default>
+        <label>South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Southeast Asia</fullName>
+        <default>false</default>
+        <label>Southeast Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade &amp; Supply Chains</fullName>
+        <default>false</default>
+        <label>Trade &amp; Supply Chains</label>
+    </customValue>
+    <masterLabel>Practice Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

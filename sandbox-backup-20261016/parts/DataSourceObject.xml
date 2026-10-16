@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ConsumptionResourceTags_std_dll</members>
+        <members>CurrencyType_Home</members>
+        <members>ProvisionedFeature</members>
+        <members>TenantBillingUsageEvent</members>
+        <members>TenantEntitlementTransaction</members>
+        <members>TenantUsageTypeMultiplier</members>
+        <name>DataSourceObject</name>
+    </types>
+    <version>62.0</version>
+</Package>

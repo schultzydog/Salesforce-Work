@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Publication_Date__c</columns>
+        <columns>of_Reviews__c</columns>
+        <columns>NAME</columns>
+        <columns>Lead_analyst__c</columns>
+        <columns>Link_to_article_in_portal__c</columns>
+        <columns>Worldflow_Document_Id__c</columns>
+        <columns>Template_name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account_Preferences__c.Library__c,Account__c</members>
+        <members>Contact.Assistant_Email__c</members>
+        <members>Contact.Contact_Type__c</members>
+        <members>Contact.Trigger_eg_update_calculator__c</members>
+        <members>Contact_Preferences__c.Set_up_as_Trial_Subscription__c</members>
+        <name>CustomIndex</name>
+    </types>
+    <version>62.0</version>
+</Package>

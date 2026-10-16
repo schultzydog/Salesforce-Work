@@ -1,0 +1,378 @@
+<template>
+	<div class="clientportal-themelayout">
+		<div class="fixed-navigation desktop">
+			<div class="full-height">
+				<!-- sidebar -->
+				<div class="logo full-width">
+					<img src={logoUrl} alt="Eurasia Group Logo" />
+				</div>
+				<nav class="navigation desktop">
+					<!--
+					<div class="search-container">
+						<input type="text" placeholder="Search"></input>
+					</div>
+					-->
+					
+					<div class="navigation-section slds-text-title_caps desktop">
+						Client Portal
+					</div>
+
+					<!--
+					<div class="navigation-item desktop">
+						<div class={navItemClassHome}>
+							<div class="slds-media slds-media_center slds-has-flexi-truncate">
+								<div class="slds-media__figure">
+									<div class="nav-icon-container">
+										<a onclick={navigate} data-page="Home">
+											<i class="fad fa-home"></i>
+										</a>
+									</div>
+								</div>
+								<div class="slds-media__body">
+									<div class="label">
+										<a onclick={navigate} data-page="Home">
+											<span>Home</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					-->
+
+					<!--
+					<div class="navigation-item desktop">
+						<div class={navItemClassExplore}>
+							<div class="slds-media slds-media_center slds-has-flexi-truncate">
+								<div class="slds-media__figure">
+									<div class="nav-icon-container">
+										<a onclick={navigate} data-page="Explore__c">
+											<i class="fad fa-location-circle"></i>
+										</a>
+									</div>
+								</div>
+								<div class="slds-media__body">
+									<div class="label">
+										<a onclick={navigate} data-page="Explore__c">
+											<span>Explore</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="navigation-item desktop">
+						<div class={navItemClassEngage}>
+							<div class="slds-media slds-media_center slds-has-flexi-truncate">
+								<div class="slds-media__figure">
+									<div class="nav-icon-container">
+										<a onclick={navigate} data-page="Engage__c">
+											<i class="fad fa-users"></i>
+										</a>
+									</div>
+								</div>
+								<div class="slds-media__body">
+									<div class="label">
+										<a onclick={navigate} data-page="Engage__c">
+											<span>Engage</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					-->
+					
+					<!--
+					<div class="navigation-item desktop">
+						<div class={navItemClassSearch}>
+							<div class="slds-media slds-media_center slds-has-flexi-truncate">
+								<div class="slds-media__figure">
+									<div class="nav-icon-container">
+										<a onclick={navigate} data-page="Search__c">
+											<i class="fad fa-search"></i>
+										</a>
+									</div>
+								</div>
+								<div class="slds-media__body">
+									<div class="label">
+										<a onclick={navigate} data-page="Search__c">
+											<span>Search</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="navigation-item desktop">
+						<div class={navItemClassProfile}>
+							<div class="slds-media slds-media_center slds-has-flexi-truncate">
+								<div class="slds-media__figure">
+									<div class="nav-icon-container">
+										<a onclick={navigate} data-page="Profile__c">
+											<i class="fad fa-address-card"></i>
+										</a>
+									</div>
+								</div>
+								<div class="slds-media__body">
+									<div class="label">
+										<a onclick={navigate} data-page="Profile__c">
+											<span>Profile</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					-->
+
+					<!--
+					<div class="navigation-section slds-text-title_caps desktop">
+						Portal Products
+					</div>
+					-->
+
+					<div class="navigation-item desktop">
+						<div class={navItemClassPoliticalRisk}>
+							<div class="slds-media slds-media_center slds-has-flexi-truncate">
+								<div class="slds-media__figure">
+									<div class="nav-icon-container">
+										<a onclick={navigate} data-page="Political_Risk_Dashboard__c">
+											<i class="fad fa-chart-line"></i>
+										</a>
+									</div>
+								</div>
+								<div class="slds-media__body">
+									<div class="label">
+										<a onclick={navigate} data-page="Political_Risk_Dashboard__c">
+											<span>Risk Dashboard</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<template if:true={isSelfServiceAdministrator}>
+						<div class="navigation-section slds-text-title_caps desktop">
+							Administration
+						</div>
+
+						<div class="navigation-item desktop">
+							<div class={navItemClassSubscribers}>
+								<div class="slds-media slds-media_center slds-has-flexi-truncate">
+									<div class="slds-media__figure">
+										<div class="nav-icon-container">
+											<a onclick={navigate} data-page="Subscribers__c">
+												<i class="fad fa-users-cog"></i>
+											</a>
+										</div>
+									</div>
+									<div class="slds-media__body">
+										<div class="label">
+											<a onclick={navigate} data-page="Subscribers__c">
+												<span>Subscribers</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--
+						<div class="navigation-item desktop">
+							<div class={navItemClassReports}>
+								<div class="slds-media slds-media_center slds-has-flexi-truncate">
+									<div class="slds-media__figure">
+										<div class="nav-icon-container">
+											<a onclick={navigate} data-page="Reports__c">
+												<i class="fad fa-file-export"></i>
+											</a>
+										</div>
+									</div>
+									<div class="slds-media__body">
+										<div class="label">
+											<a onclick={navigate} data-page="Reports__c">
+												<span>Reports</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						-->
+					</template>
+				</nav>
+		
+			</div>
+		</div>
+		<nav class="navigation mobile">
+			<div class="navigation-item mobile">
+				<div class={navItemClassHome}>
+					<div class="icon">
+						<a onclick={navigate} data-page="Home">
+							<i class="fad fa-home"></i>
+						</a>
+					</div>
+					<div class="label">
+						<a onclick={navigate} data-page="Home">
+							<span>Home</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="navigation-item mobile">
+				<div class={navItemClassExplore}>
+					<div class="icon">
+						<a onclick={navigate} data-page="Explore__c">
+							<i class="fad fa-location-circle"></i>
+						</a>
+					</div>
+					<div class="label">
+						<a onclick={navigate} data-page="Explore__c">
+							<span>Explore</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="navigation-item mobile">
+				<div class={navItemClassEngage}>
+					<div class="icon">
+						<a onclick={navigate} data-page="Engage__c">
+							<i class="fad fa-users"></i>
+						</a>
+					</div>
+					<div class="label">
+						<a onclick={navigate} data-page="Engage__c">
+							<span>Engage</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="navigation-item mobile">
+				<div class={navItemClassSearch}>
+					<div class="icon">
+						<a onclick={navigate} data-page="Search__c">
+							<i class="fad fa-search"></i>
+						</a>
+					</div>
+					<div class="label">
+						<a onclick={navigate} data-page="Search__c">
+							<span>Search</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="navigation-item mobile">
+				<div class={navItemClassProfile}>
+					<div class="icon">
+						<a onclick={navigate} data-page="Profile__c">
+							<i class="fad fa-address-card"></i>
+						</a>
+					</div>
+					<div class="label">
+						<a onclick={navigate} data-page="Profile__c">
+							<span>Profile</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="content-area">
+			<div class="fixed-header">
+				<div class="full-height">
+					<!-- header -->
+					<div class="client-portal-header full-height desktop">
+						<div class="slds-align_absolute-center full-height justify-left">
+							<div class="slds-card__header slds-grid full-width">
+								<header class="slds-media slds-media_center slds-has-flexi-truncate">
+									<div class="slds-media__figure">
+										<lightning-avatar src="/bad/image/url.jpg" initials={userInitials} variant="circle"
+											size="large" fallback-icon-name="standard:user"
+											alternative-text={userInitials}></lightning-avatar>
+									</div>
+									<div class="slds-media__body">
+										<div class="slds-card__header-title slds-text-heading_large header-title">
+											Welcome {userFirstName}!
+										</div>
+										<nav class="breadcrumbs" role="navigation" aria-label="Breadcrumbs">
+											<ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
+												<li class="slds-breadcrumb__item slds-text-title_caps">
+													<a class="no-hyperlink">Home</a>
+												</li>
+											</ol>
+										</nav>
+									</div>
+									<div class="slds-no-flex">
+										<div class="header-actions">
+											<!--
+												<span class=""><a onclick={navigate} data-page="Notifications__c"><i class="fad fa-bell"></i></a></span>
+												<span class="slds-m-left_medium"><a onclick={navigate} data-page="Profile__c"><i class="fad fa-user"></i></a></span>
+											-->
+											<lightning-button-menu icon-name="utility:user" alternative-text="Show menu" 
+												variant="container" icon-size="medium" menu-alignment="right">
+												<lightning-menu-item value="logout" label="Logout" href={logoutUrl}></lightning-menu-item>
+											</lightning-button-menu>
+										</div>
+									</div>
+								</header>
+							</div>
+						</div>
+					</div>
+
+					<div class="client-portal-header full-height mobile">
+						<div class="slds-align_absolute-center full-height justify-left">
+							<div class="slds-card__header slds-grid full-width">
+								<header class="slds-media slds-media_center slds-has-flexi-truncate">
+									<div class="slds-media__figure logo mobile">
+										<img src={logoUrl} alt="Eurasia Group Logo" />
+									</div>
+									<div class="slds-media__body">
+										<div class="slds-text-heading_small">
+											Welcome {userFirstName}!
+										</div>
+										<nav class="breadcrumbs" role="navigation" aria-label="Breadcrumbs">
+											<ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
+												<li class="slds-breadcrumb__item slds-text-title_caps">
+													<a class="no-hyperlink">Home</a>
+												</li>
+											</ol>
+										</nav>
+									</div>
+								</header>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+			<div class="content-container">
+				<div id="clear-scrollable" class="content slds-scrollable">
+					<div class="body">
+						<div class="full-height full-height-content">
+							<div class="main-content-container">
+								<div class="main-content slds-is-relative">
+									<!-- main content -->
+									<slot></slot>
+								</div>
+								<div class="footer">
+									<div class="full-height">
+										<!-- footer -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="slds-backdrop slds-align_absolute-center display-too-small">
+		<div class="slds-p-around_x-large slds-text-align_center">
+			<p>We appreciate your patience as we work on our mobile experience.</p>
+			<p>For now, please use our Client Portal with a larger display.</p>
+		</div>
+	</div>
+</template>

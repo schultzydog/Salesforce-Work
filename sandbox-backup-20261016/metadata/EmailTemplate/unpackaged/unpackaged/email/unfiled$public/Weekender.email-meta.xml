@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>Weekender</name>
+    <style>freeForm</style>
+    <subject>Weekender</subject>
+    <textOnly>Good morning,
+
+
+This week&apos;s discussion point was related to the Russian/Ukraine conflict.  Russian media reported on 23 August that Wagner Group head Yevgeny Prigozhin was killed in a plane crash, flying between Moscow and St. Petersburg, with possibly other senior Wagner personnel on board. The explanation of Prigozhin’s death as a targeted killing is highly plausible, especially with Wagner-affiliated social media channels and unverified videos claiming that the Russian air defense shot the plane down. As for battlefield implications, second large-scale revolt in reaction to Prigozhin’s death is unlikely, despite angry messages coming from Wagner-aligned channels on social media. Prigozhin’s death does not have significant reactions for Russian military operations in Ukraine, since Wagner is not involved in Russia’s defensive operations in Ukraine&apos;s south or offensive actions in Luhansk region in the east.
+
+
+Picking up from last week when we discussed China, Eurasia Group is downgrading its expectations for Chinese growth this year to 4%-4.5% due to sustained demand weakness, restrained stimulus, and the piecemeal nature of policy support; the weakness in Chinese industry has become visible in the oil sector, and, if it persists, could spill into 2024 and put pressure on OPEC+ to continue to tightly manage supply. Growth will likely decelerate sequentially over the next two quarters, given the steepening decline in the contribution of real estate to GDP through investment and indirectly through consumption; a relatively stable positive contribution from consumer services, which has outpaced slowing spending on consumer goods; and a drag on growth from net exports as US and European demand cools under sticky inflation and elevated rates.
+
+
+In Ecuador, as we expected, correista candidate Luisa Gonzalez captured the most votes in the 20 August first-round presidential election, with 33.4% (the same as in 2021); however, in a surprise, right-wing populist Daniel Noboa secured 24% of the votes. They will face each other in the October 15th runoff. Eurasia Group&apos;s basecase is that Noboa is the initial favorite to win (a 60% probability).
+
+
+Have a good weekend
+
+Dave
+
+
+Eurasia Group Calls
+
+European natural gas, 2023-24 winter: EU comes out of the upcoming winter with relatively high inventories, market conditions return to normal in 2024 (50%); odds of EU gas inventories ending during the winter at very low levels, delaying a return to normal market conditions to 2025 or later (40%); odds of gas shortages in the EU (10%). Read here
+Ecuador presidential elections: odds of Noboa to win (60%). Read here
+Japan lower house snap elections: odds of Kishida calling the election before the end of the year (65%); odds of deferring the decision until 2024 (35%). Read here
+Iran nuclear program: odds that US and Iran will continue to avoid escalation (65%, up from 60%); odds of a serious escalation (20%); an agreement combining concessions on enrichment with sanctions relief (10%); odds of returning to the 2015 nuclear deal (5%). Read here
+
+
+Upcoming Events
+Conference Calls
+
+Brazil Update – Monday, 29th August at 10:00 AM EST | Register here
+
+
+Eurasia Group Weekly Roundup of Top Stories
+
+eg update – from this week&apos;s guest writer, Practice Head, Africa, Amaka Anku (21.08.23) | Read more here
+
+
+Global Macro
+
+South Africa – China secures significant diplomatic win with BRICS expansion | Read more here
+South Africa – BRICS expansion will likely be slow and piecemeal | Read more here
+
+
+Latin America
+
+Brazil – Lawmakers will press administration and banks to find negotiated solution for credit card rates | Read more here
+Brazil – Revenue measures will advance despite rift between the administration and congress | Read more here
+Brazil – Budget transfers will be insufficient for keeping congressional coalition stable | Read more here
+Brazil – Lower house poised to deliver small setbacks to administration amid protracted cabinet negotiations | Read more here
+Brazil – Senate likely to continue supporting administration’s agenda for remainder of the year | Read more here
+Guatemala - Arevalo will face persistent threats despite landslide victory | Read more here
+Ecuador – Noboa is early favorite to win presidential runoff| Read more here
+
+
+North America
+
+United States, China –Commerce Department moves will aid bilateral thaw, while congressional blowback is building| Read more here
+
+
+Asia
+
+Japan – Kishida will shuffle his cabinet soon and call lower house elections this year | Read more here
+Thailand – Srettha’s victory unlikely to end the political drama | Read more here
+China – Downgrading 2023 growth expectations on weak demand and incremental policy support | Read more here
+
+
+Europe
+
+Turkey – Central bank sends strong signal with larger than expected rate hike | Read more here
+Turkey, Aerospace &amp; Defense – Ankara likely to miss civil and military aviation targets, remain dependent on US jets | Read more here
+Natural Gas – EU winter gas shortages are very unlikely, but return to normality will require more policy effort | Read more here
+
+
+Middle East &amp; North Africa
+
+BRICS – BRICS expansion will help region expand its geopolitical influence | Read more here
+Saudi Arabia – Allegations of border killings unlikely to have significant impact on relations with West | Read more here
+Iran – Progress on de-escalation freezes status quo with US; next month will be crucial in solidifying gains | Read more here
+
+
+Sub-Saharan Africa
+
+Nigeria – Cabinet appointments are broadly constructive for reform outlook | Read more here
+
+
+Russia-Ukraine
+
+Russia - No new Wagner revolt likely after Prigozhin’s reported death| Read more here
+Russia-Ukraine Crisis Watch – New “stuck” basecase does not increase likelihood of substantive negotiations this year | Read more here
+
+
+Energy, Climate, and Resources
+
+Alternative Energy/Climate – Persistent disagreements will continue to limit climate progress at COP28| Read more here
+
+
+Geo-technology
+
+United States – New R&amp;D IP rules run up against efforts at building global tech alliances | Read more here
+
+
+Healthcare
+
+United States, EU – New policies may discourage rare disease therapy development | Read more here
+
+
+Sustainability
+
+Consumer &amp; Retail, Sustainability – Sweeping EU sustainability policies posed to overhaul apparel and textile sectors | Read more here
+
+
+Past Conference Calls
+
+Diplomacy and Global Competition in Critical and Emerging Technology | Listen here
+Ukraine Crisis: The implications of Ukraine&apos;s slowed counteroffensive| Listen here
+India: G20, the Global South, and Great Power Competition | Listen here
+Ecuador election results | Listen here
+Could Aussie workers break the global gas market? | Listen here</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>this scheduled flow set oppty stage to Closed Lost Aged Out under specific conditions</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>DaysSinceCreation</name>
+        <dataType>Number</dataType>
+        <expression>{!$Flow.CurrentDateTime}- {!$Record.CreatedDate}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>DaysSinceLastTouched</name>
+        <dataType>Number</dataType>
+        <expression>{!$Flow.CurrentDate}-{!$Record.Tracked_Fields_Last_Change_Date__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>Internal</name>
+        <dataType>Boolean</dataType>
+        <expression>CONTAINS({!$Record.Name}, &apos;[Internal]&apos;)</expression>
+    </formulas>
+    <interviewLabel>Opportunity: Scheduled Aging Out Oppties {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity: Scheduled Aging Out Oppties</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Oppty</name>
+        <label>Update Oppty</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <inputAssignments>
+            <field>Closed_Lost_Reason__c</field>
+            <value>
+                <stringValue>Aged Out</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Closed - Aged Out</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Oppty</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Days_past_Close_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <numberValue>30.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Days_since_last_touched__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>90.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>New Sale</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Age__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>360.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>AccountId</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>00130000016FGqUAAW</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-05-18</startDate>
+            <startTime>00:45:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

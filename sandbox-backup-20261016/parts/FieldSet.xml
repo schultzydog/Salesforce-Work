@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AuthSession.BT_AuthSession_EPIM</members>
+        <members>LoginHistory.BT_LoginHistory_EPIM</members>
+        <members>User.BT_User_EPIM</members>
+        <members>User.PersonalInfo_EPIM</members>
+        <members>VerificationHistory.BT_VerificationHistory_EPIM</members>
+        <name>FieldSet</name>
+    </types>
+    <version>62.0</version>
+</Package>

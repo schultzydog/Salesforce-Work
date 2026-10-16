@@ -1,0 +1,96 @@
+:host{
+    --lwc-colorTextLabel:rgb(3, 45, 96);
+    --lwc-spacingXxxSmall: 0.500rem;
+    --lwc-spacingSmall : 0.60rem;
+}
+th{
+    width:12.5%
+}
+hr{
+    margin: 15px 0px 9px 0px !important;
+}
+
+.wordwrap{
+    white-space:normal;
+}
+
+.sliderlayover{
+  width: 11.11%;
+  color: #dedddc;
+  text-align: center !important;
+}
+
+
+.Very.negative{
+  background-color: rgb(252, 152, 152) !important;
+}
+.Slightly.negative{
+  background-color: rgb(247, 210, 210) !important; 
+}
+.Negative{
+  background-color: rgb(255, 198, 198) !important;
+}
+.Neutral{
+  background-color: #ddd !important;
+}
+.Slightly.positive{
+  background-color: rgb(187, 252, 201) !important;
+}
+.Positive{
+  background-color: rgb(128, 205, 142)  !important;
+}
+
+.Very.positive{
+  background-color: rgb(109, 145, 97)!important;
+}
+
+
+  /*
+  input[type="range"] {
+    -webkit-appearance: none;
+    background: rgb(241, 243, 243);
+    background-image: linear-gradient(rgb(27, 150, 255), rgb(27, 150, 255));
+    background-size: 50% 100%;*
+    background-repeat: no-repeat;
+  }
+  
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: rgb(27, 150, 255);
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background: rgb(27, 150, 255);
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    -webkit-appearance: none;
+    background: rgb(27, 150, 255);
+    transition: background .3s ease-in-out;
+  }
+
+  
+  input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  
+  input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  
+  input[type="range"]::-ms-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }*/

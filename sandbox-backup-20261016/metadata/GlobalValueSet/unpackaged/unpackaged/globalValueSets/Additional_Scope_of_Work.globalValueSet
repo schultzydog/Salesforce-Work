@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>One-off Consulting</fullName>
+        <default>false</default>
+        <label>One-off Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>One-off Custom Research</fullName>
+        <default>false</default>
+        <label>One-off Custom Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Recurring Consulting</fullName>
+        <default>false</default>
+        <label>Recurring Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Recurring Custom Research</fullName>
+        <default>false</default>
+        <label>Recurring Custom Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Speaking</fullName>
+        <default>false</default>
+        <label>Speaking</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategic Relationship</fullName>
+        <default>false</default>
+        <label>Strategic Relationship</label>
+    </customValue>
+    <masterLabel>Additional Scope of Work</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

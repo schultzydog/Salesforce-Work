@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/Clone_Opportunity?OldOppId={!Opportunity.Id}&amp;AccountId={!Opportunity.AccountId}&amp;ExpectedStartDate={!TEXT(Opportunity.CloseDate)}&amp;OldOppName={!Opportunity.Name}&amp;AccountOwnerId={!Opportunity.OwnerId}&amp;PricebookId={!Opportunity.fr_PricebookId__c}&amp;Amount={!Opportunity.Previous_Opportunity_Amount__c}&amp;retURL=/lightning/o/Opportunity/home</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Clone_Classic</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Clone (Classic)</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/Clone_Opportunity?OldOppId={!Opportunity.Id}&amp;AccountId={!Opportunity.AccountId}&amp;ExpectedStartDate={!TEXT(Opportunity.CloseDate)}&amp;OldOppName={!Opportunity.Name}&amp;AccountOwnerId={!Opportunity.OwnerId}&amp;PricebookId={!Opportunity.fr_PricebookId__c}&amp;Amount={!Opportunity.Previous_Opportunity_Amount__c}&amp;retURL=eurasiagroup.my.salesforce.com/0063A000017j94E</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Conference_Call_Usage</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conference Call Usage</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://eurasiagroup.lightning.force.com/lightning/r/Report/00O4V000009r2yt/view?fv0={!Opportunity.AccountId}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Conference_Call_Usage_Trend</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conference Call Usage Trend</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://eurasiagroup.lightning.force.com/lightning/r/Report/00O4V000009RZXW/view?fv0={!Opportunity.AccountId}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_proforma_invoice</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create proforma invoice</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/ofc2__OFCOut?ns=ofc2&amp;template=Proforma&amp;id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generatea3ldK000000nlgvQAA</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create SOW</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR(IF($Site.Prefix == &apos;/s&apos;, $Site.Prefix + &apos;/apex/dfsle__gendocumentgenerator&apos;, &apos;/apex/dfsle__gendocumentgenerator&apos;), null, [sId = Opportunity.Id, templateId = &apos;a3ldK000000nlgvQAA&apos;, recordId = Opportunity.Id, title = &apos;Statement of Work (SOW)&apos;])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generatea3ldK000000qGWvQAM</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create MSA</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR(IF($Site.Prefix == &apos;/s&apos;, $Site.Prefix + &apos;/apex/dfsle__gendocumentgenerator&apos;, &apos;/apex/dfsle__gendocumentgenerator&apos;), null, [sId = Opportunity.Id, templateId = &apos;a3ldK000000qGWvQAM&apos;, recordId = Opportunity.Id, title = &apos;Create MSA&apos;])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SendWithDocuSign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Send with Docusign</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR(IF($Site.Prefix == &apos;/s&apos;, $Site.Prefix + &apos;/apex/dfsle__sending&apos;, &apos;/apex/dfsle__sending&apos;), null, [sId = Opportunity.Id])}</url>
+    </webLinks>
+</CustomObject>

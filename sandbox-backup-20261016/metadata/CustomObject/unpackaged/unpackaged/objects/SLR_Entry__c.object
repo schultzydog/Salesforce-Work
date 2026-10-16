@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Custom</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Custom</fullName>
+        <fields>Name</fields>
+        <fields>Announcement_Date__c</fields>
+        <fields>Announcement_Type__c</fields>
+        <fields>Annualized_Contract_Value_USD__c</fields>
+        <fields>Business_Line__c</fields>
+        <label>Custom</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>false</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>false</enableSharing>
+    <enableStreamingApi>false</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.AccountId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>SLR Entries</relationshipLabel>
+        <relationshipName>SLR_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Announcement_Date__c</fullName>
+        <description>this field is called &apos;Date&apos; on the original SLR</description>
+        <label>Announcement Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Announcement_Date_validation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Announcement_Date__c =   Opportunity__r.CloseDate , &apos;PASS&apos;, &apos;FAIL&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Announcement Date validation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Announcement_Type__c</fullName>
+        <label>Announcement Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cancellation</fullName>
+                    <default>false</default>
+                    <label>Cancellation</label>
+                </value>
+                <value>
+                    <fullName>Lost Business</fullName>
+                    <default>false</default>
+                    <label>Lost Business</label>
+                </value>
+                <value>
+                    <fullName>Mid-Year Downsell</fullName>
+                    <default>false</default>
+                    <label>Mid-Year Downsell</label>
+                </value>
+                <value>
+                    <fullName>Mid-Year Upsell</fullName>
+                    <default>false</default>
+                    <label>Mid-Year Upsell</label>
+                </value>
+                <value>
+                    <fullName>New Sale</fullName>
+                    <default>false</default>
+                    <label>New Sale</label>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                    <label>Renewal</label>
+                </value>
+                <value>
+                    <fullName>Trial Conversion</fullName>
+                    <default>false</default>
+                    <label>Trial Conversion</label>
+                </value>
+                <value>
+                    <fullName>Voting</fullName>
+                    <default>false</default>
+                    <label>Voting</label>
+                </value>
+                <value>
+                    <fullName>Contract Consolidation</fullName>
+                    <default>false</default>
+                    <label>Contract Consolidation</label>
+                </value>
+                <value>
+                    <fullName>Trial</fullName>
+                    <default>false</default>
+                    <label>Trial</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Announcement_Type_validation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  TEXT( Announcement_Type__c ) =   TEXT(Opportunity__r.Type) , &apos;PASS&apos;, &apos;FAIL&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Announcement Type validation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Contract_Value_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(   Opportunity__r.RevenueType__c  ,&apos;Recurring&apos;), 12 *  Average_Month_OC__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Contract Value (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Contract_Value_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL( Opportunity__r.RevenueType__c,&apos;Recurring&apos;), 12 * Average_Month_USD__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Contract Value (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Recurring_Amount_USD__c</fullName>
+        <externalId>false</externalId>
+        <label>Annualized Recurring Amount (USD)</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assessment__c</fullName>
+        <label>Assessment</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Average_Month_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract_Amount_OC__c  / Round(IF((  End_Date__c - Opportunity__r.Contract_Start_Date__c ) / 365.25 * 12 &lt; 1, 1, (End_Date__c -  Opportunity__r.Contract_Start_Date__c ) / 365.25 * 12), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average $/Month (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Average_Month_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract_Amount_USD__c/ Round(IF(( End_Date__c - Opportunity__r.Contract_Start_Date__c ) / 365 * 12 &lt; 1, 1, (End_Date__c - Opportunity__r.Contract_Start_Date__c) / 365 * 12), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average $/Month (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Line__c</fullName>
+        <label>Business Line</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Corporate</fullName>
+                    <default>false</default>
+                    <label>Corporate</label>
+                </value>
+                <value>
+                    <fullName>Global Markets</fullName>
+                    <default>false</default>
+                    <label>Global Markets</label>
+                </value>
+                <value>
+                    <fullName>OOP</fullName>
+                    <default>false</default>
+                    <label>OOP</label>
+                </value>
+                <value>
+                    <fullName>GZERO</fullName>
+                    <default>false</default>
+                    <label>GZERO</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Adjustment_Reason__c</fullName>
+        <externalId>false</externalId>
+        <formula>If( NOT ISBLANK(Contract_Adjustment__c), TEXT(Contract_Adjustment__r.Contract_Adjustment_Reason__c) ,null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Adjustment Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Adjustment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Contract Adjustment</label>
+        <referenceTo>Contract_Adjustments__c</referenceTo>
+        <relationshipLabel>SLR Entries</relationshipLabel>
+        <relationshipName>SLR_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Amount_OC__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Amount (OC)</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Amount_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (NOT ISBLANK(Contract_Amount_OC__c) &amp;&amp; NOT ISNULL(Contract_Amount_OC__c) &amp;&amp; Contract_Amount_OC__c &gt; 0, Contract_Amount_OC__c  /   Opportunity__r.FX_rate__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Amount_validation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ROUND(Contract_Amount_OC__c, 2) =   ROUND(Opportunity__r.Amount,2) , &apos;PASS&apos;, &apos;FAIL&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Amount validation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Code_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT( Project_Code__c ,8)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Code__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Contract Code Lookup</label>
+        <referenceTo>Contract_Code__c</referenceTo>
+        <relationshipLabel>SLR Entries</relationshipLabel>
+        <relationshipName>SLR_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>YEAR( End_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract End Date Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Ends_on_12_31__c</fullName>
+        <formula>End_Date__c =  Last_Day_of_Contract_End_Date_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Ends on 12/31</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_term_in_Months__c</fullName>
+        <externalId>false</externalId>
+        <formula>Round(IF((  End_Date__c - Opportunity__r.Contract_Start_Date__c ) / 365.25 * 12 &lt; 1, 1, (End_Date__c - Opportunity__r.Contract_Start_Date__c ) / 365.25 * 12), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract_term_in_Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_by_SLR_Automation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created by SLR Automation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_with_new_process__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created with new process</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Downsell_Upsell_due_to_FX__c</fullName>
+        <externalId>false</externalId>
+        <label>Downsell/Upsell due to FX</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Date_validation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  End_Date__c =   Opportunity__r.Contract_End_Date__c , &apos;PASS&apos;, &apos;FAIL&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>End Date validation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eurasia_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Eurasia Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Finance_team_SLR_refinement_notes__c</fullName>
+        <label>Finance team SLR refinement notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Ian_speaking__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Ian speaking</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Day_of_Contract_End_Date_Year__c</fullName>
+        <formula>DATE( Contract_End_Date_Year__c ,12 ,31)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Day of Contract End Date Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Net_Sales_Contribution_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Revenue_Type__c, &apos;One Firm&apos;), &apos;One Firm&apos;,
+IF( ISPICKVAL( Revenue_Type__c, &apos;Poll&apos;), &apos;Poll&apos;,
+IF( ISPICKVAL( Revenue_Type__c, &apos;Voting&apos;), &apos;Voting&apos;, 
+IF( ISPICKVAL( Announcement_Type__c , &apos;Lost Business&apos;), &apos;Loss&apos;,
+IF( ISPICKVAL(Renewal_Sub_type__c, &apos;Flat&apos;), &apos;Flat Renewal&apos;,
+IF( ISPICKVAL( Revenue_Type__c , &apos;Recurring&apos;) ,
+IF( ISPICKVAL(Announcement_Type__c , &apos;New Sale&apos;) || ISPICKVAL(Announcement_Type__c , &apos;Trial Conversion&apos;), &apos;New Recurring&apos;,
+IF( ISPICKVAL(Announcement_Type__c , &apos;Mid-Year Upsell&apos;) || ISPICKVAL(Renewal_Sub_type__c, &apos;Upsell&apos;), &apos;Upsell&apos;,
+IF( ISPICKVAL(Announcement_Type__c , &apos;Mid-Year Downsell&apos;) || ISPICKVAL(Renewal_Sub_type__c, &apos;Downsell&apos;), &apos;Downsell&apos;,
+null)))
+,
+IF( ISPICKVAL( Revenue_Type__c, &apos;Non-Recurring&apos;) || ISPICKVAL( Revenue_Type__c, &apos;Trial&apos;),&apos;Non-Recurring&apos;,
+
+null
+
+)))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Sales Contribution Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes_for_FX_Upsell_Downsell__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes for FX Upsell/Downsell</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_Firm__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>One Firm</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>One_Firm_formula__c</fullName>
+        <formula>Opportunity__r.One_Firm__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>One Firm - oppty value</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Opportunity Product</label>
+        <referenceTo>OpportunityLineItem</referenceTo>
+        <relationshipLabel>SLR Entries</relationshipLabel>
+        <relationshipName>SLR_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>SLR Entries</relationshipLabel>
+        <relationshipName>SLR_Lines</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Oppty_Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Oppty Project Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PV_Reporting_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2018, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2018, 12,31), &apos;2018&apos;, 
+IF( 
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2019, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2019, 12,31), &apos;2019&apos;,
+IF(
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2020, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2020, 12,31), &apos;2020&apos;, 
+IF( 
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2021, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2021, 12,31), &apos;2021&apos;,
+IF(
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2022, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2022, 12,31), &apos;2022&apos;, 
+IF( 
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2023, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2023, 12,31), &apos;2023&apos;,
+IF(
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2024, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2024, 12,31), &apos;2024&apos;, 
+IF( 
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2025, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2025, 12,31), &apos;2025&apos;,
+IF(
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2026, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2026, 12,31), &apos;2026&apos;, 
+IF( 
+Opportunity__r.Contract_Start_Date__c &lt;= DATE(2027, 12,31)  &amp;&amp;  End_Date__c &gt;= DATE(2027, 12,31), &apos;2027&apos;,
+
+null))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PV Reporting Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Oppty_Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Previous_Opportunity_Project_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Previous Oppty Project Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ISPICKVAL(Announcement_Type__c , &apos;Lost Business&apos;) ,  Opportunity__r.Previous_Opportunity__r.Project_Code__c , Opportunity__r.Project_Code__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Project Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_manual_creation__c</fullName>
+        <inlineHelpText>As we iterate toward full automation of SLR entries, we can expect the need to create manual entries to close the gaps. Please share the reason for why the entry was created manually so we use the information for refinement of SLR entry automation</inlineHelpText>
+        <label>Reason for manual creation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Recurring__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Recurring</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Sub_type__c</fullName>
+        <label>Renewal Sub-type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Flat</fullName>
+                    <default>false</default>
+                    <label>Flat</label>
+                </value>
+                <value>
+                    <fullName>Upsell</fullName>
+                    <default>false</default>
+                    <label>Upsell</label>
+                </value>
+                <value>
+                    <fullName>Downsell</fullName>
+                    <default>false</default>
+                    <label>Downsell</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Revenue_Type__c</fullName>
+        <label>Revenue Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Revenue_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_OC__c</fullName>
+        <externalId>false</externalId>
+        <label>SLR Amount (OC)</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Recurring__c</fullName>
+        <externalId>false</externalId>
+        <label>SLR Amount - Recurring</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_USD__c</fullName>
+        <externalId>false</externalId>
+        <label>SLR Amount (USD)</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Entry_18_char_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Entry 18 char Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SLR Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Plus_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SLR+ Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Scope_of_Work__c</fullName>
+        <label>Scope of Work</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Task_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Validation_error_count__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Announcement_Date__c = Opportunity__r.CloseDate , 0, 1) + 
+IF( TEXT( Announcement_Type__c ) = TEXT(Opportunity__r.Type) , 0, 1) +
+IF(  ROUND(Contract_Amount_OC__c, 2) = ROUND(Opportunity__r.Amount,2) , 0, 1) +
+IF( End_Date__c = Opportunity__r.Contract_End_Date__c , 0, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Validation error count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>SLR Entry</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Contract_Amount_OC__c</columns>
+        <columns>SLR_Amount_USD__c</columns>
+        <columns>Announcement_Date__c</columns>
+        <columns>Announcement_Type__c</columns>
+        <columns>Assessment__c</columns>
+        <columns>End_Date__c</columns>
+        <columns>Task_Code__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Created_by_automation</fullName>
+        <columns>NAME</columns>
+        <columns>Announcement_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Created_by_SLR_Automation__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Created by automation</label>
+    </listViews>
+    <listViews>
+        <fullName>No_Oppty</fullName>
+        <columns>NAME</columns>
+        <columns>Contract_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opportunity__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>No Oppty</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SLR-{00000}</displayFormat>
+        <label>SLR Line Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SLR Entries</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Announcement_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SLR_Amount_OC__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Business_Line__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

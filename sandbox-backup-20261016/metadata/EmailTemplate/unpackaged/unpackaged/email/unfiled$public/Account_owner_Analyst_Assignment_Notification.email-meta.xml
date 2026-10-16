@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Account owner Analyst Assignment Notification</name>
+    <style>none</style>
+    <subject>A new Analyst has been assigned to {!Contact.FirstName} {!Contact.LastName}</subject>
+    <textOnly>{!Account.OwnerFirstName},  
+
+{!01I3A000002LhY8.00N3A00000C3JP5} has been assigned as an Analyst to {!Contact.FirstName} {!Contact.LastName} with a {!01I3A000002LhY8.00N3A00000C3JP7} contact frequency.  
+
+Click on below link to open the contact record. {!Contact.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

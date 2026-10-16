@@ -1,0 +1,10 @@
+A new Library has been created in Salesforce. Please create 2 corresponding dynamic lists in Pardot - one for Individual Emails, one for Summary Emails. 
+
+{!Library__c.Name}
+{!Library__c.Link}
+
+In Pardot, go to Marketing->Segmentation->Lists and create a new list. Choose for it to be dynamic. The name of the List and the name of the SF Library must match exactly.  Criteria for the dynamic list (match all):
+* Prospect CRM Library is {!Library__c.Name}
+* Prospect account field Status is Enabled
+* Status is 'Enabled'
+* 'Opted Out' isn't '1'

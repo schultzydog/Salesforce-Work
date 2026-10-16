@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CventEvents__Event__c.CventEvents__Attendees__r$CventEvents__AttendeeName__c</field>
+    </columns>
+    <columns>
+        <field>CventEvents__Event__c.CventEvents__Attendees__r$CventEvents__Company__c</field>
+    </columns>
+    <columns>
+        <field>CventEvents__Event__c.CventEvents__Attendees__r$CventEvents__Status__c</field>
+    </columns>
+    <columns>
+        <field>CventEvents__Event__c.CventEvents__Attendees__r$CventEvents__RegistrationType__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>2023 GZERO Summit Invitees</description>
+    <filter>
+        <criteriaItems>
+            <column>CventEvents__Event__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>E-00000002</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>2023 GZERO Summit Japan Invitees</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cvent_Events_and_Attendees__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CventEvents__Event__c.CventEvents__Attendees__r$CventEvents__Company__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CventEvents__Event__c$CventEvents__pkg_ArchiveDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

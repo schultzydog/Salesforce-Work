@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Alec Ross</fullName>
+        <default>false</default>
+        <label>Alec Ross</label>
+    </customValue>
+    <customValue>
+        <fullName>Colin Coleman</fullName>
+        <default>false</default>
+        <label>Colin Coleman</label>
+    </customValue>
+    <customValue>
+        <fullName>David Gordon</fullName>
+        <default>false</default>
+        <label>David Gordon</label>
+    </customValue>
+    <customValue>
+        <fullName>Dennis Delorenzo</fullName>
+        <default>false</default>
+        <label>Dennis Delorenzo</label>
+    </customValue>
+    <customValue>
+        <fullName>Enrico Letta</fullName>
+        <default>false</default>
+        <label>Enrico Letta</label>
+    </customValue>
+    <customValue>
+        <fullName>Gerry Butts</fullName>
+        <default>false</default>
+        <label>Gerry Butts</label>
+    </customValue>
+    <customValue>
+        <fullName>John Baird</fullName>
+        <default>false</default>
+        <label>John Baird</label>
+    </customValue>
+    <customValue>
+        <fullName>Juan Pujadas</fullName>
+        <default>false</default>
+        <label>Juan Pujadas</label>
+    </customValue>
+    <customValue>
+        <fullName>Kevin Rudd</fullName>
+        <default>false</default>
+        <label>Kevin Rudd</label>
+    </customValue>
+    <customValue>
+        <fullName>Lord Mark Malloch-Brown</fullName>
+        <default>false</default>
+        <label>Lord Mark Malloch-Brown</label>
+    </customValue>
+    <customValue>
+        <fullName>Radek Sikorski</fullName>
+        <default>false</default>
+        <label>Radek Sikorski</label>
+    </customValue>
+    <customValue>
+        <fullName>Robert D. Kaplan</fullName>
+        <default>false</default>
+        <label>Robert D. Kaplan</label>
+    </customValue>
+    <customValue>
+        <fullName>Sean West</fullName>
+        <default>false</default>
+        <label>Sean West</label>
+    </customValue>
+    <customValue>
+        <fullName>Sigmar Gabriel</fullName>
+        <default>false</default>
+        <label>Sigmar Gabriel</label>
+    </customValue>
+    <customValue>
+        <fullName>Takashi Shimada</fullName>
+        <default>false</default>
+        <label>Takashi Shimada</label>
+    </customValue>
+    <customValue>
+        <fullName>Vuk Jeremic</fullName>
+        <default>false</default>
+        <label>Vuk Jeremic</label>
+    </customValue>
+    <customValue>
+        <fullName>Evan Medeiros</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Evan Medeiros</label>
+    </customValue>
+    <masterLabel>Senior Advisor</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

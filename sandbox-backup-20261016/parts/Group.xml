@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account_Managers</members>
+        <members>All_Internal_Users</members>
+        <members>Diogo_shares</members>
+        <members>EM</members>
+        <members>Felipe_Marin</members>
+        <members>Felipe_Marin_shares</members>
+        <members>GENR</members>
+        <members>GZERO</members>
+        <members>Gerry_Butts</members>
+        <members>Gerry_Sharers</members>
+        <members>Gloma</members>
+        <members>Jonathan_Baena</members>
+        <members>KPI_Metrics_Manager</members>
+        <members>KPI_Profile_Admins</members>
+        <members>MENA</members>
+        <members>Marina_Tavares</members>
+        <members>North_America</members>
+        <members>OOP</members>
+        <members>One_Firm_Opportunity_Owners</members>
+        <members>Portal_Data_Dashboard_recipients</members>
+        <members>Rafael_Smaletz_Shares</members>
+        <members>Sales_Ops</members>
+        <members>cventSharingGroup_a1V4V000005MIRrUAO</members>
+        <name>Group</name>
+    </types>
+    <version>62.0</version>
+</Package>

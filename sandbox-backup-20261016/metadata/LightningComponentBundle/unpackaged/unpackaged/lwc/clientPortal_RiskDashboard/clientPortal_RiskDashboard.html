@@ -1,0 +1,851 @@
+<template>
+    <div class={getMenuClass}>
+        <div class="slds-media slds-media_center slds-has-flexi-truncate" style="margin-top: 4px;">
+            <div class="slds-media__figure">
+                <div class="nav-icon-container">
+                    <i class="fad fa-chart-line"></i>
+                </div>
+            </div>
+            <div class="slds-media__body">
+                <div class="label">
+                    <span>Risk Dashboard</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="almost-full-height" >
+            <template if:true={noDashboards}>
+                <div class="slds-m-vertical_medium slds-text-color_weak" style="font-size: 0.75rem;">
+                    Contact us to subscribe to our Political Risk Dashboards portal product
+                </div>
+            </template>
+            <template if:false={selectedPoliticalRiskAnalysis}>
+            <template for:each={politicalRiskAnalysesByYear} for:item="politicalRiskAnalysesForOneYear">
+                <div key={politicalRiskAnalysesForOneYear.key} class="navigation-section slds-text-title_caps desktop">
+                    {politicalRiskAnalysesForOneYear.key}
+                </div>
+                <div key={politicalRiskAnalysesForOneYear.key} class="political-risk-links slds-m-vertical_small">
+                    <ul class="slds-list_dotted">
+                        <template for:each={politicalRiskAnalysesForOneYear.list} for:item="politicalRiskAnalysis" for:index="i">
+                            <li key={politicalRiskAnalysis.Id}><a onclick={navigate} data-target="politicalRiskAnalysis" data-id={politicalRiskAnalysis.Id} data-index={i}>{politicalRiskAnalysis.Month_Name__c}&nbsp;{politicalRiskAnalysis.Year__c}</a></li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+        </template>
+
+        <template if:true={selectedPoliticalRiskAnalysis}>
+            <div class="navigation-section slds-text-title_caps desktop">
+                <span class="back-arrow"><a onclick={navigate}><i class="fad fa-arrow-left"></i></a></span>&nbsp;
+                {selectedPoliticalRiskAnalysis.Month_Name__c}&nbsp;{selectedPoliticalRiskAnalysis.Year__c}
+            </div>
+            <div class="political-risk-links slds-m-vertical_small slds-p-bottom_large scrollable-area">
+                <ul class="slds-list_dotted">
+                    <li if:true={isFullSubscriber}><a onclick={navigate} data-target="executiveSummary" data-id={selectedPoliticalRiskAnalysis.Id}>Executive summary</a></li>
+                    <li><a onclick={navigate} data-target="glossary" data-id={selectedPoliticalRiskAnalysis.Id}>Glossary</a></li>
+                    <hr />
+                    <li><a onclick={navigate} data-target="netAssessment" data-id={selectedPoliticalRiskAnalysis.Id}>Regional net assessments</a></li>
+                    <li><a onclick={navigate} data-target="heatmap" data-id={selectedPoliticalRiskAnalysis.Id}>Regional heatmap</a></li>
+                    <li><a onclick={navigate} data-target="highrisk" data-id={selectedPoliticalRiskAnalysis.Id}>High risk upcoming events</a></li>
+                    <hr />
+                    <template for:each={selectedPoliticalRiskAnalysis.Regional_Analysis__r} for:item="regionalAnalysis"
+                        for:index="i">
+                        <li key={regionalAnalysis.Id} if:true={regionalAnalysis.analysisDepthFull}><img src={regionalAnalysis.Region__r.Flag_image_URL__c}
+                                class="region-flag small">&nbsp;<a onclick={navigate} data-target="regionalAnalysis" data-id={selectedPoliticalRiskAnalysis.Id}
+                                data-index={i}>{regionalAnalysis.Region__r.Name}</a></li>
+                    </template>
+                    <hr />
+                    <li><a onclick={navigate} data-target="basecases" data-id={selectedPoliticalRiskAnalysis.Id}>Geopolitical basecases</a></li>
+                    <hr />
+                </ul>
+                <div class="download-container"><a href={pdfUrl} target="_blank"><i
+                            class="fad fa-file-pdf"></i>&nbsp;&nbsp;View/Download PDF</a></div>
+            </div>
+        </template>
+        </div>
+    </div>
+    <div class={getContentClass}>
+        <div class="top"></div>
+        <template if:true={isLoading}>
+            <div class="slds-text-color_weak">
+                Loading...
+            </div>
+        </template>
+        <template if:false={isLoading}>
+            <template if:false={selectedPoliticalRiskAnalysis}>
+                <div class="slds-text-heading_large slds-m-bottom_medium">Political Risk Dashboard</div>
+                <p>Eurasia Group’s bespoke curation of our country, regional, and sector coverage. The Dashboard showcases the assumptions that underpin our analysis, and includes scoring of monthly risk trajectory changes for each country at the macro level and across issue areas, such as domestic stability, global position, and economic policy.</p>
+            </template>
+            <template if:true={selectedPoliticalRiskAnalysis}>
+                <template if:true={sectionIsExecutiveSummary}>
+                    <div class="slds-text-heading_large slds-m-bottom_medium">Executive summary</div>
+                    <template if:true={isFullSubscriber}>                        
+                        <lightning-formatted-rich-text value={selectedPoliticalRiskAnalysis.Executive_Summary__c}>
+                        </lightning-formatted-rich-text>
+                        <div if:true={selectedPoliticalRiskAnalysis.hasExecutiveSummarySegments} class="slds-m-top_medium">
+                            <template for:each={selectedPoliticalRiskAnalysis.Regional_Analysis__r} for:item="regionalAnalysis">
+                                <lightning-formatted-rich-text key={regionalAnalysis.Id} if:true={regionalAnalysis.Executive_Summary_Segment_for_Region__c} value={regionalAnalysis.Executive_Summary_Segment_for_Region__c}>
+                                </lightning-formatted-rich-text>
+                            </template>
+                        </div>
+                    </template>
+                    <template if:false={isFullSubscriber}> 
+                        <p>Contact us to subscribe to our full Political Risk Dashboards portal product which includes the Executive Summary</p>
+                    </template>
+                </template>
+                <template if:true={sectionIsGlossary}>
+                    <div class="slds-text-heading_large slds-m-bottom_medium">Glossary</div>
+                    <lightning-formatted-rich-text value={selectedPoliticalRiskAnalysis.Glossary__c}>
+                    </lightning-formatted-rich-text>
+                </template>
+                <template if:true={sectionIsNetAssessment}>
+                    <div class="slds-text-heading_large slds-m-bottom_medium">Regional net assessments</div>
+
+                    <div class="net-assessment">
+                        <table
+                            class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                            aria-label="">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="slds-cell-wrap" scope="col" style="width: 16%;">
+                                        <div class="" title="">{selectedPoliticalRiskAnalysis.Month_Name__c}
+                                            {selectedPoliticalRiskAnalysis.Year__c}</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col" style="width: 13%;">
+                                        <div class="" title="">Directional change since last month</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Net assessment</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={selectedPoliticalRiskAnalysis.Regional_Analysis__r}
+                                    for:item="regionalAnalysis">
+                                    <tr key={regionalAnalysis.Id} if:true={regionalAnalysis.analysisDepthFull}>
+                                        <th data-label="" scope="row" style="padding-left: 16px !important;">
+                                            <div class="" title="">
+                                                <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                                                    <div class="slds-media__figure">
+                                                        <div class="nav-icon-container">
+                                                            <img src={regionalAnalysis.Region__r.Flag_image_URL__c}
+                                                                class="region-flag medium">
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-media__body"
+                                                        style="margin-left: -6px;">
+                                                        <div class="slds-text-heading_medium" style="font-weight: 400;">{regionalAnalysis.Region__r.Name}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td data-label="" class={regionalAnalysis.Directional_change_since_last_month__c}>
+                                            <div class="slds-cell-wrap">
+                                                <img class="arrow-icon"
+                                                    src={regionalAnalysis.Directional_change_since_last_month__iconUrl}></img>&nbsp;{regionalAnalysis.Directional_change_since_last_month__c}
+                                            </div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-cell-wrap">
+                                                {regionalAnalysis.Net_Assessment__c}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </template>
+
+                <template if:true={sectionIsHeatmap}>
+                    <div class="slds-text-heading_large slds-m-bottom_medium">Regional heatmap</div>
+
+                    <div class="assessment-heatmap">
+                        <table
+                            class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                            aria-label="">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="slds-text-align_center slds-cell-wrap" scope="col" colspan="5">
+                                        <div class="" title="">{selectedPoliticalRiskAnalysis.Month_Name__c}
+                                            {selectedPoliticalRiskAnalysis.Year__c}</div>
+                                    </th>
+                                    <th class="slds-text-align_center slds-cell-wrap border" scope="col" colspan="5"
+                                        style="width: 400px;">
+                                        <div class="" title="">Changes since last report</div>
+                                    </th>
+                                </tr>
+                                <tr class="slds-line-height_reset">
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Region</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Relation of past month's events to our basecase</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Basecase confidence level</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Directional change since last month</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Estimated risk over the next month</div>
+                                    </th>
+                                    <th class="slds-cell-wrap border vertical-td" scope="col">
+                                        <div class="text-vertical" title="">Domestic<br />stability</div>
+                                    </th>
+                                    <th class="slds-cell-wrap vertical-td" scope="col">
+                                        <div class="text-vertical" title="">Global<br />position</div>
+                                    </th>
+                                    <th class="slds-cell-wrap vertical-td" scope="col">
+                                        <div class="text-vertical" title="">Security</div>
+                                    </th>
+                                    <th class="slds-cell-wrap vertical-td" scope="col">
+                                        <div class="text-vertical" title="">Leadership<br />intent</div>
+                                    </th>
+                                    <th class="slds-cell-wrap vertical-td" scope="col">
+                                        <div class="text-vertical" title="">Economy</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={selectedPoliticalRiskAnalysis.Regional_Analysis__r}
+                                    for:item="regionalAnalysis">
+                                    <tr key={regionalAnalysis.Id} if:true={regionalAnalysis.analysisDepthFull}>
+                                        <th data-label="" scope="row" style="padding-left: 16px !important;">
+                                            <div class="" title="">
+                                                <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                                                    <div class="slds-media__figure">
+                                                        <div class="nav-icon-container">
+                                                            <img src={regionalAnalysis.Region__r.Flag_image_URL__c}
+                                                                class="region-flag small">
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-media__body"
+                                                        style="margin-left: -6px; margin-top: 3px;">
+                                                        <div class=""><b>{regionalAnalysis.Region__r.Name}</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td data-label="">
+                                            <div class="slds-cell-wrap" title="">
+                                                {regionalAnalysis.Last_month_s_events_to_basecase__c}
+                                            </div>
+                                        </td>
+                                        <td data-label="" class={regionalAnalysis.Basecase_confidence_level__c}>
+                                            <div class="slds-cell-wrap">
+                                                <img class="arrow-icon"
+                                                    src={regionalAnalysis.Basecase_confidence_level__iconUrl}></img>&nbsp;{regionalAnalysis.Basecase_confidence_level__c}
+                                            </div>
+                                        </td>
+                                        <td data-label="" class={regionalAnalysis.Directional_change_since_last_month__c}>
+                                            <div class="slds-cell-wrap">
+                                                <img class="arrow-icon"
+                                                    src={regionalAnalysis.Directional_change_since_last_month__iconUrl}></img>&nbsp;{regionalAnalysis.Directional_change_since_last_month__c}
+                                            </div>
+                                        </td>
+                                        <td data-label="" class={regionalAnalysis.Estimated_risk_over_the_next_month__c}>
+                                            <div class="slds-cell-wrap">
+                                                <img class="arrow-icon"
+                                                    src={regionalAnalysis.Estimated_risk_over_the_next_month__iconUrl}></img>&nbsp;{regionalAnalysis.Estimated_risk_over_the_next_month__c}
+                                            </div>
+                                        </td>
+                                        <td class="border" data-label="">
+                                            <div class="slds-text-align_center risk-change">
+                                                <div class={regionalAnalysis.Risk_Change_Domestic_Stability__c} style={regionalAnalysis.Risk_Change_Domestic_Stability__heatmapStyle}>
+                                                    <i
+                                                        class={regionalAnalysis.Risk_Change_Domestic_Stability__iconClass}></i>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-text-align_center risk-change">
+                                                <div class={regionalAnalysis.Risk_Change_Global_Position__c} style={regionalAnalysis.Risk_Change_Global_Position__heatmapStyle}>
+                                                    <i class={regionalAnalysis.Risk_Change_Global_Position__iconClass}></i>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-text-align_center risk-change">
+                                                <div class={regionalAnalysis.Risk_Change_Security__c} style={regionalAnalysis.Risk_Change_Security__heatmapStyle}>
+                                                    <i class={regionalAnalysis.Risk_Change_Security__iconClass}></i>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-text-align_center risk-change">
+                                                <div class={regionalAnalysis.Risk_Change_Leadership_Intent__c} style={regionalAnalysis.Risk_Change_Leadership_Intent__heatmapStyle}>
+                                                    <i class={regionalAnalysis.Risk_Change_Leadership_Intent__iconClass}></i>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-text-align_center risk-change">
+                                                <div class={regionalAnalysis.Risk_Change_Economy__c} style={regionalAnalysis.Risk_Change_Economy__heatmapStyle}>
+                                                    <i class={regionalAnalysis.Risk_Change_Economy__iconClass}></i>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </template>
+                <template if:true={sectionIsHighrisk}>
+                    <div class="slds-text-heading_large slds-m-bottom_medium">High risk upcoming events</div>
+
+                    <div class="assessment-highrisk">
+                        <template if:true={selectedPoliticalRiskAnalysis.highriskSignposts}>
+                            <table
+                                class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                                aria-label="">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="slds-cell-wrap" scope="col" style="width: 16%;">
+                                            <div class="" title="">Region</div>
+                                        </th>
+                                        <th class="slds-cell-wrap" scope="col">
+                                            <div class="" title="">Upcoming Event</div>
+                                        </th>
+                                        <th class="slds-cell-wrap" scope="col" style="width: 150px;">
+                                            <div class="" title="">Category</div>
+                                        </th>
+                                        <th class="slds-cell-wrap" scope="col" style="width: 150px;">
+                                            <div class="" title="">Positive or negative for risk?</div>
+                                        </th>
+                                        <th class="slds-cell-wrap" scope="col" style="width: 150px;">
+                                            <div class="" title="">Likelihood</div>
+                                        </th>
+                                        <th class="slds-cell-wrap" scope="col" style="width: 150px;">
+                                            <div class="" title="">Impact</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={selectedPoliticalRiskAnalysis.highriskSignposts}
+                                        for:item="highriskSignpost">
+                                        <tr key={highriskSignpost.Id}>
+                                            <th data-label="" scope="row" style="padding-left: 16px !important;">
+                                                <div class="" title="">
+                                                    <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                                                        <div class="slds-media__figure">
+                                                            <div class="nav-icon-container">
+                                                                <img src={highriskSignpost.Regional_Analysis__r.Region__r.Flag_image_URL__c}
+                                                                    class="region-flag medium">
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-media__body"
+                                                            style="margin-left: -6px;">
+                                                            <div class="slds-text-heading_medium" style="font-weight: 400;">{highriskSignpost.Regional_Analysis__r.Region__r.Name}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td data-label="">
+                                                <div class="slds-cell-wrap">
+                                                    {highriskSignpost.Event__c}
+                                                </div>
+                                            </td>                                            
+                                            <td data-label="">
+                                                <div class="slds-cell-wrap">
+                                                    {highriskSignpost.Category__c}
+                                                </div>
+                                            </td>                                            
+                                            <td data-label="" class={highriskSignpost.Positive_or_negative_for_risk__c}>
+                                                <div class="slds-cell-wrap">
+                                                    <img class="arrow-icon"
+                                                        src={highriskSignpost.positiveOrNegativeForRisk__iconUrl}></img>&nbsp;{highriskSignpost.Positive_or_negative_for_risk__c}
+                                                </div>
+                                            </td>
+                                            <td data-label="" class={highriskSignpost.Likelihood__c}>
+                                                <div class="slds-cell-wrap">
+                                                    <img class="arrow-icon"
+                                                        src={highriskSignpost.likelihood__iconUrl}></img>&nbsp;{highriskSignpost.Likelihood__c}
+                                                </div>
+                                            </td>
+                                            <td data-label="" class={highriskSignpost.Impact__c}>
+                                                <div class="slds-cell-wrap">
+                                                    <img class="arrow-icon"
+                                                        src={highriskSignpost.impact__iconUrl}></img>&nbsp;{highriskSignpost.Impact__c}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </template>
+                        <template if:false={selectedPoliticalRiskAnalysis.highriskSignposts}>
+                            <p>No high risk upcoming evens to display</p>
+                        </template>
+                    </div>
+                </template>
+                <template if:true={sectionIsRegionalAnalysis}>
+                    <template if:true={selectedRegionalAnalysis.analysisDepthFull}>
+                        <div class="slds-media slds-media_center slds-has-flexi-truncate slds-m-bottom_x-large">
+                            <div class="slds-media__figure">
+                                <div class="nav-icon-container">
+                                    <img src={selectedRegionalAnalysis.Region__r.Flag_image_URL__c} class="region-flag">
+                                </div>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-text-heading_large slds-m-bottom_medium">
+                                    {selectedRegionalAnalysis.Region__r.Name}</div>
+                            </div>
+                        </div>
+
+                        <div class="regional-analysis-net-assessment">
+                            <table
+                                class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                                aria-label="">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="" title=""><i
+                                                    class="fad fa-chart-network"></i>&nbsp;Net assessment</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="slds-hint-parent">
+                                        <th data-label="" scope="row">
+                                            <div class="slds-cell-wrap" title="">
+                                                <lightning-formatted-rich-text
+                                                    value={selectedRegionalAnalysis.Net_Assessment__c}>
+                                                </lightning-formatted-rich-text>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="regional-analysis-basecase">
+                            <table
+                                class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                                aria-label="">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="" title=""><i
+                                                    class="fad fa-ruler"></i>&nbsp;Eurasia Group's
+                                                political basecases</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="slds-hint-parent">
+                                        <th data-label="" scope="row">
+                                            <div class="slds-cell-wrap" title="">
+                                                <lightning-formatted-rich-text value={selectedRegionalAnalysis.Basecase__c}>
+                                                </lightning-formatted-rich-text>
+                                            </div>
+
+                                            <div class="slds-grid slds-gutters">
+                                                <div class="slds-col slds-col-size_1-of-2 basecase-confidence-level">
+                                                    <table
+                                                        class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-vertical_large"
+                                                        aria-label="">
+                                                        <thead>
+                                                            <tr class="slds-line-height_reset">
+                                                                <th class="" scope="col">
+                                                                    <div class="" title="">Basecase
+                                                                        confidence level</div>
+                                                                </th>
+                        
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="slds-hint-parent">
+                                                                <th data-label="" scope="row"
+                                                                    class={selectedRegionalAnalysis.Basecase_confidence_level__confidenceClass}>
+                                                                    <div class="slds-cell-wrap" title="">
+                                                                        <img class="arrow-icon"
+                                                                            src={selectedRegionalAnalysis.Basecase_confidence_level__iconUrl}></img>&nbsp;{selectedRegionalAnalysis.Basecase_confidence_level__c}
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="slds-col slds-col-size_1-of-2 estimated-risk-next-month">
+                                                    <table
+                                                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-vertical_large"
+                                                    aria-label="">
+                                                        <thead>
+                                                            <tr class="slds-line-height_reset">
+                                                                <th class="slds-cell-wrap" scope="col">
+                                                                    <div class="" title=""><i
+                                                                            class="fad fa-exclamation-triangle"></i>&nbsp;Estimated risk over next
+                                                                        month</div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="slds-hint-parent">
+                                                                <td data-label=""
+                                                                    class={selectedRegionalAnalysis.Estimated_risk_over_the_next_month__c}>
+                                                                    <div class="slds-cell-wrap">
+                                                                        <img class="arrow-icon"
+                                                                            src={selectedRegionalAnalysis.Estimated_risk_over_the_next_month__iconUrl}></img>&nbsp;{selectedRegionalAnalysis.Estimated_risk_over_the_next_month__c}
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>        
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="regional-analysis-trajectories">
+                            <table
+                                class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                                aria-label="">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="" title=""><i
+                                                    class="fad fa-drafting-compass"></i>&nbsp;Basecase trajectories</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="slds-hint-parent">
+                                        <th data-label="" scope="row">
+                                            <div class="slds-cell-wrap" title="">
+                                                <table
+                                                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-vertical_large"
+                                                    aria-label="">
+                                                    <thead>
+                                                        <tr class="slds-line-height_reset">
+                                                            <th class="" scope="col">
+                                                                <div class="" title="">Directional change since
+                                                                    last month</div>
+                                                            </th>
+                                                            <th class="" scope="col">
+                                                                <div class="" title="">Short term</div>
+                                                            </th>
+                                                            <th class="" scope="col">
+                                                                <div class="" title="">Long term</div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="slds-hint-parent">
+                                                            <th data-label="" scope="row"
+                                                                class={selectedRegionalAnalysis.Directional_change_since_last_month__c}>
+                                                                <div class="slds-cell-wrap">
+                                                                    <img class="arrow-icon"
+                                                                        src={selectedRegionalAnalysis.Directional_change_since_last_month__iconUrl}></img>&nbsp;{selectedRegionalAnalysis.Directional_change_since_last_month__c}
+                                                                </div>
+                                                            </th>
+                                                            <td data-label=""
+                                                                class={selectedRegionalAnalysis.Short_term_political_trajectory__c}>
+                                                                <div class="slds-cell-wrap" title="">
+                                                                    <template if:true={selectedRegionalAnalysis.Short_term_political_trajectory__c}>
+                                                                        <img class="arrow-icon" src={selectedRegionalAnalysis.Short_term_political_trajectory__iconUrl}></img>&nbsp;{selectedRegionalAnalysis.Short_term_political_trajectory__c}                                                                    
+                                                                    </template>
+                                                                    <template if:false={selectedRegionalAnalysis.Short_term_political_trajectory__c}>
+                                                                        Eurasia Group does not assign trajectories for this locale
+                                                                    </template>
+                                                                </div>
+                                                            </td>
+                                                            <td data-label=""
+                                                                class={selectedRegionalAnalysis.Long_term_political_trajectory__c}>
+                                                                <div class="slds-cell-wrap" title="">
+                                                                    <template if:true={selectedRegionalAnalysis.Long_term_political_trajectory__c}>
+                                                                        <img class="arrow-icon" src={selectedRegionalAnalysis.Long_term_political_trajectory__iconUrl}></img>&nbsp;{selectedRegionalAnalysis.Long_term_political_trajectory__c}                                                                    
+                                                                    </template>
+                                                                    <template if:false={selectedRegionalAnalysis.Long_term_political_trajectory__c}>
+                                                                        Eurasia Group does not assign trajectories for this locale
+                                                                    </template>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="regional-analysis-assumptions">
+                            <table
+                                class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                                aria-label="">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="" title=""><i
+                                                    class="fal fa-lightbulb-exclamation"></i>&nbsp;Key analytic assumptions
+                                            </div>
+                                        </th>
+                                        <th class="" scope="col" style="width: 150px;">
+                                            <div class="" title="">Category</div>
+                                        </th>
+                                        <th class="slds-text-align_center" scope="col" style="width: 80px;">
+                                            <div class="" title="">&nbsp;</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={selectedRegionalAnalysis.Key_Analytic_Assumptions__r}
+                                        for:item="assumption">
+                                        <tr key={assumption.Id} class={assumption.class}>
+                                            <th data-label="" scope="row">
+                                                <div class="slds-cell-wrap" title="">
+                                                    {assumption.Assumption__c}
+                                                </div>
+                                            </th>
+                                            <td data-label="">
+                                                <div class="slds-cell-wrap">
+                                                    {assumption.Category__c}
+                                                </div>
+                                            </td>
+                                            <td data-label="">
+                                                <div class="slds-text-align_center slds-cell-wrap">
+                                                    <template if:true={assumption.isNew}>
+                                                        <i class="fas fa-check"></i>&nbsp;New
+                                                    </template>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="regional-analysis-events">
+                            <table
+                                class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                                aria-label="">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="slds-cell-wrap" scope="col">
+                                            <div class="" title=""><i
+                                                    class="fad fa-calendar-exclamation"></i>&nbsp;Key events since Last
+                                                update</div>
+                                        </th>
+                                        <th class="slds-cell-wrap" scope="col" style="width: 150px;">
+                                            <div class="" title="">Category</div>
+                                        </th>
+                                        <th scope="col" class="slds-cell-wrap" style="width: 150px;">
+                                            <div class="" title="">Assessment vs key
+                                                analytic assumptions</div>
+                                        </th>
+                                        <th scope="col" class="slds-cell-wrap" style="width: 150px;">
+                                            <div class="" title="">Probable
+                                                impact on risk (Negative = higher risk)</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={selectedRegionalAnalysis.Key_Events__r} for:item="event">
+                                        <tr key={event.Id} class={event.class}>
+                                            <th data-label="" scope="row">
+                                                <div class="slds-cell-wrap" title="">
+                                                    <span if:true={event.Date_Text__c}>[{event.Date_Text__c}]&nbsp;</span>{event.Event__c}
+                                                </div>
+                                            </th>
+                                            <td data-label="">
+                                                <div class="slds-cell-wrap">
+                                                    {event.Category__c}
+                                                </div>
+                                            </td>
+                                            <td data-label="">
+                                                <div class="slds-cell-wrap">
+                                                    {event.Assessment_vs_key_analytic_assumptions__c}
+                                                </div>
+                                            </td>
+                                            <td data-label="" class={event.Probable_impact_on_risk_negative_higher__c}>
+                                                <div class="slds-cell-wrap" title="">
+                                                    <img class="arrow-icon"
+                                                        src={event.Probable_impact_on_risk_negative_higher__iconUrl}></img>&nbsp;{event.Probable_impact_on_risk_negative_higher__c}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="regional-analysis-signposts">
+                            <table
+                                class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                                aria-label="">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="slds-cell-wrap" scope="col">
+                                            <div class="" title=""><i
+                                                    class="fad fa-bell-exclamation"></i>&nbsp;Key signposts for next month
+                                            </div>
+                                        </th>
+                                        <th class="slds-cell-wrap" scope="col" style="width: 150px;">
+                                            <div class="" title="">Category</div>
+                                        </th>
+                                        <template if:false={selectedRegionalAnalysis.newFormatForSignposts}>
+                                            <th scope="col" class="slds-cell-wrap" style="width: 150px;">
+                                                <div class="" title="">Likely impact</div>
+                                            </th>
+                                        </template>
+                                        <template if:true={selectedRegionalAnalysis.newFormatForSignposts}>
+                                            <th scope="col" class="slds-cell-wrap" style="width: 150px;">
+                                                <div class="" title="">Positive or negative for risk?</div>
+                                            </th>
+                                            <th scope="col" class="slds-cell-wrap" style="width: 150px;">
+                                                <div class="" title="">Likelihood</div>
+                                            </th>
+                                            <th scope="col" class="slds-cell-wrap" style="width: 150px;">
+                                                <div class="" title="">Impact</div>
+                                            </th>
+                                        </template>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={selectedRegionalAnalysis.Key_Signposts__r} for:item="signpost">
+                                        <tr key={signpost.Id} class={signpost.class}>
+                                            <th data-label="" scope="row">
+                                                <div class="slds-cell-wrap" title="">
+                                                    {signpost.Event__c}
+                                                </div>
+                                            </th>
+                                            <td data-label="">
+                                                <div class="slds-cell-wrap">
+                                                    {signpost.Category__c}
+                                                </div>
+                                            </td>
+                                            <template if:false={selectedRegionalAnalysis.newFormatForSignposts}>
+                                                <td data-label="" class={signpost.Likely_impact__c}>
+                                                    <div class="slds-cell-wrap" title="">
+                                                        <img class="arrow-icon"
+                                                            src={signpost.Likely_impact__iconUrl}></img>&nbsp;{signpost.Likely_impact__c}
+                                                    </div>
+                                                </td>
+                                            </template>
+                                            <template if:true={selectedRegionalAnalysis.newFormatForSignposts}>
+                                                <td data-label="" class={signpost.Positive_or_negative_for_risk__c}>
+                                                    <div class="slds-cell-wrap">
+                                                        <img class="arrow-icon"
+                                                            src={signpost.positiveOrNegativeForRisk__iconUrl}></img>&nbsp;{signpost.Positive_or_negative_for_risk__c}
+                                                    </div>
+                                                </td>
+                                                <td data-label="" class={signpost.Likelihood__c}>
+                                                    <div class="slds-cell-wrap">
+                                                        <img class="arrow-icon"
+                                                            src={signpost.likelihood__iconUrl}></img>&nbsp;{signpost.Likelihood__c}
+                                                    </div>
+                                                </td>
+                                                <td data-label="" class={signpost.Impact__c}>
+                                                    <div class="slds-cell-wrap">
+                                                        <img class="arrow-icon"
+                                                            src={signpost.impact__iconUrl}></img>&nbsp;{signpost.Impact__c}
+                                                    </div>
+                                                </td>
+                                            </template>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </template>
+                </template>
+            </template>
+
+            <template if:true={sectionIsBasecases}>
+                <div class="slds-text-heading_large slds-m-bottom_medium">Geopolitical basecases</div>
+
+                <template if:true={selectedPoliticalRiskAnalysis.hasBasecases}>
+                    <div class="basecases">
+                        <table
+                            class="slds-table slds-table_cell-buffer slds-table_bordered slds-no-row-hover slds-table_fixed-layout slds-m-bottom_x-large"
+                            aria-label="">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">{selectedPoliticalRiskAnalysis.Month_Name__c}
+                                            {selectedPoliticalRiskAnalysis.Year__c}</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Relation of past month's events to our basecase</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Basecase confidence level</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col">
+                                        <div class="" title="">Directional change since last month</div>
+                                    </th>
+                                    <th class="slds-cell-wrap" scope="col" style="width: 50%;">
+                                        <div class="" title="">Basecase</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={selectedPoliticalRiskAnalysis.Regional_Analysis__r}
+                                    for:item="regionalAnalysis">
+                                    <tr key={regionalAnalysis.Id} if:true={regionalAnalysis.analysisDepthBasecase}>
+                                        <th data-label="" scope="row" style="padding-left: 16px !important;">
+                                            <div class="" title="">
+                                                <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                                                    <div class="slds-media__figure">
+                                                        <div class="nav-icon-container">
+                                                            <img src={regionalAnalysis.Region__r.Flag_image_URL__c}
+                                                                class="region-flag small">
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-media__body"
+                                                        style="margin-left: -6px; margin-top: 3px;">
+                                                        <div class="">{regionalAnalysis.Region__r.Name}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td data-label="">
+                                            <div class="slds-cell-wrap" title="">
+                                                {regionalAnalysis.Last_month_s_events_to_basecase__c}
+                                            </div>
+                                        </td>
+                                        <td data-label="" class={regionalAnalysis.Basecase_confidence_level__c}>
+                                            <div class="slds-cell-wrap">
+                                                <img class="arrow-icon"
+                                                    src={regionalAnalysis.Basecase_confidence_level__iconUrl}></img>&nbsp;{regionalAnalysis.Basecase_confidence_level__c}
+                                            </div>
+                                        </td>
+                                        <td data-label="" class={regionalAnalysis.Directional_change_since_last_month__c}>
+                                            <div class="slds-cell-wrap">
+                                                <img class="arrow-icon"
+                                                    src={regionalAnalysis.Directional_change_since_last_month__iconUrl}></img>&nbsp;{regionalAnalysis.Directional_change_since_last_month__c}
+                                            </div>
+                                        </td>
+                                        <td data-label="">
+                                            <div class="slds-cell-wrap">
+                                                {regionalAnalysis.Basecase__c}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </template>
+                <template if:false={selectedPoliticalRiskAnalysis.hasBasecases}>
+                    <p>No geopolitical basecases to display</p>
+                </template>
+            </template>
+        </template>
+    </div>
+</template>

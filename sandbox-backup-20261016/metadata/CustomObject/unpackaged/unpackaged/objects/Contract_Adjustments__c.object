@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>false</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>false</enableSharing>
+    <enableStreamingApi>false</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Upsell_Downsell_Amount_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Opportunity__r.RevenueType__c,&apos;Recurring&apos;) , New_Annualized_Value_OC__c -  Pre_Adjustment_Annualized_Value_OC__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Upsell/Downsell Amount (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Upsell_Downsell_Amount_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annualized_Upsell_Downsell_Amount_OC__c /  Opportunity__r.FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Upsell/Downsell Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Date__c</fullName>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Approval_Status</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Average_Month_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>New_Contract_Value_OC__c / Round(IF(( New_End_Date__c -  New_Start_Date__c ) / 365 * 12 &lt; 1, 1, (New_End_Date__c - New_Start_Date__c ) / 365 * 12), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average $/Month (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Adjustment_Reason__c</fullName>
+        <label>Contract Adjustment Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Voting</fullName>
+                    <default>false</default>
+                    <label>Voting</label>
+                </value>
+                <value>
+                    <fullName>Cancellation</fullName>
+                    <default>false</default>
+                    <label>Cancellation</label>
+                </value>
+                <value>
+                    <fullName>Flat Extension</fullName>
+                    <default>false</default>
+                    <label>Flat Extension</label>
+                </value>
+                <value>
+                    <fullName>Mid-Year Upsell</fullName>
+                    <default>false</default>
+                    <label>Mid-Year Upsell</label>
+                </value>
+                <value>
+                    <fullName>Mid-Year Downsell</fullName>
+                    <default>false</default>
+                    <label>Mid-Year Downsell</label>
+                </value>
+                <value>
+                    <fullName>No Cost Extension</fullName>
+                    <default>false</default>
+                    <label>No Cost Extension (-)</label>
+                </value>
+                <value>
+                    <fullName>Correction</fullName>
+                    <default>false</default>
+                    <label>Correction</label>
+                </value>
+                <value>
+                    <fullName>Contract Consolidation</fullName>
+                    <default>false</default>
+                    <label>Contract Consolidation</label>
+                </value>
+                <value>
+                    <fullName>Subcontractor Costs</fullName>
+                    <default>false</default>
+                    <label>Subcontractor Costs</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>New_Annualized_Value_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Opportunity__r.RevenueType__c,&apos;Recurring&apos;) , Average_Month_OC__c  * 12, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>New Annualized Value (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Contract_Value_OC__c</fullName>
+        <externalId>false</externalId>
+        <label>New Contract Value (OC)</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Contract_Value_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>New_Contract_Value_OC__c  /  Opportunity__r.FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>New Contract Value (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_End_Date__c</fullName>
+        <label>New End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>New_Start_Date__c</fullName>
+        <label>New Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Contract Adjustments</relationshipLabel>
+        <relationshipName>Contract_Adjustments</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Original_Contract_Amount_OC__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Contract Amount (OC)</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Contract_Amount_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Original_Contract_Amount_OC__c /  Opportunity__r.FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Original Contract Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_End_Date__c</fullName>
+        <label>Original End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Original_Start_Date__c</fullName>
+        <label>Original Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Pre_Adjustment_Annualized_Value_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Opportunity__r.RevenueType__c,&apos;Recurring&apos;) , Pre_Adjustment_AverageRevenuePerMonth_OC__c  * 12, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pre-Adjustment Annualized Value (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pre_Adjustment_AverageRevenuePerMonth_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>Original_Contract_Amount_OC__c / Round(IF(( Original_End_Date__c -  Original_Start_Date__c ) / 365 * 12 &lt; 1, 1, (Original_End_Date__c - Original_Start_Date__c ) / 365 * 12), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pre-Adjustment Average $/Month (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Change_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Change Details</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Service_Changed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Product/Service Changed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Project_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Project Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_USD_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL( Opportunity__r.RevenueType__c , &apos;Recurring&apos;) &amp;&amp; CONTAINS(TEXT(Contract_Adjustment_Reason__c) ,&apos;Mid-Year&apos;),  Annualized_Upsell_Downsell_Amount_USD__c , 
+IF (ISPICKVAL( Opportunity__r.RevenueType__c , &apos;Recurring&apos;) &amp;&amp; NOT CONTAINS(TEXT(Contract_Adjustment_Reason__c) ,&apos;Mid-Year&apos;), 0,
+New_Contract_Value_USD__c - Original_Contract_Amount_USD__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount (USD) formula</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submission_Date__c</fullName>
+        <label>Submission Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>UpSell_DownSell_Amount_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>New_Contract_Value_OC__c  -  Original_Contract_Amount_OC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UpSell/DownSell Amount (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UpSell_DownSell_Amount_Value_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>UpSell_DownSell_Amount_OC__c / Opportunity__r.FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UpSell/DownSell Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Contract Adjustment</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>New_End_Date__c</columns>
+        <columns>New_Start_Date__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>New_Annualized_Value_OC__c</columns>
+        <columns>Project_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Copy_of_Pending_Approval</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>Original_Contract_Amount_OC__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>Original_Start_Date__c</columns>
+        <columns>Original_End_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Approved Adjustment</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contract_Adjustments</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>Approval_Status__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Contract Adjustments</label>
+    </listViews>
+    <listViews>
+        <fullName>No_Cost_Extensions</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UpSell_DownSell_Amount_OC__c</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>New_End_Date__c</columns>
+        <columns>New_Start_Date__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>New_Annualized_Value_OC__c</columns>
+        <columns>Project_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Contract_Adjustment_Reason__c</field>
+            <operation>equals</operation>
+            <value>No Cost Extension</value>
+        </filters>
+        <label>No Cost Extensions</label>
+    </listViews>
+    <listViews>
+        <fullName>Pending_Finance_Approval</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Approval_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Approval_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending Finance Approval</value>
+        </filters>
+        <label>Pending Finance Approval</label>
+    </listViews>
+    <listViews>
+        <fullName>X2023_Contract_Adj</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>New_Contract_Value_OC__c</columns>
+        <columns>New_End_Date__c</columns>
+        <columns>New_Start_Date__c</columns>
+        <columns>Contract_Adjustment_Reason__c</columns>
+        <columns>New_Annualized_Value_OC__c</columns>
+        <columns>Project_Code__c</columns>
+        <columns>UpSell_DownSell_Amount_OC__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>8/1/2023 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notEqual</operation>
+            <value>EG Testing Grounds</value>
+        </filters>
+        <label>2023 Contract Adj</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CA-{0000}</displayFormat>
+        <label>Contract Adjustments Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Contract Adjustments</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
+        <excludedStandardButtons>IsotopeSubscription</excludedStandardButtons>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>New_Contract_Value_OC__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Original_Contract_Amount_OC__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contract_Adjustment_Reason__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>New_Contract_Adjustment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Contract Adjustment</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>https://eurasiagroup.lightning.force.com/lightning/o/Contract_Adjustments__c/new?defaultFieldValues=Opportunity__c={!Opportunity.Id},Original_Contract_Amount_OC__c={!TEXT(Opportunity.Amount)},Original_Start_Date__c={!TEXT(Opportunity.Contract_Start_Date__c)},Original_End_Date__c={!TEXT(Opportunity.Contract_End_Date__c)},Contract_Adjustments__c.CurrencyIsoCode={!Opportunity.CurrencyIsoCode},</url>
+    </webLinks>
+</CustomObject>

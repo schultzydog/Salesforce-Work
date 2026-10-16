@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aerospace &amp; Defense</fullName>
+        <default>false</default>
+        <label>Aerospace &amp; Defense</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer &amp; Retail (C&amp;R)</fullName>
+        <default>false</default>
+        <label>Consumer &amp; Retail (C&amp;R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy, Climate, Resources (ECR)</fullName>
+        <default>false</default>
+        <label>Energy, Climate, Resources (ECR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Geotech</fullName>
+        <default>false</default>
+        <label>Geotech</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Sustainability</fullName>
+        <default>false</default>
+        <label>Global Sustainability</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare</fullName>
+        <default>false</default>
+        <label>Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional Services, Philanthropy &amp; Non-Profit, Public Sector (PPP)</fullName>
+        <default>false</default>
+        <label>Professional Services, Philanthropy &amp; Non-Profit, Public Sector (PPP)</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade &amp; Supply Chains</fullName>
+        <default>false</default>
+        <label>Trade &amp; Supply Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrials</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Institutes Group (FIG)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Financial Institutes Group (FIG)</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Institutions Group (FIG)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Financial Institutions Group (FIG)</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial &amp; Professional Services (FPS)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Financial &amp; Professional Services (FPS)</label>
+    </customValue>
+    <masterLabel>Corporate Sector Team</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

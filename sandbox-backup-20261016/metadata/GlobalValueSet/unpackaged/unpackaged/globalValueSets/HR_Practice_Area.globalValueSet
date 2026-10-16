@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>A&amp;D</fullName>
+        <default>false</default>
+        <label>A&amp;D</label>
+    </customValue>
+    <customValue>
+        <fullName>Aerospace</fullName>
+        <default>false</default>
+        <label>Aerospace</label>
+    </customValue>
+    <customValue>
+        <fullName>Africa</fullName>
+        <default>false</default>
+        <label>Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>Agriculture</fullName>
+        <default>false</default>
+        <label>Agriculture</label>
+    </customValue>
+    <customValue>
+        <fullName>Andes</fullName>
+        <default>false</default>
+        <label>Andes</label>
+    </customValue>
+    <customValue>
+        <fullName>Asia</fullName>
+        <default>false</default>
+        <label>Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Business development</fullName>
+        <default>false</default>
+        <label>Business development</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada</fullName>
+        <default>false</default>
+        <label>Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>China</fullName>
+        <default>false</default>
+        <label>China</label>
+    </customValue>
+    <customValue>
+        <fullName>China &amp; NE Asia</fullName>
+        <default>false</default>
+        <label>China &amp; NE Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Services</fullName>
+        <default>false</default>
+        <label>Client Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Climate</fullName>
+        <default>false</default>
+        <label>Climate</label>
+    </customValue>
+    <customValue>
+        <fullName>Communications</fullName>
+        <default>false</default>
+        <label>Communications</label>
+    </customValue>
+    <customValue>
+        <fullName>Consulting</fullName>
+        <default>false</default>
+        <label>Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates</fullName>
+        <default>false</default>
+        <label>Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>Economics</fullName>
+        <default>false</default>
+        <label>Economics</label>
+    </customValue>
+    <customValue>
+        <fullName>ECR</fullName>
+        <default>false</default>
+        <label>ECR</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy</fullName>
+        <default>false</default>
+        <label>Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Eurasia</fullName>
+        <default>false</default>
+        <label>Eurasia</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </customValue>
+    <customValue>
+        <fullName>FIG</fullName>
+        <default>false</default>
+        <label>FIG</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance</fullName>
+        <default>false</default>
+        <label>Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Geoeconomics</fullName>
+        <default>false</default>
+        <label>Geoeconomics</label>
+    </customValue>
+    <customValue>
+        <fullName>Geopolitics</fullName>
+        <default>false</default>
+        <label>Geopolitics</label>
+    </customValue>
+    <customValue>
+        <fullName>Geostrategy</fullName>
+        <default>false</default>
+        <label>Geostrategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Geo-technology</fullName>
+        <default>false</default>
+        <label>Geo-technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Macro</fullName>
+        <default>false</default>
+        <label>Global Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>Gloma</fullName>
+        <default>false</default>
+        <label>Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>GZERO</fullName>
+        <default>false</default>
+        <label>GZERO</label>
+    </customValue>
+    <customValue>
+        <fullName>Head of Research</fullName>
+        <default>false</default>
+        <label>Head of Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare</fullName>
+        <default>false</default>
+        <label>Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>India</fullName>
+        <default>false</default>
+        <label>India</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial</fullName>
+        <default>false</default>
+        <label>Industrial</label>
+    </customValue>
+    <customValue>
+        <fullName>Innovation</fullName>
+        <default>false</default>
+        <label>Innovation</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>International Business</fullName>
+        <default>false</default>
+        <label>International Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan</fullName>
+        <default>false</default>
+        <label>Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Latam</fullName>
+        <default>false</default>
+        <label>Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>Macrogeoeconomics</fullName>
+        <default>false</default>
+        <label>Macrogeoeconomics</label>
+    </customValue>
+    <customValue>
+        <fullName>Media</fullName>
+        <default>false</default>
+        <label>Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Mena</fullName>
+        <default>false</default>
+        <label>Mena</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle East</fullName>
+        <default>false</default>
+        <label>Middle East</label>
+    </customValue>
+    <customValue>
+        <fullName>OOM</fullName>
+        <default>false</default>
+        <label>OOM</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Affairs</fullName>
+        <default>false</default>
+        <label>Public Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>Reporting</fullName>
+        <default>false</default>
+        <label>Reporting</label>
+    </customValue>
+    <customValue>
+        <fullName>Research</fullName>
+        <default>false</default>
+        <label>Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail and Consumer</fullName>
+        <default>false</default>
+        <label>Retail and Consumer</label>
+    </customValue>
+    <customValue>
+        <fullName>Russia</fullName>
+        <default>false</default>
+        <label>Russia</label>
+    </customValue>
+    <customValue>
+        <fullName>SE Asia</fullName>
+        <default>false</default>
+        <label>SE Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Southeast &amp; South Asia</fullName>
+        <default>false</default>
+        <label>Southeast &amp; South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Supply chain</fullName>
+        <default>false</default>
+        <label>Supply chain</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology</fullName>
+        <default>false</default>
+        <label>Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade</fullName>
+        <default>false</default>
+        <label>Trade</label>
+    </customValue>
+    <customValue>
+        <fullName>United States</fullName>
+        <default>false</default>
+        <label>United States</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </customValue>
+    <customValue>
+        <fullName>West Africa/French</fullName>
+        <default>false</default>
+        <label>West Africa/French</label>
+    </customValue>
+    <customValue>
+        <fullName>OOP</fullName>
+        <default>false</default>
+        <label>OOP</label>
+    </customValue>
+    <description>Used for HR</description>
+    <masterLabel>HR Practice Area</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

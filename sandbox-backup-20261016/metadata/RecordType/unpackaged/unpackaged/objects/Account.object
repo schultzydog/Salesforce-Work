@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Client_Services</fullName>
+        <active>false</active>
+        <label>Client Services</label>
+        <picklistValues>
+            <picklist>AccountSource</picklist>
+            <values>
+                <fullName>2019 09 25 whitepaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bloomberg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Relationship Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Company Sign Up Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ipreo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan GZERO Summit 2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LATAM GZero Summit 2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LinkedIn</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitepaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of Mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Advanced Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aerospace %26 Defense</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automotive %26 Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering %26 Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investment%2FReal Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media %26 Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil %26 Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecomm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ownership</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subsidiary</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Former Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friend of Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friend of Ian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

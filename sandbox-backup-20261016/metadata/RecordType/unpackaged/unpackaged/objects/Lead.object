@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Company_Referral</fullName>
+        <active>true</active>
+        <businessProcess>Standard Leads Process</businessProcess>
+        <label>Company Referral</label>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Aerospace %26 Defense</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automotive %26 Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Packaged Goods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering %26 Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchanges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial services %28Gloma%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fintech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investment%2FReal Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logistics %26 Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Luxury Goods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media %26 Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Devices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil %26 Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payments providers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmaceuticals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Philanthropy %26 Non-Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semiconductors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology Platforms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecomm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Company Sign Up Form</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Contact us - Consumer %26 Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact us - Geotech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact us - Global Sustainability%2C Biodiversity%2C %26 Water</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact us - Healthcare %26 Medical Devices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email_List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Global_Markets</fullName>
+        <active>false</active>
+        <businessProcess>Standard Leads Process</businessProcess>
+        <compactLayoutAssignment>Custom</compactLayoutAssignment>
+        <label>Global Markets</label>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Bloomberg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Relationship Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Company Sign Up Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ipreo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan GZERO Summit 2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LATAM GZero Summit 2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LinkedIn</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitepaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of Mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard</fullName>
+        <active>true</active>
+        <businessProcess>Standard Leads Process</businessProcess>
+        <compactLayoutAssignment>Custom</compactLayoutAssignment>
+        <label>Standard</label>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automotive %26 Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Packaged Goods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exchanges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial services %28Gloma%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fintech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logistics %26 Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Luxury Goods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Devices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payments providers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmaceuticals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Philanthropy %26 Non-Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semiconductors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology Infrastructure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology Platforms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Bloomberg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Relationship Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Company Sign Up Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact us - Consumer %26 Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact us - Geotech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact us - Global Sustainability%2C Biodiversity%2C %26 Water</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact us - Healthcare %26 Medical Devices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cvent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email_List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gloma landing page</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ipreo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan GZERO Summit 2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LATAM GZero Summit 2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LinkedIn</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Press Sign Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subscription Request Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US Canada Summit 2023</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitepaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of Mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

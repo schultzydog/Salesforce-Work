@@ -1,0 +1,29 @@
+<!--
+Related List - Generic component to show related list
+-->
+<template>
+    <template if:true={showComponent}>
+        <template if:true={objectDetails}>
+            <article class="slds-card slds-card_boundary headerBottomBorder">
+                <div class="slds-page-header slds-grid forceRelatedListCardHeader">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate" style={headerStyle}>
+                        <div class="slds-media__figure">
+                            <lightning-icon icon-name={iconName} size="small"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 class="slds-card__header-title">
+                                {title}
+                            </h2>
+                        </div>
+                    </header>
+                </div>
+                <div class="slds-card__body slds-card__body_inner">
+                    <c-custom-lightning-data-table key-field="Id" data={data} 
+                            hide-checkbox-column is-loading={showSpinner}
+                        columns={objectDetails.fields}>
+                    </c-custom-lightning-data-table>                    
+                </div>
+            </article>
+        </template>
+    </template>
+</template>

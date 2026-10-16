@@ -1,0 +1,11 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Opportunity Name:&nbsp;{!Opportunity.Name}<div>Opportunity Amount: {!Opportunity.Amount}
+<br>Sales Type: {!Opportunity.Type}&nbsp;<br>Business Line: {!Opportunity.Business_Line__c}
+<br>Opportunity Owner: {!Opportunity.OwnerFullName}
+<br>Start Date: {!Opportunity.Contract_Start_Date__c}
+<br>End Date: {!Opportunity.Contract_End_Date__c}</div><div>Renewal Sub-Type:&nbsp;{!Opportunity.Renewal_Sub_type__c}<br>
+<br>Please log in to review and approve the opportunity here: {!Opportunity.Link}</div>]]></td>
+</tr>
+</table>

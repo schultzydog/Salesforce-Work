@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>jpw2__KPI_User_Scorecard__c$jpw2__User__c</field>
+    </columns>
+    <columns>
+        <field>jpw2__KPI_User_Scorecard__c$jpw2__Open_Opportunities_ICON__c</field>
+    </columns>
+    <columns>
+        <field>jpw2__KPI_User_Scorecard__c$jpw2__Opportunities_Created_Late_Stage_ICON__c</field>
+    </columns>
+    <columns>
+        <field>jpw2__KPI_User_Scorecard__c$jpw2__Opportunities_Neglected_ICON__c</field>
+    </columns>
+    <columns>
+        <field>jpw2__KPI_User_Scorecard__c$jpw2__Average_Closed_Won_Deal_Size_ICON__c</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Tabular</format>
+    <historicalSelector>
+        <snapshot>2022-06-30</snapshot>
+        <snapshot>2022-07-31</snapshot>
+    </historicalSelector>
+    <name>Opportunity Management</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>jpw2__KPI_Scorecards_with_Historical_Trending__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>jpw2__KPI_User_Scorecard__c$jpw2__User__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>jpw2__KPI_User_Scorecard__c$jpw2__Score_Period__c</dateColumn>
+        <endDate>2022-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2022-06-01</startDate>
+    </timeFrameFilter>
+</Report>

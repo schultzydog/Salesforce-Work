@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>All_of_My_Tasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>PRIORITY</columns>
+        <columns>STATUS</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Tasks - Open and Completed</label>
+    </listViews>
+    <listViews>
+        <fullName>Client_Services_Mexico</fullName>
+        <booleanFilter>(1 OR 2 OR 3) AND 4</booleanFilter>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>PRIORITY</columns>
+        <columns>STATUS</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Marin</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Lucht</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Cornwall</value>
+        </filters>
+        <filters>
+            <field>STATUS</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Client Services Mexico</label>
+    </listViews>
+    <listViews>
+        <fullName>Client_Services_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Client Services</label>
+        <queue>Client_Services</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_Deliverable_Tasks</fullName>
+        <columns>WHAT_NAME</columns>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>PRIORITY</columns>
+        <columns>STATUS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>STATUS</field>
+            <operation>equals</operation>
+            <value>Open,Not Started</value>
+        </filters>
+        <filters>
+            <field>TYPE</field>
+            <operation>equals</operation>
+            <value>Deliverable</value>
+        </filters>
+        <label>My Deliverable Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>Sales_Ops_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Sales Ops</label>
+        <queue>Sales_Ops</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+</CustomObject>

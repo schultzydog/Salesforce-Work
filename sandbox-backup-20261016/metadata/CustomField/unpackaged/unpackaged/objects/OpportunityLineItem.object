@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Analyst_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Analyst Access</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assessment__c</fullName>
+        <label>Assessment</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Automate_Entitlement_Creation__c</fullName>
+        <formula>PricebookEntry.Product2.Automate_Entitlement_Creation__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Automate Entitlement Creation</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bill_To_Intacct_Contact_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Bill_To__r.ia_crm__Intacct_Contact_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bill To Intacct Contact Id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bill_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Bill To</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunity Product (Bill To)</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Line__c</fullName>
+        <label>Product Business Line</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Business_Line</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Active__c</fullName>
+        <formula>Opportunity.Contract_Active__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <description>R - Recurring
+S - Speaking
+V - Voting
+N - No-recurring
+T - Trial
+L  - Loss</description>
+        <inlineHelpText>R - Recurring
+S - Speaking
+V - Voting
+N - No-recurring
+T - Trial
+L  - Loss</inlineHelpText>
+        <label>Contract Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>R</fullName>
+                    <default>false</default>
+                    <label>R</label>
+                </value>
+                <value>
+                    <fullName>S</fullName>
+                    <default>false</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>V</fullName>
+                    <default>false</default>
+                    <label>V</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>T</fullName>
+                    <default>false</default>
+                    <label>T</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_for_slr_retirement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created for slr retirement</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dept_Code_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Business_Line__c , &apos;Global Markets&apos;) , 
+
+ CASE(  Opportunity.Geography__c , 
+&apos;North America&apos;, &apos;315&apos;, 
+&apos;EMEA&apos;, &apos;311&apos;,
+&apos;Japan&apos;, &apos;312&apos;,
+&apos;Brazil&apos;, &apos;314&apos;,
+&apos;Asia ex-Japan&apos;, &apos;313&apos;,
+&apos;LatAm ex-Brazil&apos;, &apos;314&apos;,
+&apos;N/A&apos;) , 
+
+ IF(ISPICKVAL(Business_Line__c, &apos;Corporate&apos;), 
+
+ CASE(Opportunity.Corporate_Sector_Team__c , 
+&apos;Energy, Climate, Resources (ECR)&apos;, &apos;321&apos;, 
+&apos;Aerospace &amp; Defense&apos;, &apos;361&apos;,
+&apos;Professional Services, Philanthropy &amp; Non-Profit, Public Sector (PPP)&apos;, &apos;329&apos;,
+&apos;Healthcare&apos;, &apos;323&apos;,
+&apos;Consumer &amp; Retail (C&amp;R)&apos;, &apos;325&apos;,
+&apos;Geotech&apos;, &apos;326&apos;,
+&apos;Other&apos;, &apos;320&apos;,
+&apos;Global Sustainability&apos;, &apos;363&apos;, 
+&apos;Financial Institutions Group (FIG)&apos;, &apos;322&apos;,
+&apos;Trade &amp; Supply Chains&apos;, &apos;324&apos;,
+&apos;N/A&apos;) ,  
+
+ IF(ISPICKVAL(Business_Line__c, &apos;OOP&apos;), &apos;407&apos;, 
+ IF(ISPICKVAL(Business_Line__c, &apos;GZERO&apos;), &apos;411&apos;,  
+
+&apos;N/A&apos;))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dept Code formula</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Entitlement_Specifics__c</fullName>
+        <label>Entitlement Specifics</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Entitlement_Specifics</valueSetName>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GL_Posting_Date__c</fullName>
+        <label>GL Posting Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GL_SubAccount__c</fullName>
+        <label>GL SubAccount</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Department_Codes</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Has_Product_Libraries__c</fullName>
+        <formula>PricebookEntry.Product2.Has_Product_Libraries__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Product Libraries</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ian_speaking__c</fullName>
+        <formula>CONTAINS( Product_Name__c , &apos;Ian Bremmer - In-Person&apos;) ||  CONTAINS( Product_Name__c , &apos;Ian Bremmer - Virtual&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ian speaking</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_in_Top_30__c</fullName>
+        <formula>Opportunity.IsWon &amp;&amp;
+Opportunity.Account.Name != &apos;WNET&apos; &amp;&amp;
+Opportunity.Account.Name != &apos;Washington Speakers Bureau&apos; &amp;&amp;
+
+( (NOT(ISPICKVAL( Revenue_Type__c , &apos;Recurring&apos;)) &amp;&amp; ( Opportunity.Contract_Start_Date__c &gt; Today() - 365 &amp;&amp; Opportunity.Contract_Start_Date__c &lt; Today() +1) )
+
+||
+
+(( NOT ISBLANK(Opportunity.Renewal_Opportunity__c) &amp;&amp; Opportunity.Renewal_Opportunity_Open__c = TRUE &amp;&amp; ISPICKVAL(Opportunity.Contract_Status__c, &apos;Expired&apos;) || Opportunity.Contract_Active__c ) ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Include in Top 30</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <formula>PricebookEntry.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsActive?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Linked_EG_Project_Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Linked EG Project Task</label>
+        <referenceTo>EG_Project_Task__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Managing_Director__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.Managing_Director__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Managing Director</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_Firm_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>One Firm Product</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>casesafeid(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>18 Char Opportunity Product Id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Poll__c</fullName>
+        <formula>CONTAINS( Product_Family__c , &apos;Poll&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Poll</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Previous Product</label>
+        <referenceTo>OpportunityLineItem</referenceTo>
+        <relationshipLabel>Opportunity Product (Previous Product)</relationshipLabel>
+        <relationshipName>Opportunity_Product1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price_range__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Price_range__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Price range</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_End_Date__c</fullName>
+        <label>Product End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Product_Family__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.Family)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Family</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Start_Date__c</fullName>
+        <label>Product Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ready_for_Contract_creation__c</fullName>
+        <formula>NOT ISBLANK( ia_crm__Billing_Template__c ) &amp;&amp;
+NOT ISBLANK(TEXT(  ia_crm__Contract_Line_Save_Cancel_He__c )) &amp;&amp;
+NOT ISBLANK(  ia_crm__Intacct_Location__c ) &amp;&amp;
+NOT ISBLANK(   ia_crm__Class__c ) &amp;&amp;
+NOT ISBLANK(TEXT(  ia_crm__Billing_Method__c )) &amp;&amp;
+NOT ISBLANK(  ia_crm__Department__c) &amp;&amp;
+PricebookEntry.Product2.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product ready for Contract creation</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reimbursable_travel_expenses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Reimbursable Travel Expenses?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Renewal Product</label>
+        <referenceTo>OpportunityLineItem</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Type__c</fullName>
+        <defaultValue>&quot;Non-Recurring&quot;</defaultValue>
+        <label>Revenue Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Revenue_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SLR_Unique_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>SLR Unique Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_retirement_notes__c</fullName>
+        <label>SLR retirement notes</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Senior_Advisor__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.Senior_Advisor__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Senior Advisor</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Task Code</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Taxable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Taxable</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_Price_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>TotalPrice *  Opportunity.FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>CatalogMdloConnectionInstanceConsumptionResourceTags</members>
+        <members>SFDC_00D30000001I5aW</members>
+        <members>SalesforceDotCom_Home</members>
+        <members>Salesforce_Home</members>
+        <members>TenantBillingUsageEvent</members>
+        <name>DataSource</name>
+    </types>
+    <version>62.0</version>
+</Package>

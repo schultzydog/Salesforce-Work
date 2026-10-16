@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Opportunity: Won Opportunity For Approval</name>
+    <style>freeForm</style>
+    <subject>Salesforce Communication ***Won Opportunity Approval: {!Opportunity.Name} ***</subject>
+    <textOnly>Opportunity Name: {!Opportunity.Name}
+Opportunity Amount: {!Opportunity.Amount}
+Sales Type: {!Opportunity.Type}
+Business Line: {!Opportunity.Business_Line__c}
+Opportunity Owner: {!Opportunity.OwnerFullName}
+Start Date: {!Opportunity.Contract_Start_Date__c}
+End Date: {!Opportunity.Contract_End_Date__c}
+Renewal Sub-Type: {!Opportunity.Renewal_Sub_type__c}
+
+Please log in to review and approve the opportunity here: {!Opportunity.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

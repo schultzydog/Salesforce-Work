@@ -1,0 +1,17 @@
+.error, .red{
+    color: rgb(186, 5, 23);
+}
+.form-card{
+    xmin-height: 492px;
+}
+.eurasia-logo img{
+    height: 100px;
+    width: auto;
+}
+.company-logo img{
+    height: 75px;
+    width: auto;
+}
+.welcome{
+    color: #333333;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template to Contract Owner 90 Days prior to expiration of Contract</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Contract to Expire</name>
+    <style>none</style>
+    <subject>{!Contract.Name} to Expire in 90 Days</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

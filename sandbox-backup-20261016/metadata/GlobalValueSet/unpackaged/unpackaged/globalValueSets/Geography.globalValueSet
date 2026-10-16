@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>North America</fullName>
+        <default>false</default>
+        <label>North America</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA</fullName>
+        <default>false</default>
+        <label>EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil</fullName>
+        <default>false</default>
+        <label>Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan</fullName>
+        <default>false</default>
+        <label>Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Asia ex-Japan</fullName>
+        <default>false</default>
+        <label>Asia ex-Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>LatAm ex-Brazil</fullName>
+        <default>false</default>
+        <label>LatAm ex-Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil/Latam</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>LATAM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>LATAM</label>
+    </customValue>
+    <masterLabel>Geography</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>New User created by Rippling integration</name>
+    <style>freeForm</style>
+    <subject>New User {!User.Name} created by Rippling integration</subject>
+    <textOnly>User {!User.Name} was successfully created by the Rippling integration.
+
+Please visit the record in Salesforce to update license provisioning and Profile and to complete the Department selection. 
+{!User.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

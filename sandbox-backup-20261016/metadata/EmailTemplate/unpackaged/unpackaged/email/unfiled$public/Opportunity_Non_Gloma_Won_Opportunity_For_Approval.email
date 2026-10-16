@@ -1,0 +1,10 @@
+Opportunity Name: {!Opportunity.Name}
+Opportunity Amount: {!Opportunity.Amount}
+Sales Type: {!Opportunity.Type}
+Revenue Type: {!Opportunity.RevenueType__c}
+Business Line: {!Opportunity.Business_Line__c}
+Opportunity Owner: {!Opportunity.OwnerFullName}
+Start Date: {!Opportunity.Contract_Start_Date__c}
+End Date: {!Opportunity.Contract_End_Date__c}
+
+Please log in to review and approve the opportunity here: {!Opportunity.Link}

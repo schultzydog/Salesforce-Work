@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EG_Event_Registrant__c.Company__c</field>
+    </columns>
+    <columns>
+        <field>EG_Event_Registrant__c.First_Name__c</field>
+    </columns>
+    <columns>
+        <field>EG_Event_Registrant__c.Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>EG_Event_Registrant__c.Title__c</field>
+    </columns>
+    <columns>
+        <field>EG_Event_Registrant__c.Email__c</field>
+    </columns>
+    <columns>
+        <field>EG_Event_Registrant__c.Registrant_Type__c</field>
+    </columns>
+    <columns>
+        <field>EG_Event_Registrant__c.City__c</field>
+    </columns>
+    <columns>
+        <field>EG_Event_Registrant__c.Country__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Who Really Leads in the Race for AI Dominance</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Who Really Leads event registrant</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Conference_Call__c$EG_Event_Registrant__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Conference_Call__c.Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2024-10-17</startDate>
+    </timeFrameFilter>
+</Report>

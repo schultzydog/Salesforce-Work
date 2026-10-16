@@ -1,0 +1,122 @@
+<apex:component controller="findUpcomingAppearances" access="global">
+    
+    <!-- Include in next send -->
+    <apex:outputPanel layout="none" rendered="{!includes.size>0}">      
+        <apex:repeat value="{!includes}" var="news">
+            <b><apex:outputField value="{!news.Sector_Region__c}"/></b><br/>
+            <p>
+               <b><apex:outputField value="{!news.Outlet__c}"/></b><br/>
+               <apex:outputField value="{!news.Source__c}"/><br/>
+               By&nbsp;<apex:outputField value="{!news.Author_Participant_text_line__c}"/><br/>
+               <apex:outputPanel layout="none" rendered="{!AND(!ISNULL(news.Date__c),!ISNULL(news.Time_text__c))}">
+                    <apex:outputText value="{0, date, d MMMM YYYY}">
+                        <apex:param value="{!news.Date__c}" /> 
+                    </apex:outputText>,&nbsp;<apex:outputfield value="{!news.Time_text__c}" /><br/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!AND(!ISNULL(news.Date__c),ISNULL(news.Time_text__c))}">
+                    <apex:outputText value="{0, date, d MMMM YYYY}">
+                        <apex:param value="{!news.Date__c}" /> 
+                    </apex:outputText><br/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!AND(ISNULL(news.Date__c),!ISNULL(news.Time_text__c))}">
+                    <apex:outputfield value="{!news.Time_text__c}" />&nbsp;ET<br/>
+                </apex:outputPanel><br/>
+                <i><apex:outputField value="{!news.Appearance_Summary__c}"/></i>
+                <br/><br/>+++
+            </p>
+        </apex:repeat>        
+        <br/>
+        <br/>
+    </apex:outputPanel>
+    
+    
+    <!-- Upcoming 
+    <apex:outputPanel layout="none" rendered="{!upcomings.size>0}">
+        <b>UPCOMING </b>        
+        <apex:repeat value="{!upcomings}" var="news">
+            <p>
+               <b><apex:outputField value="{!news.Outlet__c}"/></b><br/>
+               <apex:outputField value="{!news.Source__c}"/><br/>
+               By&nbsp;<apex:outputField value="{!news.Author_Participant_text_line__c}"/><br/>
+               <apex:outputPanel layout="none" rendered="{!AND(!ISNULL(news.Date__c),!ISNULL(news.Time_text__c))}">
+                    <apex:outputText value="{0, date, d MMMM YYYY}">
+                        <apex:param value="{!news.Date__c}" /> 
+                    </apex:outputText>,&nbsp;<apex:outputfield value="{!news.Time_text__c}" /><br/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!AND(!ISNULL(news.Date__c),ISNULL(news.Time_text__c))}">
+                    <apex:outputText value="{0, date, d MMMM YYYY}">
+                        <apex:param value="{!news.Date__c}" /> 
+                    </apex:outputText><br/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!AND(ISNULL(news.Date__c),!ISNULL(news.Time_text__c))}">
+                    <apex:outputfield value="{!news.Time_text__c}" />&nbsp;ET<br/>
+                </apex:outputPanel><br/>
+                <i><apex:outputField value="{!news.Appearance_Summary__c}"/></i>
+                <br/><br/>+++
+            </p>
+        </apex:repeat>        
+        <br/>
+        <br/>
+    </apex:outputPanel>
+    
+     BROADCAST 
+    <apex:outputPanel layout="none" rendered="{!broadcasts.size>0}">
+        <b>BROADCAST </b>        
+        <apex:repeat value="{!broadcasts}" var="news">
+            <p>
+               <b><apex:outputField value="{!news.Outlet__c}"/></b><br/> 
+               <apex:outputField value="{!news.Source__c}"/><br/>
+               By&nbsp;<apex:outputField value="{!news.Author_Participant_text_line__c}"/><br/>
+               <apex:outputPanel layout="none" rendered="{!AND(!ISNULL(news.Date__c),!ISNULL(news.Time_text__c))}">
+                    <apex:outputText value="{0, date, d MMMM YYYY}">
+                        <apex:param value="{!news.Date__c}" /> 
+                    </apex:outputText>,&nbsp;<apex:outputfield value="{!news.Time_text__c}" /><br/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!AND(!ISNULL(news.Date__c),ISNULL(news.Time_text__c))}">
+                    <apex:outputText value="{0, date, d MMMM YYYY}">
+                        <apex:param value="{!news.Date__c}" /> 
+                    </apex:outputText><br/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!AND(ISNULL(news.Date__c),!ISNULL(news.Time_text__c))}">
+                    <apex:outputfield value="{!news.Time_text__c}" />&nbsp;ET<br/>
+                </apex:outputPanel><br/>
+                <i><apex:outputText value="{!news.Appearance_Summary__c}"/></i>
+                <br/><br/>+++
+            </p>
+        </apex:repeat>
+        
+        <br/>
+        <br/>
+    </apex:outputPanel>
+     -->
+    
+    <!-- PRINT/ONLINE
+    <apex:outputPanel layout="none" rendered="{!printOnlines.size>0}">
+        <b>PRINT/ONLINE </b>        
+        <apex:repeat value="{!printOnlines}" var="news">
+            <p>
+                <b><apex:outputField value="{!news.Outlet__c}"/></b><br/>
+                <apex:outputField value="{!news.Source__c}"/><br/>
+                By&nbsp;<apex:outputField value="{!news.Author_Participant_text_line__c}"/><br/>
+                <apex:outputPanel layout="none" rendered="{!AND(!ISNULL(news.Date__c),!ISNULL(news.Time_text__c))}">
+                    <apex:outputText value="{0, date, d MMMM YYYY}">
+                        <apex:param value="{!news.Date__c}" /> 
+                    </apex:outputText>,&nbsp;<apex:outputfield value="{!news.Time_text__c}" /><br/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!AND(!ISNULL(news.Date__c),ISNULL(news.Time_text__c))}">
+                    <apex:outputText value="{0, date, d MMMM YYYY}">
+                        <apex:param value="{!news.Date__c}" /> 
+                    </apex:outputText><br/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!AND(ISNULL(news.Date__c),!ISNULL(news.Time_text__c))}">
+                    <apex:outputfield value="{!news.Time_text__c}" />&nbsp;ET<br/>
+                </apex:outputPanel><br/>
+                <i><apex:outputText value="{!news.Appearance_Summary__c}"/></i>
+                <br/><br/>+++
+            </p>
+        </apex:repeat>        
+        <br/>
+        <br/>
+    </apex:outputPanel>
+    -->
+</apex:component>

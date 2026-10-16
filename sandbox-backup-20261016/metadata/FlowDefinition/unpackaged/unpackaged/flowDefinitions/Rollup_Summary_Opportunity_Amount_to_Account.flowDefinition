@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>16</activeVersionNumber>
+    <description>Rollup of contract (opportunity) amount to related account record.  
+Account.SumofActiveContracts__c = Rollup(Opportunity.Amount: ﻿Opportunity.Contract_Active__c = true)
+Account.Sum_Active_Recurring_Contracts__c  = Rollup(Opportunity.Amount: ﻿Opportunity.Contract_Active__c = true, RevenueType__c = &apos;Recurring&apos;)</description>
+    <masterLabel>Rollup Summary - Opportunity Next Renewal Date to Account</masterLabel>
+</FlowDefinition>

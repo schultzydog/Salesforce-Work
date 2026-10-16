@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account.Account_Matching_Accounts</members>
+        <members>Account.Standard_Account_Match_Rule_v1_0</members>
+        <members>Contact.Contact_Email_Matching_Rule</members>
+        <members>Contact.Lead_to_Contact</members>
+        <members>Contact.Standard_Contact_Match_Rule_v1_1</members>
+        <members>Contact_Preferences__c.Standard_rule_for_duplicate_Contact_Preferences_matching_rule</members>
+        <members>Lead.Lead_Email_Matching</members>
+        <members>Lead.Standard_Lead_Match_Rule_v1_0</members>
+        <members>Lead.Standard_MatchedLeads_Match_Rule_v1_0</members>
+        <name>MatchingRule</name>
+    </types>
+    <version>62.0</version>
+</Package>

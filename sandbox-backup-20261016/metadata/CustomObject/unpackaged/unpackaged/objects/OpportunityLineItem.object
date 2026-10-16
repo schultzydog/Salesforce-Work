@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <content>ia_crm__EditAllOpportuntyProduct</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Custom</fullName>
+        <fields>Name</fields>
+        <fields>Product2Id</fields>
+        <fields>Revenue_Type__c</fields>
+        <fields>UnitPrice</fields>
+        <label>Custom</label>
+    </compactLayouts>
+    <enableFeeds>false</enableFeeds>
+    <fieldSets>
+        <fullName>ia_crm__Contract_Fields</fullName>
+        <availableFields>
+            <field>ia_crm__Amount_Currency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Do_Not_Sync__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Intacct_Contract_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Prorate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Renew__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Renewal_BillingTemplate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__RevenueRecognition_1_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__RevenueRecognition_1_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__RevenueRecognition_2_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__RevenueRecognition_2_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ServiceDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Service_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Ship_to_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Subtotal</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Taxable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Total_quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>AddProductController and AddProductToOpportunity visualforce</description>
+        <displayedFields>
+            <field>ia_crm__Renewal_Only__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ia_crm__Project__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ia_crm__Task__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>TotalPrice</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ia_crm__Recurring__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ia_crm__Employee__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ia_crm__Class__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Contract Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ia_crm__Order_Entry_Fields</fullName>
+        <availableFields>
+            <field>ia_crm__Amount_Currency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Billing_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Billing_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Billing_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Billing_Template__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Change_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Class__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Contract_Line_Save_Cancel_He__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Department__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Discount</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Do_Not_Sync__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Employee__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Multiplier__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Renewal_BillingTemplate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Reset_Usage_Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Ship_to_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Subtotal</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Taxable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>TotalPrice</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Total_quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ia_crm__Usage_Quantity_Recurs__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Add product opportunity page.</description>
+        <displayedFields>
+            <field>ia_crm__Project__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ia_crm__Task__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Order Entry Fields</label>
+    </fieldSets>
+    <fields>
+        <fullName>Analyst_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Analyst Access</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assessment__c</fullName>
+        <label>Assessment</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Automate_Entitlement_Creation__c</fullName>
+        <formula>PricebookEntry.Product2.Automate_Entitlement_Creation__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Automate Entitlement Creation</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bill_To_Intacct_Contact_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Bill_To__r.ia_crm__Intacct_Contact_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bill To Intacct Contact Id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bill_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Bill To</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunity Product (Bill To)</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Line__c</fullName>
+        <label>Product Business Line</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Business_Line</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Active__c</fullName>
+        <formula>Opportunity.Contract_Active__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <description>R - Recurring
+S - Speaking
+V - Voting
+N - No-recurring
+T - Trial
+L  - Loss</description>
+        <inlineHelpText>R - Recurring
+S - Speaking
+V - Voting
+N - No-recurring
+T - Trial
+L  - Loss</inlineHelpText>
+        <label>Contract Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>R</fullName>
+                    <default>false</default>
+                    <label>R</label>
+                </value>
+                <value>
+                    <fullName>S</fullName>
+                    <default>false</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>V</fullName>
+                    <default>false</default>
+                    <label>V</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>T</fullName>
+                    <default>false</default>
+                    <label>T</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_for_slr_retirement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created for slr retirement</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dept_Code_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Business_Line__c , &apos;Global Markets&apos;) , 
+
+ CASE(  Opportunity.Geography__c , 
+&apos;North America&apos;, &apos;315&apos;, 
+&apos;EMEA&apos;, &apos;311&apos;,
+&apos;Japan&apos;, &apos;312&apos;,
+&apos;Brazil&apos;, &apos;314&apos;,
+&apos;Asia ex-Japan&apos;, &apos;313&apos;,
+&apos;LatAm ex-Brazil&apos;, &apos;314&apos;,
+&apos;N/A&apos;) , 
+
+ IF(ISPICKVAL(Business_Line__c, &apos;Corporate&apos;), 
+
+ CASE(Opportunity.Corporate_Sector_Team__c , 
+&apos;Energy, Climate, Resources (ECR)&apos;, &apos;321&apos;, 
+&apos;Aerospace &amp; Defense&apos;, &apos;361&apos;,
+&apos;Professional Services, Philanthropy &amp; Non-Profit, Public Sector (PPP)&apos;, &apos;329&apos;,
+&apos;Healthcare&apos;, &apos;323&apos;,
+&apos;Consumer &amp; Retail (C&amp;R)&apos;, &apos;325&apos;,
+&apos;Geotech&apos;, &apos;326&apos;,
+&apos;Other&apos;, &apos;320&apos;,
+&apos;Global Sustainability&apos;, &apos;363&apos;, 
+&apos;Financial Institutions Group (FIG)&apos;, &apos;322&apos;,
+&apos;Trade &amp; Supply Chains&apos;, &apos;324&apos;,
+&apos;N/A&apos;) ,  
+
+ IF(ISPICKVAL(Business_Line__c, &apos;OOP&apos;), &apos;407&apos;, 
+ IF(ISPICKVAL(Business_Line__c, &apos;GZERO&apos;), &apos;411&apos;,  
+
+&apos;N/A&apos;))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dept Code formula</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>Entitlement_Specifics__c</fullName>
+        <label>Entitlement Specifics</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Entitlement_Specifics</valueSetName>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GL_Posting_Date__c</fullName>
+        <label>GL Posting Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GL_SubAccount__c</fullName>
+        <label>GL SubAccount</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Department_Codes</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Has_Product_Libraries__c</fullName>
+        <formula>PricebookEntry.Product2.Has_Product_Libraries__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Product Libraries</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ian_speaking__c</fullName>
+        <formula>CONTAINS( Product_Name__c , &apos;Ian Bremmer - In-Person&apos;) ||  CONTAINS( Product_Name__c , &apos;Ian Bremmer - Virtual&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ian speaking</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_in_Top_30__c</fullName>
+        <formula>Opportunity.IsWon &amp;&amp;
+Opportunity.Account.Name != &apos;WNET&apos; &amp;&amp;
+Opportunity.Account.Name != &apos;Washington Speakers Bureau&apos; &amp;&amp;
+
+( (NOT(ISPICKVAL( Revenue_Type__c , &apos;Recurring&apos;)) &amp;&amp; ( Opportunity.Contract_Start_Date__c &gt; Today() - 365 &amp;&amp; Opportunity.Contract_Start_Date__c &lt; Today() +1) )
+
+||
+
+(( NOT ISBLANK(Opportunity.Renewal_Opportunity__c) &amp;&amp; Opportunity.Renewal_Opportunity_Open__c = TRUE &amp;&amp; ISPICKVAL(Opportunity.Contract_Status__c, &apos;Expired&apos;) || Opportunity.Contract_Active__c ) ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Include in Top 30</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <formula>PricebookEntry.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsActive?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LastSyncTime</fullName>
+    </fields>
+    <fields>
+        <fullName>Linked_EG_Project_Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Linked EG Project Task</label>
+        <referenceTo>EG_Project_Task__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Managing_Director__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.Managing_Director__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Managing Director</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
+        <fullName>One_Firm_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>One Firm Product</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>casesafeid(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>18 Char Opportunity Product Id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Poll__c</fullName>
+        <formula>CONTAINS( Product_Family__c , &apos;Poll&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Poll</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Previous Product</label>
+        <referenceTo>OpportunityLineItem</referenceTo>
+        <relationshipLabel>Opportunity Product (Previous Product)</relationshipLabel>
+        <relationshipName>Opportunity_Product1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price_range__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Price_range__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Price range</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Product_End_Date__c</fullName>
+        <label>Product End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Product_Family__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.Family)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Family</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Start_Date__c</fullName>
+        <label>Product Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Ready_for_Contract_creation__c</fullName>
+        <formula>NOT ISBLANK( ia_crm__Billing_Template__c ) &amp;&amp;
+NOT ISBLANK(TEXT(  ia_crm__Contract_Line_Save_Cancel_He__c )) &amp;&amp;
+NOT ISBLANK(  ia_crm__Intacct_Location__c ) &amp;&amp;
+NOT ISBLANK(   ia_crm__Class__c ) &amp;&amp;
+NOT ISBLANK(TEXT(  ia_crm__Billing_Method__c )) &amp;&amp;
+NOT ISBLANK(  ia_crm__Department__c) &amp;&amp;
+PricebookEntry.Product2.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product ready for Contract creation</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reimbursable_travel_expenses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Reimbursable Travel Expenses?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Renewal Product</label>
+        <referenceTo>OpportunityLineItem</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Type__c</fullName>
+        <defaultValue>&quot;Non-Recurring&quot;</defaultValue>
+        <label>Revenue Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Revenue_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SLR_Unique_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>SLR Unique Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_retirement_notes__c</fullName>
+        <label>SLR retirement notes</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Senior_Advisor__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.Senior_Advisor__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Senior Advisor</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>Task_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Task Code</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Taxable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Taxable</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Total_Price_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>TotalPrice *  Opportunity.FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Amount_Currency__c</fullName>
+        <deprecated>false</deprecated>
+        <formula>ia_crm__Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount Currency</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Intacct Base flat/fixed amount. This should be equal to Quantity x Rate(Sales Price) x Multiplier - Discount.</inlineHelpText>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Billing_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Billing End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Billing_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Billing Method</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed price</fullName>
+                    <default>true</default>
+                    <label>Fixed price</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Billing_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <inlineHelpText>The Opportunity Product Billing Start Date must be after Contract Start Date.</inlineHelpText>
+        <label>Billing Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Billing_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Billing Template</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ia_crm__Billing_Template__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Billing_Template__c.ia_crm__Status__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Billing_Template__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Billing_frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Billing frequency</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>true</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                    <label>Annually</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Change_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Change Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New MRR</fullName>
+                    <default>false</default>
+                    <label>New MRR</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+                <value>
+                    <fullName>Add on MRR</fullName>
+                    <default>false</default>
+                    <label>Add on MRR</label>
+                </value>
+                <value>
+                    <fullName>Renewal upgrade</fullName>
+                    <default>false</default>
+                    <label>Renewal upgrade</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Class__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Class</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ia_crm__Class__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Class__c.ia_crm__Status__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Class__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Contract_Line_Save_Cancel_He__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Flat/Fixed Amount Frequency</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Use billing template</fullName>
+                    <default>true</default>
+                    <label>Use billing template</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Department__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Department</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ia_crm__Department__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Department__c.ia_crm__Status__c</field>
+                <operation>notEqual</operation>
+                <value>Inactive</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Department__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Do_Not_Sync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Do Not Sync</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Employee__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Employee</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ia_crm__Employees__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Employees__c.ia_crm__Status__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Employees__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__If_Usage_Exceeds_The_Committed_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <label>If Usage Exceeds The Committed Quantity</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bill overage</fullName>
+                    <default>false</default>
+                    <label>Bill overage</label>
+                </value>
+                <value>
+                    <fullName>Don&apos;t allow overage</fullName>
+                    <default>false</default>
+                    <label>Don’t allow overage</label>
+                </value>
+                <value>
+                    <fullName>Do nothing</fullName>
+                    <default>false</default>
+                    <label>Do nothing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Contract_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Intacct Contract Line</label>
+        <referenceTo>ia_crm__Intacct_Contract_Line__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Entity_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( Opportunity.RecordType.DeveloperName = &apos;Contract&apos;, IF( ISPICKVAL( ia_crm__Intacct_Location__r.ia_crm__Entity_Type__c , &apos;Entity&apos;), ia_crm__Intacct_Location__r.ia_crm__Intacct_Entity_ID__c , &apos;&apos;), IF( ISPICKVAL( ia_crm__Intacct_Entity__r.ia_crm__Entity_Type__c , &apos;Entity&apos;), ia_crm__Intacct_Entity__r.ia_crm__Intacct_Entity_ID__c , &apos;&apos;))</formula>
+        <label>Intacct Entity ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Entity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Intacct Entity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Status__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Intacct_Entity__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <inlineHelpText>Field used for both Contract workflow and Order entry transactions.</inlineHelpText>
+        <label>Intacct Location</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Entity_Type__c</field>
+                <operation>notEqual</operation>
+                <value>Top level</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Status__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Intacct_Entity__c</referenceTo>
+        <relationshipLabel>Opportunity Product (Intacct Location)</relationshipLabel>
+        <relationshipName>Opportunity_Product1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Multiplier__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Multiplier</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__On_Contract_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>On Contract End Date</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bill unused quantity</fullName>
+                    <default>false</default>
+                    <label>Bill unused quantity</label>
+                </value>
+                <value>
+                    <fullName>Cancel unused quantity</fullName>
+                    <default>false</default>
+                    <label>Cancel unused quantity</label>
+                </value>
+                <value>
+                    <fullName>Do nothing</fullName>
+                    <default>false</default>
+                    <label>Do nothing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Project</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ia_crm__Project__c.ia_crm__Status__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Project__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Prorate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Prorate</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Quantity_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Quantity Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Variable</fullName>
+                    <default>false</default>
+                    <label>Variable</label>
+                </value>
+                <value>
+                    <fullName>Committed</fullName>
+                    <default>false</default>
+                    <label>Committed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Record_Type_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Opportunity.RecordType.DeveloperName</formula>
+        <label>Record Type Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Recurring__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Recurring</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Renew__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Renew</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Renewal_BillingTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Renewal Billing Template</label>
+        <referenceTo>ia_crm__Billing_Template__c</referenceTo>
+        <relationshipLabel>Opportunity Product (Renewal Billing Template)</relationshipLabel>
+        <relationshipName>Opportunity_Product_RBT</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Renewal_Only__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <inlineHelpText>Check if this line is used for renewal only</inlineHelpText>
+        <label>Renewal Only</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Reset_Usage_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Reset Usage Quantity</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>After each renewal</fullName>
+                    <default>false</default>
+                    <label>After each renewal</label>
+                </value>
+                <value>
+                    <fullName>After each invoice</fullName>
+                    <default>false</default>
+                    <label>After each invoice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__RevenueRecognition_1_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Revenue Recognition 1 End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__RevenueRecognition_1_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Revenue Recognition 1 Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__RevenueRecognition_2_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Revenue Recognition 2 End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__RevenueRecognition_2_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Revenue Recognition 2 Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__SFDC_Opportunity_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(OpportunityId)</formula>
+        <label>SFDC Opportunity ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__SFDC_Opportunity_Product_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <label>SFDC Opportunity Product ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Service_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Service End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Ship_to_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Ship to Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <inlineHelpText>The Opportunity Product Start Date must be after Contract Start Date.</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Task</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.ia_crm__Project__c</field>
+                <operation>equals</operation>
+                <valueField>ia_crm__Task__c.ia_crm__Project__c</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Task__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Taxable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Taxable</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Total_quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Total quantity</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Usage_Quantity_Recurs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Usage Quantity Recurs</label>
+        <type>Checkbox</type>
+    </fields>
+    <validationRules>
+        <fullName>Lock_Oppty_Product_Records_after_Closed</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+(ISPICKVAL( Opportunity.StageName ,&quot;Win&quot;) || ISPICKVAL(Opportunity.StageName,&quot;Closed Lost&quot;)),
+ $User.Id &lt;&gt; &apos;0054V00000G8XY7&apos;,
+ $User.Id &lt;&gt; &apos;0054V00000GOIjR&apos;,
+ $User.Id &lt;&gt; &apos;005dK000001YNT3&apos;,
+CASE($Profile.Name,
+&quot;System Admin - Digital Operations&quot;,1,
+&quot;Finance&quot;,1,
+&quot;System Administrator&quot;,1,
+0)=0
+)</errorConditionFormula>
+        <errorMessage>Once the Opportunity Stage has been Won or Lost the Opportunity Product Records are Locked. Please contact Finance for any corrections or updates.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Amount_cannot_be_empty</fullName>
+        <active>false</active>
+        <description>Flat/Fixed amount(Amount__c) cannot be empty if billing method is Fixed price.</description>
+        <errorConditionFormula>IF(AND(ISPICKVAL(ia_crm__Billing_Method__c, &apos;Fixed price&apos;), Opportunity.RecordType.DeveloperName = &apos;Contract&apos; ), ISBLANK(ia_crm__Amount__c), false)</errorConditionFormula>
+        <errorMessage>Flat/Fixed amount cannot be empty if billing method is Fixed price.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Billing_Template_Dates_Required</fullName>
+        <active>false</active>
+        <description>For &apos;Use billing template&apos; Billing template, Billing start and Billing End date should be required.</description>
+        <errorConditionFormula>IF( Opportunity.RecordType.DeveloperName = &apos;Contract&apos; ,IF(ISPICKVAL(ia_crm__Contract_Line_Save_Cancel_He__c, &apos;Use billing template&apos;), IF(OR(ISBLANK( ia_crm__Billing_Start_Date__c), ISBLANK( ia_crm__Billing_End_Date__c),  ISBLANK( ia_crm__Billing_Template__r.Name ) ), true, false),false), false)</errorConditionFormula>
+        <errorMessage>Billing Template, Billing Start Date and Billing End Date are required when Flat/Fixed amount frequency is &apos;Use billing template&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Contract_Dates_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF(Opportunity.RecordType.DeveloperName = &apos;Contract&apos;,
+IF(!ISBLANK(Opportunity.ContractId), 
+OR( 
+IF(AND(!(AND(ia_crm__Start_Date__c &gt;= Opportunity.Contract.StartDate, ia_crm__Start_Date__c &lt;= Opportunity.Contract.EndDate)), !ISBLANK(ia_crm__Start_Date__c)) , true, false), 
+IF(AND(!(AND(ia_crm__End_Date__c &gt;= Opportunity.Contract.StartDate, ia_crm__End_Date__c &lt;= Opportunity.Contract.EndDate)), !ISBLANK(ia_crm__End_Date__c)) , true, false), 
+IF(ISPICKVAL( ia_crm__Contract_Line_Save_Cancel_He__c , &apos;Use billing template&apos;), 
+OR( 
+IF(!(AND(ia_crm__Billing_Start_Date__c &gt;= Opportunity.Contract.StartDate, ia_crm__Billing_Start_Date__c &lt;= Opportunity.Contract.EndDate)) , true, false), 
+IF(!(AND(ia_crm__Billing_End_Date__c &gt;= Opportunity.Contract.StartDate, ia_crm__Billing_End_Date__c &lt;= Opportunity.Contract.EndDate)) , true, false) 
+), false) 
+), false), false)</errorConditionFormula>
+        <errorMessage>If the Opportunity has a Contract associated with it dates must be within the Start Date and End Date of the Contract.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Flat_Fixed_amount_frequency</fullName>
+        <active>false</active>
+        <description>If &apos;Flat/Fixed amount frequency&apos; = &apos;One Time&apos; or &apos;Include with every invoice&apos;, then the Start Date and End Date should be required.</description>
+        <errorConditionFormula>IF(Opportunity.RecordType.DeveloperName = &apos;Contract&apos;,
+IF(OR(ISPICKVAL(ia_crm__Contract_Line_Save_Cancel_He__c, &apos;One-time&apos;), ISPICKVAL(ia_crm__Contract_Line_Save_Cancel_He__c, &apos;Include with every invoice&apos;)),IF(OR(ISBLANK( ia_crm__Start_Date__c ),ISBLANK( ia_crm__End_Date__c )), true, false), false), false)</errorConditionFormula>
+        <errorDisplayField>ia_crm__Contract_Line_Save_Cancel_He__c</errorDisplayField>
+        <errorMessage>If &apos;Flat/Fixed amount frequency&apos; = &apos;One Time&apos; or &apos;Include with every invoice&apos; the Start Date and End Date are required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Intacct_Entities_Match</fullName>
+        <active>false</active>
+        <description>The Intacct Location from the Opportunity Product should match the Opportunity Intacct Entity or be a sub-location for it.</description>
+        <errorConditionFormula>IF(Opportunity.RecordType.DeveloperName = &apos;Contract&apos;,
+IF(!ISBLANK( Opportunity.ia_crm__Intacct_Location__c ), IF(OR( ia_crm__Intacct_Location__c =  Opportunity.ia_crm__Intacct_Location__c,  ia_crm__Intacct_Location__r.ia_crm__Top_Entity__c  =  Opportunity.ia_crm__Intacct_Location__c, ISBLANK(ia_crm__Intacct_Location__c)), false, true), false), false)</errorConditionFormula>
+        <errorDisplayField>ia_crm__Intacct_Location__c</errorDisplayField>
+        <errorMessage>The Intacct Location should match the Opportunity Intacct Entity or be a sublocation for it.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Order_Entry_Entity_Match</fullName>
+        <active>false</active>
+        <description>On Order Entry opportunities the Intacct Entity should match the Opportunity Intacct Entity or be a sublocation for it.</description>
+        <errorConditionFormula>IF(Opportunity.RecordType.DeveloperName = &apos;OrderEntry&apos;,
+IF(!ISBLANK( Opportunity.ia_crm__Intacct_Location__c ), IF(OR( ia_crm__Intacct_Entity__c = Opportunity.ia_crm__Intacct_Location__c, ia_crm__Intacct_Entity__r.ia_crm__Top_Entity__c = Opportunity.ia_crm__Intacct_Location__c, ISBLANK(ia_crm__Intacct_Entity__c)), false, true), false), false)</errorConditionFormula>
+        <errorDisplayField>ia_crm__Intacct_Entity__c</errorDisplayField>
+        <errorMessage>The Intacct Entity from the Opportunity Product should match the Opportunity Intacct Entity or be a sublocation for it.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Quantity_Rate_Required</fullName>
+        <active>false</active>
+        <description>If Rate, Quantity or Multiplier, then both Rate and Quantity need to be filled in.</description>
+        <errorConditionFormula>IF(Opportunity.RecordType.DeveloperName = &apos;Contract&apos;,
+AND(OR(NOT(ISBLANK(UnitPrice)), NOT(ISBLANK(Quantity)), NOT(ISBLANK( ia_crm__Multiplier__c ))), OR(ISBLANK(UnitPrice), ISBLANK(Quantity))), false)</errorConditionFormula>
+        <errorMessage>Incomplete input data is provided for &apos;Rate&apos;, &apos;Quantity&apos;, and &apos;Multiplier&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Start_and_End_Dates_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR(ia_crm__Start_Date__c &gt; ia_crm__End_Date__c, ia_crm__Billing_Start_Date__c &gt; ia_crm__Billing_End_Date__c)</errorConditionFormula>
+        <errorMessage>Start dates must be earlier than the end dates.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>ia_crm__Add_Line</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Line</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR($Site.Prefix + &apos;/apex/ia_crm__AddProduct?recordId=&apos; + Opportunity.Id + &apos;&amp;pageAction=Add&apos;)}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ia_crm__Bulk_update</fullName>
+        <availability>online</availability>
+        <description>This button can be used in classic interface only, it contains item selection from Opportunity page.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Bulk update</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var ids = {!GETRECORDIDS($ObjectType.OpportunityLineItem)}; 
+
+var url = &apos;{!URLFOR($Site.Prefix)}/apex/ia_crm__OpportunityProductsBulkUpdate?recordId={!Opportunity.Id}&amp;recordType={!Opportunity.RecordTypeId}&amp;hasOpportunityLine={!if(Opportunity.HasOpportunityLineItem,&apos;true&apos;,&apos;false&apos;)}&apos;;   
+
+var isValid = true;
+if (ids.length) { 
+if (ids.length &lt;= 50) { 
+url += &apos;&amp;oproductIds=&apos; + ids.join(&apos;,&apos;); 
+} else { 
+alert(&apos;You have selected more than 50 items, please select less items.&apos;); 
+isValid=false;
+} 
+}
+if(isValid) {
+window.location = url;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ia_crm__Bulk_update_lightning</fullName>
+        <availability>online</availability>
+        <description>This button must be used in lightning experience interface,  the functionality for selecting items from interface is disabled.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Bulk update</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!URLFOR($Site.Prefix + &apos;/apex/ia_crm__OpportunityProductsBulkUpdate?recordId=&apos; + Opportunity.Id + &apos;&amp;recordType=&apos; + Opportunity.RecordTypeId + &apos;&amp;hasOpportunityLine=&apos; +
+IF(Opportunity.HasOpportunityLineItem, &apos;true&apos;, &apos;false&apos;))}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ia_crm__Inventory_Status</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Inventory Status</masterLabel>
+        <openType>newWindow</openType>
+        <position>fullScreen</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>{!URLFOR($Site.Prefix + &apos;/apex/ia_crm__DataSyncronization?action=SHOW_INVSTATUS&amp;recordId=&apos; + OpportunityLineItem.Id)}</url>
+    </webLinks>
+</CustomObject>

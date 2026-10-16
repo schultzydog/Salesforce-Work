@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Period__c</columns>
+        <columns>Publish_Date__c</columns>
+        <columns>Library__c</columns>
+        <columns>Past_Period__c</columns>
+        <columns>Status__c</columns>
+        <columns>Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

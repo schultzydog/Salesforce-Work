@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Client_Portal1</members>
+        <members>Contact_Preferences1</members>
+        <members>Survey_Host1</members>
+        <name>SiteDotCom</name>
+    </types>
+    <version>62.0</version>
+</Package>

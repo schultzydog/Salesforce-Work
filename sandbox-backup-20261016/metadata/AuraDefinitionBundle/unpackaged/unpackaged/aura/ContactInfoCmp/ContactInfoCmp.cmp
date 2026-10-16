@@ -1,0 +1,71 @@
+<aura:component controller="ContactInfoCtlr" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" >
+    
+    <aura:attribute name="toggleSpinner" type="boolean" default="true"/>
+    <aura:attribute name="contactFound" type="boolean" default="false"/>
+    <aura:attribute name="contact" type="Contact" />
+    
+    <aura:attribute name="key" type="String" />
+    <aura:attribute name="id" type="String" />
+    
+    <aura:attribute name="salutationOptions" type="List" default="[
+                                                                  {'label': 'Mr.', 'value': 'Mr.'},
+                                                                  {'label': 'Ms.', 'value': 'Ms.'},
+                                                                  {'label': 'Mrs.', 'value': 'Mrs.'},
+                                                                  {'label': 'Dr.', 'value': 'Dr.'},
+                                                                  {'label': 'Prof.', 'value': 'Prof.'},
+                                                                  ]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.toggleSpinner}">
+        <div class="slds-spinner_container">
+            <div class="slds-spinner_brand  slds-spinner slds-spinner_large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.contactFound}">
+        <lightning:card title="Personal Information">
+            <div class="slds-p-around_medium">
+                <lightning:layout>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:inputName aura:id="contact"
+                                             label="Name"
+                                             salutation="{!v.contact.Salutation}"
+                                             firstName="{!v.contact.FirstName}"
+                                             lastName="{!v.contact.LastName}"
+                                             options="{!v.salutationOptions}"
+                                             required="true"/>
+                        <lightning:input aura:id="contact" label="Company" type="text" value="{!v.contact.Account.Name}" disabled="true"/>
+                        <lightning:input aura:id="contact" label="Email" type="email" value="{!v.contact.Email}" disabled="true"/>
+                        <lightning:inputAddress
+                                                addressLabel="Address"
+                                                streetLabel="Street"
+                                                cityLabel="City"
+                                                countryLabel="Country"
+                                                provinceLabel="State"
+                                                postalCodeLabel="PostalCode"
+                                                street="{!v.contact.MailingStreet}"
+                                                city="{!v.contact.MailingCity}"
+                                                country="{!v.contact.MailingCountryCode}"
+                                                province="{!v.contact.MailingStatecode}"
+                                                postalCode="{!v.contact.MailingPostalCode}"
+                                                required="true"
+                                                fieldLevelHelp="Input Mailing Address"
+                                                />
+                        <lightning:input type="tel" label="Phone" name="phone3" value="{!v.contact.Phone}" />
+                        <lightning:button label="Save" onclick="{!c.save}" variant="brand" class="slds-m-top_medium"/>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+        </lightning:card>
+    </aura:if>
+    <aura:if isTrue="{!!v.contactFound}">
+        <aura:if isTrue="{!!v.toggleSpinner}">
+            No Contact Found
+        </aura:if>
+    </aura:if>
+</aura:component>

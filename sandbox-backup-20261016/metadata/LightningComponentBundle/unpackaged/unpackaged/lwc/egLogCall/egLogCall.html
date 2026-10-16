@@ -1,0 +1,313 @@
+<!--
+  @description       : Log a call, Creates Event and Event relation records
+  @last modified on  : 05-31-2023
+-->
+<template>
+	<template if:true={showSpinner}>
+		<lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+	</template>
+	<lightning-card title="Log a Call">
+        <div class="slds-card__footer card-header">
+			<lightning-button class="slds-p-left_x-small slds-p-right_x-small" variant="brand"
+				icon-name="utility:save" label="Save" onclick={handleSave}>
+			</lightning-button>
+			<lightning-button class="slds-p-right_x-small" icon-name="utility:close" label="Cancel"
+				onclick={handleCancel}></lightning-button>
+		</div>
+		<div style="margin:20px">
+		
+            <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                <lightning-layout-item padding="horizontal-small" size="12" small-device-size="4">
+                    <lightning-input type="text" label="Subject" required data-type="event" data-name="subject"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-small" size="12" small-device-size="2">
+                    <lightning-combobox
+                        label="Type"
+                        options={eventTypeOption} value={eventType} required data-type="event" data-name="type"></lightning-combobox>
+                </lightning-layout-item>
+                
+                <lightning-layout-item padding="horizontal-small" size="7" small-device-size="2">
+                    <label class="slds-form-element__label">
+                        <abbr class="slds-required" title="required">*</abbr>Start Date
+                    </label>
+                    <lightning-input type="date" value={defaultToday} label="Start" required data-type="event" data-name="start" variant="label-hidden"></lightning-input>
+                </lightning-layout-item>
+                
+                <lightning-layout-item padding="horizontal-small" size="5" small-device-size="2">
+                    <lightning-combobox
+                        name="end"
+                        label="Duration"
+                        value={durationInMinutes}
+                        required data-type="event" data-name="end"
+                        placeholder="Duration (In minutes)"
+                        options={durationOptions} >
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-small" size="12"  small-device-size="2">
+                    <label class="slds-form-element__label">
+                        Assigned To
+                    </label>
+                    <c-eg-custom-lookup type="User" value={ownerId}
+                        selection={ownerName} additional-style="max-width: 400px;"
+                        disabled={hasExistingEvent}
+                        icon-name="standard:user" placeholder="Select Event Owner"
+                        onselect={handleLookupSelection}>
+                    </c-eg-custom-lookup>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-small" size="12" small-device-size="2">
+                    <label class="slds-form-element__label">
+                        Opportunity
+                    </label>
+                    <c-eg-custom-lookup type="Opportunity" value={oppId}
+                        selection={oppName} additional-style="max-width: 400px;"
+                        icon-name="standard:opportunity" placeholder="Select Opportunity"
+                        filter-field="AccountId" filter-value={originatingAccountId}
+                        onselect={handleLookupSelection}>
+                    </c-eg-custom-lookup>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-small" size="12" small-device-size="2">
+                    <label class="slds-form-element__label">
+                        Opportunity Product
+                    </label>
+                    <c-eg-custom-lookup type="OpportunityLineItem" value={oppLineItemId}
+                        selection={oppLineItemName} additional-style="max-width: 400px;"
+                        icon-name="standard:product_item" placeholder="Select Opportunity Product"
+                        disabled={noProject} filter-value={oppId}
+                        filter-field="opportunityId" onselect={handleLookupSelection}>
+                    </c-eg-custom-lookup>
+                </lightning-layout-item>
+                
+                
+                <lightning-layout-item padding="horizontal-small" size="12" small-device-size="8">
+                    <lightning-textarea name="background" label="Background Notes" required data-type="event" data-name="background"></lightning-textarea>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <!--lightning-accordion allow-multiple-sections-open
+                    onsectiontoggle={handleSectionToggle}
+                    active-section-name={activeSections}-->
+
+            <!--<lightning-tabset>
+                <lightning-tab label="Select EG Attendees" value="A">
+                    <lightning-card  title="Select EG Attendees">
+                        <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                            <lightning-layout-item padding="horizontal-small" size="12" small-device-size="6">
+                                    <c-multi-select-lookup 
+                                        object-api-name= "User"
+                                        field-api-names="Id,Name"
+                                        filter-field-api-name="Name"
+                                        data-name="users"
+                                        static-filter="usertype='Standard' AND IsActive = true"
+                                        icon-name="standard:user"
+                                        onretrieve={selectItemEventHandler} 
+                                        onremove={deleteItemEventHandler}>
+                                    </c-multi-select-lookup>
+                            </lightning-layout-item>
+
+                
+
+
+                            
+                            <lightning-layout-item padding="horizontal-small" size="12"  small-device-size="12">
+                                <lightning-input type="text" label="Search"  variant="label-hidden" data-name="user" style="width: 150px;display: inline-table;"></lightning-input>
+                                <lightning-button-icon  icon-name="utility:search" onclick={search} data-name="user"></lightning-button-icon>
+                            </lightning-layout-item>
+
+                            <lightning-layout-item padding="horizontal-small" size="12" small-device-size="6">
+                                <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                                    <lightning-layout-item padding="horizontal-small" size="10" small-device-size="11">
+                                        <div style="height:150px;">
+                                            <lightning-datatable
+                                                key-field="Id"
+                                                data={availableUsers}
+                                                data-name="availableUsers"
+                                                columns={userColumns}>
+                                            </lightning-datatable>
+                                        </div>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-small" size="2" small-device-size="1">
+                                        <lightning-button-icon icon-name="utility:jump_to_right"  onclick={add} data-name="user"></lightning-button-icon>
+                                    </lightning-layout-item>
+                                
+                                </lightning-layout>
+                                
+                                
+                                
+                            </lightning-layout-item>
+                            
+                            <lightning-layout-item padding="horizontal-small" size="12" small-device-size="6">
+                                <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                                   
+                                    <lightning-layout-item padding="horizontal-small" size="2" small-device-size="1">
+                                        <lightning-button-icon  icon-name="utility:jump_to_left"  onclick={remove} data-name="user"></lightning-button-icon>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-small" size="10" small-device-size="11">
+                                        <div style="height:150px;">
+                                            <lightning-datatable
+                                                key-field="Id"
+                                                data={selectedUsers}
+                                                data-name="selectedUsers"
+                                                columns={userColumns}>
+                                            </lightning-datatable>
+                                        </div>
+                                    </lightning-layout-item>
+                                
+                                </lightning-layout>
+                               
+                            </lightning-layout-item> 
+                        </lightning-layout>
+                    </lightning-card>
+                </lightning-tab>
+                <lightning-tab label="Select Accounts &amp; Contacts" value="B">-->
+                    <hr/>
+                    <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                        <lightning-layout-item padding="horizontal-small" size="12" small-device-size="4">
+                            <lightning-card  title="EG Attendees">
+                                <c-multi-select-lookup 
+                                    object-api-name= "User"
+                                    field-api-names="Id,Name"
+                                    filter-field-api-name="Name"
+                                    data-name="users"
+                                    static-filter="usertype='Standard' AND IsActive = true"
+                                    icon-name="standard:user"
+                                    onretrieve={selectItemEventHandler} 
+                                    onremove={deleteItemEventHandler}>
+                                </c-multi-select-lookup>
+                            </lightning-card>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="horizontal-small" size="12" small-device-size="4">
+                            <lightning-card  title="Accounts">
+                                <c-multi-select-lookup 
+                                    object-api-name= "Account"
+                                    field-api-names="Id,Name"
+                                    filter-field-api-name="Name"
+                                    data-name="account"
+                                    icon-name="standard:account"
+                                    onretrieve={selectItemEventHandler} 
+                                    onremove={deleteItemEventHandler}>
+                                </c-multi-select-lookup>
+                            </lightning-card>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="horizontal-small" size="12" small-device-size="4">
+                            <lightning-card  title="Contacts">
+                                <c-multi-select-lookup 
+                                    object-api-name= "Contact"
+                                    field-api-names="Id,Name, Account.Id, Account.Name"
+                                    filter-field-api-name="Name"
+                                    filter-parent-api-name ="AccountId"
+                                    data-name="contact"
+                                    icon-name="standard:contact"
+                                    onretrieve={selectItemEventHandler} 
+                                    onremove={deleteItemEventHandler}>
+                                </c-multi-select-lookup>
+                            </lightning-card>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                        
+                       
+
+                        <!--
+                            <lightning-layout-item padding="horizontal-small" size="12" small-device-size="12">
+                                <lightning-input type="text" label="Search"  variant="label-hidden" data-name="account" style="width: 150px;display: inline-table;"></lightning-input>
+                                <lightning-button-icon  icon-name="utility:search" onclick={search} data-name="account"></lightning-button-icon>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-small" size="12" small-device-size="6">
+                                <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                                    <lightning-layout-item padding="horizontal-small" size="10" small-device-size="11">
+                                        <div style="height:150px;">
+                                            <lightning-datatable
+                                                key-field="Id"
+                                                data={availableAccounts}
+                                                data-name="availableAccounts"
+                                                columns={accountColumns}>
+                                            </lightning-datatable>
+                                        </div>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-small" size="2" small-device-size="1">
+                                        <lightning-button-icon icon-name="utility:jump_to_right"  onclick={add} data-name="account"></lightning-button-icon>
+                                    </lightning-layout-item>
+                                
+                                </lightning-layout>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-small" size="12" small-device-size="6">
+                                <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                                   
+                                    <lightning-layout-item padding="horizontal-small" size="2" small-device-size="1">
+                                        <lightning-button-icon  icon-name="utility:jump_to_left"  onclick={remove} data-name="account"></lightning-button-icon>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-small" size="10" small-device-size="11">
+                                        <div style="height:150px;">
+                                            <lightning-datatable
+                                                key-field="Id"
+                                                data={selectedAccounts}
+                                                data-name="selectedAccounts"
+                                                columns={accountColumns}>
+                                            </lightning-datatable>
+                                        </div>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </lightning-layout-item>
+                       
+                        </lightning-layout>
+                    </lightning-card>
+                     -->
+                     <!--
+                    <lightning-card  title="Select Contacts">
+                        <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                            <lightning-layout-item padding="horizontal-small" size="12">
+                                <lightning-input type="text" label="Search"  variant="label-hidden" data-name="contact" style="width: 150px;display: inline-table;"></lightning-input>
+                                <lightning-button-icon  icon-name="utility:search" onclick={search} data-name="contact"></lightning-button-icon>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-small" size="12" small-device-size="6">
+                                <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                                    <lightning-layout-item padding="horizontal-small" size="10" small-device-size="11">
+                                        <div style="height:150px;">
+                                            <lightning-datatable
+                                                key-field="Id"
+                                                data={availableContacts}
+                                                data-name="availableContacts"
+                                                enable-infinite-loading
+                                                onloadmore={loadMoreData}
+                                                columns={contactColumns}>
+                                            </lightning-datatable>
+                                        </div>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-small" size="2" small-device-size="1">
+                                        <lightning-button-icon icon-name="utility:jump_to_right"  onclick={add} data-name="contact"></lightning-button-icon>
+                                    </lightning-layout-item>
+                                
+                                </lightning-layout>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-small" size="12" small-device-size="6">
+                                <lightning-layout multiple-rows="true" pull-to-boundary="medium">
+                                   
+                                    <lightning-layout-item padding="horizontal-small" size="2" small-device-size="1">
+                                        <lightning-button-icon  icon-name="utility:jump_to_left"  onclick={remove} data-name="contact"></lightning-button-icon>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-small" size="10" small-device-size="11">
+                                        <div style="height:150px;">
+                                            <lightning-datatable
+                                                key-field="Id"
+                                                data={selectedContacts}
+                                                data-name="selectedContacts"
+                                                columns={contactColumns}>
+                                            </lightning-datatable>
+                                        </div>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </lightning-card>
+                    -->
+               <!-- </lightning-tab>
+            </lightning-tabset>-->
+		</div>
+		<div slot="footer">
+			<lightning-button class="slds-p-left_x-small slds-p-right_x-small" variant="brand"
+				icon-name="utility:save" label="Save" onclick={handleSave}>
+			</lightning-button>
+			<lightning-button class="slds-p-right_x-small" icon-name="utility:close" label="Cancel"
+				onclick={handleCancel}></lightning-button>
+		</div>
+	</lightning-card>
+</template>

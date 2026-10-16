@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>GLOMA - Q3 ESG Outreach</name>
+    <style>freeForm</style>
+    <subject>Eurasia Group - ESG Coverage Update for 2H</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+Hope to find you doing well.
+
+
+
+As we head into 2H, we wanted to update you on our coverage plans regarding the geopolitical, policy, regulatory, and country risk dimensions of climate change and sustainable investing.
+
+
+
+Our top-line short-term and long-term views on the most market-relevant trends in the ESG space are as follows:
+
+
+The Covid-19 pandemic is not only sustaining, but rather accelerating both private and public sector momentum on ESG issues.
+
+In our latest Climate Monthly, we argue that though some companies have made Paris accord-aligned commitments and are adjusting their business models, investors continue to avoid many current and future fossil fuel projects because of a deep misalignment between planned fossil fuel production globally and Paris Agreement targets.
+We also argue that while seemingly counterintuitive to policy and political efforts globally, a successful energy transition will require more, not less, investment in the oil and gas sector to allow energy needs to be met while decarbonization continues.
+
+A new chapter in the Covid crisis is unfolding – the degree to which the recovery will be greened through explicit policy measures or as a bi-product of general stimulus.
+
+Our coverage is zeroing in on the most promising outlooks for stimulus measures that can reboot the economy with an eye to the environment.
+With many more rounds of stimulus to come, it is still too soon to tell winners from losers across sectors and countries.
+That said, the emerging policies from major economies thus far have demonstrated that the global response to the pandemic will result in a major dedication of capital globally to green efforts.
+
+All eyes in 2020 will be on the US election, which regardless of outcome will have large ramifications for energy and green policy.
+
+The competing campaigns offer starkly contrasting visions for climate and energy policy, with policy divergences between Trump and Biden translating into trillions of dollars in planned spending and radically different regulatory agendas that could reshape the energy industry and adjacent sectors.
+We see more aggressive climate policy coming from the Biden campaign, which we view as the favorite for the fall election, offering a sharp departure from the Trump administration’s policies. Though Biden would pursue climate policies more aggressive than the Obama administration, we see these being less aggressive than those some Democratic Party activists have advocated for.
+Irrespective of the outcome, state-level policy and regulatory authorities will continue to stand in the way of either a Democratic or Republican administration, with intransigent states unlikely to capitulate to aggressive national agendas in either direction where state-level opposition exists.
+
+
+Our 6-person practice is spread across Washington DC, New York, London, and Singapore for global coverage. Our Climate &amp; ESG work is led by Managing Director Rohitesh Dhawan, who joined Eurasia Group following work with Yvo de Boer, former executive secretary of the UN Framework Convention on Climate Change.
+
+
+
+Our ESG &amp; Climate Change coverage also leverages the deep expertise on climate and sustainable finance of our Vice Chairman Gerald Butts, former Principal Secretary to Canadian Prime Minister Justin Trudeau.
+
+
+
+We look forward to engaging you on these issues. Please do not hesitate to reach out to connect for macro briefings or on sector, country, or policy-specific questions.
+
+
+
+Kind regards,
+
+
+
+Rachel
+
+
+
+Rachel Gangji | Head of Global Markets Advisory
+
+Eurasia Group | 30-31 Great Sutton Street | 1st Floor | London | EC1V 0NA
+
+t +44 (0)207. 375 6922
+
+gangji@eurasiagroup.net</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

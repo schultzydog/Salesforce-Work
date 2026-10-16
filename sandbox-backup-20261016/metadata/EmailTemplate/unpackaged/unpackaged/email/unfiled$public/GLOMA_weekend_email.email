@@ -1,0 +1,1117 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+</style>
+<![endif]-->
+
+<p class="MsoNormal" style="background:white"><span style="font-size:
+12.0pt;color:black;mso-ansi-language:EN-GB" lang="EN-GB">&nbsp;</span></p>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><b><span style="font-size:12.0pt;color:#2F5597">Upcoming
+conference calls</span></b></span><span class="eop"><span style="font-size:12.0pt;
+color:#2F5597">&nbsp;</span></span><span style="font-size:9.0pt;font-family:
+&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Brazil
+     Update: A conversation with Guilherme Melo, Secretary for Economic
+     Policy&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">– Monday, April 10</span></span><span class="normaltextrun"><sup><span style="font-size:8.5pt;mso-fareast-font-family:
+     &quot;Times New Roman&quot;">th</span></sup></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;at 10:00 AM New
+     York, 07:00 AM San Francisco, 11:00 AM Brasilia, 03:00 PM UK| Register </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://us02web.zoom.us/webinar/register/WN_SJ2ajC-nQQW4ZdDeK0fEpA" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level2 lfo1;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Join Eurasia Group’s Managing Director for the
+      Americas Christopher Garman and Brazil Director Silvio Cascione to
+      discuss the recent updates in Brazil's politics with Guilherme Mello,
+      secretary for economic policy.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Taiwan-US-China
+     relations: Takeaways from President Tsai's US visit&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">–
+     Monday, April 10</span></span><span class="normaltextrun"><sup><span style="font-size:8.5pt;mso-fareast-font-family:&quot;Times New Roman&quot;">th</span></sup></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;at
+     10:15 AM New York, 07:15 AM San Francisco, 11:15 AM Brasilia, 03:15 PM UK|
+     Register </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://us02web.zoom.us/webinar/register/WN_3rfE312ySCWz-VLattwxVA" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level2 lfo1;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Taiwan President Tsai Ing-wen&nbsp;arrived
+      to&nbsp;fanfare in New York on 31 March. After visiting Central America,
+      she will stop for a meeting with House Speaker Kevin McCarthy in
+      California on 5 April. Third in line to the presidency, McCarthy will be
+      the senior-most US official to meet with a sitting Taiwan president on US
+      soil. Beijing denounced the visit and may employ a show of force and
+      other measures. Join us to discuss the visit's effects on relations
+      between the island, the mainland, and the US.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Andriy
+     Zagorodnyuk&nbsp;and Cliff Kupchan&nbsp;—The View from Kyiv&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">–
+     Tuesday, April 11</span></span><span class="normaltextrun"><sup><span style="font-size:8.5pt;mso-fareast-font-family:&quot;Times New Roman&quot;">th</span></sup></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;at
+     10:00 AM New York, 07:00 AM San Francisco, 11:00 AM Brasilia, 03:00 PM UK
+     | Register </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://us02web.zoom.us/webinar/register/WN_D99plUztSL6b7uI4AGTHdQ" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level2 lfo1;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Join Eurasia Group Chairman Cliff Kupchan&nbsp;for an
+      off-the-record call with Andriy Zagorodnyuk, former Minister of Defense
+      of Ukraine. Zagorodnyuk&nbsp;will offer perspectives from Kyiv on the
+      ongoing war.&nbsp;</span></span><span class="eop"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Eurasia
+     Group Top Calls April 2023&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">–
+     Tuesday, April 11</span></span><span class="normaltextrun"><sup><span style="font-size:8.5pt;mso-fareast-font-family:&quot;Times New Roman&quot;">th</span></sup></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;at
+     11:30 AM New York, 08:30 AM San Francisco, 12:30 PM Brasilia, 04:30 PM UK
+     | Register </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://us02web.zoom.us/webinar/register/WN_gG8EfXr2Sceb_HMrXhRMSQ" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level2 lfo1;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Please join Eurasia Group analysts to discuss our Top
+      Calls for April 2023, the Eurasia Group calls that could have the biggest
+      impact on the global economy and markets.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Europe’s
+     energy security and economic outlook coming out of winter - Ronan Lory,
+     Henning Gloystein, and Jens Larsen&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">–
+     Wednesday, April 12</span></span><span class="normaltextrun"><sup><span style="font-size:8.5pt;mso-fareast-font-family:&quot;Times New Roman&quot;">th</span></sup></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;at
+     10:00 AM New York, 07:00 AM San Francisco, 11:00 AM Brasilia, 03:00 PM UK
+     | Register </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://us02web.zoom.us/webinar/register/WN_zhFGhyYoQEiU25Ctw2oexg" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level2 lfo1;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Join Eurasia Group’s Henning Gloystein&nbsp;and Jens
+      Larsen as they host Ronan Lory, Edison SpA’s&nbsp;Chief Financial
+      Officer, for an off-the-record conversation.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level1 lfo1;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Mexico’s
+     economic outlook </span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">– Thursday, April 20</span></span><span class="normaltextrun"><sup><span style="font-size:8.5pt;mso-fareast-font-family:
+     &quot;Times New Roman&quot;">th</span></sup></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;at 11:00 AM New
+     York, 08:00 AM San Francisco, 12:00 PM Brasilia, 04:00 PM UK| Register </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://us02web.zoom.us/webinar/register/WN_tt7ZPEu_T1KxL6iH9cciPg" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l1 level2 lfo1;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Please join us for an off-the-record conversation with
+      Banxico’s&nbsp;chief economist to discuss the outlook for the Mexican
+      economy. We will discuss Mexico’s outlook for inflation, growth
+      projections and key risks.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><b><span style="font-size:12.0pt;color:#2F5597">Recent
+conference calls</span></b></span><span class="eop"><span style="font-size:12.0pt;
+color:#2F5597">&nbsp;</span></span><span style="font-size:9.0pt;font-family:
+&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l9 level1 lfo2;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Ecuador’s
+     political crisis</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;(03.31.23)&nbsp;| </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/openorplay/7f6c3bf7-e03c-494c-9d12-9266f4fb541b/March31-Ecuadorspoliticalcrisis-.mp3/1a29792d-011f-48c4-8160-14158c1ce7c8" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">Audio</span></span></a><span class="normaltextrun">&nbsp;| </span><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14590_d3c7edad/wfpub_eurasia_14590_d3c7edad.html/4b614563-9ecb-46f3-9d68-ab0e424d8ca6" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">Notes</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l9 level2 lfo2;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Eurasia Group’s&nbsp;director for Latin America Risa
+      Grais-Targow&nbsp;discusses political scenarios following the
+      constitutional court's decision to greenlight an impeachment against
+      President Guillermo Lasso.&nbsp;</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l9 level1 lfo2;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Brazil
+     Update</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:
+     &quot;Times New Roman&quot;">&nbsp;(03.31.23) |&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/openorplay/d2f939b0-5e09-4d3e-a53c-4be82bea3b7c/March31-BrazilUpdate.mp3/6a7963ac-923b-4aef-993c-292bb6f32205" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">Audio</span></span></a><span class="normaltextrun">&nbsp;&nbsp;</span><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l9 level2 lfo2;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Eurasia Group’s Managing Director for the Americas
+      Christopher Garman,&nbsp;Brazil&nbsp;Director Silvio Cascione,
+      and&nbsp;Brazil&nbsp;Senior Analyst Carlos Nepomuceno discuss the recent
+      updates&nbsp;in&nbsp;Brazil's politics.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><b><span style="font-size:12.0pt;color:#2F5597">Top Calls</span></b></span><span class="eop"><span style="font-size:12.0pt;color:#2F5597">&nbsp;</span></span><span style="font-size:9.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l2 level1 lfo3;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Top
+     Calls:&nbsp;Despite a strong recovery in China, relations with the US pose
+     downside risks to the global outlook&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.04.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14608_53c85d99/2023-04_top_calls_0.pdf/553919dd-dc4d-4ddc-95c2-91b7f285b01b" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l2 level2 lfo3;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Top Calls focuses on the Eurasia Group calls that
+      could have the biggest impact on the global economy and markets. Pages
+      2-3 list ten calls, ranked according to imminence, impact, and relevance
+      to clients.</span></span><span class="eop"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><b><span style="font-size:12.0pt;color:#2F5597">Eurasia
+Group’s weekly roundup of top stories</span></b></span><span class="eop"><span style="font-size:12.0pt;color:#2F5597">&nbsp;</span></span><span style="font-size:9.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l8 level1 lfo4;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">eg&nbsp;update</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;from
+     Ian Bremmer (05.04.23) | Read </span></span><span style="mso-fareast-font-family:
+     &quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14595_a8955a96/wfpub_eurasia_14595_a8955a96.html/ec49aca6-6282-4ac8-87ca-b8fe4384f52e" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="normaltextrun">&nbsp;</span><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l8 level2 lfo4;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">This week, Ian shares the latest on Russia, namely the
+      biggest headline regarding&nbsp;Russia’s arrest of Wall Street Journal
+      reporter Evan Gershkovich on espionage charges. He talks about TikTok and
+      technology being the fastest deteriorating piece of Us-China relations.
+      With the indictment&nbsp;of Trump, the United States has made political
+      history yet again. Finally, Israel hits pause on crisis.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><i><span style="color:black">Latin America</span></i></span><span class="eop"><span style="color:black">&nbsp;</span></span><span style="font-size:
+9.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level1 lfo5;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Mexico:
+     Treatment of Iberdrola will not extend to other companies in sector </span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.05.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14630_4762499c/wfpub_eurasia_14630_4762499c.html/f2b7e4c5-07b3-4f3e-885b-f28543ce0b26" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level2 lfo5;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">On 4 April, power generator Iberdrola announced it
+      will sell most of its Mexican assets to a private investment fund partly
+      owned by Mexico’s National Infrastructure Fund (Fonadin); the Federal
+      Electricity Commission (CFE) will become the assets’ new
+      operator.&nbsp;President Andres Manuel Lopez Obrador’s administration has
+      consistently targeted the Spanish company with criticism and harsh
+      regulatory treatment; he believes it had received special treatment in
+      the past and had direct connections to his political foes.&nbsp;The
+      president wants to increase CFE’s role in the sector, but he is unlikely
+      to push other companies out and will follow a more nuanced approach
+      toward other investors.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level1 lfo5;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Guatemala:&nbsp;Rios
+     is early presidential favorite as official campaign gets underway&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.05.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14627_d142d493/wfpub_eurasia_14627_d142d493.html/bf7ec9cb-50c1-4567-9887-242905727de9" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level2 lfo5;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Far-right candidate Zury Rios is the early
+      presidential frontrunner ahead of the 25 June first-round presidential
+      election; she will likely face&nbsp;center-left former first lady Sandra
+      Torres in an August runoff, in which Rios would have an advantage owing
+      to Torres’s high rejection rates. The exclusion of antiestablishment&nbsp;candidates
+      Roberto Arzu and Thelma Cabrera from the race will deepen voter
+      discontent and likely increase&nbsp;abstention; center-right Edmond Mulet
+      could emerge&nbsp;as an alternative, but his candidacy is also in
+      question. Rios and Torres represent broad continuity on economic policy
+      and resistance to greater transparency; the latter issue will ensure
+      persistent tensions with the US, though President Joe Biden’s
+      administration will continue to focus on targeted sanctions.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level1 lfo5;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Brazil:&nbsp;Laxer
+     rules for sanitation contracts will affect private investment
+     opportunities&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.05.23) | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14625_b3d0464b/wfpub_eurasia_14625_b3d0464b.html/bcb08df0-2f05-433a-96eb-d5780562aef5" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level2 lfo5;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">At 4 pm (Brazil time) on 5 April, President Luiz
+      Inacio Lula da Silva will sign two decrees reviewing regulations issued
+      by the Jair Bolsonaro administration detailing the 2020 sanitation reform
+      law. The revision will make it easier for state-owned water utilities to
+      keep their current contracts, reducing pressure for privatizations. The
+      administration will not pursue changes to the 2020 legislation, sparing
+      the reform’s main pillars: mandatory tenders for new contracts and the 2033
+      deadline to universalize coverage. Still, the upcoming specifications
+      will allow state governors who do not want private partners to circumvent
+      compulsory auctions and maintain&nbsp;their SOEs, despite the
+      government’s encouragement of public-private partnerships (PPP).&nbsp; As
+      Eurasia Group expected, the decrees will allow municipalities to hire
+      PPPs with more flexibility by scrapping the 25% outsourcing limit.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level1 lfo5;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Peru:&nbsp;Threats
+     to Boluarte’s&nbsp;position will persist after failed motion to oust
+     her&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.04.23) | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14622_85f09440/wfpub_eurasia_14622_85f09440.html/d05aa833-4a27-4325-9e56-e87d75362a1e" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level2 lfo5;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">On 4 April, congress rejected an impeachment motion
+      against President Dina Boluarte&nbsp;on the grounds of “permanent moral
+      incapacity,” the first effort to oust Boluarte&nbsp;since she took office
+      in December. But the government will remain extremely fragile and is
+      unlikely to survive until July 2026. Protests have subsided and the
+      attention of authorities recently shifted to responding to rains and
+      flooding in several parts of the country. But public support for
+      Boluarte&nbsp;and congress remains&nbsp;extremely low. The government
+      will remain focused on its survival, and no meaningful reforms are likely
+      to advance. Moreover, public discontent will persist in the long run,
+      particularly if demands for early elections are ignored. Radical and
+      antiestablishment&nbsp;candidates will probably be&nbsp;competitive in a
+      crowded electoral field.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level1 lfo5;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Brazil:&nbsp;Deal
+     on first batch of provisional measures favors Lula’s agenda in
+     congress&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.04.23) | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14616_cd509985/wfpub_eurasia_14616_cd509985.html/2a0d9c7d-8cb6-40de-94b4-42b06436affe" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level2 lfo5;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">On 4 April, Institutional Relations Minister Alexandre
+      Padilha announced that the administration struck a deal with both houses
+      of parliament about the procedures to deliberate on the first 13
+      provisional measures (MPs) enacted by President Luiz Inacio Lula da Silva
+      since 1 January. The arrangement does not solve the ongoing procedural
+      dispute between Lira and Pacheco over provisional measures but eases the
+      pressure concerning the first bills enacted by the Lula
+      administration—which could expire between late May and early June. The
+      deal clears the way for Lula’s early priorities, and the administration
+      needs to have Lira and Pacheco reach a compromise over MPs procedures.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level1 lfo5;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Brazil:&nbsp;Lessons
+     from new fiscal framework and next steps&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.03.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14602_4b34a4c6/wfpub_eurasia_14602_4b34a4c6.html/4b58ef81-3b82-4d42-accd-1ee7222cccc5" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level2 lfo5;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">The new fiscal framework represents&nbsp;a win for the
+      economic team and suggests President Luiz Inacio Lula da Silva is
+      sensitive to the need to signal fiscal responsibility. The administration
+      will not have much difficulty securing approval of its new fiscal anchor
+      in congress by June or July, but it will achieve only partial success
+      advancing the measures to be unveiled this week to boost revenue by BRL
+      100 billion-150 billion reais given the competing need to bring the VAT
+      reform to a vote in June. The fiscal rule, along with the likely
+      approval&nbsp;of VAT reform, reinforces the country’s neutral short-term
+      political trajectory; however, difficulties generating sufficient revenue
+      to meet primary surplus targets, along with Lula’s poor reaction function
+      if he loses popular support, are key risk factors to track.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level1 lfo5;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Mexico:&nbsp;Morena’s
+     push to gain control of INE’s board yields mixed results </span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(03.31.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14591_c4e0ecf3/wfpub_eurasia_14591_c4e0ecf3.html/db79c685-5368-42d0-a800-a90d8d5af02e" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level2 lfo5;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">The lower house selected Guadalupe Taddei, who is
+      close to the administration, as the new head of the National Electoral
+      Institute (INE). Morena and the administration were unable to nominate
+      loyalists to all four vacancies, however. The INE’s eleven-member board
+      now has eight Morena-designated commissioners, out of which three have
+      been highly independent and two of the incoming ones are unlikely to bend
+      in favor of the administration. This process will not stop further
+      attacks against the INE, as President Andres Manuel Lopez Obrador
+      remains&nbsp;intent on decreasing as much as possible its leeway to
+      monitor&nbsp;campaign spending and electoral violations. Thus, we expect
+      further budget cuts down the line and a weaker board that will struggle
+      to limit Morena’s electoral excesses in 2024.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level1 lfo5;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Mexico:&nbsp;Central
+     bank will remain focused on inflation with no political interference&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(03.31.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14588_faa1f596/wfpub_eurasia_14588_faa1f596.html/3642f777-1f1e-41fe-9cb0-d5d780206687" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l0 level2 lfo5;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">On 30 March, the central bank increased interest rates
+      by 25 basis points. The board of governors is aware of
+      perceptions&nbsp;of its weakness but will remain conservative, believing
+      that it will take some time to achieve its 3% inflation target. President
+      Andres Manuel Lopez Obrador has previously publicly questioned rate
+      increases but is primarily concerned about inflation and will continue to
+      respect <span style="background:#FFE5E5">Banxico’s</span>&nbsp;independence.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><i><span style="color:black">Europe</span></i></span><span class="eop"><span style="color:black">&nbsp;</span></span><span style="font-size:
+9.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l7 level1 lfo6;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Poland:&nbsp;Opposition
+     loses support, but its current travails may only be temporary&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.06.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14636_33ee1fd4/wfpub_eurasia_14636_33ee1fd4.html/18eec6ac-b433-46f5-8cd6-7d6d2abde896" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l7 level2 lfo6;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Friction within the liberal opposition is causing a loss
+      of support for pro-EU parties, while the “United Right” alliance of the
+      conservative Law and Justice party (PiS) and its junior partner
+      Solidarity Poland has arrested its decline in the polls. That said, this
+      phenomenon might only be temporary; the likely unification&nbsp;of at
+      least two liberal opposition parties in the coming weeks, and the
+      potential nomination of Warsaw Mayor Rafal&nbsp;Trzaskowski&nbsp;as the
+      opposition’s lead candidate instead of former prime minister Donald Tusk,
+      could help the liberal opposition recuperate its lost support. The United
+      Right will also face challenges in the coming weeks; for now, Eurasia
+      Group is&nbsp;maintaining&nbsp;its 65% probability of a pro-EU, liberal
+      opposition government&nbsp;emerging&nbsp;after the elections.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l7 level1 lfo6;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">UK:&nbsp;Sunak
+     is back in the race, but is unlikely to catch Labour&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.04.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14615_1cd29219/wfpub_eurasia_14615_1cd29219.html/66c9907a-ec32-4a93-a4d8-eb3346e56fbe" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l7 level2 lfo6;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Having delivered a string of policy wins and restored
+      unity to the Conservative Party, local elections on 4 May are no longer
+      decisive for Prime Minister Rishi Sunak’s government—or his own fate. As
+      such, Eurasia Group is reducing the odds of a Boris Johnson comeback to
+      10% from 30%. Eurasia Group’s basecase for next year’s general
+      elections—most likely in&nbsp;October 2024—remains&nbsp;a Labour majority
+      (60% odds); we also assign a 30% probability to a hung parliament that
+      results in a Labour minority government with informal support from the
+      Liberal Democrats and/or the Scottish Nationalist Party and a 10%
+      probability to a Tory majority.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l7 level1 lfo6;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Germany,
+     Sustainability:&nbsp;Tackling a phaseout of Russian fossil fuels while
+     accelerating the green transition&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.04.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14611_f4b8fbcd/2023-04_germany-ecr_special_report.pdf/15684921-1f12-4598-900d-90fd8dd6ae73" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l7 level2 lfo6;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Germany is attempting&nbsp;to phase out previously
+      high Russian fossil fuel imports while enabling a green transition that
+      continues to supply its heavy industry with reliable, affordable, and
+      clean energy. The timeline for policy action is to first resolve the
+      emergency by replacing all Russian fossil fuels with alternative
+      suppliers (in 2022/2023), then move into a medium-term adaptation process
+      by establishing the regulatory foundations to deploy the technologies
+      needed to cut emissions (2023/2024); afterward, officials will launch the
+      mass deployment of all decarbonized systems to enable clean and
+      affordable energy supply, by 2030. The green energy and industry
+      transition will require substantial energy and industrial government
+      support programs at the national and EU levels, as well as deeper EU
+      cooperation and global supply chain partnerships; it will likewise
+      require some degree of green industrial protectionism.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l7 level1 lfo6;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Russia-Ukraine
+     Crisis&nbsp;Watch:&nbsp;New OPEC+ production cuts raise oil prices and
+     provide&nbsp;an economic boost to Russia</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;(04.03.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14605_ac429490/wfpub_eurasia_14605_ac429490.html/71570f71-9071-4dc3-ba9c-ec7dabb1aa3d" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l7 level2 lfo6;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Surprise additional&nbsp;OPEC+ oil production cuts
+      will bolster Moscow’s ability to withstand sanctions in the short term
+      and potentially test Western ability to enforce its price cap. Recent
+      Western military equipment deliveries to Ukraine, including Polish MiG-29
+      fighter jets and German-designed Leopard tanks, continue to fuel
+      speculation on timing of the expected Ukrainian counteroffensive; poor
+      weather conditions in April are among the factors that suggest it is
+      still some weeks away. Despite Russia’s arrest of US journalist Evan
+      Gershkovich and a New START treaty data-sharing breakdown further raising
+      tensions between Washington and Moscow, Eurasia Group’s scenarios and
+      probabilities remain&nbsp;unchanged.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><i><span style="color:black">Asia</span></i></span><span class="eop"><span style="color:black">&nbsp;</span></span><span style="font-size:
+9.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l4 level1 lfo7;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Japan:&nbsp;New
+     carbon trading system begins in April, but implementation will be
+     gradual&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(03.31.23) | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14589_4c950f70/wfpub_eurasia_14589_4c950f70.html/9f483aa4-9f38-47de-a721-d7473648538d" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l4 level2 lfo7;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Japan announced its carbon pricing scheme would go
+      into effect this April, to be implemented in stages between 2023 and
+      2027. Since the carbon trading and pricing scheme will be implemented
+      gradually, the short-term impact on emissions will be minimal. Impact on
+      emissions by 2030 will depend on the pricing and enforcement measures,
+      which are still under discussion. Japan's new carbon pricing system
+      aligns with the timeline of the EU CBAM, which includes a tax period
+      beginning in 2026, and represents&nbsp;another signal that the G7 members
+      might be closer to formally aligning their climate policies.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><i><span style="color:black">North America</span></i></span><span class="eop"><span style="color:black">&nbsp;</span></span><span style="font-size:
+9.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l6 level1 lfo8;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Critical
+     Minerals:&nbsp;Geopolitical turbulence will push North America to deepen
+     supply chain integration and pursue new battery chemistries&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.03.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14604_ea953639/2023-04-03_critical_minerals_special_report_final.pdf/14dd53cd-38ed-442f-9c62-ce25b2f0f4f3" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l6 level2 lfo8;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">The following report is the first in a series from
+      Eurasia Group’s new Critical Minerals Working Group, a cross-disciplinary
+      assemblage of analysts from the following practices: Energy, Climate
+      &amp; Resources; Industrials &amp; Supply Chains, and Geo-technology. It
+      also leverages&nbsp;the work of specialists from regional and global
+      macro practices. In coordination with Eurasia Group’s inaugural US-Canada
+      Summit, this first report will focus on the role of CMs in North America.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><i><span style="color:black">Middle East and Africa</span></i></span><span class="eop"><span style="color:black">&nbsp;</span></span><span style="font-size:
+9.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l5 level1 lfo9;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">UAE:&nbsp;Authorities
+     will seek&nbsp;to marginally reduce Russian economic ties&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.05.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14629_f7c933e4/wfpub_eurasia_14629_f7c933e4.html/b209204a-47da-4eb9-8a29-fc84ca22cc1e" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l5 level2 lfo9;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Given the risks that sanctions evasion could create,
+      Emirati authorities will explore ways to reduce scrutiny of the country’s
+      linkages with Russian entities. The UAE will likely seek&nbsp;to manage
+      risks on the financial side and more carefully weigh the footprint of
+      Russian financial institutions and companies in the economy; some
+      curtailing of non-oil goods trade with Russia is also possible. However,
+      any initiatives will remain modest and focused on risk/reputation
+      management; significantly reducing the presence of Russian individuals or
+      entities in the UAE is unlikely.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul><li class="paragraph" style="color:black;text-align:justify;mso-list:l5 level1 lfo9;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Saudi
+     Arabia, Egypt:&nbsp;Sisi’s trip to Riyadh affirms strategic link and opens
+     door to Arab normalization with Syria&nbsp;</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(04.03.23)
+     | Read </span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="https://library.eurasiagroup.net/document/open/wfpub_eurasia_14600_57e13764/wfpub_eurasia_14600_57e13764.html/4555a793-da68-4aa6-801c-3f699c218593" target="_blank"><span class="normaltextrun"><span style="color:#0563C1;
+     text-decoration:none;text-underline:none">here</span></span></a><span class="eop">&nbsp;</span></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l5 level2 lfo9;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">Egyptian President Abdelfattah el&nbsp;Sisi’s meeting
+      with Saudi Crown Prince Mohammad bin Salman on 2 April highlights the
+      resilience of the strategic bond between the two countries. Saudi
+      Arabia’s financial support to Egypt will require still more progress on
+      reforms by Cairo that might prove challenging, but a withdrawal of
+      assistance&nbsp;is unlikely. Riyadh is likely to normalize relations with
+      Syria, and Sisi has received explicit support from Riyadh to also move
+      toward normalization; Saudi Arabia’s regional initiatives are focused on
+      easing regional tensions to improve its geopolitical influence and
+      security environment.</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li></ul></ul>
+
+<p class="paragraph" style="text-align:justify;background:white"><span class="normaltextrun"><i><span style="color:black">Sector Research</span></i></span><span class="eop"><span style="color:black">&nbsp;</span></span><span style="font-size:
+9.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:black"></span></p>
+
+<ul style="margin-top:0in" type="disc"><li class="paragraph" style="color:black;text-align:justify;mso-list:l3 level1 lfo10;
+     tab-stops:list .5in;background:white;user-select:text;cursor:text"><span class="normaltextrun"><b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Energy,
+     Climate and Resources:</span></b></span><span class="normaltextrun"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<b>Amid
+     geopolitical and energy security concerns, technology breakthroughs will
+     drive global green transition&nbsp;</b>(04.03.23)</span></span><span class="eop"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"></span></li><ul style="margin-top:0in" type="circle"><li class="paragraph" style="color:black;text-align:justify;mso-list:l3 level2 lfo10;
+      tab-stops:list 1.0in;background:white;user-select:text;list-style-type:
+      &quot;o  &quot;;cursor:text"><span class="normaltextrun"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">The energy transition is happening globally, but it
+      will look different and progress at varying speeds in each country and
+      region; geopolitical factors will play a role as will individual countries’
+      economic circumstances, domestic energy resources, and politics.
+      Technology breakthroughs are enabling more rapid decarbonization, with
+      power and road transport moving more quickly along this path, while new
+      possibilities are emerging&nbsp;for long-haul transport and heavy
+      manufacturing. Tensions between emerging and industrialized markets will
+      continue to grow as financing for energy transitions in lower-income
+      countries remains&nbsp;insufficient and the costs of climate impacts are
+      rising rapidly.</span></span><span class="eop"><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;">&nbsp;</span></span><span style="mso-fareast-font-family:
+      &quot;Times New Roman&quot;"></span></li></ul></ul>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

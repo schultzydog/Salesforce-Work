@@ -1,0 +1,13 @@
+Analyst: {!Travel_Request__c.Analyst__c}
+Additional Analyst: {!Travel_Request__c.Additional_Analyst__c}
+Will client cover trip costs? {!Travel_Request__c.Will_client_cover_trip_costs__c}
+Purpose: {!Travel_Request__c.Purpose__c}
+Dates: {!Travel_Request__c.Travel_Start_Date__c} - {!Travel_Request__c.Travel_End_Date__c}
+Destinations: {!Travel_Request__c.Destination__c}
+
+If not analysts: {!Travel_Request__c.If_analyst_s_is_not_available__c}
+Does this trip relate to contractual obligation? {!Travel_Request__c.Contract_obligation_trip__c}
+Notes: {!Travel_Request__c.Notes__c}
+
+Click to the Travel request record in Salesforce to approve:
+{!Travel_Request__c.Link}

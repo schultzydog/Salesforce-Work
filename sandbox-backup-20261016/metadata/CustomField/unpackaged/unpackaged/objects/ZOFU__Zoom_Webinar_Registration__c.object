@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>EG_Event_Registrant__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>EG Event Registrant</label>
+        <referenceTo>EG_Event_Registrant__c</referenceTo>
+        <relationshipLabel>Zoom Registrations</relationshipLabel>
+        <relationshipName>Zoom_Registrations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Country_differs__c</fullName>
+        <formula>ZOFU__Country__c  &lt;&gt;  text(ZOFU__Lead__r.CountryCode)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Country differs</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>ZOFU__Lead__r.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

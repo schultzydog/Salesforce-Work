@@ -1,0 +1,5 @@
+Account - {!Account.Name}
+Account SF Id- {!Account.Id}
+
+New Owner Name - {!Account.OwnerFullName}
+New Owner SF ID - {!Account.OwnerId}

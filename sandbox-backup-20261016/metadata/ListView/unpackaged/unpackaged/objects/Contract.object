@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>Intacct_Sync_queue</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>ia_crm__Intacct_Sync_Status__c</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>Contract_Id__c</columns>
+        <columns>ia_crm__Intacct_Contract_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ia_crm__Intacct_Sync_Status__c</field>
+            <operation>notEqual</operation>
+            <value>OK,Error</value>
+        </filters>
+        <label>Intacct Sync queue</label>
+    </listViews>
+    <listViews>
+        <fullName>Sync_error_with_Intacct</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <columns>ia_crm__Intacct_Sync_Errors__c</columns>
+        <columns>Contract_Id__c</columns>
+        <columns>ia_crm__Intacct_Contract_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ia_crm__Intacct_Sync_Status__c</field>
+            <operation>contains</operation>
+            <value>Error</value>
+        </filters>
+        <label>Sync error with Intacct</label>
+    </listViews>
+    <listViews>
+        <fullName>Synced_with_Intacct</fullName>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
+        <columns>Intacct_Contract__c</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>CONTRACT.START_DATE</columns>
+        <columns>CONTRACT.END_DATE</columns>
+        <columns>CONTRACT.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ia_crm__Intacct_Sync_Status__c</field>
+            <operation>equals</operation>
+            <value>OK</value>
+        </filters>
+        <label>Synced with Intacct</label>
+    </listViews>
+</CustomObject>

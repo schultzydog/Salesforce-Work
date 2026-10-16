@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Owner.LastName</formula>
+        <label>Account Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Active_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Active Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.AccountId</field>
+                <operation>equals</operation>
+                <valueField>Opportunity.AccountId</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Analyst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Analyst</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_to__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Assigned to</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>HG_DocId__c</fullName>
+        <externalId>false</externalId>
+        <label>HG DocId</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Interview_Declined_Reason__c</fullName>
+        <label>Interview Declined Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Analyst too busy</fullName>
+                    <default>false</default>
+                    <label>Analyst too busy</label>
+                </value>
+                <value>
+                    <fullName>Analyst on vacation</fullName>
+                    <default>false</default>
+                    <label>Analyst on vacation</label>
+                </value>
+                <value>
+                    <fullName>No subject coverage</fullName>
+                    <default>false</default>
+                    <label>No subject coverage</label>
+                </value>
+                <value>
+                    <fullName>Outlet too small</fullName>
+                    <default>false</default>
+                    <label>Outlet too small</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Interview_Request_Status__c</fullName>
+        <label>Interview Request Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>true</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Interview Accepted</fullName>
+                    <default>false</default>
+                    <label>Interview Accepted</label>
+                </value>
+                <value>
+                    <fullName>Interview Declined</fullName>
+                    <default>false</default>
+                    <label>Interview Declined</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Publication__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Publication</label>
+        <referenceTo>Publication__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Publication_reply_text_approximate__c</fullName>
+        <label>Client&apos;s message (truncated)</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Request_Type__c</fullName>
+        <label>Request Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Clear Hard Bounce</fullName>
+                    <default>false</default>
+                    <label>Clear Hard Bounce</label>
+                </value>
+                <value>
+                    <fullName>Client Reimbursable Expenses</fullName>
+                    <default>false</default>
+                    <label>Client Reimbursable Expenses</label>
+                </value>
+                <value>
+                    <fullName>Conference Calls</fullName>
+                    <default>false</default>
+                    <label>Conference Calls</label>
+                </value>
+                <value>
+                    <fullName>Contracts</fullName>
+                    <default>false</default>
+                    <label>Contracts</label>
+                </value>
+                <value>
+                    <fullName>Create/Update Contact</fullName>
+                    <default>false</default>
+                    <label>Create/Update Contact</label>
+                </value>
+                <value>
+                    <fullName>Create/Update Opportunity</fullName>
+                    <default>false</default>
+                    <label>Create/Update Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Disable User</fullName>
+                    <default>false</default>
+                    <label>Disable User</label>
+                </value>
+                <value>
+                    <fullName>Interactions Repot</fullName>
+                    <default>false</default>
+                    <label>Interactions Repot</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Reset Password/Portal Login Issues</fullName>
+                    <default>false</default>
+                    <label>Reset Password/Portal Login Issues</label>
+                </value>
+                <value>
+                    <fullName>Reports/Dashboards</fullName>
+                    <default>false</default>
+                    <label>Reports/Dashboards</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status_indicator__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( TEXT(Status) = &quot;New&quot;, IMAGE(&quot;https://eurasiagroup.file.force.com/servlet/servlet.ImageServer?id=0154V000005RYL4&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446538000&quot;, &quot;red&quot;),
+IF( TEXT(Status) = &quot;In Progress&quot;, IMAGE(&quot;https://eurasiagroup.file.force.com/servlet/servlet.ImageServer?id=0154V000005RYL9&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446525000&quot;, &quot;orange&quot;),
+
+IF( TEXT(Status) = &quot;Completed&quot;, IMAGE(&quot;https://eurasiagroup.file.force.com/servlet/servlet.ImageServer?id=0154V000005RYLY&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446470000&quot;, &quot;green&quot;), 
+
+IMAGE(&quot;https://eurasiagroup.file.force.com/servlet/servlet.ImageServer?id=0154V000005M6LB&amp;oid=00DWL00000BtPgz&amp;lastMod=1674067317000&quot;, &quot;blue&quot;))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status indicator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sum_of_active_contracts_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Sum_of_Active_Contracts_USD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sum of active contracts (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Support_level__c</fullName>
+        <description>Tier 1 - things to assign to SalesOps or WF
+Tier 2 - things Adam can oversee
+Tier 3 - things Adam must do himself</description>
+        <label>Support level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tier 1</fullName>
+                    <default>false</default>
+                    <label>Tier 1</label>
+                </value>
+                <value>
+                    <fullName>Tier 2</fullName>
+                    <default>false</default>
+                    <label>Tier 2</label>
+                </value>
+                <value>
+                    <fullName>Tier 3</fullName>
+                    <default>false</default>
+                    <label>Tier 3</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WF_DocId__c</fullName>
+        <externalId>false</externalId>
+        <label>WF DocId</label>
+        <length>28</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>process_csv_file__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>process csv file</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

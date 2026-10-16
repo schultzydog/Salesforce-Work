@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Morning Meeting Note Submission notice</name>
+    <style>freeForm</style>
+    <subject>Morning meeting note submission - {!Morning_Meeting_Note__c.Submitted_by__c}</subject>
+    <textOnly>Topic: {!Morning_Meeting_Note__c.Topic__c}
+
+Title: {!Morning_Meeting_Note__c.Proposed_Title__c}
+
+Arguments: {!Morning_Meeting_Note__c.Argument__c}
+
+Client Justification: {!Morning_Meeting_Note__c.Client_justification__c}
+
+Lead Author: {!Morning_Meeting_Note__c.egLead_Author__c}
+
+Contributors: {!Morning_Meeting_Note__c.egContributors__c}
+
+Distribution: {!Morning_Meeting_Note__c.Distribution_Lists__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

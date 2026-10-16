@@ -1,0 +1,3315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>00-000 General</fullName>
+        <default>false</default>
+        <label>00-000 General</label>
+    </customValue>
+    <customValue>
+        <fullName>00-200 Research</fullName>
+        <default>false</default>
+        <label>00-200 Research</label>
+    </customValue>
+    <customValue>
+        <fullName>00-201 Research Management</fullName>
+        <default>false</default>
+        <label>00-201 Research Management</label>
+    </customValue>
+    <customValue>
+        <fullName>00-202 Research CompAn</fullName>
+        <default>false</default>
+        <label>00-202 Research CompAn</label>
+    </customValue>
+    <customValue>
+        <fullName>00-203 Research GENR</fullName>
+        <default>false</default>
+        <label>00-203 Research GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>00-204 Research China &amp; NE Asia</fullName>
+        <default>false</default>
+        <label>00-204 Research China &amp; NE Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>00-205 Research Latin America</fullName>
+        <default>false</default>
+        <label>00-205 Research Latin America</label>
+    </customValue>
+    <customValue>
+        <fullName>00-206 Research Middle East</fullName>
+        <default>false</default>
+        <label>00-206 Research Middle East</label>
+    </customValue>
+    <customValue>
+        <fullName>00-207 Research Africa</fullName>
+        <default>false</default>
+        <label>00-207 Research Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-208 Research Eurasia</fullName>
+        <default>false</default>
+        <label>00-208 Research Eurasia</label>
+    </customValue>
+    <customValue>
+        <fullName>00-209 Research Publications</fullName>
+        <default>false</default>
+        <label>00-209 Research Publications</label>
+    </customValue>
+    <customValue>
+        <fullName>00-210 Research Other</fullName>
+        <default>false</default>
+        <label>00-210 Research Other</label>
+    </customValue>
+    <customValue>
+        <fullName>00-211 Research Europe</fullName>
+        <default>false</default>
+        <label>00-211 Research Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>00-212 Research US</fullName>
+        <default>false</default>
+        <label>00-212 Research US</label>
+    </customValue>
+    <customValue>
+        <fullName>00-213 Research Global Strategy</fullName>
+        <default>false</default>
+        <label>00-213 Research Global Strategy</label>
+    </customValue>
+    <customValue>
+        <fullName>00-214 Research Macro</fullName>
+        <default>false</default>
+        <label>00-214 Research Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>00-215 Research GeoTech</fullName>
+        <default>false</default>
+        <label>00-215 Research GeoTech</label>
+    </customValue>
+    <customValue>
+        <fullName>00-216 Research Corporates</fullName>
+        <default>false</default>
+        <label>00-216 Research Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>00-217 Research Labs</fullName>
+        <default>false</default>
+        <label>00-217 Research Labs</label>
+    </customValue>
+    <customValue>
+        <fullName>00-218 Research Brazil</fullName>
+        <default>false</default>
+        <label>00-218 Research Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>00-219 Research HealthCare</fullName>
+        <default>false</default>
+        <label>00-219 Research HealthCare</label>
+    </customValue>
+    <customValue>
+        <fullName>00-220 Research SE &amp; South Asia</fullName>
+        <default>false</default>
+        <label>00-220 Research SE &amp; South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>00-221 Research South Asia</fullName>
+        <default>false</default>
+        <label>00-221 Research South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>00-300 EgA Business Development GENR</fullName>
+        <default>false</default>
+        <label>00-300 EgA Business Development GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>00-302 NY Roadshow</fullName>
+        <default>false</default>
+        <label>00-302 NY Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>00-303 LN Roadshow</fullName>
+        <default>false</default>
+        <label>00-303 LN Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>00-31 Sub Acct Added During Posting</fullName>
+        <default>false</default>
+        <label>00-31 Sub Acct Added During Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>00-310 Global Markets - General</fullName>
+        <default>false</default>
+        <label>00-310 Global Markets - General</label>
+    </customValue>
+    <customValue>
+        <fullName>00-311 Global Markets - EMEA</fullName>
+        <default>false</default>
+        <label>00-311 Global Markets - EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>00-312 Global Markets - Japan</fullName>
+        <default>false</default>
+        <label>00-312 Global Markets - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>00-313 Global Markets - Asia (non JP)</fullName>
+        <default>false</default>
+        <label>00-313 Global Markets - Asia (non JP)</label>
+    </customValue>
+    <customValue>
+        <fullName>00-314 Global Markets - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>00-314 Global Markets - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>00-315 Global Markets - North America</fullName>
+        <default>false</default>
+        <label>00-315 Global Markets - North America</label>
+    </customValue>
+    <customValue>
+        <fullName>00-320 Corporate - General</fullName>
+        <default>false</default>
+        <label>00-320 Corporate - General</label>
+    </customValue>
+    <customValue>
+        <fullName>00-321 Corporate - ECR</fullName>
+        <default>false</default>
+        <label>00-321 Corporate - ECR</label>
+    </customValue>
+    <customValue>
+        <fullName>00-322 Corporate - Financial</fullName>
+        <default>false</default>
+        <label>00-322 Corporate - Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>00-323 Corporate - Healthcare</fullName>
+        <default>false</default>
+        <label>00-323 Corporate - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>00-324 Corporate - Industrials</fullName>
+        <default>false</default>
+        <label>00-324 Corporate - Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>00-325 Corporate - Retail</fullName>
+        <default>false</default>
+        <label>00-325 Corporate - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>00-326 Corporate - Technology</fullName>
+        <default>false</default>
+        <label>00-326 Corporate - Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>00-327 Corporate - Japan</fullName>
+        <default>false</default>
+        <label>00-327 Corporate - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>00-328 Corporate - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>00-328 Corporate - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>00-329 Corporate - PPP</fullName>
+        <default>false</default>
+        <label>00-329 Corporate - PPP</label>
+    </customValue>
+    <customValue>
+        <fullName>00-330 Japan</fullName>
+        <default>false</default>
+        <label>00-330 Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>00-340 US Government</fullName>
+        <default>false</default>
+        <label>00-340 US Government</label>
+    </customValue>
+    <customValue>
+        <fullName>00-350 Non-US Government</fullName>
+        <default>false</default>
+        <label>00-350 Non-US Government</label>
+    </customValue>
+    <customValue>
+        <fullName>00-360 Corporate Consulting</fullName>
+        <default>false</default>
+        <label>00-360 Corporate Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>00-370 GENR Business Development</fullName>
+        <default>false</default>
+        <label>00-370 GENR Business Development</label>
+    </customValue>
+    <customValue>
+        <fullName>00-380 Brazil/LatAM</fullName>
+        <default>false</default>
+        <label>00-380 Brazil/LatAM</label>
+    </customValue>
+    <customValue>
+        <fullName>00-390 Asia (excl. Japan) BD</fullName>
+        <default>false</default>
+        <label>00-390 Asia (excl. Japan) BD</label>
+    </customValue>
+    <customValue>
+        <fullName>00-401 Finance</fullName>
+        <default>false</default>
+        <label>00-401 Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>00-402 IT</fullName>
+        <default>false</default>
+        <label>00-402 IT</label>
+    </customValue>
+    <customValue>
+        <fullName>00-403 Admin</fullName>
+        <default>false</default>
+        <label>00-403 Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>00-404 Other</fullName>
+        <default>false</default>
+        <label>00-404 Other</label>
+    </customValue>
+    <customValue>
+        <fullName>00-405 Partner&apos;s Group</fullName>
+        <default>false</default>
+        <label>00-405 Partner&apos;s Group</label>
+    </customValue>
+    <customValue>
+        <fullName>00-406 EgA Management</fullName>
+        <default>false</default>
+        <label>00-406 EgA Management</label>
+    </customValue>
+    <customValue>
+        <fullName>00-407 Office of the President</fullName>
+        <default>false</default>
+        <label>00-407 Office of the President</label>
+    </customValue>
+    <customValue>
+        <fullName>00-408 Shareholder(s)</fullName>
+        <default>false</default>
+        <label>00-408 Shareholder(s)</label>
+    </customValue>
+    <customValue>
+        <fullName>00-409 Human Resources</fullName>
+        <default>false</default>
+        <label>00-409 Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>00-410 Marketing</fullName>
+        <default>false</default>
+        <label>00-410 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>00-411 GZero Media</fullName>
+        <default>false</default>
+        <label>00-411 GZero Media</label>
+    </customValue>
+    <customValue>
+        <fullName>00-501 Speaking Engagements</fullName>
+        <default>false</default>
+        <label>00-501 Speaking Engagements</label>
+    </customValue>
+    <customValue>
+        <fullName>00-502 Books</fullName>
+        <default>false</default>
+        <label>00-502 Books</label>
+    </customValue>
+    <customValue>
+        <fullName>00-503 Summits</fullName>
+        <default>false</default>
+        <label>00-503 Summits</label>
+    </customValue>
+    <customValue>
+        <fullName>00-600 EGX</fullName>
+        <default>false</default>
+        <label>00-600 EGX</label>
+    </customValue>
+    <customValue>
+        <fullName>00-710 Buildout</fullName>
+        <default>false</default>
+        <label>00-710 Buildout</label>
+    </customValue>
+    <customValue>
+        <fullName>00-810 In 60 Seconds</fullName>
+        <default>false</default>
+        <label>00-810 In 60 Seconds</label>
+    </customValue>
+    <customValue>
+        <fullName>00-811 Signal</fullName>
+        <default>false</default>
+        <label>00-811 Signal</label>
+    </customValue>
+    <customValue>
+        <fullName>00-812 GZero World</fullName>
+        <default>false</default>
+        <label>00-812 GZero World</label>
+    </customValue>
+    <customValue>
+        <fullName>00-813 Puppet Regime</fullName>
+        <default>false</default>
+        <label>00-813 Puppet Regime</label>
+    </customValue>
+    <customValue>
+        <fullName>00-814 Marketing</fullName>
+        <default>false</default>
+        <label>00-814 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>00-913 2013 LTIP</fullName>
+        <default>false</default>
+        <label>00-913 2013 LTIP</label>
+    </customValue>
+    <customValue>
+        <fullName>00-914 2014 LTIP</fullName>
+        <default>false</default>
+        <label>00-914 2014 LTIP</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A01 BREIS GloMa</fullName>
+        <default>false</default>
+        <label>00-A01 BREIS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A02 CCLARK GloMa</fullName>
+        <default>false</default>
+        <label>00-A02 CCLARK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A04 CSPRATT GloMA</fullName>
+        <default>false</default>
+        <label>00-A04 CSPRATT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A05 DDUNN GloMa</fullName>
+        <default>false</default>
+        <label>00-A05 DDUNN GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A06 DTAWFIK GloMa</fullName>
+        <default>false</default>
+        <label>00-A06 DTAWFIK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A07 JBARTER GloMa</fullName>
+        <default>false</default>
+        <label>00-A07 JBARTER GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A08 JPRESS GloMa</fullName>
+        <default>false</default>
+        <label>00-A08 JPRESS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A10 KROSELLO GloMa</fullName>
+        <default>false</default>
+        <label>00-A10 KROSELLO GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A14 MSHAPIRO GloMa</fullName>
+        <default>false</default>
+        <label>00-A14 MSHAPIRO GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A16 NBAJOREK GloMa</fullName>
+        <default>false</default>
+        <label>00-A16 NBAJOREK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A18 RDELUCA GloMa</fullName>
+        <default>false</default>
+        <label>00-A18 RDELUCA GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A20 FKAPADIA GloMa</fullName>
+        <default>false</default>
+        <label>00-A20 FKAPADIA GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A21 MMOUSSALLI GloMa</fullName>
+        <default>false</default>
+        <label>00-A21 MMOUSSALLI GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A23 SWEST GloMA</fullName>
+        <default>false</default>
+        <label>00-A23 SWEST GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A25 NHALIM GloMa</fullName>
+        <default>false</default>
+        <label>00-A25 NHALIM GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A29 PLIGHTFOOT GloMA</fullName>
+        <default>false</default>
+        <label>00-A29 PLIGHTFOOT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A30 SGHOSH GloMA</fullName>
+        <default>false</default>
+        <label>00-A30 SGHOSH GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A31 JKRINKS GloMa</fullName>
+        <default>false</default>
+        <label>00-A31 JKRINKS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A32 MLU GloMa</fullName>
+        <default>false</default>
+        <label>00-A32 MLU GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A34 EFISH Gloma</fullName>
+        <default>false</default>
+        <label>00-A34 EFISH Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A38 MRUDDICK GloMa</fullName>
+        <default>false</default>
+        <label>00-A38 MRUDDICK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A39 AFINFROCK Gloma</fullName>
+        <default>false</default>
+        <label>00-A39 AFINFROCK Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>00-A99 Incoming GloMa</fullName>
+        <default>false</default>
+        <label>00-A99 Incoming GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B01 BREIS Corp</fullName>
+        <default>false</default>
+        <label>00-B01 BREIS Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B03 CGRAHAM Corp</fullName>
+        <default>false</default>
+        <label>00-B03 CGRAHAM Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B04 CSPRATT Corp</fullName>
+        <default>false</default>
+        <label>00-B04 CSPRATT Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B05 DDUNN Corp</fullName>
+        <default>false</default>
+        <label>00-B05 DDUNN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B06 DTAWFIK Corp</fullName>
+        <default>false</default>
+        <label>00-B06 DTAWFIK Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B07 JBARTER Corp</fullName>
+        <default>false</default>
+        <label>00-B07 JBARTER Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B09 JSTEELE Corp</fullName>
+        <default>false</default>
+        <label>00-B09 JSTEELE Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B11 LCRISTINI Corp</fullName>
+        <default>false</default>
+        <label>00-B11 LCRISTINI Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B12 MMITTAG Corp</fullName>
+        <default>false</default>
+        <label>00-B12 MMITTAG Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B17 PLEDGER Corp</fullName>
+        <default>false</default>
+        <label>00-B17 PLEDGER Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B22 RSHUKLA Corp</fullName>
+        <default>false</default>
+        <label>00-B22 RSHUKLA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B23 SWEST Corp</fullName>
+        <default>false</default>
+        <label>00-B23 SWEST Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B24 JSHIN Corp</fullName>
+        <default>false</default>
+        <label>00-B24 JSHIN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B26 SMAJORS Corp</fullName>
+        <default>false</default>
+        <label>00-B26 SMAJORS Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B34 EFISH Corp</fullName>
+        <default>false</default>
+        <label>00-B34 EFISH Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B36 RSCHUDDEBOOM Corp</fullName>
+        <default>false</default>
+        <label>00-B36 RSCHUDDEBOOM Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B37 PCORRIGAN Corp</fullName>
+        <default>false</default>
+        <label>00-B37 PCORRIGAN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B40 KBALA Corp</fullName>
+        <default>false</default>
+        <label>00-B40 KBALA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-B99 Incoming Corp</fullName>
+        <default>false</default>
+        <label>00-B99 Incoming Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>00-C05 DDUNN Japan</fullName>
+        <default>false</default>
+        <label>00-C05 DDUNN Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>00-C15 YWATANABE Japan</fullName>
+        <default>false</default>
+        <label>00-C15 YWATANABE Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>00-C33 MSUZUKI Japan</fullName>
+        <default>false</default>
+        <label>00-C33 MSUZUKI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>00-C35 KSAKAGUCHI Japan</fullName>
+        <default>false</default>
+        <label>00-C35 KSAKAGUCHI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>00-D04 CSPRATT Govt</fullName>
+        <default>false</default>
+        <label>00-D04 CSPRATT Govt</label>
+    </customValue>
+    <customValue>
+        <fullName>00-E05 DDUNN Speaking</fullName>
+        <default>false</default>
+        <label>00-E05 DDUNN Speaking</label>
+    </customValue>
+    <customValue>
+        <fullName>00-E13 MPETERSON Speaking</fullName>
+        <default>false</default>
+        <label>00-E13 MPETERSON Speaking</label>
+    </customValue>
+    <customValue>
+        <fullName>00-F01 BREIS Corp Consult</fullName>
+        <default>false</default>
+        <label>00-F01 BREIS Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>00-F03 CGRAHAM Corp Consult.</fullName>
+        <default>false</default>
+        <label>00-F03 CGRAHAM Corp Consult.</label>
+    </customValue>
+    <customValue>
+        <fullName>00-F05 DDUNN Corp Consult</fullName>
+        <default>false</default>
+        <label>00-F05 DDUNN Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>00-F11 LCRISTINI Corp Consult</fullName>
+        <default>false</default>
+        <label>00-F11 LCRISTINI Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>00-F22 RSHUKLA Corp Consult</fullName>
+        <default>false</default>
+        <label>00-F22 RSHUKLA Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>00-F24 JSHIN Corp Consult</fullName>
+        <default>false</default>
+        <label>00-F24 JSHIN Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>00-G07 JBARTER GENR</fullName>
+        <default>false</default>
+        <label>00-G07 JBARTER GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>00-G09 JSTEELE GENR</fullName>
+        <default>false</default>
+        <label>00-G09 JSTEELE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>00-G27 RPINIELLA GENR</fullName>
+        <default>false</default>
+        <label>00-G27 RPINIELLA GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>00-G28 BSTANZIALE GENR</fullName>
+        <default>false</default>
+        <label>00-G28 BSTANZIALE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>00-Z05 DDUNN Other</fullName>
+        <default>false</default>
+        <label>00-Z05 DDUNN Other</label>
+    </customValue>
+    <customValue>
+        <fullName>00-Z19 ASANFORD Other</fullName>
+        <default>false</default>
+        <label>00-Z19 ASANFORD Other</label>
+    </customValue>
+    <customValue>
+        <fullName>10-000 New York Office</fullName>
+        <default>false</default>
+        <label>10-000 New York Office</label>
+    </customValue>
+    <customValue>
+        <fullName>10-200 Research-NY</fullName>
+        <default>false</default>
+        <label>10-200 Research-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-201 Research Management-NY</fullName>
+        <default>false</default>
+        <label>10-201 Research Management-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-202 Research CompAn-NY</fullName>
+        <default>false</default>
+        <label>10-202 Research CompAn-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-203 Research GENR-NY</fullName>
+        <default>false</default>
+        <label>10-203 Research GENR-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-204 Research China &amp; NE Asia</fullName>
+        <default>false</default>
+        <label>10-204 Research China &amp; NE Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>10-205 Research Latin America-NY</fullName>
+        <default>false</default>
+        <label>10-205 Research Latin America-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-206 Research Middle East-NY</fullName>
+        <default>false</default>
+        <label>10-206 Research Middle East-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-207 Research Africa-NY</fullName>
+        <default>false</default>
+        <label>10-207 Research Africa-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-208 Research Eurasia-NY</fullName>
+        <default>false</default>
+        <label>10-208 Research Eurasia-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-209 Research Publications-NY</fullName>
+        <default>false</default>
+        <label>10-209 Research Publications-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-210 Research Other-NY</fullName>
+        <default>false</default>
+        <label>10-210 Research Other-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-211 Research Europe-NY</fullName>
+        <default>false</default>
+        <label>10-211 Research Europe-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-212 Research US-NY</fullName>
+        <default>false</default>
+        <label>10-212 Research US-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-213 Research Global Strategy-NY</fullName>
+        <default>false</default>
+        <label>10-213 Research Global Strategy-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-214 CSPRATT GloMA</fullName>
+        <default>false</default>
+        <label>10-214 CSPRATT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>10-215 Research GeoTech</fullName>
+        <default>false</default>
+        <label>10-215 Research GeoTech</label>
+    </customValue>
+    <customValue>
+        <fullName>10-216 Research Corporates</fullName>
+        <default>false</default>
+        <label>10-216 Research Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>10-217 Research Labs</fullName>
+        <default>false</default>
+        <label>10-217 Research Labs</label>
+    </customValue>
+    <customValue>
+        <fullName>10-218 Research Brazil</fullName>
+        <default>false</default>
+        <label>10-218 Research Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>10-219 Research HealthCare</fullName>
+        <default>false</default>
+        <label>10-219 Research HealthCare</label>
+    </customValue>
+    <customValue>
+        <fullName>10-220 Research SE &amp; South Asia</fullName>
+        <default>false</default>
+        <label>10-220 Research SE &amp; South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>10-300 Business Development General-N</fullName>
+        <default>false</default>
+        <label>10-300 Business Development General-N</label>
+    </customValue>
+    <customValue>
+        <fullName>10-302 NY Roadshow</fullName>
+        <default>false</default>
+        <label>10-302 NY Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>10-303 LN Roadshow</fullName>
+        <default>false</default>
+        <label>10-303 LN Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>10-310 Global Markets-NY</fullName>
+        <default>false</default>
+        <label>10-310 Global Markets-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-311 Global Markets - EMEA</fullName>
+        <default>false</default>
+        <label>10-311 Global Markets - EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>10-312 Global Markets - Japan</fullName>
+        <default>false</default>
+        <label>10-312 Global Markets - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>10-313 Global Markets - Asia (non JP)</fullName>
+        <default>false</default>
+        <label>10-313 Global Markets - Asia (non JP)</label>
+    </customValue>
+    <customValue>
+        <fullName>10-314 Global Markets - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>10-314 Global Markets - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>10-315 Global Markets - North America</fullName>
+        <default>false</default>
+        <label>10-315 Global Markets - North America</label>
+    </customValue>
+    <customValue>
+        <fullName>10-320 Corporate-NY</fullName>
+        <default>false</default>
+        <label>10-320 Corporate-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-321 Corporate - ECR</fullName>
+        <default>false</default>
+        <label>10-321 Corporate - ECR</label>
+    </customValue>
+    <customValue>
+        <fullName>10-322 Corporate - Financial</fullName>
+        <default>false</default>
+        <label>10-322 Corporate - Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>10-323 Corporate - Healthcare</fullName>
+        <default>false</default>
+        <label>10-323 Corporate - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>10-324 Corporate - Industrials</fullName>
+        <default>false</default>
+        <label>10-324 Corporate - Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>10-325 Corporate - Retail</fullName>
+        <default>false</default>
+        <label>10-325 Corporate - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>10-326 Corporate - Technology</fullName>
+        <default>false</default>
+        <label>10-326 Corporate - Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>10-327 Corporate - Japan</fullName>
+        <default>false</default>
+        <label>10-327 Corporate - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>10-328 Corporate - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>10-328 Corporate - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>10-329 Corporate - PPP</fullName>
+        <default>false</default>
+        <label>10-329 Corporate - PPP</label>
+    </customValue>
+    <customValue>
+        <fullName>10-330 Japan-NY</fullName>
+        <default>false</default>
+        <label>10-330 Japan-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-340 US Government-NY</fullName>
+        <default>false</default>
+        <label>10-340 US Government-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-350 Non-US Government-NY</fullName>
+        <default>false</default>
+        <label>10-350 Non-US Government-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-360 Corporate Consulting-NY</fullName>
+        <default>false</default>
+        <label>10-360 Corporate Consulting-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-370 GENR Business Development</fullName>
+        <default>false</default>
+        <label>10-370 GENR Business Development</label>
+    </customValue>
+    <customValue>
+        <fullName>10-380 Brazli/LatAM BD (NY)</fullName>
+        <default>false</default>
+        <label>10-380 Brazli/LatAM BD (NY)</label>
+    </customValue>
+    <customValue>
+        <fullName>10-390 Asia (excl. Japan) BD</fullName>
+        <default>false</default>
+        <label>10-390 Asia (excl. Japan) BD</label>
+    </customValue>
+    <customValue>
+        <fullName>10-401 Finance-NY</fullName>
+        <default>false</default>
+        <label>10-401 Finance-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-402 IT-NY</fullName>
+        <default>false</default>
+        <label>10-402 IT-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-403 Admin-NY</fullName>
+        <default>false</default>
+        <label>10-403 Admin-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-404 Other-NY</fullName>
+        <default>false</default>
+        <label>10-404 Other-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-405 Partner&apos;s Group-NY</fullName>
+        <default>false</default>
+        <label>10-405 Partner&apos;s Group-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-406 Executive Management-NY</fullName>
+        <default>false</default>
+        <label>10-406 Executive Management-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-407 Office of the President-NY</fullName>
+        <default>false</default>
+        <label>10-407 Office of the President-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-408 Shareholder(s)-NY</fullName>
+        <default>false</default>
+        <label>10-408 Shareholder(s)-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-409 Human Resources</fullName>
+        <default>false</default>
+        <label>10-409 Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>10-410 Marketing</fullName>
+        <default>false</default>
+        <label>10-410 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>10-411 Media</fullName>
+        <default>false</default>
+        <label>10-411 Media</label>
+    </customValue>
+    <customValue>
+        <fullName>10-501 Speaking Engagements-NY</fullName>
+        <default>false</default>
+        <label>10-501 Speaking Engagements-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-502 Books-NY</fullName>
+        <default>false</default>
+        <label>10-502 Books-NY</label>
+    </customValue>
+    <customValue>
+        <fullName>10-503 Summits</fullName>
+        <default>false</default>
+        <label>10-503 Summits</label>
+    </customValue>
+    <customValue>
+        <fullName>10-600 EGX</fullName>
+        <default>false</default>
+        <label>10-600 EGX</label>
+    </customValue>
+    <customValue>
+        <fullName>10-710 NY - 149 Fifth Ave Buildout 0</fullName>
+        <default>false</default>
+        <label>10-710 NY - 149 Fifth Ave Buildout 0</label>
+    </customValue>
+    <customValue>
+        <fullName>10-810 In 60 Seconds</fullName>
+        <default>false</default>
+        <label>10-810 In 60 Seconds</label>
+    </customValue>
+    <customValue>
+        <fullName>10-811 Signal</fullName>
+        <default>false</default>
+        <label>10-811 Signal</label>
+    </customValue>
+    <customValue>
+        <fullName>10-812 GZero World</fullName>
+        <default>false</default>
+        <label>10-812 GZero World</label>
+    </customValue>
+    <customValue>
+        <fullName>10-813 Puppet Regime</fullName>
+        <default>false</default>
+        <label>10-813 Puppet Regime</label>
+    </customValue>
+    <customValue>
+        <fullName>10-814 Marketing</fullName>
+        <default>false</default>
+        <label>10-814 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A01 BREIS</fullName>
+        <default>false</default>
+        <label>10-A01 BREIS</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A02 CCLARK</fullName>
+        <default>false</default>
+        <label>10-A02 CCLARK</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A04 CSPRATT GloMA</fullName>
+        <default>false</default>
+        <label>10-A04 CSPRATT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A05 DDUNN</fullName>
+        <default>false</default>
+        <label>10-A05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A06 DTAWFIK GloMa</fullName>
+        <default>false</default>
+        <label>10-A06 DTAWFIK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A07 JBARTER</fullName>
+        <default>false</default>
+        <label>10-A07 JBARTER</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A08 JPRESS</fullName>
+        <default>false</default>
+        <label>10-A08 JPRESS</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A10 KROSELLO</fullName>
+        <default>false</default>
+        <label>10-A10 KROSELLO</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A14 MSHAPIRO</fullName>
+        <default>false</default>
+        <label>10-A14 MSHAPIRO</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A16 NBAJOREK</fullName>
+        <default>false</default>
+        <label>10-A16 NBAJOREK</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A18 RDELUCA</fullName>
+        <default>false</default>
+        <label>10-A18 RDELUCA</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A20 FKAPADIA</fullName>
+        <default>false</default>
+        <label>10-A20 FKAPADIA</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A21 MMOUSSALLI GloMa</fullName>
+        <default>false</default>
+        <label>10-A21 MMOUSSALLI GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A23 SWEST GloMA</fullName>
+        <default>false</default>
+        <label>10-A23 SWEST GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A25 NHALIM GloMa</fullName>
+        <default>false</default>
+        <label>10-A25 NHALIM GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A29 PLIGHTFOOT GloMA</fullName>
+        <default>false</default>
+        <label>10-A29 PLIGHTFOOT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A30 SGHOSH GloMA</fullName>
+        <default>false</default>
+        <label>10-A30 SGHOSH GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A31 JKRINKS GloMa</fullName>
+        <default>false</default>
+        <label>10-A31 JKRINKS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A32 MLU GloMa</fullName>
+        <default>false</default>
+        <label>10-A32 MLU GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A34 EFISH Gloma</fullName>
+        <default>false</default>
+        <label>10-A34 EFISH Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A38 MRUDDICK GloMa</fullName>
+        <default>false</default>
+        <label>10-A38 MRUDDICK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A39 AFINFROCK Gloma</fullName>
+        <default>false</default>
+        <label>10-A39 AFINFROCK Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>10-A99 Incoming GloMa</fullName>
+        <default>false</default>
+        <label>10-A99 Incoming GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B01 BREIS</fullName>
+        <default>false</default>
+        <label>10-B01 BREIS</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B03 CGRAHAM</fullName>
+        <default>false</default>
+        <label>10-B03 CGRAHAM</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B04 CSPRATT Corp</fullName>
+        <default>false</default>
+        <label>10-B04 CSPRATT Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B05 DDUNN</fullName>
+        <default>false</default>
+        <label>10-B05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B06 DTAWFIK</fullName>
+        <default>false</default>
+        <label>10-B06 DTAWFIK</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B07 JBARTER</fullName>
+        <default>false</default>
+        <label>10-B07 JBARTER</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B09 JSTEELE</fullName>
+        <default>false</default>
+        <label>10-B09 JSTEELE</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B11 LCRISTINI</fullName>
+        <default>false</default>
+        <label>10-B11 LCRISTINI</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B12 MMITTAG</fullName>
+        <default>false</default>
+        <label>10-B12 MMITTAG</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B17 PLEDGER</fullName>
+        <default>false</default>
+        <label>10-B17 PLEDGER</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B22 RSHUKLA Corp</fullName>
+        <default>false</default>
+        <label>10-B22 RSHUKLA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B23 SWEST Corp</fullName>
+        <default>false</default>
+        <label>10-B23 SWEST Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B24 JSHIN Corp</fullName>
+        <default>false</default>
+        <label>10-B24 JSHIN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B26 SMAJORS Corp</fullName>
+        <default>false</default>
+        <label>10-B26 SMAJORS Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B34 EFISH Corp</fullName>
+        <default>false</default>
+        <label>10-B34 EFISH Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B36 RSCHUDDEBOOM Corp</fullName>
+        <default>false</default>
+        <label>10-B36 RSCHUDDEBOOM Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B37 PCORRIGAN Corp</fullName>
+        <default>false</default>
+        <label>10-B37 PCORRIGAN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B40 KBALA Corp</fullName>
+        <default>false</default>
+        <label>10-B40 KBALA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-B99 Incoming Corp</fullName>
+        <default>false</default>
+        <label>10-B99 Incoming Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>10-C05 DDUNN</fullName>
+        <default>false</default>
+        <label>10-C05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>10-C15 YWATANABE</fullName>
+        <default>false</default>
+        <label>10-C15 YWATANABE</label>
+    </customValue>
+    <customValue>
+        <fullName>10-C33 MSUZUKI Japan</fullName>
+        <default>false</default>
+        <label>10-C33 MSUZUKI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>10-C35 KSAKAGUCHI Japan</fullName>
+        <default>false</default>
+        <label>10-C35 KSAKAGUCHI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>10-D04 CSPRATT</fullName>
+        <default>false</default>
+        <label>10-D04 CSPRATT</label>
+    </customValue>
+    <customValue>
+        <fullName>10-E05 DDUNN</fullName>
+        <default>false</default>
+        <label>10-E05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>10-E13 MPETERSON</fullName>
+        <default>false</default>
+        <label>10-E13 MPETERSON</label>
+    </customValue>
+    <customValue>
+        <fullName>10-F01 BREIS Corp Consult</fullName>
+        <default>false</default>
+        <label>10-F01 BREIS Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>10-F03 CGRAHAM</fullName>
+        <default>false</default>
+        <label>10-F03 CGRAHAM</label>
+    </customValue>
+    <customValue>
+        <fullName>10-F05 DDUNN Corp Consult</fullName>
+        <default>false</default>
+        <label>10-F05 DDUNN Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>10-F11 LCRISTINI Corp Consult</fullName>
+        <default>false</default>
+        <label>10-F11 LCRISTINI Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>10-F22 RSHUKLA Corp Consult</fullName>
+        <default>false</default>
+        <label>10-F22 RSHUKLA Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>10-F24 JSHIN Corp Consult</fullName>
+        <default>false</default>
+        <label>10-F24 JSHIN Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>10-G07 JBARTER GENR</fullName>
+        <default>false</default>
+        <label>10-G07 JBARTER GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>10-G09 JSTEELE GENR</fullName>
+        <default>false</default>
+        <label>10-G09 JSTEELE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>10-G27 RPINIELLA GENR</fullName>
+        <default>false</default>
+        <label>10-G27 RPINIELLA GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>10-G28 BSTANZIALE GENR</fullName>
+        <default>false</default>
+        <label>10-G28 BSTANZIALE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>10-Z05 DDUNN</fullName>
+        <default>false</default>
+        <label>10-Z05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>10-Z19 ASANFORD</fullName>
+        <default>false</default>
+        <label>10-Z19 ASANFORD</label>
+    </customValue>
+    <customValue>
+        <fullName>11-000 DC Office</fullName>
+        <default>false</default>
+        <label>11-000 DC Office</label>
+    </customValue>
+    <customValue>
+        <fullName>11-200 Research-DC</fullName>
+        <default>false</default>
+        <label>11-200 Research-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-201 Research Management-DC</fullName>
+        <default>false</default>
+        <label>11-201 Research Management-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-202 Research CompAn-DC</fullName>
+        <default>false</default>
+        <label>11-202 Research CompAn-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-203 Research GENR-DC</fullName>
+        <default>false</default>
+        <label>11-203 Research GENR-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-204 Research China &amp; NE Asia</fullName>
+        <default>false</default>
+        <label>11-204 Research China &amp; NE Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>11-205 Research Latin America-DC</fullName>
+        <default>false</default>
+        <label>11-205 Research Latin America-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-206 Research Middle East-DC</fullName>
+        <default>false</default>
+        <label>11-206 Research Middle East-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-207 Research Africa-DC</fullName>
+        <default>false</default>
+        <label>11-207 Research Africa-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-208 Research Eurasia-DC</fullName>
+        <default>false</default>
+        <label>11-208 Research Eurasia-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-209 Research Publications-DC</fullName>
+        <default>false</default>
+        <label>11-209 Research Publications-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-210 Research Other-DC</fullName>
+        <default>false</default>
+        <label>11-210 Research Other-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-211 Research Europe-DC</fullName>
+        <default>false</default>
+        <label>11-211 Research Europe-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-212 Research US-DC</fullName>
+        <default>false</default>
+        <label>11-212 Research US-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-213 Research Global Strategy-DC</fullName>
+        <default>false</default>
+        <label>11-213 Research Global Strategy-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-214 Research Macro</fullName>
+        <default>false</default>
+        <label>11-214 Research Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>11-215 Research GeoTech</fullName>
+        <default>false</default>
+        <label>11-215 Research GeoTech</label>
+    </customValue>
+    <customValue>
+        <fullName>11-216 Research Corporates</fullName>
+        <default>false</default>
+        <label>11-216 Research Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>11-217 Research Labs</fullName>
+        <default>false</default>
+        <label>11-217 Research Labs</label>
+    </customValue>
+    <customValue>
+        <fullName>11-218 Research Brazil</fullName>
+        <default>false</default>
+        <label>11-218 Research Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>11-219 Research HealthCare</fullName>
+        <default>false</default>
+        <label>11-219 Research HealthCare</label>
+    </customValue>
+    <customValue>
+        <fullName>11-220 Research SE &amp; South Asia</fullName>
+        <default>false</default>
+        <label>11-220 Research SE &amp; South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>11-300 Business Development General-D</fullName>
+        <default>false</default>
+        <label>11-300 Business Development General-D</label>
+    </customValue>
+    <customValue>
+        <fullName>11-302 NY Roadshow</fullName>
+        <default>false</default>
+        <label>11-302 NY Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>11-303 LN Roadshow</fullName>
+        <default>false</default>
+        <label>11-303 LN Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>11-310 Global Markets-DC</fullName>
+        <default>false</default>
+        <label>11-310 Global Markets-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-311 Global Markets - EMEA</fullName>
+        <default>false</default>
+        <label>11-311 Global Markets - EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>11-312 Global Markets - Japan</fullName>
+        <default>false</default>
+        <label>11-312 Global Markets - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>11-313 Global Markets - Asia (non JP)</fullName>
+        <default>false</default>
+        <label>11-313 Global Markets - Asia (non JP)</label>
+    </customValue>
+    <customValue>
+        <fullName>11-314 Global Markets - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>11-314 Global Markets - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>11-315 Global Markets - North America</fullName>
+        <default>false</default>
+        <label>11-315 Global Markets - North America</label>
+    </customValue>
+    <customValue>
+        <fullName>11-320 Corporate-DC</fullName>
+        <default>false</default>
+        <label>11-320 Corporate-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-321 Corporate - ECR</fullName>
+        <default>false</default>
+        <label>11-321 Corporate - ECR</label>
+    </customValue>
+    <customValue>
+        <fullName>11-322 Corporate - Financial</fullName>
+        <default>false</default>
+        <label>11-322 Corporate - Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>11-323 Corporate - Healthcare</fullName>
+        <default>false</default>
+        <label>11-323 Corporate - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>11-324 Corporate - Industrials</fullName>
+        <default>false</default>
+        <label>11-324 Corporate - Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>11-325 Corporate - Retail</fullName>
+        <default>false</default>
+        <label>11-325 Corporate - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>11-326 Corporate - Technology</fullName>
+        <default>false</default>
+        <label>11-326 Corporate - Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>11-327 Corporate - Japan</fullName>
+        <default>false</default>
+        <label>11-327 Corporate - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>11-328 Corporate - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>11-328 Corporate - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>11-329 Corporate - PPP</fullName>
+        <default>false</default>
+        <label>11-329 Corporate - PPP</label>
+    </customValue>
+    <customValue>
+        <fullName>11-330 Japan-DC</fullName>
+        <default>false</default>
+        <label>11-330 Japan-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-340 US Government-DC</fullName>
+        <default>false</default>
+        <label>11-340 US Government-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-350 Non-US Government-DC</fullName>
+        <default>false</default>
+        <label>11-350 Non-US Government-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-360 Corporate Consulting-DC</fullName>
+        <default>false</default>
+        <label>11-360 Corporate Consulting-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-370 GENR Business Development</fullName>
+        <default>false</default>
+        <label>11-370 GENR Business Development</label>
+    </customValue>
+    <customValue>
+        <fullName>11-380 Brazli/LatAM BD (DC)</fullName>
+        <default>false</default>
+        <label>11-380 Brazli/LatAM BD (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>11-390 Asia (excl. Japan) BD</fullName>
+        <default>false</default>
+        <label>11-390 Asia (excl. Japan) BD</label>
+    </customValue>
+    <customValue>
+        <fullName>11-401 Finance-DC</fullName>
+        <default>false</default>
+        <label>11-401 Finance-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-402 IT-DC</fullName>
+        <default>false</default>
+        <label>11-402 IT-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-403 Admin-DC</fullName>
+        <default>false</default>
+        <label>11-403 Admin-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-404 Other-DC</fullName>
+        <default>false</default>
+        <label>11-404 Other-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-405 Partner&apos;s Group-DC</fullName>
+        <default>false</default>
+        <label>11-405 Partner&apos;s Group-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-406 Executive Management-DC</fullName>
+        <default>false</default>
+        <label>11-406 Executive Management-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-407 Office of the President-DC</fullName>
+        <default>false</default>
+        <label>11-407 Office of the President-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-409 Human Resources</fullName>
+        <default>false</default>
+        <label>11-409 Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>11-410 Marketing</fullName>
+        <default>false</default>
+        <label>11-410 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>11-411 Media</fullName>
+        <default>false</default>
+        <label>11-411 Media</label>
+    </customValue>
+    <customValue>
+        <fullName>11-501 Speaking Engagements-DC</fullName>
+        <default>false</default>
+        <label>11-501 Speaking Engagements-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-502 Books-DC</fullName>
+        <default>false</default>
+        <label>11-502 Books-DC</label>
+    </customValue>
+    <customValue>
+        <fullName>11-503 Summits</fullName>
+        <default>false</default>
+        <label>11-503 Summits</label>
+    </customValue>
+    <customValue>
+        <fullName>11-600 EGX</fullName>
+        <default>false</default>
+        <label>11-600 EGX</label>
+    </customValue>
+    <customValue>
+        <fullName>11-710 DC - Buildout 2012</fullName>
+        <default>false</default>
+        <label>11-710 DC - Buildout 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>11-810 In 60 Seconds</fullName>
+        <default>false</default>
+        <label>11-810 In 60 Seconds</label>
+    </customValue>
+    <customValue>
+        <fullName>11-811 Signal</fullName>
+        <default>false</default>
+        <label>11-811 Signal</label>
+    </customValue>
+    <customValue>
+        <fullName>11-812 GZero World</fullName>
+        <default>false</default>
+        <label>11-812 GZero World</label>
+    </customValue>
+    <customValue>
+        <fullName>11-813 Puppet Regime</fullName>
+        <default>false</default>
+        <label>11-813 Puppet Regime</label>
+    </customValue>
+    <customValue>
+        <fullName>11-814 Marketing</fullName>
+        <default>false</default>
+        <label>11-814 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A01 BREIS</fullName>
+        <default>false</default>
+        <label>11-A01 BREIS</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A02 CCLARK</fullName>
+        <default>false</default>
+        <label>11-A02 CCLARK</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A04 CSPRATT GloMA</fullName>
+        <default>false</default>
+        <label>11-A04 CSPRATT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A05 DDUNN</fullName>
+        <default>false</default>
+        <label>11-A05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A06 DTAWFIK GloMa</fullName>
+        <default>false</default>
+        <label>11-A06 DTAWFIK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A07 JBARTER</fullName>
+        <default>false</default>
+        <label>11-A07 JBARTER</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A08 JPRESS</fullName>
+        <default>false</default>
+        <label>11-A08 JPRESS</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A10 KROSELLO</fullName>
+        <default>false</default>
+        <label>11-A10 KROSELLO</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A14 MSHAPIRO</fullName>
+        <default>false</default>
+        <label>11-A14 MSHAPIRO</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A16 NBAJOREK</fullName>
+        <default>false</default>
+        <label>11-A16 NBAJOREK</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A18 RDELUCA</fullName>
+        <default>false</default>
+        <label>11-A18 RDELUCA</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A20 FKAPADIA</fullName>
+        <default>false</default>
+        <label>11-A20 FKAPADIA</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A21 MMOUSSALLI</fullName>
+        <default>false</default>
+        <label>11-A21 MMOUSSALLI</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A23 SWEST GloMA</fullName>
+        <default>false</default>
+        <label>11-A23 SWEST GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A25 NHALIM GloMa</fullName>
+        <default>false</default>
+        <label>11-A25 NHALIM GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A29 PLIGHTFOOT GloMA</fullName>
+        <default>false</default>
+        <label>11-A29 PLIGHTFOOT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A30 SGHOSH GloMA</fullName>
+        <default>false</default>
+        <label>11-A30 SGHOSH GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A31 JKRINKS GloMa</fullName>
+        <default>false</default>
+        <label>11-A31 JKRINKS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A32 MLU GloMa</fullName>
+        <default>false</default>
+        <label>11-A32 MLU GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A34 EFISH Gloma</fullName>
+        <default>false</default>
+        <label>11-A34 EFISH Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A38 MRUDDICK GloMa</fullName>
+        <default>false</default>
+        <label>11-A38 MRUDDICK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A39 AFINFROCK Gloma</fullName>
+        <default>false</default>
+        <label>11-A39 AFINFROCK Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>11-A99 Incoming GloMa</fullName>
+        <default>false</default>
+        <label>11-A99 Incoming GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B01 BREIS</fullName>
+        <default>false</default>
+        <label>11-B01 BREIS</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B03 CGRAHAM</fullName>
+        <default>false</default>
+        <label>11-B03 CGRAHAM</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B04 CSPRATT Corp</fullName>
+        <default>false</default>
+        <label>11-B04 CSPRATT Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B05 DDUNN</fullName>
+        <default>false</default>
+        <label>11-B05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B06 DTAWFIK</fullName>
+        <default>false</default>
+        <label>11-B06 DTAWFIK</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B07 JBARTER</fullName>
+        <default>false</default>
+        <label>11-B07 JBARTER</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B09 JSTEELE</fullName>
+        <default>false</default>
+        <label>11-B09 JSTEELE</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B11 LCRISTINI</fullName>
+        <default>false</default>
+        <label>11-B11 LCRISTINI</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B12 MMITTAG</fullName>
+        <default>false</default>
+        <label>11-B12 MMITTAG</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B17 PLEDGER</fullName>
+        <default>false</default>
+        <label>11-B17 PLEDGER</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B22 RSHUKLA Corp</fullName>
+        <default>false</default>
+        <label>11-B22 RSHUKLA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B23 SWEST Corp</fullName>
+        <default>false</default>
+        <label>11-B23 SWEST Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B24 JSHIN Corp</fullName>
+        <default>false</default>
+        <label>11-B24 JSHIN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B26 SMAJORS Corp</fullName>
+        <default>false</default>
+        <label>11-B26 SMAJORS Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B34 EFISH Corp</fullName>
+        <default>false</default>
+        <label>11-B34 EFISH Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B36 RSCHUDDEBOOM Corp</fullName>
+        <default>false</default>
+        <label>11-B36 RSCHUDDEBOOM Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B37 PCORRIGAN Corp</fullName>
+        <default>false</default>
+        <label>11-B37 PCORRIGAN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B40 KBALA Corp</fullName>
+        <default>false</default>
+        <label>11-B40 KBALA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-B99 Incoming Corp</fullName>
+        <default>false</default>
+        <label>11-B99 Incoming Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>11-C05 DDUNN</fullName>
+        <default>false</default>
+        <label>11-C05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>11-C15 YWATANABE</fullName>
+        <default>false</default>
+        <label>11-C15 YWATANABE</label>
+    </customValue>
+    <customValue>
+        <fullName>11-C33 MSUZUKI Japan</fullName>
+        <default>false</default>
+        <label>11-C33 MSUZUKI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>11-C35 KSAKAGUCHI Japan</fullName>
+        <default>false</default>
+        <label>11-C35 KSAKAGUCHI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>11-D04 CSPRATT</fullName>
+        <default>false</default>
+        <label>11-D04 CSPRATT</label>
+    </customValue>
+    <customValue>
+        <fullName>11-E05 DDUNN</fullName>
+        <default>false</default>
+        <label>11-E05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>11-E13 MPETERSON</fullName>
+        <default>false</default>
+        <label>11-E13 MPETERSON</label>
+    </customValue>
+    <customValue>
+        <fullName>11-F01 BREIS Corp Consult</fullName>
+        <default>false</default>
+        <label>11-F01 BREIS Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>11-F03 CGRAHAM</fullName>
+        <default>false</default>
+        <label>11-F03 CGRAHAM</label>
+    </customValue>
+    <customValue>
+        <fullName>11-F05 DDUNN Corp Consult</fullName>
+        <default>false</default>
+        <label>11-F05 DDUNN Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>11-F11 LCRISTINI Corp Consult</fullName>
+        <default>false</default>
+        <label>11-F11 LCRISTINI Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>11-F22 RSHUKLA Corp Consult</fullName>
+        <default>false</default>
+        <label>11-F22 RSHUKLA Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>11-F24 JSHIN Corp Consult</fullName>
+        <default>false</default>
+        <label>11-F24 JSHIN Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>11-G07 JBARTER GENR</fullName>
+        <default>false</default>
+        <label>11-G07 JBARTER GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>11-G09 JSTEELE GENR</fullName>
+        <default>false</default>
+        <label>11-G09 JSTEELE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>11-G27 RPINIELLA GENR</fullName>
+        <default>false</default>
+        <label>11-G27 RPINIELLA GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>11-G28 BSTANZIALE GENR</fullName>
+        <default>false</default>
+        <label>11-G28 BSTANZIALE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>11-Z05 DDUNN</fullName>
+        <default>false</default>
+        <label>11-Z05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>11-Z19 ASANFORD</fullName>
+        <default>false</default>
+        <label>11-Z19 ASANFORD</label>
+    </customValue>
+    <customValue>
+        <fullName>12-000 Connecticut Office</fullName>
+        <default>false</default>
+        <label>12-000 Connecticut Office</label>
+    </customValue>
+    <customValue>
+        <fullName>12-203 GENR-CT</fullName>
+        <default>false</default>
+        <label>12-203 GENR-CT</label>
+    </customValue>
+    <customValue>
+        <fullName>12-204 Research China &amp; NE Asia</fullName>
+        <default>false</default>
+        <label>12-204 Research China &amp; NE Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>12-214 Research Macro</fullName>
+        <default>false</default>
+        <label>12-214 Research Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>12-215 Research GeoTech</fullName>
+        <default>false</default>
+        <label>12-215 Research GeoTech</label>
+    </customValue>
+    <customValue>
+        <fullName>12-216 Research Corporates</fullName>
+        <default>false</default>
+        <label>12-216 Research Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>12-217 Research Labs</fullName>
+        <default>false</default>
+        <label>12-217 Research Labs</label>
+    </customValue>
+    <customValue>
+        <fullName>12-218 Research Brazil</fullName>
+        <default>false</default>
+        <label>12-218 Research Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>12-219 Research HealthCare</fullName>
+        <default>false</default>
+        <label>12-219 Research HealthCare</label>
+    </customValue>
+    <customValue>
+        <fullName>12-220 Research SE &amp; South Asia</fullName>
+        <default>false</default>
+        <label>12-220 Research SE &amp; South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>12-311 Global Markets - EMEA</fullName>
+        <default>false</default>
+        <label>12-311 Global Markets - EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>12-312 Global Markets - Japan</fullName>
+        <default>false</default>
+        <label>12-312 Global Markets - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>12-313 Global Markets - Asia (non JP)</fullName>
+        <default>false</default>
+        <label>12-313 Global Markets - Asia (non JP)</label>
+    </customValue>
+    <customValue>
+        <fullName>12-314 Global Markets - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>12-314 Global Markets - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>12-315 Global Markets - North America</fullName>
+        <default>false</default>
+        <label>12-315 Global Markets - North America</label>
+    </customValue>
+    <customValue>
+        <fullName>12-320 CT Corp</fullName>
+        <default>false</default>
+        <label>12-320 CT Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>12-321 Corporate - ECR</fullName>
+        <default>false</default>
+        <label>12-321 Corporate - ECR</label>
+    </customValue>
+    <customValue>
+        <fullName>12-322 Corporate - Financial</fullName>
+        <default>false</default>
+        <label>12-322 Corporate - Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>12-323 Corporate - Healthcare</fullName>
+        <default>false</default>
+        <label>12-323 Corporate - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>12-324 Corporate - Industrials</fullName>
+        <default>false</default>
+        <label>12-324 Corporate - Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>12-325 Corporate - Retail</fullName>
+        <default>false</default>
+        <label>12-325 Corporate - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>12-326 Corporate - Technology</fullName>
+        <default>false</default>
+        <label>12-326 Corporate - Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>12-327 Corporate - Japan</fullName>
+        <default>false</default>
+        <label>12-327 Corporate - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>12-328 Corporate - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>12-328 Corporate - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>12-370 GENR Busienss Development</fullName>
+        <default>false</default>
+        <label>12-370 GENR Busienss Development</label>
+    </customValue>
+    <customValue>
+        <fullName>12-390 Asia (excl. Japan) BD</fullName>
+        <default>false</default>
+        <label>12-390 Asia (excl. Japan) BD</label>
+    </customValue>
+    <customValue>
+        <fullName>12-411 Media</fullName>
+        <default>false</default>
+        <label>12-411 Media</label>
+    </customValue>
+    <customValue>
+        <fullName>12-503 Summits</fullName>
+        <default>false</default>
+        <label>12-503 Summits</label>
+    </customValue>
+    <customValue>
+        <fullName>12-600 EGX</fullName>
+        <default>false</default>
+        <label>12-600 EGX</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A04 CSPRATT GloMA</fullName>
+        <default>false</default>
+        <label>12-A04 CSPRATT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A23 SWEST GloMA</fullName>
+        <default>false</default>
+        <label>12-A23 SWEST GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A29 PLIGHTFOOT GloMA</fullName>
+        <default>false</default>
+        <label>12-A29 PLIGHTFOOT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A30 SGHOSH GloMA</fullName>
+        <default>false</default>
+        <label>12-A30 SGHOSH GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A31 JKRINKS GloMa</fullName>
+        <default>false</default>
+        <label>12-A31 JKRINKS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A32 MLU GloMa</fullName>
+        <default>false</default>
+        <label>12-A32 MLU GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A34 EFISH Gloma</fullName>
+        <default>false</default>
+        <label>12-A34 EFISH Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A38 MRUDDICK GloMa</fullName>
+        <default>false</default>
+        <label>12-A38 MRUDDICK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A39 AFINFROCK Gloma</fullName>
+        <default>false</default>
+        <label>12-A39 AFINFROCK Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>12-A99 Incoming GloMa</fullName>
+        <default>false</default>
+        <label>12-A99 Incoming GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>12-B04 CSPRATT</fullName>
+        <default>false</default>
+        <label>12-B04 CSPRATT</label>
+    </customValue>
+    <customValue>
+        <fullName>12-B34 EFISH Corp</fullName>
+        <default>false</default>
+        <label>12-B34 EFISH Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>12-B36 RSCHUDDEBOOM Corp</fullName>
+        <default>false</default>
+        <label>12-B36 RSCHUDDEBOOM Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>12-B37 PCORRIGAN Corp</fullName>
+        <default>false</default>
+        <label>12-B37 PCORRIGAN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>12-B40 KBALA Corp</fullName>
+        <default>false</default>
+        <label>12-B40 KBALA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>12-B99 Incoming Corp</fullName>
+        <default>false</default>
+        <label>12-B99 Incoming Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>12-C33 MSUZUKI Japan</fullName>
+        <default>false</default>
+        <label>12-C33 MSUZUKI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>12-c35 KSAKAGUSHI Japan</fullName>
+        <default>false</default>
+        <label>12-c35 KSAKAGUSHI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>12-F01 BREIS Corp Consult</fullName>
+        <default>false</default>
+        <label>12-F01 BREIS Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>12-F22 RSHUKLA Corp Consult</fullName>
+        <default>false</default>
+        <label>12-F22 RSHUKLA Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>12-G07 JBARTER GENR</fullName>
+        <default>false</default>
+        <label>12-G07 JBARTER GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>12-G09 JSTEELE GENR</fullName>
+        <default>false</default>
+        <label>12-G09 JSTEELE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>12-G27 RPINIELLA GENR</fullName>
+        <default>false</default>
+        <label>12-G27 RPINIELLA GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>12-G28 BSTANZIALE GENR</fullName>
+        <default>false</default>
+        <label>12-G28 BSTANZIALE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>13-000 California Office</fullName>
+        <default>false</default>
+        <label>13-000 California Office</label>
+    </customValue>
+    <customValue>
+        <fullName>13-200 Research</fullName>
+        <default>false</default>
+        <label>13-200 Research</label>
+    </customValue>
+    <customValue>
+        <fullName>13-201 Research Management</fullName>
+        <default>false</default>
+        <label>13-201 Research Management</label>
+    </customValue>
+    <customValue>
+        <fullName>13-202 Research CompAn</fullName>
+        <default>false</default>
+        <label>13-202 Research CompAn</label>
+    </customValue>
+    <customValue>
+        <fullName>13-203 Research GENR</fullName>
+        <default>false</default>
+        <label>13-203 Research GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>13-204 Research China &amp; NE Asia</fullName>
+        <default>false</default>
+        <label>13-204 Research China &amp; NE Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>13-205 Research Latin America</fullName>
+        <default>false</default>
+        <label>13-205 Research Latin America</label>
+    </customValue>
+    <customValue>
+        <fullName>13-206 Research Middle East</fullName>
+        <default>false</default>
+        <label>13-206 Research Middle East</label>
+    </customValue>
+    <customValue>
+        <fullName>13-207 Research Africa</fullName>
+        <default>false</default>
+        <label>13-207 Research Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-208 Research Eurasia</fullName>
+        <default>false</default>
+        <label>13-208 Research Eurasia</label>
+    </customValue>
+    <customValue>
+        <fullName>13-209 Research Publications</fullName>
+        <default>false</default>
+        <label>13-209 Research Publications</label>
+    </customValue>
+    <customValue>
+        <fullName>13-210 Research Other</fullName>
+        <default>false</default>
+        <label>13-210 Research Other</label>
+    </customValue>
+    <customValue>
+        <fullName>13-211 Research Europe</fullName>
+        <default>false</default>
+        <label>13-211 Research Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>13-212 Research US</fullName>
+        <default>false</default>
+        <label>13-212 Research US</label>
+    </customValue>
+    <customValue>
+        <fullName>13-213 Research Global Strategy</fullName>
+        <default>false</default>
+        <label>13-213 Research Global Strategy</label>
+    </customValue>
+    <customValue>
+        <fullName>13-214 Research Macro</fullName>
+        <default>false</default>
+        <label>13-214 Research Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>13-215 Research GeoTech</fullName>
+        <default>false</default>
+        <label>13-215 Research GeoTech</label>
+    </customValue>
+    <customValue>
+        <fullName>13-216 Research Corporates</fullName>
+        <default>false</default>
+        <label>13-216 Research Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>13-217 Research Labs</fullName>
+        <default>false</default>
+        <label>13-217 Research Labs</label>
+    </customValue>
+    <customValue>
+        <fullName>13-218 Research Brazil</fullName>
+        <default>false</default>
+        <label>13-218 Research Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>13-219 Research HealthCare</fullName>
+        <default>false</default>
+        <label>13-219 Research HealthCare</label>
+    </customValue>
+    <customValue>
+        <fullName>13-220 Research SE &amp; South Asia</fullName>
+        <default>false</default>
+        <label>13-220 Research SE &amp; South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>13-300 Business Development General</fullName>
+        <default>false</default>
+        <label>13-300 Business Development General</label>
+    </customValue>
+    <customValue>
+        <fullName>13-302 NY Roadshow</fullName>
+        <default>false</default>
+        <label>13-302 NY Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>13-303 LN Roadshow</fullName>
+        <default>false</default>
+        <label>13-303 LN Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>13-310 Global Markets</fullName>
+        <default>false</default>
+        <label>13-310 Global Markets</label>
+    </customValue>
+    <customValue>
+        <fullName>13-311 Global Markets - EMEA</fullName>
+        <default>false</default>
+        <label>13-311 Global Markets - EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>13-312 Global Markets - Japan</fullName>
+        <default>false</default>
+        <label>13-312 Global Markets - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>13-313 Global Markets - Asia (non JP)</fullName>
+        <default>false</default>
+        <label>13-313 Global Markets - Asia (non JP)</label>
+    </customValue>
+    <customValue>
+        <fullName>13-314 Global Markets - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>13-314 Global Markets - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>13-315 Global Markets - North America</fullName>
+        <default>false</default>
+        <label>13-315 Global Markets - North America</label>
+    </customValue>
+    <customValue>
+        <fullName>13-320 Corporate</fullName>
+        <default>false</default>
+        <label>13-320 Corporate</label>
+    </customValue>
+    <customValue>
+        <fullName>13-321 Corporate - ECR</fullName>
+        <default>false</default>
+        <label>13-321 Corporate - ECR</label>
+    </customValue>
+    <customValue>
+        <fullName>13-322 Corporate - Financial</fullName>
+        <default>false</default>
+        <label>13-322 Corporate - Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>13-323 Corporate - Healthcare</fullName>
+        <default>false</default>
+        <label>13-323 Corporate - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>13-324 Corporate - Industrials</fullName>
+        <default>false</default>
+        <label>13-324 Corporate - Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>13-325 Corporate - Retail</fullName>
+        <default>false</default>
+        <label>13-325 Corporate - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>13-326 Corporate - Technology</fullName>
+        <default>false</default>
+        <label>13-326 Corporate - Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>13-327 Corporate - Japan</fullName>
+        <default>false</default>
+        <label>13-327 Corporate - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>13-328 Corporate - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>13-328 Corporate - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>13-330 Japan</fullName>
+        <default>false</default>
+        <label>13-330 Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>13-340 US Government</fullName>
+        <default>false</default>
+        <label>13-340 US Government</label>
+    </customValue>
+    <customValue>
+        <fullName>13-350 Non-US Government</fullName>
+        <default>false</default>
+        <label>13-350 Non-US Government</label>
+    </customValue>
+    <customValue>
+        <fullName>13-360 Corporate Consulting</fullName>
+        <default>false</default>
+        <label>13-360 Corporate Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>13-370 GENR Business Development</fullName>
+        <default>false</default>
+        <label>13-370 GENR Business Development</label>
+    </customValue>
+    <customValue>
+        <fullName>13-390 Asia (excl. Japan) BD</fullName>
+        <default>false</default>
+        <label>13-390 Asia (excl. Japan) BD</label>
+    </customValue>
+    <customValue>
+        <fullName>13-401 Finance</fullName>
+        <default>false</default>
+        <label>13-401 Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>13-402 IT</fullName>
+        <default>false</default>
+        <label>13-402 IT</label>
+    </customValue>
+    <customValue>
+        <fullName>13-403 Admin</fullName>
+        <default>false</default>
+        <label>13-403 Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>13-404 Other</fullName>
+        <default>false</default>
+        <label>13-404 Other</label>
+    </customValue>
+    <customValue>
+        <fullName>13-405 Partner&apos;s Group</fullName>
+        <default>false</default>
+        <label>13-405 Partner&apos;s Group</label>
+    </customValue>
+    <customValue>
+        <fullName>13-406 Executive Management</fullName>
+        <default>false</default>
+        <label>13-406 Executive Management</label>
+    </customValue>
+    <customValue>
+        <fullName>13-407 Office of the President</fullName>
+        <default>false</default>
+        <label>13-407 Office of the President</label>
+    </customValue>
+    <customValue>
+        <fullName>13-408 Shareholder(s)</fullName>
+        <default>false</default>
+        <label>13-408 Shareholder(s)</label>
+    </customValue>
+    <customValue>
+        <fullName>13-409 Human Resources</fullName>
+        <default>false</default>
+        <label>13-409 Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>13-410 Marketing</fullName>
+        <default>false</default>
+        <label>13-410 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>13-411 Media</fullName>
+        <default>false</default>
+        <label>13-411 Media</label>
+    </customValue>
+    <customValue>
+        <fullName>13-501 Speaking Engagements</fullName>
+        <default>false</default>
+        <label>13-501 Speaking Engagements</label>
+    </customValue>
+    <customValue>
+        <fullName>13-502 Books</fullName>
+        <default>false</default>
+        <label>13-502 Books</label>
+    </customValue>
+    <customValue>
+        <fullName>13-503 Summits</fullName>
+        <default>false</default>
+        <label>13-503 Summits</label>
+    </customValue>
+    <customValue>
+        <fullName>13-600 EGX</fullName>
+        <default>false</default>
+        <label>13-600 EGX</label>
+    </customValue>
+    <customValue>
+        <fullName>13-710 Buildout</fullName>
+        <default>false</default>
+        <label>13-710 Buildout</label>
+    </customValue>
+    <customValue>
+        <fullName>13-913 2013 LTIP</fullName>
+        <default>false</default>
+        <label>13-913 2013 LTIP</label>
+    </customValue>
+    <customValue>
+        <fullName>13-914 2014 LTIP</fullName>
+        <default>false</default>
+        <label>13-914 2014 LTIP</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A01 BREIS GloMa</fullName>
+        <default>false</default>
+        <label>13-A01 BREIS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A02 CCLARK GloMa</fullName>
+        <default>false</default>
+        <label>13-A02 CCLARK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A04 CSPRATT GloMA</fullName>
+        <default>false</default>
+        <label>13-A04 CSPRATT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A05 DDUNN GloMa</fullName>
+        <default>false</default>
+        <label>13-A05 DDUNN GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A06 DTAWFIK GloMa</fullName>
+        <default>false</default>
+        <label>13-A06 DTAWFIK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A07 JBARTER GloMa</fullName>
+        <default>false</default>
+        <label>13-A07 JBARTER GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A08 JPRESS GloMa</fullName>
+        <default>false</default>
+        <label>13-A08 JPRESS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A10 KROSELLO GloMa</fullName>
+        <default>false</default>
+        <label>13-A10 KROSELLO GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A14 MSHAPIRO GloMa</fullName>
+        <default>false</default>
+        <label>13-A14 MSHAPIRO GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A16 NBAJOREK GloMa</fullName>
+        <default>false</default>
+        <label>13-A16 NBAJOREK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A18 RDELUCA GloMa</fullName>
+        <default>false</default>
+        <label>13-A18 RDELUCA GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A20 FKAPADIA GloMa</fullName>
+        <default>false</default>
+        <label>13-A20 FKAPADIA GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A21 MMOUSSALLI GloMa</fullName>
+        <default>false</default>
+        <label>13-A21 MMOUSSALLI GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A23 SWEST GloMA</fullName>
+        <default>false</default>
+        <label>13-A23 SWEST GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A25 NHALIM GloMa</fullName>
+        <default>false</default>
+        <label>13-A25 NHALIM GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A29 PLIGHTFOOT GloMA</fullName>
+        <default>false</default>
+        <label>13-A29 PLIGHTFOOT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A30 SGHOSH GloMA</fullName>
+        <default>false</default>
+        <label>13-A30 SGHOSH GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A31 JKRINKS GloMa</fullName>
+        <default>false</default>
+        <label>13-A31 JKRINKS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A32 MLU GloMa</fullName>
+        <default>false</default>
+        <label>13-A32 MLU GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A34 EFISH Gloma</fullName>
+        <default>false</default>
+        <label>13-A34 EFISH Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A38 MRUDDICK GloMa</fullName>
+        <default>false</default>
+        <label>13-A38 MRUDDICK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A39 AFINFROCK Gloma</fullName>
+        <default>false</default>
+        <label>13-A39 AFINFROCK Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>13-A99 Incoming GloMa</fullName>
+        <default>false</default>
+        <label>13-A99 Incoming GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B01 BREIS Corp</fullName>
+        <default>false</default>
+        <label>13-B01 BREIS Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B03 CGRAHAM Corp</fullName>
+        <default>false</default>
+        <label>13-B03 CGRAHAM Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B04 CSPRATT Corp</fullName>
+        <default>false</default>
+        <label>13-B04 CSPRATT Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B05 DDUNN Corp</fullName>
+        <default>false</default>
+        <label>13-B05 DDUNN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B06 DTAWFIK Corp</fullName>
+        <default>false</default>
+        <label>13-B06 DTAWFIK Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B07 JBARTER Corp</fullName>
+        <default>false</default>
+        <label>13-B07 JBARTER Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B09 JSTEELE Corp</fullName>
+        <default>false</default>
+        <label>13-B09 JSTEELE Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B11 LCRISTINI Corp</fullName>
+        <default>false</default>
+        <label>13-B11 LCRISTINI Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B12 MMITTAG Corp</fullName>
+        <default>false</default>
+        <label>13-B12 MMITTAG Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B17 PLEDGER Corp</fullName>
+        <default>false</default>
+        <label>13-B17 PLEDGER Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B22 RSHUKLA Corp</fullName>
+        <default>false</default>
+        <label>13-B22 RSHUKLA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B23 SWEST Corp</fullName>
+        <default>false</default>
+        <label>13-B23 SWEST Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B24 JSHIN Corp</fullName>
+        <default>false</default>
+        <label>13-B24 JSHIN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B26 SMAJORS Corp</fullName>
+        <default>false</default>
+        <label>13-B26 SMAJORS Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B34 EFISH Corp</fullName>
+        <default>false</default>
+        <label>13-B34 EFISH Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B36 RSCHUDDEBOOM Corp</fullName>
+        <default>false</default>
+        <label>13-B36 RSCHUDDEBOOM Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B37 PCORRIGAN Corp</fullName>
+        <default>false</default>
+        <label>13-B37 PCORRIGAN Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B40 KBALA Corp</fullName>
+        <default>false</default>
+        <label>13-B40 KBALA Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-B99 Incoming Corp</fullName>
+        <default>false</default>
+        <label>13-B99 Incoming Corp</label>
+    </customValue>
+    <customValue>
+        <fullName>13-C05 DDUNN Japan</fullName>
+        <default>false</default>
+        <label>13-C05 DDUNN Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>13-C15 YWATANABE Japan</fullName>
+        <default>false</default>
+        <label>13-C15 YWATANABE Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>13-C33 MSUZUKI Japan</fullName>
+        <default>false</default>
+        <label>13-C33 MSUZUKI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>13-C35 KSAKAGUCHI Japan</fullName>
+        <default>false</default>
+        <label>13-C35 KSAKAGUCHI Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>13-D04 CSPRATT Govt</fullName>
+        <default>false</default>
+        <label>13-D04 CSPRATT Govt</label>
+    </customValue>
+    <customValue>
+        <fullName>13-E05 DDUNN Speaking</fullName>
+        <default>false</default>
+        <label>13-E05 DDUNN Speaking</label>
+    </customValue>
+    <customValue>
+        <fullName>13-E13 MPETERSON Speaking</fullName>
+        <default>false</default>
+        <label>13-E13 MPETERSON Speaking</label>
+    </customValue>
+    <customValue>
+        <fullName>13-F01 BREIS Corp Consult</fullName>
+        <default>false</default>
+        <label>13-F01 BREIS Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>13-F03 CGRAHAM Corp Consult.</fullName>
+        <default>false</default>
+        <label>13-F03 CGRAHAM Corp Consult.</label>
+    </customValue>
+    <customValue>
+        <fullName>13-F05 DDUNN Corp Consult</fullName>
+        <default>false</default>
+        <label>13-F05 DDUNN Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>13-F11 LCRISTINI Corp Consult</fullName>
+        <default>false</default>
+        <label>13-F11 LCRISTINI Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>13-F22 RSHUKLA Corp Consult</fullName>
+        <default>false</default>
+        <label>13-F22 RSHUKLA Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>13-F24 JSHIN Corp Consult</fullName>
+        <default>false</default>
+        <label>13-F24 JSHIN Corp Consult</label>
+    </customValue>
+    <customValue>
+        <fullName>13-G07 JBARTER GENR</fullName>
+        <default>false</default>
+        <label>13-G07 JBARTER GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>13-G09 JSTEELE GENR</fullName>
+        <default>false</default>
+        <label>13-G09 JSTEELE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>13-G27 RPINIELLA GENR</fullName>
+        <default>false</default>
+        <label>13-G27 RPINIELLA GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>13-G28 BSTANZIALE GENR</fullName>
+        <default>false</default>
+        <label>13-G28 BSTANZIALE GENR</label>
+    </customValue>
+    <customValue>
+        <fullName>13-Z05 DDUNN Other</fullName>
+        <default>false</default>
+        <label>13-Z05 DDUNN Other</label>
+    </customValue>
+    <customValue>
+        <fullName>13-Z19 ASANFORD Other</fullName>
+        <default>false</default>
+        <label>13-Z19 ASANFORD Other</label>
+    </customValue>
+    <customValue>
+        <fullName>20-000 London Office</fullName>
+        <default>false</default>
+        <label>20-000 London Office</label>
+    </customValue>
+    <customValue>
+        <fullName>20-200 Research-UK</fullName>
+        <default>false</default>
+        <label>20-200 Research-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-201 Research Management-UK</fullName>
+        <default>false</default>
+        <label>20-201 Research Management-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-202 Research CompAn-UK</fullName>
+        <default>false</default>
+        <label>20-202 Research CompAn-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-203 Research GENR-UK</fullName>
+        <default>false</default>
+        <label>20-203 Research GENR-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-204 Research China &amp; NE Asia</fullName>
+        <default>false</default>
+        <label>20-204 Research China &amp; NE Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>20-205 Research Latin America-UK</fullName>
+        <default>false</default>
+        <label>20-205 Research Latin America-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-206 Research Middle East-UK</fullName>
+        <default>false</default>
+        <label>20-206 Research Middle East-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-207 Research Africa-UK</fullName>
+        <default>false</default>
+        <label>20-207 Research Africa-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-208 Research Eurasia-UK</fullName>
+        <default>false</default>
+        <label>20-208 Research Eurasia-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-209 Research Publications-UK</fullName>
+        <default>false</default>
+        <label>20-209 Research Publications-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-210 Research Other-UK</fullName>
+        <default>false</default>
+        <label>20-210 Research Other-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-211 Research Europe-UK</fullName>
+        <default>false</default>
+        <label>20-211 Research Europe-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-212 Research US-UK</fullName>
+        <default>false</default>
+        <label>20-212 Research US-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-213 Research Global Strategy-UK</fullName>
+        <default>false</default>
+        <label>20-213 Research Global Strategy-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-214 Research Macro</fullName>
+        <default>false</default>
+        <label>20-214 Research Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>20-215 Research GeoTech</fullName>
+        <default>false</default>
+        <label>20-215 Research GeoTech</label>
+    </customValue>
+    <customValue>
+        <fullName>20-216 Research Corporates</fullName>
+        <default>false</default>
+        <label>20-216 Research Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>20-217 Research Labs</fullName>
+        <default>false</default>
+        <label>20-217 Research Labs</label>
+    </customValue>
+    <customValue>
+        <fullName>20-218 Research Brazil</fullName>
+        <default>false</default>
+        <label>20-218 Research Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>20-219 Research HealthCare</fullName>
+        <default>false</default>
+        <label>20-219 Research HealthCare</label>
+    </customValue>
+    <customValue>
+        <fullName>20-220 Research SE &amp; South Asia</fullName>
+        <default>false</default>
+        <label>20-220 Research SE &amp; South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>20-300 Business Development General-U</fullName>
+        <default>false</default>
+        <label>20-300 Business Development General-U</label>
+    </customValue>
+    <customValue>
+        <fullName>20-302 NY Roadshow</fullName>
+        <default>false</default>
+        <label>20-302 NY Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>20-303 LN Roadshow</fullName>
+        <default>false</default>
+        <label>20-303 LN Roadshow</label>
+    </customValue>
+    <customValue>
+        <fullName>20-310 Global Markets-UK</fullName>
+        <default>false</default>
+        <label>20-310 Global Markets-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-311 Global Markets - EMEA</fullName>
+        <default>false</default>
+        <label>20-311 Global Markets - EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>20-312 Global Markets - Japan</fullName>
+        <default>false</default>
+        <label>20-312 Global Markets - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>20-313 Global Markets - Asia (non JP)</fullName>
+        <default>false</default>
+        <label>20-313 Global Markets - Asia (non JP)</label>
+    </customValue>
+    <customValue>
+        <fullName>20-314 Global Markets - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>20-314 Global Markets - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>20-315 Global Markets - North America</fullName>
+        <default>false</default>
+        <label>20-315 Global Markets - North America</label>
+    </customValue>
+    <customValue>
+        <fullName>20-320 Corporate-UK</fullName>
+        <default>false</default>
+        <label>20-320 Corporate-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-321 Corporate - ECR</fullName>
+        <default>false</default>
+        <label>20-321 Corporate - ECR</label>
+    </customValue>
+    <customValue>
+        <fullName>20-322 Corporate - Financial</fullName>
+        <default>false</default>
+        <label>20-322 Corporate - Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>20-323 Corporate - Healthcare</fullName>
+        <default>false</default>
+        <label>20-323 Corporate - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>20-324 Corporate - Industrials</fullName>
+        <default>false</default>
+        <label>20-324 Corporate - Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>20-325 Corporate - Retail</fullName>
+        <default>false</default>
+        <label>20-325 Corporate - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>20-326 Corporate - Technology</fullName>
+        <default>false</default>
+        <label>20-326 Corporate - Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>20-327 Corporate - Japan</fullName>
+        <default>false</default>
+        <label>20-327 Corporate - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>20-328 Corporate - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>20-328 Corporate - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>20-330 Japan-UK</fullName>
+        <default>false</default>
+        <label>20-330 Japan-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-340 US Government-UK</fullName>
+        <default>false</default>
+        <label>20-340 US Government-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-350 Non-US Government-UK</fullName>
+        <default>false</default>
+        <label>20-350 Non-US Government-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-360 Corporate Consulting-UK</fullName>
+        <default>false</default>
+        <label>20-360 Corporate Consulting-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-370 GENR Business Development</fullName>
+        <default>false</default>
+        <label>20-370 GENR Business Development</label>
+    </customValue>
+    <customValue>
+        <fullName>20-380 Brazil BD-UK</fullName>
+        <default>false</default>
+        <label>20-380 Brazil BD-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-390 Asia (excl. Japan) BD</fullName>
+        <default>false</default>
+        <label>20-390 Asia (excl. Japan) BD</label>
+    </customValue>
+    <customValue>
+        <fullName>20-401 Finance-UK</fullName>
+        <default>false</default>
+        <label>20-401 Finance-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-402 IT-UK</fullName>
+        <default>false</default>
+        <label>20-402 IT-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-403 Admin-UK</fullName>
+        <default>false</default>
+        <label>20-403 Admin-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-404 Other-UK</fullName>
+        <default>false</default>
+        <label>20-404 Other-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-405 Partner&apos;s Group-UK</fullName>
+        <default>false</default>
+        <label>20-405 Partner&apos;s Group-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-406 Executive Management-UK</fullName>
+        <default>false</default>
+        <label>20-406 Executive Management-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-407 Office of the President-UK</fullName>
+        <default>false</default>
+        <label>20-407 Office of the President-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-409 Human Resources</fullName>
+        <default>false</default>
+        <label>20-409 Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>20-410 Marketing</fullName>
+        <default>false</default>
+        <label>20-410 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>20-411 Media</fullName>
+        <default>false</default>
+        <label>20-411 Media</label>
+    </customValue>
+    <customValue>
+        <fullName>20-501 Speaking Engagements-UK</fullName>
+        <default>false</default>
+        <label>20-501 Speaking Engagements-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-502 Books-UK</fullName>
+        <default>false</default>
+        <label>20-502 Books-UK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-503 Summits</fullName>
+        <default>false</default>
+        <label>20-503 Summits</label>
+    </customValue>
+    <customValue>
+        <fullName>20-600 EGX</fullName>
+        <default>false</default>
+        <label>20-600 EGX</label>
+    </customValue>
+    <customValue>
+        <fullName>20-710 UK Build out</fullName>
+        <default>false</default>
+        <label>20-710 UK Build out</label>
+    </customValue>
+    <customValue>
+        <fullName>20-810 In 60 Seconds</fullName>
+        <default>false</default>
+        <label>20-810 In 60 Seconds</label>
+    </customValue>
+    <customValue>
+        <fullName>20-811 Signal</fullName>
+        <default>false</default>
+        <label>20-811 Signal</label>
+    </customValue>
+    <customValue>
+        <fullName>20-812 GZero World</fullName>
+        <default>false</default>
+        <label>20-812 GZero World</label>
+    </customValue>
+    <customValue>
+        <fullName>20-813 Puppet Regime</fullName>
+        <default>false</default>
+        <label>20-813 Puppet Regime</label>
+    </customValue>
+    <customValue>
+        <fullName>20-814 Marketing</fullName>
+        <default>false</default>
+        <label>20-814 Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A01 BREIS</fullName>
+        <default>false</default>
+        <label>20-A01 BREIS</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A02 CCLARK</fullName>
+        <default>false</default>
+        <label>20-A02 CCLARK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A04 CSPRATT GloMA</fullName>
+        <default>false</default>
+        <label>20-A04 CSPRATT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A05 DDUNN</fullName>
+        <default>false</default>
+        <label>20-A05 DDUNN</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A06 DTAWFIK GloMa</fullName>
+        <default>false</default>
+        <label>20-A06 DTAWFIK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A07 JBARTER</fullName>
+        <default>false</default>
+        <label>20-A07 JBARTER</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A08 JPRESS</fullName>
+        <default>false</default>
+        <label>20-A08 JPRESS</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A10 KROSELLO</fullName>
+        <default>false</default>
+        <label>20-A10 KROSELLO</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A14 MSHAPIRO</fullName>
+        <default>false</default>
+        <label>20-A14 MSHAPIRO</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A16 NBAJOREK</fullName>
+        <default>false</default>
+        <label>20-A16 NBAJOREK</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A18 RDELUCA</fullName>
+        <default>false</default>
+        <label>20-A18 RDELUCA</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A20 FKAPADIA</fullName>
+        <default>false</default>
+        <label>20-A20 FKAPADIA</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A21 MMOUSSALI</fullName>
+        <default>false</default>
+        <label>20-A21 MMOUSSALI</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A23 SWEST GloMA</fullName>
+        <default>false</default>
+        <label>20-A23 SWEST GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A25 NHALIM GloMA</fullName>
+        <default>false</default>
+        <label>20-A25 NHALIM GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A29 PLIGHTFOOT GloMA</fullName>
+        <default>false</default>
+        <label>20-A29 PLIGHTFOOT GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A30 SGHOSH GloMA</fullName>
+        <default>false</default>
+        <label>20-A30 SGHOSH GloMA</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A31 JKRINKS GloMa</fullName>
+        <default>false</default>
+        <label>20-A31 JKRINKS GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A32 MLU GloMa</fullName>
+        <default>false</default>
+        <label>20-A32 MLU GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A34 EFISH Gloma</fullName>
+        <default>false</default>
+        <label>20-A34 EFISH Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A38 MRUDDICK GloMa</fullName>
+        <default>false</default>
+        <label>20-A38 MRUDDICK GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A39 AFINFROCK Gloma</fullName>
+        <default>false</default>
+        <label>20-A39 AFINFROCK Gloma</label>
+    </customValue>
+    <customValue>
+        <fullName>20-A99 Incoming GloMa</fullName>
+        <default>false</default>
+        <label>20-A99 Incoming GloMa</label>
+    </customValue>
+    <customValue>
+        <fullName>20-B01 BREIS</fullName>
+        <default>false</default>
+        <label>20-B01 BREIS</label>
+    </customValue>
+    <masterLabel>Department Codes</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

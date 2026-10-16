@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Worldflow</members>
+        <members>cartodb_fastly_for_plotly</members>
+        <members>egprod</members>
+        <members>eurasiagroup_content_force_come</members>
+        <members>eurasiagroup_file_force_com</members>
+        <members>eurasiagroup_retool</members>
+        <members>google_com</members>
+        <name>CspTrustedSite</name>
+    </types>
+    <version>62.0</version>
+</Package>

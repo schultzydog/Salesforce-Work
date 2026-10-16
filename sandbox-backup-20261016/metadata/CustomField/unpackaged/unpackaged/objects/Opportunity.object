@@ -1,0 +1,4399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Advisory_Scope_of_Work__c</fullName>
+        <description>This field serves the Outlaw integration</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Account.Advisory_Scope_of_Work__c)</formula>
+        <label>Account: Advisory Scope of Work</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Pending_MSA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Account Pending MSA</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Lost_Revenue_Due_to_Renewal_Delay__c</fullName>
+        <formula>IF( ISPICKVAL(  RevenueType__c  ,&apos;Recurring&apos;)&amp;&amp; Days_Between_Prev_End_Current_Start__c &gt; 0 ,  Annualized_Value_OC__c * Days_Between_Prev_End_Current_Start__c/365, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Actual Lost Revenue Due to Renewal Delay</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Notes__c</fullName>
+        <label>Additional Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>Now() -  CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>All_Eurasia_Email__c</fullName>
+        <label>All Eurasia Email</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Amount_Recurring_OC__c</fullName>
+        <label>Amount Recurring (OC)</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Recurring</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Recurring_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount_Recurring_OC__c /  FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount Recurring (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount_Sales_Tax__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount  +  Estimated_Sales_Tax_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount + Sales Tax</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_Corporate_OC__c</fullName>
+        <description>Recurring only</description>
+        <externalId>false</externalId>
+        <formula>Revenue_Month_Corporate_R_OC__c * 12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value - Corporate (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_Corporate_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annualized_Value_Corporate_OC__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value - Corporate (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_GZERO_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Month_GZERO_R_OC__c * 12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value - GZERO (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_GZERO_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annualized_Value_GZERO_OC__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value - GZERO (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_Gloma_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Month_Gloma_R_OC__c * 12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value - Gloma (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_Gloma_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annualized_Value_Gloma_OC__c  / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value - Gloma (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_OC_Recurring__c</fullName>
+        <externalId>false</externalId>
+        <formula>12 * Average_Month_Recurring_OC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value (OC) - Recurring</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_OC__c</fullName>
+        <formula>IF(ISPICKVAL( RevenueType__c ,&apos;Recurring&apos;), 12  *  AverageRevenuePerMonth_OC__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_OOP_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Month_OOP_R_OC__c * 12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value - OOP (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_OOP_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annualized_Value_OOP_OC__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value - OOP (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_USD_Recurring__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annualized_Value_OC_Recurring__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value (USD) - Recurring</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_Value_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annualized_Value_OC__c  /  FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Annualized Value (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apparel_Campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Apparel Campaign</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Approval_Status</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Australia_Campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Australia Campaign</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Authorized_Users__c</fullName>
+        <externalId>false</externalId>
+        <label>Authorized Users</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AutoCreateRenewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>AutoCreateRenewal</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AverageRevenuePerMonth_OC__c</fullName>
+        <formula>Amount / Number_of_months_in_Contract_term__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average $/Month (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Average_Month_Recurring_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Number_of_months_in_Contract_term__c &gt; 0, Amount_Recurring_OC__c / Number_of_months_in_Contract_term__c, Amount_Recurring_OC__c / 12)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average $/Month Recurring (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Average_Month_Recurring_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount_Recurring_USD__c / Number_of_months_in_Contract_term__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Average $/Month Recurring (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Avg__c</fullName>
+        <externalId>false</externalId>
+        <formula>CloseDate - Contract.StartDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Avg</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Background_Checks__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Background Checks</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Background_info_for_Maziar__c</fullName>
+        <label>Background info - for Maziar</label>
+        <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Bill_To_from_wrong_Account__c</fullName>
+        <formula>IF(NOT ISBLANK( ia_crm__Bill_to__c ), AccountId  &lt;&gt;  ia_crm__Bill_to__r.AccountId, fALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bill To from wrong Account</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Cycle__c</fullName>
+        <label>Billing Cycle</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Billing_Cycle</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Billing_Instructions__c</fullName>
+        <label>Billing Instructions</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Business_Line__c</fullName>
+        <label>Business Line</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>true</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>GZERO</fullName>
+                    <default>false</default>
+                    <label>GZERO</label>
+                </value>
+                <value>
+                    <fullName>Global Markets</fullName>
+                    <default>false</default>
+                    <label>Global Markets</label>
+                </value>
+                <value>
+                    <fullName>OOP</fullName>
+                    <default>false</default>
+                    <label>OOP</label>
+                </value>
+                <value>
+                    <fullName>Corporate</fullName>
+                    <default>false</default>
+                    <label>Corporate</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bypass_Stage_Win_Automations__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Bypass Stage Win Automations</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Client_Contact__c</fullName>
+        <label>Client Contact</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Client_Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Region</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Sector__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Account.Industry)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Client Sector</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Services_Team__c</fullName>
+        <label>Client Services Team</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Client_Services_Team</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Close_Date_in_the_past__c</fullName>
+        <formula>CloseDate &lt; Today()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Close Date in the past</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Closed_Lost_Reason__c</fullName>
+        <label>Closed/Lost Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Closed_Lost_Reason</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Closer_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Closer 1</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Opportunities7</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Closer_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Closer 2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Opportunities8</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Commission__c</fullName>
+        <inlineHelpText>Is this opportunity eligible for a commission for the senior advisor if they qualify?​</inlineHelpText>
+        <label>Commission</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Conf_call_attendance_over_last_12_months__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Conf_Call_Attended_Last_12_Months__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field shows the total number of conference call attendees over the last 12 months for this account</inlineHelpText>
+        <label>Conf call attendance over last 12 months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Point_Email__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Contact Point Email</label>
+        <referenceTo>ContactPointEmail</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_for_Intaact_migration__c</fullName>
+        <externalId>false</externalId>
+        <formula>Customer_Id_Name__r.Contact_for_Intaact_migration__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact for Intaact migration</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Active__c</fullName>
+        <formula>Contract_End_Date__c &gt;= Today()&amp;&amp;  Contract_Start_Date__c &lt;= Today() &amp;&amp;  IsWon &amp;&amp;  ISPICKVAL( Approval_Status__c , &apos;Approved&apos;) &amp;&amp;  ISPICKVAL(  Contract_Status__c , &apos;Executed&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Active</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Active_checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is populated by automation and is necessary to drive Account rollups (which can&apos;t be driven by the formulaic Contract Active field</description>
+        <label>Contract Active checkbox</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Active_for_PV_reporting__c</fullName>
+        <formula>Contract_End_Date__c &gt;= Today()&amp;&amp; Contract_Start_Date__c &lt;= Today() &amp;&amp; IsWon &amp;&amp; (ISPICKVAL( Approval_Status__c , &apos;Approved&apos;)|| ISPICKVAL( Approval_Status__c , &apos;Pending Finance Approval&apos;)) &amp;&amp; (ISPICKVAL( Contract_Status__c , &apos;Executed&apos;) || ISPICKVAL( Contract_Status__c , &apos;Submitted&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Active for PV reporting</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Amount_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Amount (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Amount_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount  /  FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Code__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Contract Code</label>
+        <referenceTo>Contract_Code__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Contract Created</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date__c</fullName>
+        <label>Contract End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date_in_the_past__c</fullName>
+        <formula>Contract_End_Date__c &lt;  TODAY()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract End Date in the past</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Expired_for_44_days_or_less__c</fullName>
+        <formula>Today() &gt; Contract_End_Date__c &amp;&amp; Today() - 44 &lt;= Contract_End_Date__c &amp;&amp; IsWon</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Expired for 44 days or less</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Expired_for_45_days_or_more__c</fullName>
+        <formula>Contract_End_Date__c &lt;= Today() - 45 &amp;&amp; IsWon</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Expired for 45 days or more</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Number</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Sourcing__c</fullName>
+        <inlineHelpText>If different than sales recognition</inlineHelpText>
+        <label>Contract Sourcing</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Consumer &amp; Retail (C&amp;R)</fullName>
+                    <default>false</default>
+                    <label>Consumer &amp; Retail (C&amp;R)</label>
+                </value>
+                <value>
+                    <fullName>Corporates Sales Team</fullName>
+                    <default>false</default>
+                    <label>Corporates Sales Team</label>
+                </value>
+                <value>
+                    <fullName>Energy, Climate, Resources (ECR)</fullName>
+                    <default>false</default>
+                    <label>Energy, Climate, Resources (ECR)</label>
+                </value>
+                <value>
+                    <fullName>Geostrategy</fullName>
+                    <default>false</default>
+                    <label>Geostrategy</label>
+                </value>
+                <value>
+                    <fullName>Geotech</fullName>
+                    <default>false</default>
+                    <label>Geotech</label>
+                </value>
+                <value>
+                    <fullName>Global Markets</fullName>
+                    <default>false</default>
+                    <label>Global Markets</label>
+                </value>
+                <value>
+                    <fullName>Global Sustainability</fullName>
+                    <default>false</default>
+                    <label>Global Sustainability</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Start_Date__c</fullName>
+        <label>Contract Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Status__c</fullName>
+        <label>Contract Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>false</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>Executed</fullName>
+                    <default>false</default>
+                    <label>Executed</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                    <label>Expired</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Status_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Contract_Active__c &amp;&amp; Today() &gt; Contract_End_Date__c, &apos;Expired&apos;, 
+ IF(Contract_Active__c , &apos;Executed&apos;, 
+  IF(IsWon &amp;&amp; (CONTAINS(TEXT( Approval_Status__c ), &apos;Business&apos;) || CONTAINS(TEXT( Approval_Status__c ), &apos;Finance&apos;)) , &apos;Submitted&apos;,
+   IF( IsWon, &apos;Draft&apos;, 
+null
+))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_expired_for_180_days__c</fullName>
+        <formula>Contract_End_Date__c &lt;= Today() - 180 &amp;&amp; IsWon</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract expired for &gt; 180 days</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_length_in_days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract_End_Date__c - Contract_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract length in days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Corporate_Sector_Team__c</fullName>
+        <label>Corporate Sector Team</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Corporate_Sector_Team</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Count_of_SLR_Entries__c</fullName>
+        <label>Count of SLR Entries</label>
+        <summaryForeignKey>SLR_Entry__c.Opportunity__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <label>Country</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Countries_of_Interest</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Create_MSA_in_Outlaw__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Create MSA in Outlaw</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Create_Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to trigger manual creation of a renewal opp</description>
+        <label>Create Renewal</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Create_SOW_in_Outlaw__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Create SOW in Outlaw</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_by_Renewal_Automation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created by Renewal Automation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_for_SLR_retirement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created for SLR retirement</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Id_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Customer Id Name</label>
+        <referenceTo>Customer_Id__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Data_Privacy_Data_Protection__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Data Privacy/Data Protection</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Data_loaded_to_Sage_Intaact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Historical migration to Sage Intacct</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Date_Processed_by_Finance__c</fullName>
+        <label>Date Processed by Finance</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date_last_discussed_at_LSG__c</fullName>
+        <label>Date last discussed at LSG</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_First_Invoice__c</fullName>
+        <label>Date of First Invoice</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_first_client_interaction__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of first client interaction</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Between_Close_Date_and_Current_Star__c</fullName>
+        <externalId>false</externalId>
+        <formula>CloseDate -  Contract_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Between Close Date &amp; Current Star</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Between_Prev_End_Current_Start__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract_Start_Date__c -   (Previous_Opportunity__r.Contract_End_Date__c  + 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Between Prev End Current Start</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Until_Trial_End__c</fullName>
+        <externalId>false</externalId>
+        <formula>Trial_End_Date__c -  TODAY()</formula>
+        <label>Days Until Trial End</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_between_Research_Began_and_Contract__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract_Start_Date__c -  Account.Date_Research_Delivery_Began__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days between Research and Contract</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_from_creation_to_Close__c</fullName>
+        <externalId>false</externalId>
+        <formula>CloseDate -  Datevalue(CreatedDate)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days from creation to Close</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_past_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT IsClosed , CloseDate - Today( ), null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days past Close Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_past_Renewal_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(IsClosed) &amp;&amp; Today() - Contract_Start_Date__c &gt; 0, Today() - Contract_Start_Date__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days past Renewal Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_since_last_touched__c</fullName>
+        <externalId>false</externalId>
+        <formula>TODAY() -  Tracked_Fields_Last_Change_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days since last touched</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_until_next_renewal_due__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  NOT(IsClosed)  , Contract_Start_Date__c - Today(), null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days until next renewal due</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <label>Department</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Asia</fullName>
+                    <default>false</default>
+                    <label>Asia</label>
+                </value>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>LATAM / Brazil</label>
+                </value>
+                <value>
+                    <fullName>Corporate Consulting</fullName>
+                    <default>false</default>
+                    <label>CorpCon</label>
+                </value>
+                <value>
+                    <fullName>US</fullName>
+                    <default>false</default>
+                    <label>Rest of World</label>
+                </value>
+                <value>
+                    <fullName>egx</fullName>
+                    <default>false</default>
+                    <label>egx</label>
+                </value>
+                <value>
+                    <fullName>GZERO</fullName>
+                    <default>false</default>
+                    <label>GZERO</label>
+                </value>
+                <value>
+                    <fullName>OOP</fullName>
+                    <default>false</default>
+                    <label>OOP</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Japan</fullName>
+                    <default>false</default>
+                    <label>Japan</label>
+                </value>
+                <value>
+                    <fullName>GENR</fullName>
+                    <default>false</default>
+                    <label>GENR</label>
+                </value>
+                <value>
+                    <fullName>Global Markets</fullName>
+                    <default>false</default>
+                    <label>Global Markets</label>
+                </value>
+                <value>
+                    <fullName>Corporate</fullName>
+                    <default>false</default>
+                    <label>Corporate</label>
+                </value>
+                <value>
+                    <fullName>Gzero Media</fullName>
+                    <default>false</default>
+                    <label>Gzero Media</label>
+                </value>
+                <value>
+                    <fullName>Speaking Engagements</fullName>
+                    <default>false</default>
+                    <label>Speaking Engagements</label>
+                </value>
+                <value>
+                    <fullName>Summits</fullName>
+                    <default>false</default>
+                    <label>Summits</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Dept_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Dept Code</label>
+        <length>5</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dept_Code_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Business_Line__c, &apos;Global Markets&apos;) , 
+
+ CASE( Geography__c , 
+&apos;North America&apos;, &apos;315&apos;, 
+&apos;EMEA&apos;, &apos;311&apos;,
+&apos;Japan&apos;, &apos;312&apos;,
+&apos;Brazil&apos;, &apos;314&apos;,
+&apos;Asia ex-Japan&apos;, &apos;313&apos;,
+&apos;LatAm ex-Brazil&apos;, &apos;314&apos;,
+&apos;N/A&apos;) , 
+
+ IF(ISPICKVAL(Business_Line__c, &apos;Corporate&apos;), 
+
+ CASE(  Corporate_Sector_Team__c , 
+&apos;Energy, Climate, Resources (ECR)&apos;, &apos;321&apos;, 
+&apos;Professional Services, Philanthropy &amp; Non-Profit, Public Sector (PPP)&apos;, &apos;329&apos;,
+&apos;Healthcare&apos;, &apos;323&apos;,
+&apos;Consumer &amp; Retail (C&amp;R)&apos;, &apos;325&apos;,
+&apos;Geotech&apos;, &apos;326&apos;,
+&apos;Financial Institutions Group (FIG)&apos;, &apos;322&apos;,
+&apos;Trade &amp; Supply Chains&apos;, &apos;324&apos;,
+&apos;N/A&apos;) ,  
+
+ IF(ISPICKVAL(Business_Line__c, &apos;OOP&apos;), &apos;407&apos;, 
+ IF(ISPICKVAL(Business_Line__c, &apos;GZERO&apos;), &apos;411&apos;,  
+
+&apos;N/A&apos;))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dept Code formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Docusign_Envelope_Sender__c</fullName>
+        <externalId>false</externalId>
+        <label>Docusign Envelope Sender</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Docusign_Envelope_Sent_Date_Time__c</fullName>
+        <label>Docusign Envelope Sent Date/Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Docusign_Envelope_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Docusign Envelope Status</label>
+        <length>55</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Entitlements_Review__c</fullName>
+        <label>Entitlements Review</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Approval</fullName>
+                    <default>false</default>
+                    <label>Awaiting Approval</label>
+                </value>
+                <value>
+                    <fullName>Review Required at Renewal</fullName>
+                    <default>false</default>
+                    <label>Review Required at Renewal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Estimated_Sales_Tax_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ia_crm__Bill_to__r.Tax_Exempt__c , 0, Taxable_Amount__c *   ia_crm__Bill_to__r.Tax_Rate__r.EstimatedCombinedRate__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Estimated Sales Tax Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expired_but_include_in_PV__c</fullName>
+        <formula>Today() &gt; Contract_End_Date__c  &amp;&amp; IsWon &amp;&amp; Renewal_Opportunity__c != NULL &amp;&amp; Renewal_Opportunity__r.IsClosed = FALSE</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expired but include in PV</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>External Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FX_Impact__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(CurrencyIsoCode) = TEXT(Previous_Opportunity__r.CurrencyIsoCode) , (Previous_Opportunity__r.Annualized_Value_OC__c/FX_rate__c) - (Previous_Opportunity__r.Annualized_Value_OC__c/Previous_Opportunity__r.FX_rate__c), null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FX Impact</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FX_rate__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <label>FX rate</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_created_at_account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>File created at account</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Final_Year_of_Multi_Year_Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Year of Multi-Year Contract</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Finance_Approval_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The user selected in the field will be used in the finance portion of the approval process</description>
+        <label>Finance Approval User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>First_Product_Id__c</fullName>
+        <description>This field holds the first product id value for the purpose of populating the oppty product lookup in the New SLR Entry button</description>
+        <externalId>false</externalId>
+        <label>First Product Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Product_Name__c</fullName>
+        <description>This field exists to hold the first recurring product name of an opportunity to be used for oppty naming during the renewal oppty automation flow</description>
+        <externalId>false</externalId>
+        <label>First Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Food_Campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Food Campaign</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Geography__c</fullName>
+        <label>Geography</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Geography</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Gloma_Client_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Account.Gloma_Client_Type__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gloma Client Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gloma_contract_below_40k__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Annualized_Value_USD__c &lt; 40000, &quot;Yes&quot;, &quot;No&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gloma contract below 40k</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Has_File__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Has File</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Products__c</fullName>
+        <formula>HasOpportunityLineItem</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Products</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Healthcare_Campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Healthcare Campaign</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Heat_Index__c</fullName>
+        <label>Heat Index</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Warm</fullName>
+                    <default>false</default>
+                    <label>Warm</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Cool</fullName>
+                    <default>false</default>
+                    <label>Cool</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Historical_at_LSG__c</fullName>
+        <label>Historical at LSG</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Ian_Assisted_Sale__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Ian Assisted Sale</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ian__c</fullName>
+        <description>Field to note if Ian is originating lead</description>
+        <inlineHelpText>Has Ian been involved in this sale (either origination, doing a pitch or close meeting, etc)?</inlineHelpText>
+        <label>Ian?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ian_speaking__c</fullName>
+        <formula>Ian_speaking_products__c &gt; 0</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ian speaking</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ian_speaking_products__c</fullName>
+        <label>Ian speaking products</label>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Ian_speaking__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Include_in_LSG__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Include in LSG</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_in_Open_Won_account_rollup__c</fullName>
+        <formula>(IsClosed = TRUE &amp;&amp;  IsWon = TRUE) || (IsClosed = FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Include in Open/Won account rollup</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_in_Power_BI__c</fullName>
+        <formula>Count_of_SLR_Entries__c &gt; 0  || 
+Number_of_PV_Entries__c &gt; 0  ||
+
+( ISPICKVAL(Type, &apos;Renewal&apos;) &amp;&amp; ISPICKVAL(StageName , &apos;Closed Lost&apos;) &amp;&amp;  
+
+Previous_Opportunity__r.Count_of_SLR_Entries__c &gt; 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Include in Power BI</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Intacct_Contract_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract.ia_crm__Intacct_Contract_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Intacct Contract Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Intacct_Contract_Id_data_loaded__c</fullName>
+        <externalId>false</externalId>
+        <label>Intacct Contract Id - data loaded</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoicing_platform__c</fullName>
+        <label>Invoicing platform</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>true</default>
+                    <label>N/A</label>
+                </value>
+                <value>
+                    <fullName>Ariba</fullName>
+                    <default>false</default>
+                    <label>Ariba</label>
+                </value>
+                <value>
+                    <fullName>Candex</fullName>
+                    <default>false</default>
+                    <label>Candex</label>
+                </value>
+                <value>
+                    <fullName>Coupa</fullName>
+                    <default>false</default>
+                    <label>Coupa</label>
+                </value>
+                <value>
+                    <fullName>Liquidnet Invoice Uploader</fullName>
+                    <default>false</default>
+                    <label>Liquidnet Invoice Uploader</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Prenax</fullName>
+                    <default>false</default>
+                    <label>Prenax</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IsLocked__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>IsLocked</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LSG_Comments__c</fullName>
+        <label>LSG Comments</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LSG_notes_and_follow_up__c</fullName>
+        <label>LSG notes and follow up</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Last_Action_Items__c</fullName>
+        <label>Last action items</label>
+        <length>1500</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Last_Discussed_at_LSG__c</fullName>
+        <label>Last Discussed at LSG</label>
+        <length>1500</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Last_M2_Touch__c</fullName>
+        <label>Last M2 touch</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Last_discussed_at_Secretariat__c</fullName>
+        <label>Last discussed at Secretariat</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Linked_EG_Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Linked EG Project</label>
+        <referenceTo>EG_Project__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Maziar_update__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>Has Maziar been involved in this sale (either origination, doing a pitch or close meeting, etc)?​</inlineHelpText>
+        <label>Maziar?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Multi_year_Contract__c</fullName>
+        <label>Multi-year Contract</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Net_Lost_Revenue__c</fullName>
+        <description>Downsell Renewal Value OR Lost Opportunity Value</description>
+        <formula>IF( UpSell_DownSell_Annualized_Value_OC__c &lt;&gt; 0,  ABS(UpSell_DownSell_Annualized_Value_OC__c ) , 
+ IF(  IsClosed  &amp;&amp;  NOT IsWon  ,    Amount  , 0) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Lost Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Net_New_Revenue__c</fullName>
+        <description>Upsell Renewal Value OR New Sale Value</description>
+        <formula>IF( UpSell_DownSell_Annualized_Value_OC__c &lt;&gt; 0, UpSell_DownSell_Annualized_Value_OC__c , 
+ IF( ISPICKVAL( Type , &apos;New Sale&apos;)  || ISPICKVAL( Type , &apos;Trial&apos;), Amount, 
+ IF(NOT IsWon, -Amount, 0) ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net New Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Next_Contract_Follow_Up_Date__c</fullName>
+        <label>Next Contract Follow-Up Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Next_Project_Code_in_sequence__c</fullName>
+        <description>Temp field to validate next project code in sequence</description>
+        <externalId>false</externalId>
+        <formula>LEFT(Previous_Opportunity__r.Project_Code__c, 6) &amp; 
+LPAD(TEXT(VALUE(RIGHT(Previous_Opportunity__r.Project_Code__c, 4)) + 1), 4, &quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Next Project Code in sequence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notify_Change_of_Subprocessors__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Notify Change of Subprocessors</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notify_Product_Updates_Cancellation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>Does the SOW include a clause requiring us to notify the client when a product is discontinued/updated?</inlineHelpText>
+        <label>Notify Product Updates/Cancellation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notify_Security_Breach__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Notify Security Breach</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notify_Use_of_Subcontracts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Notify Use of Subcontracts</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_One_Firm_Products__c</fullName>
+        <label>Number of One Firm Products</label>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>One Firm</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_PV_Entries__c</fullName>
+        <label>Number of PV Entries</label>
+        <summaryForeignKey>PV_Entry__c.Opportunity__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Poll_Products__c</fullName>
+        <label>Number of Poll Products</label>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Poll</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Products__c</fullName>
+        <label>Number of Products</label>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Voting_Products__c</fullName>
+        <label>Number of Voting Products</label>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Voting</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_months_in_Contract_term__c</fullName>
+        <externalId>false</externalId>
+        <formula>Round(IF(( Contract_End_Date__c - Contract_Start_Date__c ) / 365 * 12 &lt; 1, 1, (Contract_End_Date__c - Contract_Start_Date__c ) / 365 * 12), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of months in Contract term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_year_ends_in_contract__c</fullName>
+        <externalId>false</externalId>
+        <formula>YEAR(Contract_End_Date__c+1) - YEAR(Contract_Start_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of year-ends in contract</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OOP_Tracking__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>OOP Tracking</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>One_Firm__c</fullName>
+        <formula>IF( Number_of_One_Firm_Products__c &gt; 0, TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>One Firm</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>One_Firmdep__c</fullName>
+        <defaultValue>false</defaultValue>
+        <inlineHelpText>Is this a One Firm opportunity, meaning that it involves multiple EG service lines (events, media, thought leadership, advisory, etc) and/or has public facing elements?</inlineHelpText>
+        <label>One Firmdep</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>casesafeid(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Id - 18 Digit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner.Email</formula>
+        <label>Opportunity Owner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner.FirstName  &amp; &apos; &apos; &amp; Owner.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Owner Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_closes_within_6_months_count__c</fullName>
+        <description>Renewals only</description>
+        <externalId>false</externalId>
+        <formula>IF( (CloseDate &lt; Today()+180 &amp;&amp;  ISPICKVAL( Type , &apos;Renewal&apos;)), 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity closes within 6 months count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oppties_SLR_Entries_notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Oppties w/wo SLR Entries - notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Origination_Credit__c</fullName>
+        <inlineHelpText>Which business line has originated this opportunity?​</inlineHelpText>
+        <label>Origination Credit</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Business_Line</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Outstanding_Renewal__c</fullName>
+        <formula>Days_until_next_renewal_due__c &lt;= 0</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Outstanding Renewal</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Owners_Corporate_Sector_Team__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner.Department</formula>
+        <label>Owner&apos;s Corporate Sector Team</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PF_Addressee__c</fullName>
+        <description>proforma field - fake data</description>
+        <label>Addressee</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PF_Billing_Cycle__c</fullName>
+        <label>PF Billing Cycle</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Billing_Cycle</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PF_Contract__c</fullName>
+        <description>proforma field -fake data</description>
+        <externalId>false</externalId>
+        <label>PF Contract</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PF_Due_Date__c</fullName>
+        <description>proforma field - fake data</description>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PF_Estimated_Tax__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Estimated_Sales_Tax_Amount__c &gt; 0, PF_Invoice_Total__c  *  Sales_Tax_Rate__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Estimated Tax</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PF_Int_Ref__c</fullName>
+        <description>proforma field - fake data</description>
+        <externalId>false</externalId>
+        <label>Int Ref#</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PF_Invoice_Date__c</fullName>
+        <label>Invoice Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PF_Invoice_Number__c</fullName>
+        <description>proforma field - pretend data</description>
+        <externalId>false</externalId>
+        <label>Invoice Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PF_Invoice_Total_Tax__c</fullName>
+        <formula>IF (PF_Invoice_Total__c &gt; 0 &amp;&amp; Estimated_Sales_Tax_Amount__c &gt; 0, PF_Invoice_Total__c +  PF_Estimated_Tax__c , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Invoice Total + Tax</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PF_Invoice_Total__c</fullName>
+        <description>proforma field - fake data</description>
+        <label>Invoice Total</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PF_Number_of_installments__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Number_of_months_in_Contract_term__c &gt; 0,
+CASE(  PF_Billing_Cycle__c ,
+&apos;One Time&apos;, 1,
+&apos;Monthly in Advance&apos;, Number_of_months_in_Contract_term__c ,
+&apos;Quarterly in Advance&apos;, Number_of_months_in_Contract_term__c/3,
+&apos;Semi-Annually in Advance&apos;, Number_of_months_in_Contract_term__c/6,
+&apos;Annually in Advance&apos;, Number_of_months_in_Contract_term__c/12,
+&apos;50:50 (Speaking only)&apos;, 2,
+
+
+null)
+ , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of installments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PF_PO_Number__c</fullName>
+        <description>proforma field - fake data</description>
+        <externalId>false</externalId>
+        <label>PF PO Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PF_Product_Lines__c</fullName>
+        <description>proforma field - fake data</description>
+        <label>Product Lines</label>
+        <length>1800</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PO_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>PO Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Required__c</fullName>
+        <label>PO Required</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PV_Corporate__c</fullName>
+        <description>prepping for deletion 5/27/26</description>
+        <externalId>false</externalId>
+        <formula>Revenue_Percentage_Corporate__c *  Annualized_Value_USD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PV - Corporate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PV_GZERO__c</fullName>
+        <description>prepping for deletion 5/27/26</description>
+        <externalId>false</externalId>
+        <formula>Revenue_Percentage_GZERO__c  *  Annualized_Value_USD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PV - GZERO</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PV_Global_Markets__c</fullName>
+        <description>prepping for deletion 5/27/26</description>
+        <externalId>false</externalId>
+        <formula>Revenue_Percentage_Global_Markets__c  *  Annualized_Value_USD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PV - Global Markets</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PV_OOP__c</fullName>
+        <description>prepping for deletion 5/27/26</description>
+        <externalId>false</externalId>
+        <formula>Revenue_Percentage_OOP__c   *  Annualized_Value_USD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PV - OOP</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PV_Reporting_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+Contract_Start_Date__c &lt;= DATE(2012, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2012, 12,31), &apos;2012&apos;, 
+IF( 
+Contract_Start_Date__c &lt;= DATE(2013, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2013, 12,31), &apos;2013&apos;,
+IF(
+Contract_Start_Date__c &lt;= DATE(2014, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2014, 12,31), &apos;2014&apos;, 
+IF( 
+Contract_Start_Date__c &lt;= DATE(2015, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2015, 12,31), &apos;2015&apos;,
+IF(
+Contract_Start_Date__c &lt;= DATE(2016, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2016, 12,31), &apos;2016&apos;, 
+IF( 
+Contract_Start_Date__c &lt;= DATE(2017, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2017, 12,31), &apos;2017&apos;,
+IF( 
+Contract_Start_Date__c &lt;= DATE(2018, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2018, 12,31), &apos;2018&apos;, 
+IF( 
+Contract_Start_Date__c &lt;= DATE(2019, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2019, 12,31), &apos;2019&apos;,
+IF(
+Contract_Start_Date__c &lt;= DATE(2020, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2020, 12,31), &apos;2020&apos;, 
+IF( 
+Contract_Start_Date__c &lt;= DATE(2021, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2021, 12,31), &apos;2021&apos;,
+IF(
+Contract_Start_Date__c &lt;= DATE(2022, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2022, 12,31), &apos;2022&apos;, 
+IF( 
+Contract_Start_Date__c &lt;= DATE(2023, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2023, 12,31), &apos;2023&apos;,
+IF(
+Contract_Start_Date__c &lt;= DATE(2024, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2024, 12,31), &apos;2024&apos;, 
+IF( 
+Contract_Start_Date__c &lt;= DATE(2025, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2025, 12,31), &apos;2025&apos;,
+IF(
+Contract_Start_Date__c &lt;= DATE(2026, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2026, 12,31), &apos;2026&apos;, 
+IF( 
+Contract_Start_Date__c &lt;= DATE(2027, 12,31)  &amp;&amp;  Contract_End_Date__c &gt;= DATE(2027, 12,31), &apos;2027&apos;,
+
+null))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PV Reporting Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pending_PO__c</fullName>
+        <description>Serves the Sage Intacct Integration</description>
+        <formula>CONTAINS(PO_Number__c , &apos;PENDING&apos;) ||
+CONTAINS(PO_Number__c , &apos;Pending&apos;) ||
+CONTAINS(PO_Number__c , &apos;pending&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending PO</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pending_Signed_Paperwork__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Pending Signed Paperwork</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Poll__c</fullName>
+        <formula>Number_of_Poll_Products__c &gt; 0</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Poll</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Potential_Lost_Revenue_Renewal_Delay__c</fullName>
+        <formula>IF( ISPICKVAL(   Type   ,&apos;Renewal&apos;)&amp;&amp;  Days_Between_Close_Date_and_Current_Star__c  &gt; 0 ,  Annualized_Value_OC__c *  Days_Between_Close_Date_and_Current_Star__c /365, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Potential Lost Revenue - Renewal Delay</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Presenter__c</fullName>
+        <label>Presenter</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Business_Line_Different__c</fullName>
+        <formula>TEXT(Previous_Opportunity__r.Business_Line__c) &lt;&gt;  TEXT(Business_Line__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Previous Business Line Different</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Geography_Different__c</fullName>
+        <formula>TEXT(Previous_Opportunity__r.Geography__c) &lt;&gt;  TEXT(Geography__c)</formula>
+        <label>Previous Geography Different</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Opportunity_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Previous_Opportunity__r.Amount</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Previous Opportunity Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Opportunity_Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Previous_Opportunity__r.Project_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Previous Opportunity Project Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Previous Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Opportunity.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.AccountId</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Oppty_Annualized_Value_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Previous_Opportunity__r.Annualized_Value_USD__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Previous Oppty Annualized Value USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Probability_value__c</fullName>
+        <label>Previous Probability value</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Client_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Primary Client Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority_Maziar_update__c</fullName>
+        <label>Priority</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>true</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Probability__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Probability (%)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Product Check</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Products__c</fullName>
+        <label>Products</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Project Code</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Proposal_link__c</fullName>
+        <label>Proposal link</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Publicly_Traded_Company__c</fullName>
+        <label>Publicly Traded Company</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ready_for_Contract_creation__c</fullName>
+        <formula>NOT ISBLANK(Account.ia_crm__Term__c) &amp;&amp; 
+NOT ISBLANK( ia_crm__Intacct_Entity__c ) &amp;&amp; 
+NOT ISBLANK(TEXT(  Billing_Cycle__c  )) &amp;&amp; 
+NOT ISBLANK(  ia_crm__Bill_to__c ) &amp;&amp;
+NOT ISPICKVAL(Billing_Cycle__c , &apos;None&apos;) &amp;&amp;
+NOT ISBLANK( ia_crm__Bill_to__r.MailingCity ) &amp;&amp;
+NOT ISBLANK( ia_crm__Bill_to__r.Email ) &amp;&amp;
+NOT ISBLANK( Account.BillingCity ) &amp;&amp; 
+ISBLANK( Intacct_Contract_Id_data_loaded__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Oppty Ready for Contract creation</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Approval_Rejection__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for Approval Rejection</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring_Lost_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(IsWon=FALSE, IsClosed=TRUE),  Annualized_Value_USD_Recurring__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recurring Lost Annualized amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring_Won_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(IsWon,  Annualized_Value_USD_Recurring__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recurring Won Annualized amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Red_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Red Flag</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Remove_from_Concur__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Remove from Concur</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Removed_Prohibition_on_Web_Scraping__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Removed Prohibition on Web Scraping</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Date__c</fullName>
+        <formula>IF( ISPICKVAL( RevenueType__c , &apos;Recurring&apos;) ,  Contract_End_Date__c  + 1, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Opportunity_Amount__c</fullName>
+        <formula>IF( Renewal_Opportunity__r.Amount &gt; 0, Renewal_Opportunity__r.Amount, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Opportunity Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Opportunity_Open__c</fullName>
+        <formula>IF(!ISBLANK(Renewal_Opportunity__c) , !Renewal_Opportunity__r.IsClosed , false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Opportunity Open</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Renewal Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Opportunity.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.AccountId</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Renewals</relationshipLabel>
+        <relationshipName>Renewals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Renewal_Opportunity__r.StageName)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Sub_type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Type , &apos;Renewal&apos;) &amp;&amp; NOT ISBLANK( UpSell_DownSell_Annualized_Recurring__c ) &amp;&amp; NOT ISNULL(UpSell_DownSell_Annualized_Recurring__c) ,
+IF( UpSell_DownSell_Annualized_Recurring__c &gt; 1, &apos;Upsell&apos;,
+IF( UpSell_DownSell_Annualized_Recurring__c &lt; -1, &apos;Downsell&apos;,&apos;Flat&apos;)), &apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Sub-type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Upsell_Downsell_Amount__c</fullName>
+        <formula>IF(Renewal_Opportunity_Amount__c &gt; 0, Renewal_Opportunity_Amount__c - Amount, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Upsell/Downsell Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Won_on_Time_Day__c</fullName>
+        <formula>IsWon  &amp;&amp;  Days_Between_Close_Date_and_Current_Star__c &lt;= 0</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Won on Time (Day)</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Won_on_Time_Quarter__c</fullName>
+        <formula>OR( AND(CEILING( MONTH (CloseDate)  / 3 )  &lt;=  CEILING( MONTH(  Contract_Start_Date__c -1  ) / 3 ),
+   YEAR(  CloseDate  )  &lt;=  YEAR(   Contract_Start_Date__c -1  )), CEILING( MONTH (CloseDate)  / 3 )    &gt;=    CEILING( MONTH(  Contract_Start_Date__c -1  ) / 3 )  &amp;&amp; YEAR(  CloseDate  )   &lt;   YEAR(   Contract_Start_Date__c -1  ), 	Renewal_Won_on_Time_Day__c = TRUE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewal Won on Time (Quarter)</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Renewing_Project_Code_External_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Renewing Project Code External Id</label>
+        <length>35</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewing_Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Previous_Opportunity__r.Project_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewing Project Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_Tracking__c</fullName>
+        <label>Report Tracking</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>OOP</fullName>
+                    <default>false</default>
+                    <label>OOP</label>
+                </value>
+                <value>
+                    <fullName>Maziar</fullName>
+                    <default>false</default>
+                    <label>Maziar</label>
+                </value>
+                <value>
+                    <fullName>SLC Partners 2023</fullName>
+                    <default>false</default>
+                    <label>SLC Partners 2023</label>
+                </value>
+                <value>
+                    <fullName>One Firm</fullName>
+                    <default>false</default>
+                    <label>One Firm</label>
+                </value>
+                <value>
+                    <fullName>US/Canada 2024 Sponsor</fullName>
+                    <default>false</default>
+                    <label>US/Canada 2024 Sponsor</label>
+                </value>
+                <value>
+                    <fullName>Geopolitics &amp; Salon Dinner Series</fullName>
+                    <default>false</default>
+                    <label>Geopolitics &amp; Salon Dinner Series</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RevenueType__c</fullName>
+        <label>Revenue Type - oppty dep</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>true</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Revenue_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Revenue_Corporate_NR__c</fullName>
+        <label>Revenue - Corporate - NR</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Non-Recurring</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Corporate_OF__c</fullName>
+        <label>Revenue - Corporate - OF</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>One Firm</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Corporate_R__c</fullName>
+        <description>R for recurring</description>
+        <label>Revenue - Corporate - R</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Recurring</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Corporate__c</fullName>
+        <description>Prepping for deletion 5/27/26</description>
+        <label>Revenue - Corporate</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_GZERO_NR__c</fullName>
+        <label>Revenue - GZERO - NR</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>GZERO</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Non-Recurring</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_GZERO_OF__c</fullName>
+        <label>Revenue - GZERO - OF</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>GZERO</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>One Firm</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_GZERO_R__c</fullName>
+        <label>Revenue - GZERO - R</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>GZERO</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Recurring</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_GZERO__c</fullName>
+        <description>Prepping for deletion 5/27/26</description>
+        <label>Revenue - GZERO</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>GZERO</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Global_Markets__c</fullName>
+        <description>Prepping for deletion 5/27/26</description>
+        <label>Revenue - Global Markets</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Global Markets</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Gloma_NR__c</fullName>
+        <label>Revenue - Gloma - NR</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Global Markets</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Non-Recurring, Voting, Poll</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Gloma_OF__c</fullName>
+        <label>Revenue - Gloma - OF</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Global Markets</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>One Firm</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Gloma_R__c</fullName>
+        <label>Revenue - Gloma - R</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Global Markets</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Recurring</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Month_Corporate_R_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Revenue_Corporate_R__c &gt; 0, Revenue_Corporate_R__c / Number_of_months_in_Contract_term__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue/Month - Corporate - R (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revenue_Month_GZERO_R_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Revenue_GZERO_R__c &gt; 0, Revenue_GZERO_R__c / Number_of_months_in_Contract_term__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue/Month - GZERO - R (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revenue_Month_Gloma_R_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Revenue_Gloma_R__c &gt; 0, Revenue_Gloma_R__c / Number_of_months_in_Contract_term__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue/Month - Gloma - R (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revenue_Month_OOP_R_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Revenue_OOP_R__c &gt; 0, Revenue_OOP_R__c / Number_of_months_in_Contract_term__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue/Month - OOP - R (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revenue_OOP_NR__c</fullName>
+        <label>Revenue - OOP - NR</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>OOP</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Non-Recurring</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_OOP_OF__c</fullName>
+        <label>Revenue - OOP - OF</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>OOP</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>One Firm</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_OOP_R__c</fullName>
+        <label>Revenue - OOP - R</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>OOP</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Revenue_Type__c</field>
+            <operation>equals</operation>
+            <value>Recurring</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_OOP__c</fullName>
+        <description>Prepping for deletion 5/27/26</description>
+        <label>Revenue - OOP</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Business_Line__c</field>
+            <operation>equals</operation>
+            <value>OOP</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Percentage_Corporate__c</fullName>
+        <formula>Revenue_Corporate__c /  Amount</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue % - Corporate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Percentage_GZERO__c</fullName>
+        <formula>Revenue_GZERO__c / Amount</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue % - GZERO</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Percentage_Global_Markets__c</fullName>
+        <formula>Revenue_Global_Markets__c /  Amount</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue % - Global Markets</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Percentage_OOP__c</fullName>
+        <description>Prepping for deletion 5/27/26</description>
+        <formula>Revenue_OOP__c /  Amount</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue % - OOP</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Corporate_NR_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Corporate_NR__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - Corporate - NR (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Corporate_OF_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Corporate_OF__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - Corporate - OF (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Corporate_R_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Type, &apos;Renewal&apos;) ,  U_D_Annual_Value_Corporate_USD__c ,  Annualized_Value_Corporate_USD__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - Corporate - R (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Corporate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Percentage_Corporate__c  *  SLR_Amount_USD_formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - Corporate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_GZERO_NR_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_GZERO_NR__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - GZERO - NR (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_GZERO_OF_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_GZERO_OF__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - GZERO - OF (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_GZERO_R_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Type, &apos;Renewal&apos;) ,  U_D_Annual_Value_GZERO_USD__c ,  Annualized_Value_GZERO_USD__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - GZERO - R (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_GZERO__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Percentage_GZERO__c  *  SLR_Amount_USD_formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - GZERO</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Global_Markets__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Percentage_Global_Markets__c  *  SLR_Amount_USD_formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - Global Markets</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Gloma_NR_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Gloma_NR__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - Gloma - NR (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Gloma_OF_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Gloma_OF__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - Gloma - OF (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_Gloma_R_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Type, &apos;Renewal&apos;) ,  U_D_Annual_Value_Gloma_USD__c ,  Annualized_Value_Gloma_USD__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - Gloma - R (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_OOP_NR_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_OOP_NR__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - OOP - NR (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_OOP_OF_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_OOP_OF__c / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - OOP - OF (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_OOP_R_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Type, &apos;Renewal&apos;) ,  U_D_Annual_Value_OOP_USD__c ,  Annualized_Value_OOP_USD__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - OOP - R (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_OOP__c</fullName>
+        <externalId>false</externalId>
+        <formula>Revenue_Percentage_OOP__c  *  SLR_Amount_USD_formula__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount - OOP</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Amount_USD_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(RevenueType__c , &apos;Recurring&apos;) &amp;&amp; (ISPICKVAL(Type, &apos;New Sale&apos; ) || ISPICKVAL(Type, &apos;Trial Conversion&apos; )) ,  Annualized_Value_USD__c , IF(ISPICKVAL(RevenueType__c , &apos;Recurring&apos;) &amp;&amp; ISPICKVAL(Type, &apos;Renewal&apos;) , UpSell_DownSell_Annualized_Value_USD__c , Contract_Amount_USD__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Formula_test__c</fullName>
+        <formula>IsWon  &amp;&amp;  NOT Bypass_Stage_Win_Automations__c &amp;&amp; NOT ISBLANK(Project_Code__c) &amp;&amp; Count_of_SLR_Entries__c &lt; 1 &amp;&amp;   Trigger_SLR_creation_flow__c &amp;&amp; 
+( ISPICKVAL( Approval_Status__c , &apos;Approved&apos;)  || 
+ISPICKVAL( Approval_Status__c , &apos;Pending Finance Approval&apos;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLR Formula test</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SLR_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>SLR Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Notes_from_Cassandra__c</fullName>
+        <label>SLR+ Notes from Cassandra</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SLR_Notes_from_JP__c</fullName>
+        <label>SLR+ Notes from JP</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SLR_Notes_from_Team_Review__c</fullName>
+        <label>SLR+ Notes from Team Review</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SLR_Plus_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SLR+ Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_SLR_Amount__c</fullName>
+        <description>This SLR Amount comes directly from the SLR migration</description>
+        <externalId>false</externalId>
+        <label>SLR - SLR Amount</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLR_Unique_Serial__c</fullName>
+        <label>SLR Unique Serial</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SLR_retirement_notes__c</fullName>
+        <label>SLR retirement notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sage_Intaact_Contract_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ContractId != null, Contract.ia_crm__Intacct_Contract_ID__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sage Intaact Contract Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Ops__c</fullName>
+        <label>Contract Process Owner</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account Manager</fullName>
+                    <default>false</default>
+                    <label>Account Manager</label>
+                </value>
+                <value>
+                    <fullName>Another Sales Ops Member</fullName>
+                    <default>false</default>
+                    <label>Another Sales Ops Member</label>
+                </value>
+                <value>
+                    <fullName>Jaqueline Oliveira</fullName>
+                    <default>false</default>
+                    <label>Jaqueline Oliveira</label>
+                </value>
+                <value>
+                    <fullName>Marcella Vizzotto</fullName>
+                    <default>false</default>
+                    <label>Marcella Vizzotto</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sales_Tax_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Tax Rate - dep</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scan_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT( Project_Code__c , 6)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Scan Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scope__c</fullName>
+        <inlineHelpText>Describe the scope of the opportunity.</inlineHelpText>
+        <label>Status Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>20</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Scope_of_Work_last_edit_date__c</fullName>
+        <label>Status Description - last edit date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Scope_of_Work_last_edited_by__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Description - last edited by</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scoping_and_Pitching_S_P_Credit__c</fullName>
+        <label>Scoping and Pitching (S&amp;P) Credit</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Business_Line</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Second_PV_Reporting_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Number_of_year_ends_in_contract__c &gt; 1,  TEXT(VALUE(PV_Reporting_Year__c) + 1), null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Second PV Reporting Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_to_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Send to Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities (Send to Contact)</relationshipLabel>
+        <relationshipName>Opportunities2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Senior_Advisor__c</fullName>
+        <inlineHelpText>Has a Senior Advisor been involved in this sale (either origination, doing a pitch or close meeting, etc) or been included in the contract?​</inlineHelpText>
+        <label>Senior Advisor?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Amund Vik</fullName>
+                    <default>false</default>
+                    <label>Amund Vik</label>
+                </value>
+                <value>
+                    <fullName>Catherine Ashton</fullName>
+                    <default>false</default>
+                    <label>Catherine Ashton</label>
+                </value>
+                <value>
+                    <fullName>David Gordon</fullName>
+                    <default>false</default>
+                    <label>David Gordon</label>
+                </value>
+                <value>
+                    <fullName>Diana Fox Carney</fullName>
+                    <default>false</default>
+                    <label>Diana Fox Carney</label>
+                </value>
+                <value>
+                    <fullName>Dominic Barton</fullName>
+                    <default>false</default>
+                    <label>Dominic Barton</label>
+                </value>
+                <value>
+                    <fullName>Frederic Michel</fullName>
+                    <default>false</default>
+                    <label>Frederic Michel</label>
+                </value>
+                <value>
+                    <fullName>Gerry Butts</fullName>
+                    <default>false</default>
+                    <label>Gerry Butts</label>
+                </value>
+                <value>
+                    <fullName>Kimura Ko</fullName>
+                    <default>false</default>
+                    <label>Kimura Ko</label>
+                </value>
+                <value>
+                    <fullName>Marietje Schaake</fullName>
+                    <default>false</default>
+                    <label>Marietje Schaake</label>
+                </value>
+                <value>
+                    <fullName>Mike Dempsey</fullName>
+                    <default>false</default>
+                    <label>Mike Dempsey</label>
+                </value>
+                <value>
+                    <fullName>Vuk Jeremic</fullName>
+                    <default>false</default>
+                    <label>Vuk Jeremic</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>true</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Stable_Currency_up_down_sell__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( TEXT(CurrencyIsoCode) = TEXT(Previous_Opportunity__r.CurrencyIsoCode) , 
+(Annualized_Value_OC__c -  Previous_Opportunity__r.Annualized_Value_OC__c ) /  FX_rate__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stable Currency up/down sell</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_End_date_equal__c</fullName>
+        <formula>Contract_End_Date__c  = Contract_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start End date equal</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status_Description_additions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Text added to this field will automatically be appended to the Status Description field</inlineHelpText>
+        <label>Status Description additions</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Color-coded status display of renewal status</description>
+        <externalId>false</externalId>
+        <formula>IF( Days_until_next_renewal_due__c &lt; 0 , IMAGE(&quot;https://eurasiagroup--c.na138.content.force.com/servlet/servlet.ImageServer?id=0154V000005RYLd&amp;oid=00DWL00000BtPgz&amp;lastMod=1656452847000&quot;, &quot;dark red&quot;),
+
+IF( Days_until_next_renewal_due__c &lt; 30 &amp;&amp;  Days_until_next_renewal_due__c &gt; -44, IMAGE(&quot;https://eurasiagroup--c.na138.content.force.com/servlet/servlet.ImageServer?id=0154V000005RYL4&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446538000&quot;, &quot;red&quot;), 
+
+IF( Days_until_next_renewal_due__c &lt; 60&amp;&amp;  Days_until_next_renewal_due__c &gt; 29, IMAGE(&quot;https://eurasiagroup--c.na138.content.force.com/servlet/servlet.ImageServer?id=0154V000005RYL9&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446505000&quot;, &quot;orange&quot;), 
+
+IF( Days_until_next_renewal_due__c &gt; 59 , IMAGE(&quot;https://eurasiagroup--c.na138.content.force.com/servlet/servlet.ImageServer?id=0154V000005RYLY&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446470000&quot;, &quot;green&quot;), 
+
+
+null))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subcontractor_Amount__c</fullName>
+        <description>prepped for deletion</description>
+        <label>Subcontractor Amount</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Subcontractor_Name__c</fullName>
+        <description>prepped for deletion</description>
+        <externalId>false</externalId>
+        <label>Subcontractor Name</label>
+        <length>125</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Code_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Code Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Exempt__c</fullName>
+        <formula>Customer_Id_Name__r.Tax_Exempt__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Exempt</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Taxable_Amount__c</fullName>
+        <label>Taxable Amount</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryFilterItems>
+            <field>OpportunityLineItem.Taxable__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Taxable__c</fullName>
+        <formula>Tax_Exempt__c = FALSE &amp;&amp; Estimated_Sales_Tax_Amount__c &gt; 0 &amp;&amp; 
+(  ia_crm__Bill_to__r.MailingState = &apos;DC&apos; ||  ia_crm__Bill_to__r.MailingState = &apos;NY&apos; || ia_crm__Bill_to__r.MailingState = &apos;CT&apos; || ia_crm__Bill_to__r.MailingState = &apos;PA&apos; || ia_crm__Bill_to__r.MailingState = &apos;TX&apos; ||ia_crm__Bill_to__r.MailingState = &apos;WA&apos; ||ia_crm__Bill_to__r.MailingState = &apos;WI&apos; || ia_crm__Bill_to__r.MailingState = &apos;NJ&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Taxable</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Territory_Strategy__c</fullName>
+        <label>Territory Strategy</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>GCC</fullName>
+                    <default>false</default>
+                    <label>GCC</label>
+                </value>
+                <value>
+                    <fullName>ASEAN</fullName>
+                    <default>false</default>
+                    <label>ASEAN</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Todays_Date__c</fullName>
+        <description>This field is created to give proper date display in Outlaw integration</description>
+        <externalId>false</externalId>
+        <formula>CASE(MONTH(  TODAY() ),
+1, &quot;January&quot;,
+2, &quot;February&quot;,
+3, &quot;March&quot;, 
+4, &quot;April&quot;, 
+5, &quot;May&quot;, 
+6, &quot;June&quot;,
+7, &quot;July&quot;,
+8, &quot;August&quot;,
+9, &quot;September&quot;,
+10, &quot;October&quot;,
+11, &quot;November&quot;,
+12, &quot;December&quot;,
+&quot;None&quot;) 
+&amp; &quot; &quot; &amp; TEXT(DAY(TODAY()))
+&amp; &quot;, &quot; &amp;
+TEXT(YEAR( TODAY()))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today&apos;s Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tracked_Fields_Last_Change_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>This field captures the last date that a field history record was created. Field history tracks the &apos;relevant&apos; field changes that indicate a user has made a change that represents that the oppty is being worked.</description>
+        <label>Tracked Fields Last Change Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Transfer_Bill_to_City_to_Account__c</fullName>
+        <description>Supports the Sage Intacct integration</description>
+        <formula>IF(  NOT ISBLANK(ia_crm__Bill_to__r.MailingCity) &amp;&amp; ISBLANK(Account.BillingCity), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Transfer Bill to City to Account</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Trial_End_Date__c</fullName>
+        <inlineHelpText>If you need to adjust your trial dates, please email sales ops</inlineHelpText>
+        <label>Trial End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Trial_Notes__c</fullName>
+        <label>Trial Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Trial_Period__c</fullName>
+        <externalId>false</externalId>
+        <formula>Trial_End_Date__c -  Trial_Start_Date__c</formula>
+        <label>Trial Period (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trial_Start_Date__c</fullName>
+        <description>Field that holds the old Trial Start Date values</description>
+        <label>Trial Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Trial_Status__c</fullName>
+        <label>Trial Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending Owner Review</fullName>
+                    <default>false</default>
+                    <label>Pending Owner Review</label>
+                </value>
+                <value>
+                    <fullName>Pending Manager approval</fullName>
+                    <default>false</default>
+                    <label>Pending Manager approval</label>
+                </value>
+                <value>
+                    <fullName>Active Trial</fullName>
+                    <default>false</default>
+                    <label>Active Trial</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Trigger_PV_Entry_flow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Trigger PV Entry flow</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Trigger_Rollup__c</fullName>
+        <label>Trigger Rollup</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Trigger_SLR_creation_flow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Trigger SLR creation flow</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Trigger_new_SLR_Process__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Trigger new SLR Process</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>U_D_Amt_Corporate__c</fullName>
+        <description>Prepping for deletion 5/27/26</description>
+        <externalId>false</externalId>
+        <formula>IF( (ISPICKVAL(Type,&apos;Renewal&apos;) &amp;&amp; NOT ISBLANK(Previous_Opportunity__c)), PV_Corporate__c - Previous_Opportunity__r.PV_Corporate__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Amt Corporate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Amt_GZERO__c</fullName>
+        <description>U_D_Amt_Corporate__c</description>
+        <externalId>false</externalId>
+        <formula>IF( (ISPICKVAL(Type,&apos;Renewal&apos;) &amp;&amp; NOT ISBLANK(Previous_Opportunity__c)) ,
+  PV_GZERO__c - Previous_Opportunity__r.PV_GZERO__c ,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Amt GZERO</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Amt_Global_Markets__c</fullName>
+        <description>U_D_Amt_Corporate__c</description>
+        <externalId>false</externalId>
+        <formula>IF( (ISPICKVAL(Type,&apos;Renewal&apos;) &amp;&amp; NOT ISBLANK(Previous_Opportunity__c)) ,
+ PV_Global_Markets__c - Previous_Opportunity__r.PV_Global_Markets__c ,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Amt Global Markets</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Amt_OOP__c</fullName>
+        <description>U_D_Amt_Corporate__c</description>
+        <externalId>false</externalId>
+        <formula>IF( (ISPICKVAL(Type,&apos;Renewal&apos;) &amp;&amp; NOT ISBLANK(Previous_Opportunity__c)) ,
+  PV_OOP__c - Previous_Opportunity__r.PV_OOP__c  ,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Amt OOP</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Annual_Value_Corporate_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Annualized_Value_Corporate_OC__c - Previous_Opportunity__r.Annualized_Value_Corporate_OC__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Annual Value - Corporate (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Annual_Value_Corporate_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Annualized_Value_Corporate_USD__c - Previous_Opportunity__r.Annualized_Value_Corporate_USD__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Annual Value - Corporate (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Annual_Value_GZERO_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Annualized_Value_GZERO_OC__c - Previous_Opportunity__r.Annualized_Value_GZERO_OC__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Annual Value - GZERO (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Annual_Value_GZERO_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Annualized_Value_GZERO_USD__c - Previous_Opportunity__r.Annualized_Value_GZERO_USD__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Annual Value - GZERO (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Annual_Value_Gloma_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Annualized_Value_Gloma_OC__c - Previous_Opportunity__r.Annualized_Value_Gloma_OC__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Annual Value - Gloma (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Annual_Value_Gloma_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Annualized_Value_Gloma_USD__c - Previous_Opportunity__r.Annualized_Value_Gloma_USD__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Annual Value - Gloma (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Annual_Value_OOP_OC__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Annualized_Value_OOP_OC__c - Previous_Opportunity__r.Annualized_Value_OOP_OC__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Annual Value - OOP (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>U_D_Annual_Value_OOP_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(Previous_Opportunity__c), Annualized_Value_OOP_USD__c - Previous_Opportunity__r.Annualized_Value_OOP_USD__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>U/D Annual Value - OOP (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unpaid_Trial_Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(IsClosed = FALSE &amp;&amp; 
+    Account.Count_of_Open_Renewals_Opportunities__c = 0 &amp;&amp; 
+    Account.Count_of_Active_Contracts__c = 0 &amp;&amp; 
+ Account.Count_of_Enabled_Contacts__c &gt; 0 &amp;&amp;
+    NOT(ISPICKVAL(Account.Type, &quot;Media&quot;)) &amp;&amp;  
+    NOT(ISPICKVAL(Account.Type, &quot;Friend of Firm&quot;)) &amp;&amp;  
+    NOT(ISPICKVAL(Account.Type, &quot;Friend of Ian&quot;)) &amp;&amp; 
+    NOT(ISPICKVAL(Account.Type, &quot;Client&quot;)) &amp;&amp; 
+    NOT(ISPICKVAL(Type, &quot;Renewal&quot;)) &amp;&amp;  
+    NOT(ISPICKVAL(Type, &quot;Voting&quot;)) &amp;&amp; 
+    NOT(ISPICKVAL(Type, &quot;Vote Invoice Request&quot;)) &amp;&amp; 
+    NOT(ISPICKVAL(Business_Line__c, &quot;GZERO&quot;)) &amp;&amp; 
+    NOT(ISPICKVAL(Business_Line__c, &quot;OOP&quot;)), &quot;Yes&quot;, TEXT(Unpaid_Trial_Opportunity_history__c))</formula>
+        <label>Unpaid Trial Opportunity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unpaid_Trial_Opportunity_history__c</fullName>
+        <description>used to hold a static value of unpaid trial oppty when oppty closes</description>
+        <label>Unpaid Trial Opportunity history</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Type</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>New Sale</controllingFieldValue>
+                <controllingFieldValue>Trial Conversion</controllingFieldValue>
+                <controllingFieldValue>Renewal</controllingFieldValue>
+                <controllingFieldValue>Voting</controllingFieldValue>
+                <valueName>No</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>New Sale</controllingFieldValue>
+                <valueName>Yes</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>UpSellDownSellAmount_OC__c</fullName>
+        <description>Net Sale Amount displays the difference between this Opportunity amount and the Previous Opportunity Amount</description>
+        <externalId>false</externalId>
+        <formula>IF( (ISPICKVAL(Type,&apos;Renewal&apos;) &amp;&amp; NOT ISBLANK(Previous_Opportunity__c)) , Amount  -  Previous_Opportunity__r.Amount, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Net Sale Amount displays the difference between this Opportunity amount and the Previous Opportunity Amount.  If there is no Previous Opportunity then Net Sale equals this Opportunity amount.</inlineHelpText>
+        <label>UpSell/DownSell Amount (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UpSell_DownSell_Amount_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>UpSellDownSellAmount_OC__c  / FX_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UpSell/DownSell Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UpSell_DownSell_Annualized_Recurring__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( RevenueType__c ,&apos;Recurring&apos;) &amp;&amp; NOT ISPICKVAL( Type ,&apos;New Sale&apos;) &amp;&amp; NOT ISPICKVAL( Type ,&apos;Trial Conversion&apos;) &amp;&amp; NOT ISBLANK(Previous_Opportunity__c),  Annualized_Value_USD_Recurring__c  -  Previous_Opportunity__r.Annualized_Value_USD_Recurring__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UpSell/DownSell- Annualized (Recurring)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UpSell_DownSell_Annualized_Value_OC__c</fullName>
+        <formula>IF( ISPICKVAL( RevenueType__c ,&apos;Recurring&apos;) &amp;&amp; NOT ISPICKVAL( Type ,&apos;New Sale&apos;) &amp;&amp; NOT ISPICKVAL( Type ,&apos;Trial Conversion&apos;)
+,  Annualized_Value_OC__c - Previous_Opportunity__r.Annualized_Value_OC__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UpSell/DownSell - Annualized Value (OC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>UpSell_DownSell_Annualized_Value_USD__c</fullName>
+        <externalId>false</externalId>
+        <formula>U_D_Annual_Value_Corporate_USD__c +  U_D_Annual_Value_Gloma_USD__c +  U_D_Annual_Value_GZERO_USD__c +  U_D_Annual_Value_OOP_USD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UpSell/DownSell - Annualized Value (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UpSell_DownSell_Expected_Revenue__c</fullName>
+        <formula>Probability *  UpSellDownSellAmount_OC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UpSell/DownSell Expected Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Update__c</fullName>
+        <label>Update for Maziar</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Update_to_Closed_Aged_out__c</fullName>
+        <formula>NOT IsClosed &amp;&amp; Age__c &gt; 360 &amp;&amp; Days_since_last_touched__c &gt; 90 &amp;&amp; Days_past_Close_Date__c &gt; 30 &amp;&amp; ISPICKVAL(Type, &apos;New Sale&apos;) &amp;&amp; AccountId  &lt;&gt;  &apos;00130000016FGqUAAW&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Update to Closed/Aged out</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Voting__c</fullName>
+        <formula>Number_of_Voting_Products__c &gt; 0</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Voting</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Won_60_days_in_advance__c</fullName>
+        <formula>IF(
+  IsWon = TRUE,
+  Days_Between_Close_Date_and_Current_Star__c &lt;= 60,
+  FALSE
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Won 60 days in advance</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>fr_PricebookId__c</fullName>
+        <description>Used to initiate Cloning Flow - Do not delete</description>
+        <externalId>false</externalId>
+        <formula>Pricebook2Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>fr_PricebookId</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

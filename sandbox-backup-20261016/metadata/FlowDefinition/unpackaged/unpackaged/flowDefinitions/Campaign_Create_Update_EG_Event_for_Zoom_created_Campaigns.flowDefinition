@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>9</activeVersionNumber>
+    <description>For Zoom Webinar Campaigns created by the ZFusion app, this flow will -
+Update related to the eg event record OR
+Create one if one doesn&apos;t already exist 
+based on zoom webinar id</description>
+    <masterLabel>Campaign: Create/Update EG Event for Zoom-created Campaigns</masterLabel>
+</FlowDefinition>

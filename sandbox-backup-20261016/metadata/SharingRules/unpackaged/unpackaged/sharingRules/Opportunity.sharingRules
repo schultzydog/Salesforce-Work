@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>GZERO_Oppty_shares</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GZERO Oppty shares</label>
+        <sharedTo>
+            <group>GZERO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Line__c</field>
+            <operation>equals</operation>
+            <value>GZERO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Gloma_Oppty_Shares</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Gloma Oppty Shares</label>
+        <sharedTo>
+            <group>Gloma</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Business_Line__c</field>
+            <operation>equals</operation>
+            <value>Global Markets</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>One_Firm_Oppty_Shares</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>One Firm Oppty Shares</label>
+        <sharedTo>
+            <group>One_Firm_Opportunity_Owners</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>One_Firmdep__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Baena_Share</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Baena Share</label>
+        <sharedTo>
+            <group>Diogo_shares</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Jonathan_Baena</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Gerry_Shares</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Gerry Shares</label>
+        <sharedTo>
+            <group>Gerry_Sharers</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Gerry_Butts</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>OOP_Tracking</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>OOP Tracking</label>
+        <sharedTo>
+            <group>OOP</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

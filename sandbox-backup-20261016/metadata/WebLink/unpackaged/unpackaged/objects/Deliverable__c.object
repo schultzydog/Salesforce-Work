@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Notify_Oppty_Owner_Team</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Notify Oppty Owner and Project Lead</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/flow/Deliverable_Notify_Oppty_Team?deliverableId={!Deliverable__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Notify_Research</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Notify Research</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/Deliverable_Notify_Research?deliverableId={!Deliverable__c.Id}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BDSFEntityMappingClient</members>
+        <members>ClientPortal</members>
+        <members>FontAwesomePro</members>
+        <members>Fonts_SalesforceSans</members>
+        <members>Home_Banner</members>
+        <members>Home_Survey</members>
+        <members>RiskDasboardPDF</members>
+        <members>SANDBOX_REFRESH_LIBRARY_DL</members>
+        <members>SANDBOX_REFRESH_LIBRARY_DLC</members>
+        <members>SANDBOX_REFRESH_LIBRARY_DLSUBCAT</members>
+        <members>SANDBOX_REFRESH_PROJECT</members>
+        <members>SANDBOX_REFRESH_PROJECT_TASK</members>
+        <members>SNA_Client_Portal1_sf_default_cdn_DIvjw</members>
+        <members>SNA_Contact_Preferences1_sf_default_cdn_DHRMR</members>
+        <members>SNA_Survey_Host1_sf_default_cdn_nVUXW</members>
+        <members>SiteSamples</members>
+        <members>egLogo</members>
+        <members>favicon</members>
+        <members>plotly</members>
+        <members>subscribelogo</members>
+        <name>StaticResource</name>
+    </types>
+    <version>62.0</version>
+</Package>

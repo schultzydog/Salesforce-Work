@@ -1,0 +1,5 @@
+Customer Id Name: {!Customer_Id__c.Name}
+Account: {!Customer_Id__c.Account__c}
+
+
+Please log in to review and approve the Customer Id here: {!Customer_Id__c.Link}

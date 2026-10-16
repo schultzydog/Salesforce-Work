@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Conference_Call__c</fullName>
+        <label>Conference Call</label>
+        <referenceTo>Conference_Call__c</referenceTo>
+        <relationshipName>Conference_Call_Attendees</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Department</label>
+        <referenceTo>Department__c</referenceTo>
+        <relationshipLabel>Conference Call Speakers</relationshipLabel>
+        <relationshipName>Conference_Call_Speakers</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Speaker_Company__c</fullName>
+        <externalId>false</externalId>
+        <formula>Speaker__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Speaker Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Speaker_Department__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Speaker_User__r.Department__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Speaker Department</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Speaker_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Speaker__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Speaker Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Speaker_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Speaker User</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>User.IsActive</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Conference_Call_Speakers</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Speaker__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Speaker</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.AccountName__c</field>
+                <operation>equals</operation>
+                <value>Eurasia Group</value>
+            </filterItems>
+            <filterItems>
+                <field>Contact.Email</field>
+                <operation>contains</operation>
+                <value>eurasiagroup</value>
+            </filterItems>
+            <filterItems>
+                <field>Contact.Status__c</field>
+                <operation>equals</operation>
+                <value>Enabled</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Conference Call Speakers</relationshipLabel>
+        <relationshipName>Conference_Call_Speakers</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>

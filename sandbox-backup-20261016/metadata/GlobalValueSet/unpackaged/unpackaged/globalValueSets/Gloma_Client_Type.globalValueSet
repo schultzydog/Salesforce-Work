@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alternative Investment</fullName>
+        <default>false</default>
+        <label>Alternative Investment</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Manager</fullName>
+        <default>false</default>
+        <label>Asset Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank</fullName>
+        <default>false</default>
+        <label>Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Hedge Fund</fullName>
+        <default>false</default>
+        <label>Hedge Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Pension Fund</fullName>
+        <default>false</default>
+        <label>Pension Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Equity</fullName>
+        <default>false</default>
+        <label>Private Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Wealth/Family Office</fullName>
+        <default>false</default>
+        <label>Private Wealth/Family Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate</fullName>
+        <default>false</default>
+        <label>Real Estate</label>
+    </customValue>
+    <customValue>
+        <fullName>Sovereign Wealth Fund</fullName>
+        <default>false</default>
+        <label>Sovereign Wealth Fund</label>
+    </customValue>
+    <masterLabel>Gloma Client Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

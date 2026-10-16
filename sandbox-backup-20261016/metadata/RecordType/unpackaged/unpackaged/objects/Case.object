@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Default</fullName>
+        <active>true</active>
+        <businessProcess>Sales</businessProcess>
+        <label>Default</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Client requests in WF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EG Portal Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Publication Replies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF%2FWF Support Requests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales ops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Billing Cycle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loss Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Address Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Billing Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Contact Information</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Interview Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

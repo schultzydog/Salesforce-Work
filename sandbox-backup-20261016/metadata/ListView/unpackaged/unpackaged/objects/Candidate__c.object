@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Current_Role_Title__c</columns>
+        <columns>Leader__c</columns>
+        <columns>Primary_Practice_Area__c</columns>
+        <columns>Affiliation_Company__c</columns>
+        <columns>EG_Equivalent_Level__c</columns>
+        <columns>Location__c</columns>
+        <columns>Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

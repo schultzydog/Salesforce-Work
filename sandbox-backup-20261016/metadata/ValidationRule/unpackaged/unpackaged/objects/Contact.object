@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Account_Disabled_Contact_Disabled</fullName>
+        <active>true</active>
+        <description>Checks the related Account - if it is in a Disabled Status the Contact must also be Disabled</description>
+        <errorConditionFormula>AND( 
+ISPICKVAL( 
+Account.Status_Enable_Disable__c , &quot;Disabled&quot;), 
+ISPICKVAL( 
+Status__c , &quot;Enabled&quot;))</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>The Account this Contact belongs to is Disabled. Contacts cannot be Enabled unless their Account is also Enabled.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Conf_Call_Access_must_be_enabled_at_acct</fullName>
+        <active>true</active>
+        <errorConditionFormula>Conference_Call_Access__c &amp;&amp; !Account.Conference_Call_Access__c  &amp;&amp; ISPICKVAL( Status__c , &apos;Enabled&apos;)</errorConditionFormula>
+        <errorDisplayField>Conference_Call_Access__c</errorDisplayField>
+        <errorMessage>Conference Call Access must be enabled at the Account level to allow Contact Conference Call Access</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contact_requires_Account</fullName>
+        <active>true</active>
+        <errorConditionFormula>AccountId = null</errorConditionFormula>
+        <errorMessage>Contacts require an Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Deliver_Full_Content_Email_validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>Deliver_Full_Content_Emails__c = FALSE &amp;&amp; ISPICKVAL(Status__c, &apos;Enabled&apos;) &amp;&amp; Press_User__c = FALSE &amp;&amp; (Worldflow_Portal_Access__c = FALSE ||  ISPICKVAL(Contact_Type__c, &apos;Research Robot&apos;))</errorConditionFormula>
+        <errorMessage>Must have portal access to disable full content emails
+
+Research Robots cannot have full content emails disabled</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EG_Update_Lowercase</fullName>
+        <active>true</active>
+        <errorConditionFormula>eg_update_name__c  &lt;&gt;  LOWER( eg_update_name__c )</errorConditionFormula>
+        <errorDisplayField>eg_update_name__c</errorDisplayField>
+        <errorMessage>EG Update Name must only contain lowercase letters.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Email_Access_must_be_enabled_at_Account</fullName>
+        <active>true</active>
+        <errorConditionFormula>Worldflow_Email_Access__c &amp;&amp; !Account.Email_Access__c &amp;&amp;  ISPICKVAL( Status__c , &apos;Enabled&apos;)</errorConditionFormula>
+        <errorDisplayField>Worldflow_Email_Access__c</errorDisplayField>
+        <errorMessage>Worldflow Email Access must be enabled at the Account level before you can grant Worldflow Email Access at the Contact level</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Enabled_contacts_require_enabled_account</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(  Account.Status_Enable_Disable__c , &apos;Disabled&apos;)
+&amp;&amp;  ISPICKVAL( Status__c , &apos;Enabled&apos;)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Account Status must be Enabled to allow Contact Status to be Enabled</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Ian_must_stay_on_Full_Content_emails</fullName>
+        <active>true</active>
+        <errorConditionFormula>Email = &apos;bremmer@eurasiagroup.net&apos; &amp;&amp;  Deliver_Full_Content_Emails__c = false</errorConditionFormula>
+        <errorDisplayField>Deliver_Full_Content_Emails__c</errorDisplayField>
+        <errorMessage>Ian must be left on for full content emails</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Portal_Access_must_be_Enabled_on_Account</fullName>
+        <active>true</active>
+        <errorConditionFormula>Worldflow_Portal_Access__c  &amp;&amp;  !Account.Portal_Access__c &amp;&amp;  ISPICKVAL( Status__c , &apos;Enabled&apos;)</errorConditionFormula>
+        <errorMessage>Portal Access must be enabled at the Account level to allow Contact Portal Access</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Portal_Contacts_must_have_emails</fullName>
+        <active>true</active>
+        <description>Contacts cannot be given portal access unless they have an email to log in with</description>
+        <errorConditionFormula>ISPICKVAL(Status__c, &apos;Enabled&apos;)  &amp;&amp;  ISBLANK(Email) &amp;&amp;  $Profile.Name &lt;&gt; &apos;System Administrator&apos; &amp;&amp; !Batch_apex_job_is_running__c &amp;&amp;  Worldflow_Portal_Access__c</errorConditionFormula>
+        <errorMessage>Email must be provided to enable a contact in the portal</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Press_Users_no_Portal_Access</fullName>
+        <active>true</active>
+        <errorConditionFormula>Press_User__c &amp;&amp;  Worldflow_Portal_Access__c</errorConditionFormula>
+        <errorMessage>Press Users are not permitted to have Portal Acces</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Press_users_no_conf_call_access</fullName>
+        <active>true</active>
+        <errorConditionFormula>Press_User__c &amp;&amp; Conference_Call_Access__c</errorConditionFormula>
+        <errorDisplayField>Conference_Call_Access__c</errorDisplayField>
+        <errorMessage>Press Users are not permitted to have Conference Call Acces</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_Edit_by_Integration_user</fullName>
+        <active>true</active>
+        <errorConditionFormula>( $User.Username = &apos;(integrationuser@eurasiagroup.net&apos;  || CONTAINS( $User.FirstName , &apos;integration&apos;) || CONTAINS( $User.LastName , &apos;integration&apos;) || $User.Username = &apos;(b2bmaintegration@00d30000001i5aweas.ext&apos;) 
+
+
+ &amp;&amp;(  ISCHANGED(Status__c) || 
+ISCHANGED( Worldflow_Portal_Access__c ) || 
+ISCHANGED( Worldflow_Email_Access__c ) ||
+ISCHANGED( Title ) ||
+ISCHANGED( Department ) ||
+ISCHANGED(  Contact_Type__c ) ||
+ISCHANGED(  Press_User__c ) ||
+ISCHANGED(   MailingCountry ) ||
+ISCHANGED(   MailingState ) ||
+ISCHANGED(   MailingPostalCode ) ||
+ISCHANGED(   MailingStreet) ||
+ISCHANGED(   Phone) ||
+ISCHANGED( Email ) )</errorConditionFormula>
+        <errorMessage>Pardot User can only edit Pardot fields</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_City_Country_if_Enabled</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ISBLANK(MailingCity),
+ISBLANK(MailingCountry),
+$Profile.Name!=&apos;Client Portal (External)&apos;,
+NOT(Contains($Profile.Name , &apos;Admin&apos;)),
+NOT(Contains($Profile.Name , &apos;Finance&apos;)),
+NOT(Contains($Profile.Name , &apos;Integration&apos;)),
+ISPICKVAL(Status__c, &apos;Enabled&apos;),
+ISPICKVAL( Account.Type , &apos;Client&apos;),
+NOT( Account.Name = &apos;Eurasia Group&apos;),
+NOT(Contains($Profile.Name , &apos;Contact Preferences Profile&apos;)),
+NOT ISCHANGED( Conference_Call_Access__c ),
+ISCHANGED( Status__c) 
+)</errorConditionFormula>
+        <errorDisplayField>MailingCity</errorDisplayField>
+        <errorMessage>City is required to save a contact</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>eg_update_name_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Status__c , &apos;Enabled&apos;) &amp;&amp; NOT ISBLANK(FirstName) &amp;&amp; NOT ISNULL(FirstName) &amp;&amp; (ISNULL(eg_update_name__c ) || ISBLANK(eg_update_name__c  ))</errorConditionFormula>
+        <errorDisplayField>eg_update_name__c</errorDisplayField>
+        <errorMessage>eg update name is required for Enabled contacts</errorMessage>
+    </validationRules>
+</CustomObject>

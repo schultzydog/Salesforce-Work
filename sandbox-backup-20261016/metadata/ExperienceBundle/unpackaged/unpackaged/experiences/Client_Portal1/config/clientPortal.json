@@ -1,0 +1,15 @@
+{
+  "authenticationType" : "AUTHENTICATED",
+  "forgotPasswordRouteId" : null,
+  "isFilteredComponentsView" : false,
+  "isProgressiveRenderingEnabled" : false,
+  "mainAppPageId" : "b82c533e-f9b2-43a4-b6ea-72afea6fed42",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : null,
+  "trustedSitesForIFrame" : [ {
+    "id" : "d2546118-b148-4f9d-8a6c-0eadda4d9d91",
+    "trustedDomainsForInlineFrames" : [ ],
+    "type" : "trustedSitesForIFrame"
+  } ],
+  "type" : "site"
+}

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Top_Risk_Entry_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Custom</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Custom</fullName>
+        <fields>Name</fields>
+        <fields>Dep_Lead_analyst_POC__c</fields>
+        <fields>CreatedById</fields>
+        <fields>Risk_or_red_herring__c</fields>
+        <label>Custom</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Additional_contributors__c</fullName>
+        <label>Additional contributors</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Analyst</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contingent_on_the_US_election_outcome__c</fullName>
+        <label>Contingent on the US election outcome?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes, on a Trump win</fullName>
+                    <default>false</default>
+                    <label>Yes, on a Trump win</label>
+                </value>
+                <value>
+                    <fullName>Yes, on a Harris win</fullName>
+                    <default>false</default>
+                    <label>Yes, on a Harris win</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Dep_Lead_analyst_POC__c</fullName>
+        <label>Dep-Lead analyst/POC</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Analyst</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Dep_Practice_s__c</fullName>
+        <label>Dep-Practice(s)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Africa</fullName>
+                    <default>false</default>
+                    <label>Africa</label>
+                </value>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>Brazil</label>
+                </value>
+                <value>
+                    <fullName>China &amp; Northeast Asia</fullName>
+                    <default>false</default>
+                    <label>China &amp; Northeast Asia</label>
+                </value>
+                <value>
+                    <fullName>Energy, Climate, and Resources</fullName>
+                    <default>false</default>
+                    <label>Energy, Climate, and Resources</label>
+                </value>
+                <value>
+                    <fullName>Eurasia</fullName>
+                    <default>false</default>
+                    <label>Eurasia</label>
+                </value>
+                <value>
+                    <fullName>Europe</fullName>
+                    <default>false</default>
+                    <label>Europe</label>
+                </value>
+                <value>
+                    <fullName>Financial Institutions Group</fullName>
+                    <default>false</default>
+                    <label>Financial Institutions Group</label>
+                </value>
+                <value>
+                    <fullName>Geo-technology</fullName>
+                    <default>false</default>
+                    <label>Geo-technology</label>
+                </value>
+                <value>
+                    <fullName>Global Macro</fullName>
+                    <default>false</default>
+                    <label>Global Macro</label>
+                </value>
+                <value>
+                    <fullName>Global Macro - Geoeconomics</fullName>
+                    <default>false</default>
+                    <label>Global Macro - Geoeconomics</label>
+                </value>
+                <value>
+                    <fullName>Global Macro - Geopolitics</fullName>
+                    <default>false</default>
+                    <label>Global Macro - Geopolitics</label>
+                </value>
+                <value>
+                    <fullName>Global Macro - Geostrategy</fullName>
+                    <default>false</default>
+                    <label>Global Macro - Geostrategy</label>
+                </value>
+                <value>
+                    <fullName>Healthcare</fullName>
+                    <default>false</default>
+                    <label>Healthcare</label>
+                </value>
+                <value>
+                    <fullName>Industrials &amp; Consumer</fullName>
+                    <default>false</default>
+                    <label>Industrials &amp; Consumer</label>
+                </value>
+                <value>
+                    <fullName>Latin America</fullName>
+                    <default>false</default>
+                    <label>Latin America</label>
+                </value>
+                <value>
+                    <fullName>Middle East &amp; North Africa</fullName>
+                    <default>false</default>
+                    <label>Middle East &amp; North Africa</label>
+                </value>
+                <value>
+                    <fullName>South Asia</fullName>
+                    <default>false</default>
+                    <label>South Asia</label>
+                </value>
+                <value>
+                    <fullName>Southeast Asia</fullName>
+                    <default>false</default>
+                    <label>Southeast Asia</label>
+                </value>
+                <value>
+                    <fullName>United States</fullName>
+                    <default>false</default>
+                    <label>United States</label>
+                </value>
+                <value>
+                    <fullName>-- Other -- if other then open up a text field for write-in</fullName>
+                    <default>false</default>
+                    <label>-- Other -- if other then open up a text field for write-in</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Explain_why_it_should_be_considered__c</fullName>
+        <label>Explain why it should be considered</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>If_Other_please_describe__c</fullName>
+        <externalId>false</externalId>
+        <label>If &apos;Other&apos;, please describe</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>If_Trend_why_should_we_include_it__c</fullName>
+        <label>If &apos;Trend&apos;, why include this year?</label>
+        <length>1200</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Is_it_consensus__c</fullName>
+        <label>Is it consensus?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_the_risk_base_case__c</fullName>
+        <label>Is the risk base case?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_this_a_2025_or_a_trend__c</fullName>
+        <label>Is this a 2026 risk or a trend?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>2026</fullName>
+                    <default>false</default>
+                    <label>2026</label>
+                </value>
+                <value>
+                    <fullName>Trend</fullName>
+                    <default>false</default>
+                    <label>Trend</label>
+                </value>
+                <value>
+                    <fullName>2024</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>2024</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lead_analyst_POC__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Lead analyst/POC</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Top_Risk_submissions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Practices__c</fullName>
+        <label>Practice(s)</label>
+        <length>1200</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Risk_or_red_herring__c</fullName>
+        <label>Risk or red herring?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Risk</fullName>
+                    <default>false</default>
+                    <label>Risk</label>
+                </value>
+                <value>
+                    <fullName>Red herring</fullName>
+                    <default>false</default>
+                    <label>Red herring</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>So_what_for_markets_or_geopolitics__c</fullName>
+        <label>So what for markets and/or geopolitics?</label>
+        <length>1200</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>false</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>true</default>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>Selected for Review</fullName>
+                    <default>false</default>
+                    <label>Selected for Review</label>
+                </value>
+                <value>
+                    <fullName>Candidate for Inclusion</fullName>
+                    <default>false</default>
+                    <label>Candidate for Inclusion</label>
+                </value>
+                <value>
+                    <fullName>Delete Draft</fullName>
+                    <default>false</default>
+                    <label>Delete Draft</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>What_is_the_risk_in_1_3_sentences__c</fullName>
+        <label>What is the risk, in 1-3 sentences?</label>
+        <length>1200</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Whats_our_counter_consensus_base_case__c</fullName>
+        <label>What’s our counter-consensus base case?</label>
+        <length>1200</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Whats_the_overhyped_view_narrative__c</fullName>
+        <label>What’s the overhyped view/narrative?</label>
+        <length>1200</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Top Risk submission</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Additional_contributors__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Proposed title</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Top Risk submissions</pluralLabel>
+    <profileSearchLayouts>
+        <fields>NAME</fields>
+        <fields>Risk_or_red_herring__c</fields>
+        <fields>Status__c</fields>
+        <fields>Dep_Lead_analyst_POC__c</fields>
+        <fields>Additional_contributors__c</fields>
+        <profileName>Research</profileName>
+    </profileSearchLayouts>
+    <searchLayouts>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>NewFromDocument</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Import</excludedStandardButtons>
+        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <sharingReasons>
+        <fullName>Share_with_Lead_analyst__c</fullName>
+        <label>Share with Lead analyst</label>
+    </sharingReasons>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>BCT_Year</fullName>
+        <categories>BCT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BCT Year</shortDescription>
+        <value>2026</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Preferences_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Preferences Help Text</shortDescription>
+        <value>Below you can manage your email preferences.  &quot;Email Alerts&quot; checked means you&apos;ll receive an email each time we publish a piece of content on the corresponding topic/title.  &quot;Include in Daily Summary&quot; checked means you&apos;ll receive this topic in your once-per-day email summary of content published in the previous 24 hours.  If you see &quot;N/A&quot; instead of a check-box, it means that topic/title is not entitled to your account.
+Please allow two hours for changes to register across our systems.</value>
+    </labels>
+    <labels>
+        <fullName>Morning_Meeting_instructions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Morning Meeting instructions</shortDescription>
+        <value>Morning meeting note submission</value>
+    </labels>
+    <labels>
+        <fullName>Timesheet_Metrics_Compliance_Score_Help</fullName>
+        <categories>Time</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Timesheet Metrics Compliance Score Help</shortDescription>
+        <value>% of your weekly time cards for this fiscal year that are in compliance (I.e. have at least 40hrs logged)</value>
+    </labels>
+    <labels>
+        <fullName>Timesheets_Project_Task_Guidance</fullName>
+        <categories>Time</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Timesheets Project &amp; Task Guidance</shortDescription>
+        <value>&lt;b&gt;Timesheet basics:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Log time directly to clients and prospects.&lt;/b&gt; Avoid using general categories whenever possible.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Use 15-minute increments (.25)&lt;/b&gt; to accurately capture time spent on specific clients.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Unsure where to log time?&lt;/b&gt; Check the &lt;a href=&quot;https://eurasiagroup.sharepoint.com/:x:/s/Internal/IQBK8-yv0jwPSrD6chGPYXf3AY1OMTaBxV-ldQpWhD5RDkU&quot; target=&quot;_blank&quot;&gt;category guidance&lt;/a&gt;, reference the &lt;a href=&quot;https://eurasiagroup.sharepoint.com/:w:/s/Internal/IQAxwrfspn6-Q4cJGwcPev7kAfV6bOrucxrp-XVRkp04kZM&quot; target=&quot;_blank&quot;&gt;cheat sheet&lt;/a&gt;, or ask the &lt;a href=&quot;https://app.cassidyai.com/chat?aid=cmon56eyn001lqj011lj3wyny&amp;oid=cmbfd6gti00zr3f25cgctc0ew&quot; target=&quot;_blank&quot;&gt;Cassidy Timesheet Bot&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Still unclear?&lt;/b&gt; Don&apos;t guess. Contact the account manager, your supervisor, or Christina Wehrmann.&lt;/li&gt;
+&lt;/ul&gt;</value>
+    </labels>
+</CustomLabels>

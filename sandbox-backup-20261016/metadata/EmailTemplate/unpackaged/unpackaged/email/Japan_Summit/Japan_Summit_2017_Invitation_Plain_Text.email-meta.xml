@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>Shift_JIS</encodingKey>
+    <name>Japan Summit 2017 Invitation Plain Text</name>
+    <style>none</style>
+    <subject>ユーラシア・グループ：地政学サミットへのご招待 (10月26日)</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

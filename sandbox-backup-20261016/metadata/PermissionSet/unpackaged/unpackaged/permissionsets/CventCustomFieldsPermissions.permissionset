@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provides an access to the custom fields created via Metadata Sync for the Cvent App.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Cvent - Custom Fields Permissions</label>
+</PermissionSet>

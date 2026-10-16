@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>Deliverable_Send_Notice</flowApiName>
+    <label>Test send notice</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;Analysts_Needed__c&quot;:&quot;Christina Wehrmann&quot;,&quot;Client_Reimbursable__c&quot;:false,&quot;CurrencyIsoCode&quot;:&quot;USD&quot;,&quot;Deadline__c&quot;:&quot;2024-11-12&quot;,&quot;Description__c&quot;:&quot;test&quot;,&quot;Kick_off_call_needed__c&quot;:&quot;Yes&quot;,&quot;Name&quot;:&quot;test&quot;,&quot;Notify_Analysts_Managers__c&quot;:false,&quot;Notify_Opp_Owner_Team__c&quot;:false,&quot;Opportunity__c&quot;:&quot;0064V00001JE4jMQAT&quot;,&quot;OwnerId&quot;:&quot;0054V00000G8MzDQAV&quot;,&quot;Priority__c&quot;:&quot;Low&quot;,&quot;Type__c&quot;:&quot;Report&quot;}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>Send_Email</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

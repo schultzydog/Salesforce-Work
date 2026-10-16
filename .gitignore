@@ -26,3 +26,9 @@ node_modules/
 
 org-now/
 sandbox-build/
+
+# Org backups: keep auth-related metadata out of the remote.
+sandbox-backup-*/metadata/Certificate/
+sandbox-backup-*/metadata/ConnectedApp/
+sandbox-backup-*/metadata/NamedCredential/
+sandbox-backup-*/metadata/SamlSsoConfig/

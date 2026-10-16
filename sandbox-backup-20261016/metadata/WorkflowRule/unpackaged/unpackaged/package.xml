@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account.Clear Batch apex checkbox</members>
+        <members>Account.Clear Pref Usage Counter</members>
+        <members>Account.Clear Pref Usage Counter2</members>
+        <members>Account.Notify for Contact Review</members>
+        <members>Account.Notify on Account disablement</members>
+        <members>Account.Notify on Owner Change</members>
+        <members>Account_Preferences__c.Populate Account Library concat</members>
+        <members>Account_Preferences__c.Update Name</members>
+        <members>Analyst_Appearance__c.Notify Analyst on Appearance</members>
+        <members>Case.Case%3A Assign Finance Cases to Finance</members>
+        <members>Contact.Check Deliver Full Content when no Portal Access</members>
+        <members>Contact.Check if Disabled Aggregator Subscriber</members>
+        <members>Contact.Clear Batch apex checkbox</members>
+        <members>Contact.Clear WF Bounced Fields</members>
+        <members>Contact.Disable if contact left the firm</members>
+        <members>Contact.New EG Employee</members>
+        <members>Contact.Notify Account Owner of Contact by Lead Conversion</members>
+        <members>Contact.Notify Account Owner when Contact Email Opt Out</members>
+        <members>Contact.Populate Full Content Emails Date Off</members>
+        <members>Contact.Populate Full Content Emails Date On</members>
+        <members>Contact.Refresh Crypto Key</members>
+        <members>Contact.eg update Latest Disable Date</members>
+        <members>Contact.eg update Latest Disable Date clear</members>
+        <members>Contact_Preferences__c.Populate Contact Library concat</members>
+        <members>Contact_Preferences__c.Update Name</members>
+        <members>Contract.Expire ended Contracts</members>
+        <members>Contract.Update Contract Name</members>
+        <members>Event.Update Activity Type</members>
+        <members>Lead.New Lead not Modified after 24 hours</members>
+        <members>Lead.Notify Lead Owner on Company Sign Up leads</members>
+        <members>Library__c.Copy Record Type</members>
+        <members>Opportunity.Populate Amount %28Converted%29</members>
+        <members>Opportunity.Update Probability for Red Flag</members>
+        <members>Opportunity.Update Sales Type to Renewal</members>
+        <members>OpportunityLineItem.Populate Product Name</members>
+        <name>WorkflowRule</name>
+    </types>
+    <version>62.0</version>
+</Package>

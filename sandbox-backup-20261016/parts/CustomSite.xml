@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Client_Portal</members>
+        <members>Contact_Preferences</members>
+        <members>Delete</members>
+        <members>Survey_Host</members>
+        <members>Webhook_API</members>
+        <name>CustomSite</name>
+    </types>
+    <version>62.0</version>
+</Package>

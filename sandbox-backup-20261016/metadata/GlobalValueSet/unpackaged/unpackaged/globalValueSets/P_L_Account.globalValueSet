@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>IT Initiative</fullName>
+        <default>false</default>
+        <label>IT Initiative</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer Software</fullName>
+        <default>false</default>
+        <label>Computer Software</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer Hardware</fullName>
+        <default>false</default>
+        <label>Computer Hardware</label>
+    </customValue>
+    <customValue>
+        <fullName>Telephone</fullName>
+        <default>false</default>
+        <label>Telephone</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology Consultants</fullName>
+        <default>false</default>
+        <label>Technology Consultants</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Service</fullName>
+        <default>false</default>
+        <label>Data Service</label>
+    </customValue>
+    <customValue>
+        <fullName>TV</fullName>
+        <default>false</default>
+        <label>TV</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional Services</fullName>
+        <default>false</default>
+        <label>Professional Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Cyber Insurance</fullName>
+        <default>false</default>
+        <label>Cyber Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology</fullName>
+        <default>false</default>
+        <label>Technology</label>
+    </customValue>
+    <masterLabel>P&amp;L Account</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

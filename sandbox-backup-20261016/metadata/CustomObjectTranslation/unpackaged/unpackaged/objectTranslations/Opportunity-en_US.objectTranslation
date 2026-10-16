@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Opportunity Amount</value>
+        </caseValues>
+        <name>amount_opportunity</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Additional</value>
+        </caseValues>
+        <name>description_opportunity</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Stage-Adjusted Pipeline Revenue</value>
+        </caseValues>
+        <name>expected_revenue_opportunity</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Opportunity and Origination Team</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Opportunity and Origination Teams</value>
+        </caseValues>
+        <name>opportunity_team</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Opportunity Team Member</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Opportunity and Origination Team Members</value>
+        </caseValues>
+        <name>opportunity_team_member</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Opportunity Team Member Field</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Opportunity and Origination Team Member Fields</value>
+        </caseValues>
+        <name>opportunity_team_member_field</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Sales Type</value>
+        </caseValues>
+        <name>type_opportunity</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Call - Research</fullName>
+        <default>false</default>
+        <label>Call - Research</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call - Client relations</fullName>
+        <default>false</default>
+        <label>Call - Client relations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call - Prospect/Introduction</fullName>
+        <default>false</default>
+        <label>Call - Prospect/Introduction</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call - Pitch conf call/meeting</fullName>
+        <default>false</default>
+        <label>Call - Pitch conf call/meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting - Client relations</fullName>
+        <default>false</default>
+        <label>Meeting - Client relations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting - Prospect/Introduction</fullName>
+        <default>false</default>
+        <label>Meeting - Prospect/Introduction</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EG Conference Call</fullName>
+        <default>false</default>
+        <label>EG Conference Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Executive Memo</fullName>
+        <default>false</default>
+        <label>Executive Memo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>To Do</fullName>
+        <default>false</default>
+        <label>To Do</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>true</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Request</fullName>
+        <default>false</default>
+        <label>Meeting Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feedback_Comment</fullName>
+        <default>false</default>
+        <label>Feedback Comment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Survey Follow-up</fullName>
+        <default>false</default>
+        <label>Survey Follow-up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Subscription Request</fullName>
+        <default>false</default>
+        <label>Subscription Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deliverable</fullName>
+        <default>false</default>
+        <label>Deliverable</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Publication Reply</fullName>
+        <default>false</default>
+        <label>Publication Reply</label>
+    </standardValue>
+</StandardValueSet>

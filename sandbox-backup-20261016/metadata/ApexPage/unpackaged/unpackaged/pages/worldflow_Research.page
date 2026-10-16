@@ -1,0 +1,19 @@
+<apex:page showHeader="false"
+           sidebar="false"
+           controller="WorldFlow_SearchController"
+           cache="false"
+           docType="html-5.0"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           standardStylesheets="false"
+           lightningStylesheets="true"
+           contentType="">
+            <apex:outputPanel layout="none" rendered="{!contentType == 'download'}">
+                    <iframe src="data:application/pdf;base64,{!pdf}" frameborder='0' scrolling='no' height="100%" seamless="true" style="height:100%;width:100%;border:0;min-height:800px;"></iframe>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block" rendered="{!contentType != 'download'}" styleclass="slds-scope">
+                <apex:slds />
+                <apex:outputText escape="false" value="{!articleHTML}" ></apex:outputText>
+        </apex:outputPanel>
+
+</apex:page>

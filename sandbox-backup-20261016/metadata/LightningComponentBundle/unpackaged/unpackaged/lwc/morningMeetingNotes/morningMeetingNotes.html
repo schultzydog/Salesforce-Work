@@ -1,0 +1,166 @@
+<!--
+  @description       : Morning Meeting Notes
+-->
+<template>
+    <template if:true={showForm}>
+        <!-- <center><div class="slds-text-heading_medium">{label.Morning_Meeting_instructions}</div></center> -->
+        <div class="slds-text-align_center">
+            <div class="slds-text-heading_medium">
+                {label.Morning_Meeting_instructions}
+            </div>
+        </div>
+    </template>
+  
+    <div class="slds-container_medium slds-container_center">
+        <div class="slds-card slds-card_boundary slds-m-around_large slds-p-around_large form-card">
+            <template if:true={showForm}>
+                
+                <lightning-record-edit-form object-api-name="Morning_Meeting_Note__c" onsubmit={handleSubmit} >
+                    <div if:true={errorMessage}
+                        class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-top_small">
+                        <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                            <span class="slds-assistive-text">error</span>
+                            <h2>{errorMessage}</h2>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="Topic__c" variant="label-stacked"
+                                class="slds-form-element_1-col"  onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="Proposed_Title__c" variant="label-stacked"
+                                class="slds-form-element_1-col"  onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <template if:true={hasOptionLoaded}>
+                                <c-multi-select-combobox 
+                                        disabled={isWorking} 
+                                        classes="slds-form-element_1-col"
+                                        options={leadAuthorOptions} 
+                                        label="Lead Author"
+                                        data-id="leadAuthor"
+                                        onselect={handleOptionChange}>
+                                </c-multi-select-combobox>
+                            </template>
+                            <template if:false={hasOptionLoaded}>
+                                <lightning-input-field field-name="egLead_Author__c" variant="label-stacked"
+                                    class="slds-form-element_1-col" onchange={clearErrorMessage}
+                                    disabled={isWorking}> </lightning-input-field>
+                            </template>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <lightning-input-field field-name="Submitted_by_Email__c" variant="label-stacked"
+                                class="slds-form-element_1-col" required onchange={clearErrorMessage}
+                                disabled={isWorking} value=""> </lightning-input-field>
+                        </div>                       
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
+                            <lightning-input-field field-name="Argument__c" variant="label-stacked"
+                                class="slds-form-element_1-col"  onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
+                            <lightning-input-field field-name="Client_justification__c" variant="label-stacked"
+                                class="slds-form-element_1-col"  onchange={clearErrorMessage}
+                                disabled={isWorking}> </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
+                            <template if:true={hasOptionLoaded}>
+                                <c-multi-select-combobox disabled={isWorking} classes="slds-form-element_1-col" selected-value="No"
+                                    options={callChangeOrNewCallOptions} data-id="callChangeOrNewCall" label="Call change or new call?"
+                                    onselect={handleOptionChange}>
+                                </c-multi-select-combobox>
+                            </template>
+                            <template if:false={hasOptionLoaded}>
+                                <lightning-input-field field-name="Call_change_or_new_call__c" value="No" variant="label-stacked"
+                                    class="slds-form-element_1-col" onchange={clearErrorMessage} disabled={isWorking}>
+                                </lightning-input-field>
+                            </template>
+                        </div>
+
+                        <div if:true={showTitlesAndOddsForNewScenarios} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
+                            <label class="slds-form-element__label">
+                                Provide titles and odds for new scenarios or provide updated odds for existing scenarios
+                            </label>
+                            <lightning-input-field field-name="Titles_and_odds_for_new_scenarios__c"
+                                variant="label-hidden" class="slds-form-element_1-col"
+                                onchange={clearErrorMessage} disabled={isWorking}> </lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
+                            <template if:true={hasOptionLoaded}>
+                                <c-multi-select-combobox 
+                                    disabled={isWorking} 
+                                    multi-select="true" 
+                                    options={contributorOptions} 
+                                    classes="slds-form-element_1-col"
+                                    label="Contributors"
+                                    data-id="contributor"
+                                    onselect={handleOptionChange}>
+                                </c-multi-select-combobox>
+                            </template>
+                            <template if:false={hasOptionLoaded}>
+                                <lightning-input-field field-name="egContributors__c" variant="label-stacked"
+                                        class="slds-form-element_1-col"  onchange={clearErrorMessage}
+                                        disabled={isWorking}> </lightning-input-field>
+                            </template>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">                           
+                                <template if:true={hasOptionLoaded}>
+                                    <c-multi-select-combobox 
+                                        disabled={isWorking} 
+                                        multi-select="true" 
+                                        classes="slds-form-element_1-col"
+                                        options={distributionOptions} 
+                                        label="Distribution"
+                                        data-id="distribution"
+                                        onselect={handleOptionChange}>
+                                    </c-multi-select-combobox>
+                                </template>
+                                <template if:false={hasOptionLoaded}>
+                                    <lightning-input-field field-name="Distribution_Lists__c" variant="label-stacked"
+                                        class="slds-form-element_1-col" onchange={clearErrorMessage} disabled={isWorking}
+                                        > </lightning-input-field>
+                                </template>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-top_small">
+                            <lightning-button type="submit" label="Submit" class="hidden-in-form"
+                                onchange={clearErrorMessage} disabled={isWorking}></lightning-button>
+                        </div>
+                        <div if:true={errorMessage}
+                            class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-top_small">
+                            <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                                <span class="slds-assistive-text">error</span>
+                                <h2>{errorMessage}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </lightning-record-edit-form>
+             </template>
+            <template if:true={formMessage}>
+                <div class="slds-text-align_center">
+                    {formMessage}
+                    
+                </div>
+            </template>
+            <div if:true={isWorking}>
+                <div class="slds-spinner_container">
+                    <div role="status" class="slds-spinner slds-spinner_medium">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Speaking Engagements</fullName>
+        <default>false</default>
+        <label>Speaking Engagements</label>
+    </customValue>
+    <customValue>
+        <fullName>Management Consulting</fullName>
+        <default>false</default>
+        <label>Management Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare &amp; Medical Devices</fullName>
+        <default>false</default>
+        <label>Healthcare &amp; Medical Devices</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer &amp; Retail</fullName>
+        <default>false</default>
+        <label>Consumer &amp; Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Macro</fullName>
+        <default>false</default>
+        <label>Global Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>Geoeconomics</fullName>
+        <default>false</default>
+        <label>Geoeconomics</label>
+    </customValue>
+    <customValue>
+        <fullName>Geostrategy</fullName>
+        <default>false</default>
+        <label>Geostrategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Sustainability, Biodiversity &amp; Water</fullName>
+        <default>false</default>
+        <label>Global Sustainability, Biodiversity &amp; Water</label>
+    </customValue>
+    <customValue>
+        <fullName>Geo-technology</fullName>
+        <default>false</default>
+        <label>Geo-technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy, Climate &amp; Resources</fullName>
+        <default>false</default>
+        <label>Energy, Climate &amp; Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade &amp; Supply Chains</fullName>
+        <default>false</default>
+        <label>Trade &amp; Supply Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </customValue>
+    <customValue>
+        <fullName>Thought Leadership</fullName>
+        <default>false</default>
+        <label>Thought Leadership</label>
+    </customValue>
+    <customValue>
+        <fullName>Africa</fullName>
+        <default>false</default>
+        <label>Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>China &amp; Northeast Asia</fullName>
+        <default>false</default>
+        <label>China &amp; Northeast Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>South Asia</fullName>
+        <default>false</default>
+        <label>South Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Southeast Asia</fullName>
+        <default>false</default>
+        <label>Southeast Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Eurasia</fullName>
+        <default>false</default>
+        <label>Eurasia</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin America</fullName>
+        <default>false</default>
+        <label>Latin America</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil</fullName>
+        <default>false</default>
+        <label>Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle East &amp; North Africa</fullName>
+        <default>false</default>
+        <label>Middle East &amp; North Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>North America</fullName>
+        <default>false</default>
+        <label>North America</label>
+    </customValue>
+    <customValue>
+        <fullName>What We Do</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>What We Do</label>
+    </customValue>
+    <customValue>
+        <fullName>Geotechnology</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Geotechnology</label>
+    </customValue>
+    <customValue>
+        <fullName>Political Risk Advisory</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Political Risk Advisory</label>
+    </customValue>
+    <customValue>
+        <fullName>Market Strategy &amp; Data</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Market Strategy &amp; Data</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan Office</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Japan Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Investment Partnerships</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Investment Partnerships</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive Education</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Executive Education</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Labs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Labs</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Partnerships</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporate Partnerships</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Sustainability, Biodiversity, &amp; Water</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Global Sustainability, Biodiversity, &amp; Water</label>
+    </customValue>
+    <description>This picklist serves the Pardot I am interested in field used on the Contact us form</description>
+    <masterLabel>Contact us form - Interested In</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

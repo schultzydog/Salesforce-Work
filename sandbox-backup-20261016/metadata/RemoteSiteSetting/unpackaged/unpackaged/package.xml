@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AD_Provisioning_App</members>
+        <members>AuthforIpreo</members>
+        <members>BDforSalesforce</members>
+        <members>DocuSign</members>
+        <members>DocuSignDlrsMdapi</members>
+        <members>DocuSignSFDCSoapApi</members>
+        <members>EG_Portal_Service</members>
+        <members>GoogleAlerts</members>
+        <members>MicrosoftLogin</members>
+        <members>Production_API</members>
+        <members>Production_Account</members>
+        <members>Production_Adm_API</members>
+        <members>Production_Collaboration</members>
+        <members>Production_Integration_API</members>
+        <members>Production_Merge</members>
+        <members>Production_Provisioning</members>
+        <members>Production_Web</members>
+        <members>Production_eSignature</members>
+        <members>SerpAPI</members>
+        <members>SharePoint</members>
+        <members>WorldPortal</members>
+        <members>WorldPortalQA</members>
+        <members>eurasiagroup_content_force_com</members>
+        <members>mdapi</members>
+        <members>self</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <version>62.0</version>
+</Package>

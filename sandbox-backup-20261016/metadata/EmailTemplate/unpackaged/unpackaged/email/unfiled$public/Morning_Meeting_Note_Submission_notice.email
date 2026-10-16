@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Topic: {!Morning_Meeting_Note__c.Topic__c}<br><br>Title: {!Morning_Meeting_Note__c.Proposed_Title__c}<br><br>Arguments: {!Morning_Meeting_Note__c.Argument__c}<div><br></div><div>Client Justification: {!Morning_Meeting_Note__c.Client_justification__c}</div><br>Lead Author: {!Morning_Meeting_Note__c.egLead_Author__c}<br><br>Contributors: {!Morning_Meeting_Note__c.egContributors__c}<br><br><div>Distribution: {!Morning_Meeting_Note__c.Distribution_Lists__c}</div><div><br></div><div><a href="https://eurasiagroup.lightning.force.com/lightning/r/Report/00O4V000009W5X3UAK/view?queryScope=userFolders">Link to Morning Meeting Notes report in Salesforce </a><br></div>]]></td>
+</tr>
+</table>

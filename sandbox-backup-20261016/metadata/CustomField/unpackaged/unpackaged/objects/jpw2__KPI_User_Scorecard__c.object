@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Accounts_Owned_DATA__c</fullName>
+        <externalId>false</externalId>
+        <label>Accounts Owned DATA</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Accounts_Owned_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(   Accounts_Owned_SCORE__c  ),&quot;Not Subscribed&quot;,
+Case(  Accounts_Owned_SCORE__c  , 3, 
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,&quot;3&quot;,15,(40))&amp; &quot; &quot;&amp;  Accounts_Owned_DATA__c  , 2, 
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,&quot;2&quot;,15,(40))&amp; &quot; &quot;&amp; Accounts_Owned_DATA__c   , 1,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  Accounts_Owned_DATA__c  ,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  Accounts_Owned_DATA__c )) &amp;
+
+IF(ISNULL(   Accounts_Owned_SCORE__c  ),&quot;&quot;,
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp;   Accounts_Owned_REPORT__c   &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp;  jpw2__User_Name_Filter__c  ,&quot; &quot;&amp;
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;Link&quot;,15,17), &apos;_self&apos;))</formula>
+        <label>Accounts Owned #</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Accounts_Owned_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>Accounts Owned REPORT</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Accounts_Owned_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>Accounts Owned SCORE</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>true</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Timecard_Compliance_DATA__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Timecard Compliance % DATA</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Timecard_Compliance_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(   Annual_Timecard_Compliance_SCORE__c),&quot;Not Subscribed&quot;,
+Case(  Annual_Timecard_Compliance_SCORE__c, 3, 
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,&quot;3&quot;,15,(40))&amp; &quot; &quot;&amp;  Annual_Timecard_Compliance_DATA__c
+, 2, 
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,&quot;2&quot;,15,(40))&amp; &quot; &quot;&amp; Annual_Timecard_Compliance_DATA__c
+, 1,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  Annual_Timecard_Compliance_DATA__c
+,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  Annual_Timecard_Compliance_DATA__c)) &amp;
+
+IF(ISNULL(   Annual_Timecard_Compliance_SCORE__c),&quot;&quot;,
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp;   Annual_Timecard_Compliance_REPORT__c &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp;  jpw2__User_Name_Filter__c  ,&quot; &quot;&amp;
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;Link&quot;,15,17), &apos;_self&apos;))</formula>
+        <label>Annual Timecard Compliance %</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Timecard_Compliance_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Timecard Compliance % REPORT</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Timecard_Compliance_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Timecard Compliance % SCORE</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(jpw2__User__r.Client_Services_Team__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Client Services Team</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(jpw2__User__r.Department__c)</formula>
+        <label>Department</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enabled_Contacts_by_Account_Owner_DATA__c</fullName>
+        <externalId>false</externalId>
+        <label>Enabled Contacts by Account Owner DATA</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enabled_Contacts_by_Account_Owner_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(   
+Enabled_Contacts_by_Account_Owner_SCORE__c
+),&quot;Not Subscribed&quot;,
+Case(  
+Enabled_Contacts_by_Account_Owner_SCORE__c
+, 3, 
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,&quot;3&quot;,15,(40))&amp; &quot; &quot;&amp;  Enabled_Contacts_by_Account_Owner_DATA__c, 2, 
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,&quot;2&quot;,15,(40))&amp; &quot; &quot;&amp; Enabled_Contacts_by_Account_Owner_DATA__c, 1,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  Enabled_Contacts_by_Account_Owner_DATA__c,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  Enabled_Contacts_by_Account_Owner_DATA__c)) &amp;
+
+IF(ISNULL(   
+Enabled_Contacts_by_Account_Owner_SCORE__c
+),&quot;&quot;,
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp;   Enabled_Contacts_by_Account_Owner_REPORT__c   &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp;  jpw2__User_Name_Filter__c  ,&quot; &quot;&amp;
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;Link&quot;,15,17), &apos;_self&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Enabled Contacts by Account Owner</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enabled_Contacts_by_Account_Owner_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>Enabled Contacts by Account Owner REPORT</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enabled_Contacts_by_Account_Owner_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>Enabled Contacts by Account Owner SCORE</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Sale_Opportunities_Neglected_DATA__c</fullName>
+        <externalId>false</externalId>
+        <label>New Sale Opportunities Neglected DATA</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Sale_Opportunities_Neglected_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(  New_Sale_Opportunities_Neglected_SCORE__c  ),&quot;Not Subscribed&quot;,
+Case(  New_Sale_Opportunities_Neglected_SCORE__c  , 3,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,&quot;3&quot;,15,(40))&amp; &quot; &quot;&amp;  New_Sale_Opportunities_Neglected_DATA__c  , 2,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,&quot;2&quot;,15,(40))&amp; &quot; &quot;&amp;  New_Sale_Opportunities_Neglected_DATA__c  , 1,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  New_Sale_Opportunities_Neglected_DATA__c  ,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  New_Sale_Opportunities_Neglected_DATA__c  )) &amp;
+
+IF(ISNULL(  New_Sale_Opportunities_Neglected_SCORE__c  ),&quot;&quot;,
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp; New_Sale_Opportunities_Neglected_REPORT__c &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp; jpw2__User_Name_Filter__c ,&quot; &quot;&amp;
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;Link&quot;,15,17) , &apos;_self&apos;))</formula>
+        <label>New Sale Opportunities Neglected #</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Sale_Opportunities_Neglected_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>New Sale Opportunities Neglected REPORT</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Sale_Opportunities_Neglected_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>New Sale Opportunities Neglected SCORE</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Key_Metrics_Category_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Other_Key_Metrics_Category_SCORE__c=0,&quot;No Metrics Selected&quot;,
+IF(ISNULL(Other_Key_Metrics_Category_SCORE__c),&quot;No Metrics Selected&quot;,
+IF
+( Other_Key_Metrics_Category_SCORE__c =1,
+&quot;1.00&quot; &amp;&quot; &quot;
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,TEXT(Other_Key_Metrics_Category_SCORE__c) ,15,(3))
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;&quot;,15,(67)),
+
+IF( Other_Key_Metrics_Category_SCORE__c =2,
+&quot;2.00&quot; &amp;&quot; &quot;
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,TEXT(Other_Key_Metrics_Category_SCORE__c) ,15,(35))
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;&quot;,15,(35)),
+
+IF( Other_Key_Metrics_Category_SCORE__c =3,
+&quot;3.00&quot; &amp;&quot; &quot;
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,TEXT(Other_Key_Metrics_Category_SCORE__c) ,15,(70)),
+
+IF( Other_Key_Metrics_Category_SCORE__c &gt;= $CustomMetadata.jpw2__KPI_Category_Color_Thresholds__mdt.jpw2__Category_Threshold_Colors.jpw2__Green_Threshold__c,
+RPAD(TEXT(Other_Key_Metrics_Category_SCORE__c),4,&quot;0&quot;) &amp;&quot; &quot;
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,TEXT(Other_Key_Metrics_Category_SCORE__c) ,15,((Other_Key_Metrics_Category_SCORE__c-1)*35))
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;&quot;,15,((2-(Other_Key_Metrics_Category_SCORE__c-1))*35)),
+
+IF( Other_Key_Metrics_Category_SCORE__c &lt; $CustomMetadata.jpw2__KPI_Category_Color_Thresholds__mdt.jpw2__Category_Threshold_Colors.jpw2__Red_Threshold1__c,
+RPAD(TEXT(Other_Key_Metrics_Category_SCORE__c),4,&quot;0&quot;) &amp;&quot; &quot;
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,TEXT(Other_Key_Metrics_Category_SCORE__c) ,15,((Other_Key_Metrics_Category_SCORE__c-1)*35))
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;&quot;,15,((2-(Other_Key_Metrics_Category_SCORE__c-1))*35)),
+
+
+RPAD(TEXT(Other_Key_Metrics_Category_SCORE__c),4,&quot;0&quot;) &amp;&quot; &quot;
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,TEXT(Other_Key_Metrics_Category_SCORE__c) ,15,((Other_Key_Metrics_Category_SCORE__c-1)*35))
+&amp; IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;&quot;,15,((2-(Other_Key_Metrics_Category_SCORE__c-1))*35)))))))))&amp;
+
+IF(ISNULL(Other_Key_Metrics_Category_SCORE__c),&quot;&quot;,
+
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp; Other_Key_Metrics_Category_REPORT__c &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp; jpw2__User__r.Id ,&quot; &quot;&amp;IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;more&quot;,15,17) , &apos;_self&apos;))</formula>
+        <label>Other Key Metrics Category</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Key_Metrics_Category_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Key Metrics Category REPORT</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Key_Metrics_Category_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Key Metrics Category SCORE</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Opportunities_Neglected_DATA__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Opportunities Neglected DATA</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Opportunities_Neglected_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(  Renewal_Opportunities_Neglected_SCORE__c  ),&quot;Not Subscribed&quot;,
+Case(  Renewal_Opportunities_Neglected_SCORE__c  , 3,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,&quot;3&quot;,15,(40))&amp; &quot; &quot;&amp;  Renewal_Opportunities_Neglected_DATA__c  , 2,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,&quot;2&quot;,15,(40))&amp; &quot; &quot;&amp;  Renewal_Opportunities_Neglected_DATA__c  , 1,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  Renewal_Opportunities_Neglected_DATA__c  ,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  Renewal_Opportunities_Neglected_DATA__c  )) &amp;
+
+IF(ISNULL(  Renewal_Opportunities_Neglected_SCORE__c  ),&quot;&quot;,
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp; Renewal_Opportunities_Neglected_REPORT__c &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp; jpw2__User_Name_Filter__c ,&quot; &quot;&amp;
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;Link&quot;,15,17) , &apos;_self&apos;))</formula>
+        <label>Renewal Opportunities Neglected #</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Opportunities_Neglected_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Opportunities Neglected REPORT</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Opportunities_Neglected_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Opportunities Neglected SCORE</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Research_Calls_Completed_DATA__c</fullName>
+        <externalId>false</externalId>
+        <label>Research Calls Completed # DATA</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Research_Calls_Completed_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL( Research_Calls_Completed_SCORE__c ),&quot;Not Subscribed&quot;,
+Case( Research_Calls_Completed_SCORE__c , 3,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,&quot;3&quot;,15,(40))&amp; &quot; &quot;&amp; Research_Calls_Completed_DATA__c , 2,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,&quot;2&quot;,15,(40))&amp; &quot; &quot;&amp; Research_Calls_Completed_DATA__c , 1,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp; Research_Calls_Completed_DATA__c ,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp; Research_Calls_Completed_DATA__c)) &amp;
+
+IF(ISNULL( Research_Calls_Completed_SCORE__c ),&quot;&quot;,
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp; Research_Calls_Completed_REPORT__c &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp; jpw2__User_Name_Filter__c ,&quot; &quot;&amp;
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;Link&quot;,15,17) , &apos;_self&apos;))</formula>
+        <label>Research Calls Completed #</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Research_Calls_Completed_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>Research Calls Completed # REPORT</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Research_Calls_Completed_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>Research Calls Completed # SCORE</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Timecards_Adherence_Hours_DATA__c</fullName>
+        <externalId>false</externalId>
+        <label>Timecards Adherence Hours DATA</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Timecards_Adherence_Hours_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL( Timecards_Adherence_Hours_SCORE__c ),&quot;Not Subscribed&quot;,
+Case( Timecards_Adherence_Hours_SCORE__c , 3,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,&quot;3&quot;,15,(40))&amp; &quot; &quot;&amp; Timecards_Adherence_Hours_DATA__c , 2,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,&quot;2&quot;,15,(40))&amp; &quot; &quot;&amp; Timecards_Adherence_Hours_DATA__c , 1,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp; Timecards_Adherence_Hours_DATA__c ,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp; Timecards_Adherence_Hours_DATA__c)) &amp;
+
+IF(ISNULL( Timecards_Adherence_Hours_SCORE__c ),&quot;&quot;,
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp; Timecards_Adherence_Hours_REPORT__c &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp; jpw2__User_Name_Filter__c ,&quot; &quot;&amp;
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;Link&quot;,15,17) , &apos;_self&apos;))</formula>
+        <label>Timecards Adherence # Hours</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Timecards_Adherence_Hours_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>Timecards Adherence Hours REPORT</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Timecards_Adherence_Hours_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>Timecards Adherence Hours SCORE</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Activities_by_Acct_Owner_DATA__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Activities by Acct Owner  DATA</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Activities_by_Acct_Owner_ICON__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(   
+Total_Activities_by_Acct_Owner_SCORE__c
+
+),&quot;Not Subscribed&quot;,
+Case(  
+Total_Activities_by_Acct_Owner_SCORE__c
+
+, 3, 
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Green_3.png&quot;,&quot;3&quot;,15,(40))&amp; &quot; &quot;&amp;  
+Total_Activities_by_Acct_Owner_DATA__c
+
+, 2, 
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Yellow_2.png&quot;,&quot;2&quot;,15,(40))&amp; &quot; &quot;&amp; 
+Total_Activities_by_Acct_Owner_DATA__c
+
+, 1,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Red_1.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  
+Total_Activities_by_Acct_Owner_DATA__c
+
+,
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/Gray_0.png&quot;,&quot;1&quot;,15,(40 ))&amp; &quot; &quot;&amp;  
+Total_Activities_by_Acct_Owner_DATA__c
+
+)) &amp;
+
+IF(ISNULL(   
+Total_Activities_by_Acct_Owner_SCORE__c
+
+),&quot;&quot;,
+HYPERLINK( &quot;/lightning/r/Report/&quot; &amp;   
+Total_Activities_by_Acct_Owner_REPORT__c
+ &amp;&quot;/view&quot; &amp; &quot;?fv0=&quot;&amp;  jpw2__User_Name_Filter__c  ,&quot; &quot;&amp;
+IMAGE(&quot;/resource/jpw2__AdoptionAppIcons/AdoptionAppIcons/report1.svg&quot;,&quot;Link&quot;,15,17), &apos;_self&apos;))</formula>
+        <label>Total Activities by Acct Owner</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Activities_by_Acct_Owner_REPORT__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Activities by Acct Owner  REPORT</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Activities_by_Acct_Owner_SCORE__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Activities by Acct Owner  SCORE</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

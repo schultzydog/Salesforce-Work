@@ -1,0 +1,13 @@
+Hi {!Receiving_User.FirstName},
+
+We are excited to give you complimentary temporary access to Eurasia Group’s Risk Dashboard. This latest addition to Eurasia Group’s product suite helps systematically quantify, track, and integrate salient geopolitical trends and risks into an investment decision-making process.
+ 
+For a brief intro, please have a look at the attachment. I would suggest arranging a call with the team to discuss the dashboard in more detail and how it can be utilized. Please let us know your availability for a call. 
+ 
+Kind regards,
+Rachel Gangji
+
+
+Welcome to {!Community_Name}! To get started, go to {!Community_Url}
+
+Username: {!Receiving_User.Username}

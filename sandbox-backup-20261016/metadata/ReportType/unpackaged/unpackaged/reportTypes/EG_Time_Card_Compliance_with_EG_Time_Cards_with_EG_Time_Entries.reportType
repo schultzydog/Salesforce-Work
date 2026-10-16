@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>EG Time Card Compliance with EG Time Cards with EG Time Entries</description>
+    <label>EG Time Card Compliance with EG Time Cards with EG Time Entries</label>
+    <sections>
+        <masterLabel>EG Time Card Compliance</masterLabel>
+    </sections>
+</ReportType>

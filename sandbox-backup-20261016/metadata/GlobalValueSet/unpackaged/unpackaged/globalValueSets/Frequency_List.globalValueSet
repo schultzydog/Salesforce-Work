@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Weekly</fullName>
+        <default>false</default>
+        <label>Weekly</label>
+    </customValue>
+    <customValue>
+        <fullName>Monthly</fullName>
+        <default>false</default>
+        <label>Monthly</label>
+    </customValue>
+    <customValue>
+        <fullName>Quarterly</fullName>
+        <default>false</default>
+        <label>Quarterly</label>
+    </customValue>
+    <customValue>
+        <fullName>Every-2-months</fullName>
+        <default>false</default>
+        <label>Every-2-months</label>
+    </customValue>
+    <customValue>
+        <fullName>Twice-monthly/Every-2-weeks</fullName>
+        <default>false</default>
+        <label>Twice-monthly/Every-2-weeks</label>
+    </customValue>
+    <customValue>
+        <fullName>Every-6-months</fullName>
+        <default>false</default>
+        <label>Every-6-months</label>
+    </customValue>
+    <description>use this list to associate a contact frequency with a picklist</description>
+    <masterLabel>Frequency List</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

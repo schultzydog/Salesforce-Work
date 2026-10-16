@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Lock_Oppty_Product_Records_after_Closed</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+(ISPICKVAL( Opportunity.StageName ,&quot;Win&quot;) || ISPICKVAL(Opportunity.StageName,&quot;Closed Lost&quot;)),
+ $User.Id &lt;&gt; &apos;0054V00000G8XY7&apos;,
+ $User.Id &lt;&gt; &apos;0054V00000GOIjR&apos;,
+ $User.Id &lt;&gt; &apos;005dK000001YNT3&apos;,
+CASE($Profile.Name,
+&quot;System Admin - Digital Operations&quot;,1,
+&quot;Finance&quot;,1,
+&quot;System Administrator&quot;,1,
+0)=0
+)</errorConditionFormula>
+        <errorMessage>Once the Opportunity Stage has been Won or Lost the Opportunity Product Records are Locked. Please contact Finance for any corrections or updates.</errorMessage>
+    </validationRules>
+</CustomObject>

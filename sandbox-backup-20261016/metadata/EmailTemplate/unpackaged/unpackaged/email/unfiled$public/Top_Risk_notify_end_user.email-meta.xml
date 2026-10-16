@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Top Risk: notify end user</name>
+    <style>freeForm</style>
+    <subject>Top Risk entry submission</subject>
+    <textOnly>{!User.FirstName}, thank you for your Top Risk submission with proposed title {!Top_Risk__c.Name}.
+
+Your submission can be reviewed and edited here - {!Top_Risk__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

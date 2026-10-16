@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>EG Update</name>
+    <style>none</style>
+    <subject>eg update</subject>
+    <textOnly>dear {!Contact.eg_update_name__c},  
+
+{!01I3A000002bShp.00N3A00000CMKx5}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,23 @@
+<apex:page standardController="Account" extensions="AccountPreferencesCtlr">
+    
+    <apex:includeLightning />
+
+    <div id="lightning" />
+
+    <script>
+
+        var accountid = "{!Account.Id}";
+
+        $Lightning.use("c:AccountPreferencesApp", function() {
+          $Lightning.createComponent("c:AccountPreferencesCmp",
+          {
+            accountid : accountid
+          },
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+    
+</apex:page>

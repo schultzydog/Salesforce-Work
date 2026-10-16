@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Bill_To_contact_must_have_Mailing_City</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(Approval_Status__c , &apos;Pending Finance Approval&apos;) &amp;&amp; NOT ISBLANK(ia_crm__Bill_to__c)  &amp;&amp;ISBLANK(ia_crm__Bill_to__r.MailingCity)</errorConditionFormula>
+        <errorDisplayField>ia_crm__Bill_to__c</errorDisplayField>
+        <errorMessage>Billing Contact must have a Mailing City</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Billing_Cycle_50_50</fullName>
+        <active>true</active>
+        <description>50-50 is only allowed as a selection if the Contract Start and End dates are in different months</description>
+        <errorConditionFormula>CloseDate &gt;=  DATE(2026,5,1) &amp;&amp; MONTH( Contract_Start_Date__c ) = MONTH(Contract_End_Date__c ) &amp;&amp; ISPICKVAL( Billing_Cycle__c, &apos;50-50&apos;)</errorConditionFormula>
+        <errorDisplayField>Billing_Cycle__c</errorDisplayField>
+        <errorMessage>50-50 is only allowed as a selection if the Contract Start and End dates are in different months. If they are in the same month, please choose Custom for Billing Cycle</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Billing_Instructions_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(Billing_Cycle__c , &apos;Custom&apos;) &amp;&amp;  ISBLANK(Billing_Instructions__c) &amp;&amp;  NOT ISPICKVAL(Contract_Status__c , &apos;Expired&apos;)</errorConditionFormula>
+        <errorDisplayField>Billing_Instructions__c</errorDisplayField>
+        <errorMessage>Billing instructions are required when Billing Cycle is Custom</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Billing_Template_Custom</fullName>
+        <active>false</active>
+        <description>For the Sage Intacct integration, Custom is required for certain conditions. 
+
+THIS IS NOT DONE YET DO NOT USE</description>
+        <errorConditionFormula>CloseDate &gt;=  DATE(2026,5,1) &amp;&amp; MONTH( Contract_Start_Date__c ) = MONTH(Contract_End_Date__c ) &amp;&amp; ISPICKVAL( Billing_Cycle__c, &apos;50-50&apos;)</errorConditionFormula>
+        <errorDisplayField>Billing_Cycle__c</errorDisplayField>
+        <errorMessage>50-50 is only allowed as a selection if the Contract Start and End dates are in different months. If they are in the same month, please choose Custom for Billing Cycle</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lock_Closed_Won_Deprecated</fullName>
+        <active>false</active>
+        <description>Once the Oppty has been won, the Opp is locked from changes.</description>
+        <errorConditionFormula>AND(
+ IsClosed,
+ NOT ISCHANGED( Count_of_SLR_Entries__c ),
+ NOT ISCHANGED( Number_of_PV_Entries__c ),
+ NOT ISCHANGED( Linked_EG_Project__c),
+ NOT ISCHANGED( Unpaid_Trial_Opportunity_history__c ), 
+ NOT ISCHANGED( IsClosed),
+ NOT ISCHANGED( Renewal_Opportunity__c ),
+ NOT(Contains($Profile.Name , &apos;Admin&apos;)),
+ NOT(Contains($Profile.Name , &apos;Finance&apos;)),
+ ($User.Email = &apos;nelson.ne@eurasiagroup.net&apos; || $User.Email = &apos;tavares@eurasiagroup.net&apos; ||$User.Email = &apos;craven@eurasiagroup.net&apos; ) &amp;&amp;
+ NOT ISCHANGED( One_Firmdep__c ) &amp;&amp;
+ NOT ISCHANGED( Senior_Advisor__c ) &amp;&amp;
+ NOT ISCHANGED( Ian__c )&amp;&amp;
+ NOT ISCHANGED( Maziar_update__c ) &amp;&amp;
+ NOT ISCHANGED( OOP_Tracking__c ) &amp;&amp;
+ NOT ISCHANGED( Origination_Credit__c ) &amp;&amp;
+ NOT ISCHANGED( Include_in_LSG__c ) &amp;&amp;
+ NOT ISCHANGED( Date_last_discussed_at_LSG__c ) &amp;&amp;
+ NOT ISCHANGED( Last_Discussed_at_LSG__c ) &amp;&amp;
+ NOT ISCHANGED( Last_discussed_at_Secretariat__c ) &amp;&amp;
+ NOT ISCHANGED( LSG_Comments__c ) &amp;&amp;
+ NOT ISCHANGED( Presenter__c ) &amp;&amp;
+ NOT ISCHANGED( Historical_at_LSG__c )
+)</errorConditionFormula>
+        <errorMessage>Once the Opportunity Stage has been Won or Lost the Opportunity Record is Locked. Please contact Finance for any corrections or updates.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Locks_Closed_Won</fullName>
+        <active>true</active>
+        <description>Once the Oppty has been won, the Opp is locked from changes.</description>
+        <errorConditionFormula>AND(
+ IsClosed,
+ NOT ISCHANGED( Count_of_SLR_Entries__c ),
+ NOT ISCHANGED( Number_of_PV_Entries__c ),
+ NOT ISCHANGED( Linked_EG_Project__c),
+ NOT ISCHANGED(  Billing_Cycle__c ),
+ NOT ISCHANGED(  Billing_Instructions__c ),
+ NOT ISCHANGED( Unpaid_Trial_Opportunity_history__c ), 
+ NOT ISCHANGED( IsClosed),
+ NOT ISCHANGED( Renewal_Opportunity__c ),
+ NOT(ISCHANGED(LastModifiedDate)),
+ NOT(Contains($Profile.Name , &apos;Admin&apos;)),
+ NOT(Contains($Profile.Name , &apos;Finance&apos;)),
+ NOT( $User.Email = &apos;nelson.ne@eurasiagroup.net&apos; ),
+ NOT( $User.Email = &apos;vizzotto@eurasiagroup.net&apos; ),
+ NOT( $User.Email = &apos;tavares@eurasiagroup.net&apos; ),
+ NOT( $User.Id = &apos;005dK000001YNT3&apos; )
+
+
+)</errorConditionFormula>
+        <errorMessage>Once the Opportunity Stage has been Won or Lost the Opportunity Record is Locked. Please contact Finance for any corrections or updates.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Must_Provide_Closed_Lost_Reason</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+
+ISBLANK( TEXT(Closed_Lost_Reason__c )),
+NOT(Contains($Profile.Name , &apos;Admin&apos;)),
+IsClosed,
+ !IsWon 
+)</errorConditionFormula>
+        <errorMessage>Please provide a Closed/Lost reason for a closed/lost opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Opportunity_Name_Too_Long</fullName>
+        <active>false</active>
+        <errorConditionFormula>LEN( Name )  &gt;= 80</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Opportunity Name must be 80 characters or less</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Opportunity_amount_validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+Amount &lt;= 0,
+NOT(Contains($Profile.Name , &apos;Admin&apos;)),
+NOT(Contains($Profile.Name , &apos;Finance&apos;))
+
+)</errorConditionFormula>
+        <errorMessage>Opportunity Amount cannot be $0 or less.  Cancellations or lost sales should reflect the actual amount of the lost opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_changing_stage_from_Win</fullName>
+        <active>true</active>
+        <description>only admins are allowed to change stage from win to otherwise</description>
+        <errorConditionFormula>NOT(Contains($Profile.Name , &apos;Admin&apos;)) &amp;&amp;
+IsWon = false &amp;&amp;
+PRIORVALUE( IsWon ) = true</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Only admins can change the Stage away from Win. Please contact your admin for assistance.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_unchecking_Unpaid_Trial_Oppty</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT ISPICKVAL(Unpaid_Trial_Opportunity_history__c , &quot;Yes&quot; ) &amp;&amp;  ISPICKVAL(PRIORVALUE(Unpaid_Trial_Opportunity_history__c), &quot;NO&quot; ) &amp;&amp;  ISCHANGED(Unpaid_Trial_Opportunity_history__c)</errorConditionFormula>
+        <errorDisplayField>Unpaid_Trial_Opportunity_history__c</errorDisplayField>
+        <errorMessage>You cannot set the Unpaid Trial checkbox to No after it&apos;s already been set to Yes. Please contact Sales Op for additional assistance. salesops@eurasiagroup.net</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Primary_Contact_Must_be_Selected</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ISBLANK( Primary_Client_Contact__c ), 
+NOT(Contains($Profile.Name , &apos;Admin&apos;)),
+  Probability &gt; 33
+
+)</errorConditionFormula>
+        <errorDisplayField>Primary_Client_Contact__c</errorDisplayField>
+        <errorMessage>Primary Client Contact must be selected when saving an opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Recurring_Revenue_Type_Sales_Types</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+ISPICKVAL(RevenueType__c , &apos;Recurring&apos;) ,
+!ISPICKVAL(Type , &apos;Renewal&apos;),
+!ISPICKVAL(Type , &apos;New Sale&apos;),
+!ISPICKVAL(Type , &apos;Trial Conversion&apos;)
+)</errorConditionFormula>
+        <errorMessage>Revenue Type of Recurring can only be used for New Sales, Renewals, Upsells, and Downsells</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Commission_on_Senior_Advisor</fullName>
+        <active>true</active>
+        <errorConditionFormula>Probability &gt; 0.1 &amp;&amp;
+NOT ISPICKVAL(Senior_Advisor__c, &apos;N/A&apos;) &amp;&amp; 
+ISBLANK(TEXT(Commission__c)) &amp;&amp;
+NOT(Contains($Profile.Name , &apos;Digital&apos;))</errorConditionFormula>
+        <errorDisplayField>Commission__c</errorDisplayField>
+        <errorMessage>Please select whether Senior Advisor receives Commission on this opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Corporate_Sector</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Business_Line__c , &apos;Corporate&apos;) &amp;&amp;   ISPICKVAL(Corporate_Sector_Team__c , &quot;&quot;) &amp;&amp; 
+CloseDate &gt;  DATE(2024,1,1)</errorConditionFormula>
+        <errorMessage>Corporate Sector Team is required for Business Line Corporate opportunities. Please visit the related Account to update the Corporate Sector Team value. After you do this, this error will go away!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Previous_Oppty_for_Renewal_Oppty</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL(StageName,&quot;Win&quot;), 
+ Previous_Opportunity__c  = NULL,
+ NOT(Contains($Profile.Name , &apos;Admin&apos;)), 
+ ISPICKVAL (Type, &quot;Renewal&quot;)
+)</errorConditionFormula>
+        <errorMessage>A Previous Opportunity must exist when setting a Renewal Opportunity Stage to Win</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Products_on_Won_Opportunities</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ISPICKVAL(StageName,&quot;Win&quot;),
+HasOpportunityLineItem = FALSE,
+Bypass_Stage_Win_Automations__c = FALSE
+)</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>In order to set Stage to Win you must first select one or more products to add to this Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Revenue_Type</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+Probability &gt;= 0.27,
+NOT(Contains($Profile.Name , &apos;Admin&apos;)),
+ISBLANK(TEXT( RevenueType__c )))</errorConditionFormula>
+        <errorDisplayField>RevenueType__c</errorDisplayField>
+        <errorMessage>Revenue Type is required after stage reaches First Meeting Done</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Required_Fields_on_Win</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(StageName,&apos;Win&apos;) &amp;&amp;  ISCHANGED(StageName) &amp;&amp;  
+(
+ISBLANK( Contract_Start_Date__c )
+||
+ISBLANK( Contract_End_Date__c )
+||
+ISBLANK(TEXT( Business_Line__c ))
+||
+(NOT ISPICKVAL( Multi_year_Contract__c ,&apos;Yes&apos;) &amp;&amp; 
+NOT ISPICKVAL( Multi_year_Contract__c ,&apos;No&apos;))
+||
+(NOT ISPICKVAL(  PO_Required__c ,&apos;Yes&apos;) &amp;&amp; 
+NOT ISPICKVAL( PO_Required__c ,&apos;No&apos;))
+)</errorConditionFormula>
+        <errorMessage>Contract Start and End Date, Business Line, PO Required, and Multi-year contract selection are required to Win an Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Required_fields_for_finance_approval</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED(Approval_Status__c)  &amp;&amp; ISPICKVAL(Approval_Status__c, &apos;Approved&apos;) &amp;&amp;  (ISBLANK( Task_Code_Description__c ) || ISBLANK(  Dept_Code__c ))</errorConditionFormula>
+        <errorMessage>Please ensure both Dept Code and Task Code Description are filled out prior to approving opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Required_fields_for_sales_ops_approval</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED(Approval_Status__c)  &amp;&amp; ISPICKVAL(Approval_Status__c, &apos;Pending Finance Approval&apos;) &amp;&amp;  (ISBLANK(  ia_crm__Bill_to__c ) || ISBLANK(   ia_crm__Intacct_Location__c ) ||
+ ISBLANK(TEXT( Billing_Cycle__c )))</errorConditionFormula>
+        <errorMessage>Please ensure Billing Cycle, Bill To, and Location are filled out prior to approving opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Selected_Department_must_be_Active</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(ia_crm__Department__r.ia_crm__Status__c , &apos;Inactive&apos;)</errorConditionFormula>
+        <errorDisplayField>Department__c</errorDisplayField>
+        <errorMessage>Please select an Active Department</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stand_and_End_date_cannot_be_the_same</fullName>
+        <active>true</active>
+        <errorConditionFormula>Contract_Start_Date__c  =  Contract_End_Date__c</errorConditionFormula>
+        <errorDisplayField>Contract_End_Date__c</errorDisplayField>
+        <errorMessage>Start and End date cannot be the same date</errorMessage>
+    </validationRules>
+</CustomObject>

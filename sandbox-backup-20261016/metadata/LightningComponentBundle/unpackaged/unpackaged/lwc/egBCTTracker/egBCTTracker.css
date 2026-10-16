@@ -1,0 +1,77 @@
+.page-container{
+    background-color: #fff;
+}
+.slds-table thead th{
+    background-color: var(--slds-g-color-neutral-base-95, rgb(243, 243, 243));
+    cursor: pointer;
+}
+.table-select{
+    font-size: 1rem;
+    min-width: 400px;
+}
+
+th.sector{    
+    width: 120px;
+}
+th.proposal{
+    width: 180px;
+}
+th.type{
+    width: 100px;
+}
+th.number{
+    width: 100px;
+}
+th.summary{
+    width: 100%; 
+    min-width: 200px;
+}
+th.status{
+    width: 200px;
+}
+th.likelihood{
+    width: 110px;
+}
+th.likelihoodThisYear{
+    width: 110px;
+}
+th.lastModified{
+    width: 100px;
+}
+th.expiration{
+    width: 100px;
+}
+
+@media screen and (max-width: 1280px) { /* smaller screens */
+    th.sector{
+        width: 100px;
+    }
+    th.proposal{
+        width: 100px;
+    }
+    th.type{
+        width: 80px;
+    }
+    th.number{
+        width: 90px;
+    }
+    th.summary{
+        width: 100%; 
+        min-width: 200px;
+    }
+    th.status{
+        width: 100px;
+    }
+    th.likelihood{
+        width: 90px;
+    }    
+    th.likelihoodThisYear{
+        width: 90px;
+    }    
+    th.lastModified{
+        width: 80px;
+    }    
+    th.expiration{
+        width: 100px;
+    }
+}

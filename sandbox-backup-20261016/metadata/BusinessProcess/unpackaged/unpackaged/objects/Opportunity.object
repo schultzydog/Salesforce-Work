@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <businessProcesses>
+        <fullName>EG Opportunity</fullName>
+        <description>This is a master Opportunity sales process</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Meeting Done</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gather Client Input</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Meeting Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refine and Finalize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Win</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Renewal</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft Renewal Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gather Client Feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Win</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+</CustomObject>

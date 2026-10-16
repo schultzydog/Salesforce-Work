@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Reminder: Trial Close to Expiration</name>
+    <style>freeForm</style>
+    <subject>Reminder: {!Account.Name} Trial Close to Expiration</subject>
+    <textOnly>Hi,
+
+Your free trial to {!Account.Count_of_Contacts_Receiving_Research__c} user(s) at {!Account.Name} will expire in {!Opportunity.Days_Until_Trial_End__c} days: {!Opportunity.Link}
+
+Account managers are notified 14 and 7 days prior to each trial’s expiration. Sales ops will additionally reach out with one last follow up to make sure extension requests are submitted in a timely manner. Going forward, all trials will be shut off automatically after 90 days and it is the account manager’s responsibility to get approval to extend each trial from Rachel/Justin in advance. Sales ops will extend or turn trials/accounts back on if Rachel/Justin is copied on the request confirming the extension.
+
+
+If trial is not being extended, trial users will be moved to a marketing campaign list after disablement.
+
+
+Thanks,
+SalesOps</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

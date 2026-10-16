@@ -1,0 +1,4 @@
+This email was sent automagically after an admin added a new Contact record to the Eurasia Group account in Salesforce.
+
+Please be sure the EG Staff checkbox is set correctly!
+{!Contact.Link}

@@ -1,0 +1,12 @@
+You were recently quoted in the media. Please share your appearance across social media channels and tag @EurasiaGroup.
+
+Date:
+{!Media_Appearance__c.Date__c}
+
+Outlet:
+{!Media_Appearance__c.Outlet__c}
+
+URL:
+{!Media_Appearance__c.Appearance_URL__c}
+
+If you are aware of additional citations in the media, please continue to share them with the communications team.

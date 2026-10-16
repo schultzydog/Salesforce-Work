@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>Custom</fullName>
+        <fields>Name</fields>
+        <fields>Purpose__c</fields>
+        <fields>Travel_Start_Date__c</fields>
+        <fields>Travel_End_Date__c</fields>
+        <fields>Request_Status__c</fields>
+        <label>Custom</label>
+    </compactLayouts>
+</CustomObject>

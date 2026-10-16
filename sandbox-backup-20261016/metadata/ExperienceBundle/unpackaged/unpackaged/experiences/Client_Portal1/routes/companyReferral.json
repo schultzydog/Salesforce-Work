@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "3fdb11e2-abc6-44cb-b005-279c0c0dec5b",
+  "appPageId" : "b82c533e-f9b2-43a4-b6ea-72afea6fed42",
+  "configurationTags" : [ ],
+  "devName" : "Company_Referral__c",
+  "id" : "e9bede78-8e19-4b25-8ff0-ec7efd1137f9",
+  "label" : "Company Referral",
+  "routeType" : "custom-company-referral",
+  "type" : "route",
+  "urlPrefix" : "company-referral"
+}

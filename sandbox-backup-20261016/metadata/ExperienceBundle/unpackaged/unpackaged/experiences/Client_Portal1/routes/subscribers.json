@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "2af08cc1-39d9-4517-8c76-833f82d46403",
+  "appPageId" : "b82c533e-f9b2-43a4-b6ea-72afea6fed42",
+  "configurationTags" : [ ],
+  "devName" : "Subscribers__c",
+  "id" : "c995cb0e-4620-49a0-b81c-ed6c81554fbd",
+  "label" : "Subscribers",
+  "routeType" : "custom-subscribers",
+  "type" : "route",
+  "urlPrefix" : "subscribers"
+}

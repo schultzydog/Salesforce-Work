@@ -1,0 +1,132 @@
+/* override browser default */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
+.fill {
+    height:100%;
+}
+:host{
+    display: block;
+}
+lightning-input{
+    --slds-c-input-spacing-horizontal-start: 0.25rem;
+    --slds-c-input-spacing-horizontal-end: 0.25rem;
+}
+div.timesheet-app{
+    /* position:absolute; */
+    /* height: 100%; */
+}
+div.timesheet-app .slds-card{
+    height: 100%;
+}
+table.time-table {
+    border: 1px solid #BBBBBB;
+    border-collapse: collapse;
+}
+table.time-table th, table.time-table td {
+    border: 1px solid #BBBBBB;
+    border-collapse: collapse;
+    padding: 2px;
+}
+td.cell-center{
+    text-align: center;
+    vertical-align: middle;
+}
+td.cell-hours input{
+    text-align: right;
+}
+.full-height{
+    height: 100%;
+}
+.inline-block{
+    display: inline-block;
+}
+.very-small{
+    font-size: 0.5rem;
+}
+.no-border{
+    border: none !important;
+}
+.slds-welcome-mat__tile-icon-container{
+    font-size: 2rem;
+}
+.slds-welcome-mat__content{
+    border-radius: 0.25rem;
+}
+.error{
+    color: #ba0517;
+}
+.weekend{
+    background-color: #f5f5f5;
+}
+.calendar-item {
+    display: inline-block;
+}
+.calendar-item .date{
+    color: #4B4F54;
+    border: solid 1px #dfdcd7;
+    width: 64px;
+    height: 64px;
+}
+.calendar-item .date .month{
+    font-weight: bold;
+    text-align: center;
+    background-color: #dfdcd7;
+    padding-bottom: 2px;
+}
+.calendar-item .date .day{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+.weekly-timesheet{
+    font-size: 2rem;
+    font-weight: 100;
+}
+.success{
+    color: #91db8b;
+}
+.warning{
+    color: #fe9339;
+}
+.fail{
+    color: #ba0517;
+}
+.status-icon{
+    position: absolute;
+    padding-left: 4px;
+    display: inline-block;
+}
+a.disabled {
+    pointer-events: none;
+    color: #ccc;
+}
+.refresh {
+    float:right;
+    z-index:10000;
+    position: sticky;
+}
+.stretch {
+    height:90%;
+}
+.icon-large{
+    font-size: 2rem;
+}
+.date-label{
+    width: 40px;
+}
+.working-locactions{
+    margin-left: -5px;
+}

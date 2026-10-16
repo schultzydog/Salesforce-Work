@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BD_Team</members>
+        <members>Client_Services</members>
+        <members>Corporate_Intake</members>
+        <members>Finance_Request</members>
+        <members>Global_Market_Intake</members>
+        <members>Japan_Office</members>
+        <members>Media_team</members>
+        <members>PolFast_EMEA</members>
+        <members>PolFast_US</members>
+        <members>Sales_Ops</members>
+        <members>Service_Case</members>
+        <members>Travel_Requests</members>
+        <members>egX</members>
+        <name>Queue</name>
+    </types>
+    <version>62.0</version>
+</Package>

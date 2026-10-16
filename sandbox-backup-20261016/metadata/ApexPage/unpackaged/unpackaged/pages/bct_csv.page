@@ -1,0 +1,24 @@
+<apex:page showHeader="false"
+           sidebar="false"
+           controller="bct_csv_ctlr"
+           cache="false"           
+           standardStylesheets="false"
+           contentType="{!contentType}">
+    
+    <apex:outputPanel layout="none" rendered="{!table=='Main legislative proposals in congress'}">    
+        <apex:outputPanel layout="none">{!headers}
+            <apex:repeat value="{!rows}" var="row" >                   
+"{!SUBSTITUTE(SUBSTITUTE(row.Sector__c, '\"', '\"\"'), ',', ', ')}","{!SUBSTITUTE(SUBSTITUTE(row.Proposal__c, '\"', '\"\"'), ',', ', ')}","{!SUBSTITUTE(SUBSTITUTE(row.Type__c, '\"', '\"\"'), ',', ', ')}","{!SUBSTITUTE(SUBSTITUTE(row.Number_Text__c, '\"', '\"\"'), ',', ', ')}","{!SUBSTITUTE(SUBSTITUTE(row.Summary__c, '\"', '\"\"'), ',', ', ')}","{!SUBSTITUTE(SUBSTITUTE(row.Status__c, '\"', '\"\"'), ',', ', ')}","{!SUBSTITUTE(SUBSTITUTE(IF(AND(lang=='pt-br',row.Likelihood__c=='Approved'),'Aprovado',row.Likelihood_this_year__c), '\"', '\"\"'), ',', ', ')}",<apex:outputText value="{0,date,MM'/'dd'/'yyyy}"><apex:param value="{!row.LastModifiedDate}" /></apex:outputText>
+            </apex:repeat>        
+        </apex:outputPanel>  
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="none" rendered="{!table=='Provisional measures under congressional analysis'}">    
+        <apex:outputPanel layout="none">{!headers}
+            <apex:repeat value="{!rows}" var="row" >                   
+{!row.Number__c},"{!SUBSTITUTE(SUBSTITUTE(row.Summary__c, '\"', '\"\"'), ',', ', ')}","{!SUBSTITUTE(SUBSTITUTE(row.Status__c, '\"', '\"\"'), ',', ', ')}",<apex:outputText value="{0,date,MM'/'dd'/'yyyy}"><apex:param value="{!row.Expiration_Date__c}" /></apex:outputText>
+            </apex:repeat>        
+        </apex:outputPanel>  
+    </apex:outputPanel>
+
+</apex:page>

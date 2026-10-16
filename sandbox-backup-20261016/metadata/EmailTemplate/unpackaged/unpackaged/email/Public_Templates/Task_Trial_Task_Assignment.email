@@ -1,0 +1,10 @@
+Dear {!Opportunity.OwnerFullName},
+
+The free trial period for {!Opportunity.Account} has expired and a task has been created for you.
+
+Click on below link to open the task record:
+
+{!Task.Link}
+
+Click on below link to open the opportunity record:
+{!Opportunity.Link}

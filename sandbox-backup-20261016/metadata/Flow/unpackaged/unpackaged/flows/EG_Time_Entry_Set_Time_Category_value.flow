@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Sets the Category picklist based on related project attributes
+this version always runs and is used for initial category setting</description>
+    <environments>Default</environments>
+    <interviewLabel>EG Time Entry: Set Time Category value {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EG Time Entry: Set Time Category value</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_EG_Time_Entry</name>
+        <label>Update EG Time Entry</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Time_Category__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.EG_Project_Task__r.Time_Category__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Time_Category__c</field>
+            <value>
+                <elementReference>$Record.EG_Project_Task__r.Time_Category__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_EG_Time_Entry</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>EG_Project__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <object>EG_Time_Entry__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

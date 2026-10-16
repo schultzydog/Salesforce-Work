@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Automate_Entitlement_Creation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Automate Entitlement Creation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Product_Libraries__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Has Product Libraries</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>casesafeid(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Managing_Director__c</fullName>
+        <label>Managing Director</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dr. Evan Medeiros</fullName>
+                    <default>false</default>
+                    <label>Dr. Evan Medeiros</label>
+                </value>
+                <value>
+                    <fullName>Christopher Garman</fullName>
+                    <default>false</default>
+                    <label>Christopher Garman</label>
+                </value>
+                <value>
+                    <fullName>Alexander Kazan</fullName>
+                    <default>false</default>
+                    <label>Alexander Kazan</label>
+                </value>
+                <value>
+                    <fullName>Cliff Kupchan</fullName>
+                    <default>false</default>
+                    <label>Cliff Kupchan</label>
+                </value>
+                <value>
+                    <fullName>Dr. Robert Johnston</fullName>
+                    <default>false</default>
+                    <label>Dr. Robert Johnston</label>
+                </value>
+                <value>
+                    <fullName>Mujtaba Rahman</fullName>
+                    <default>false</default>
+                    <label>Mujtaba Rahman</label>
+                </value>
+                <value>
+                    <fullName>Sean West</fullName>
+                    <default>false</default>
+                    <label>Sean West</label>
+                </value>
+                <value>
+                    <fullName>Willis Sparks</fullName>
+                    <default>false</default>
+                    <label>Willis Sparks</label>
+                </value>
+                <value>
+                    <fullName>Callum Henderson</fullName>
+                    <default>false</default>
+                    <label>Callum Henderson</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Poll__c</fullName>
+        <formula>CONTAINS(  Name , &apos;Poll&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Poll</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Price_range__c</fullName>
+        <externalId>false</externalId>
+        <label>Price range</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Template__c</fullName>
+        <label>Project Template</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Project_Template</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <label>Region</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Asia</fullName>
+                    <default>false</default>
+                    <label>Asia</label>
+                </value>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>Brazil</label>
+                </value>
+                <value>
+                    <fullName>Canada</fullName>
+                    <default>false</default>
+                    <label>Canada</label>
+                </value>
+                <value>
+                    <fullName>Europe</fullName>
+                    <default>false</default>
+                    <label>Europe</label>
+                </value>
+                <value>
+                    <fullName>Global</fullName>
+                    <default>false</default>
+                    <label>Global</label>
+                </value>
+                <value>
+                    <fullName>Latin America</fullName>
+                    <default>false</default>
+                    <label>Latin America</label>
+                </value>
+                <value>
+                    <fullName>North America</fullName>
+                    <default>false</default>
+                    <label>North America</label>
+                </value>
+                <value>
+                    <fullName>NY/DC</fullName>
+                    <default>false</default>
+                    <label>NY/DC</label>
+                </value>
+                <value>
+                    <fullName>NYC</fullName>
+                    <default>false</default>
+                    <label>NYC</label>
+                </value>
+                <value>
+                    <fullName>Other International</fullName>
+                    <default>false</default>
+                    <label>Other International</label>
+                </value>
+                <value>
+                    <fullName>Other U.S.</fullName>
+                    <default>false</default>
+                    <label>Other U.S.</label>
+                </value>
+                <value>
+                    <fullName>UK</fullName>
+                    <default>false</default>
+                    <label>UK</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Revenue_Type__c</fullName>
+        <label>Revenue Type</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Revenue_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Senior_Advisor__c</fullName>
+        <label>Senior Advisor</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alec Ross</fullName>
+                    <default>false</default>
+                    <label>Alec Ross</label>
+                </value>
+                <value>
+                    <fullName>Dr. David Gordon</fullName>
+                    <default>false</default>
+                    <label>Dr. David Gordon</label>
+                </value>
+                <value>
+                    <fullName>Hon. Enrico Letta</fullName>
+                    <default>false</default>
+                    <label>Hon. Enrico Letta</label>
+                </value>
+                <value>
+                    <fullName>Hon. John Baird</fullName>
+                    <default>false</default>
+                    <label>Hon. John Baird</label>
+                </value>
+                <value>
+                    <fullName>Hon. Kevin Rudd</fullName>
+                    <default>false</default>
+                    <label>Hon. Kevin Rudd</label>
+                </value>
+                <value>
+                    <fullName>Hon. Radoslaw Sikorshi</fullName>
+                    <default>false</default>
+                    <label>Hon. Radoslaw Sikorshi</label>
+                </value>
+                <value>
+                    <fullName>Lord Mark Malloch Brown</fullName>
+                    <default>false</default>
+                    <label>Lord Mark Malloch Brown</label>
+                </value>
+                <value>
+                    <fullName>Robert D. Kaplan</fullName>
+                    <default>false</default>
+                    <label>Robert D. Kaplan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Taxable__c</fullName>
+        <formula>IF(  ISPICKVAL(Family, &apos;Publications&apos;) || ISPICKVAL(Family, &apos;Advisory&apos;)  , TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Taxable</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

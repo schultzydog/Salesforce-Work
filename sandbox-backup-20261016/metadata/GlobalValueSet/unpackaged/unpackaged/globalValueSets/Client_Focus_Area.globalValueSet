@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Brazil</fullName>
+        <default>false</default>
+        <label>Brazil</label>
+    </customValue>
+    <customValue>
+        <fullName>China</fullName>
+        <default>false</default>
+        <label>China</label>
+    </customValue>
+    <customValue>
+        <fullName>EM</fullName>
+        <default>false</default>
+        <label>EM</label>
+    </customValue>
+    <customValue>
+        <fullName>ESG</fullName>
+        <default>false</default>
+        <label>ESG</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Latam</fullName>
+        <default>false</default>
+        <label>Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>Macro</fullName>
+        <default>false</default>
+        <label>Macro</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil</fullName>
+        <default>false</default>
+        <label>Oil</label>
+    </customValue>
+    <customValue>
+        <fullName>United States</fullName>
+        <default>false</default>
+        <label>United States</label>
+    </customValue>
+    <masterLabel>Client Focus Area</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

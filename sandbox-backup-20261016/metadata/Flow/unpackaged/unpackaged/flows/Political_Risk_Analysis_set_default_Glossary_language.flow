@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Political Risk Analysis: set default Glossary language {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Political Risk Analysis: set default Glossary language</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_with_default_Glossary_language</name>
+        <label>Update with default Glossary language</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>Glossary__c</field>
+            <value>
+                <elementReference>GlossaryTemplate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_with_default_Glossary_language</targetReference>
+        </connector>
+        <object>Political_Risk_Analysis__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>GlossaryTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;em&gt;Basecase:&lt;/em&gt; Eurasia Group&apos;s assessment of the political risk outlook for each country or geopolitical relationship over the next 6 to 12 months.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Eurasia Group trajectories:&lt;/em&gt; Political Trajectories capture our analysts’ forward-looking, directional assessment of the impact of political risk in a given country on its macro-business environment over the next 6 and 24 months. A Trajectory change serves as notice that the analyst assesses that the political outlook in a given country is changing and will affect the general business and investment environment either positively or negatively. The Trajectories represent the aggregated anticipated future values (that is, forecasts) of risks and opportunities within four components—government, society, security, and economy (including macroeconomy and investment climate)—weighted by the relative importance of each component in generating political risks and opportunities.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Key analytic assumptions:&lt;/em&gt; “Any hypothesis that analysts have accepted to be true and which forms the basis of the assessment.” For the purposes of this exercise, we define key analytic assumptions as the underlying assumptions that inform our analysis of government decision making; for example, in Taiwan, we assume that while President Tsai Ing-wen will seek a stronger relationship with the US, she will not transgress red lines for Beijing such as declaring formal independence, because the perceived risks of doing so would be too severe.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Net assessment: &lt;/em&gt;This month’s distillation of the dashboard findings for each country.&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

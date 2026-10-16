@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aged Out</fullName>
+        <default>false</default>
+        <label>Aged Out / Neglected</label>
+    </customValue>
+    <customValue>
+        <fullName>CEO Departure</fullName>
+        <default>false</default>
+        <label>CEO Departure</label>
+    </customValue>
+    <customValue>
+        <fullName>Checkwriter Departure</fullName>
+        <default>false</default>
+        <label>Checkwriter Departure</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract_Transfer</fullName>
+        <default>false</default>
+        <label>Contract Transfer to New Entity</label>
+    </customValue>
+    <customValue>
+        <fullName>COVID-19 Impact</fullName>
+        <default>false</default>
+        <label>COVID-19 Impact</label>
+    </customValue>
+    <customValue>
+        <fullName>Expired Opportunity</fullName>
+        <default>false</default>
+        <label>Expired Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Issues with Coverage</fullName>
+        <default>false</default>
+        <label>Issues with Coverage</label>
+    </customValue>
+    <customValue>
+        <fullName>No Reason Given</fullName>
+        <default>false</default>
+        <label>No Reason Given</label>
+    </customValue>
+    <customValue>
+        <fullName>Shift in business focus</fullName>
+        <default>false</default>
+        <label>Shift In Business Focus</label>
+    </customValue>
+    <customValue>
+        <fullName>Too Expensive/Budget Constraints</fullName>
+        <default>false</default>
+        <label>Too Expensive/Budget Constraints</label>
+    </customValue>
+    <customValue>
+        <fullName>Other—see ScoOther—see Status/Next Steps notepe note</fullName>
+        <default>false</default>
+        <label>Other—see Status/Next Steps note</label>
+    </customValue>
+    <masterLabel>Closed/Lost Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

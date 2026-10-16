@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Enforce_pbe_edit_for_Admins_only</fullName>
+        <active>true</active>
+        <errorConditionFormula>$User.ProfileId  &lt;&gt; &apos;00e30000001mXHV&apos;  &amp;&amp;  ISCHANGED( UnitPrice )</errorConditionFormula>
+        <errorMessage>Only system administrators are permitted to edit list price</errorMessage>
+    </validationRules>
+</CustomObject>

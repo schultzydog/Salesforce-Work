@@ -1,0 +1,60 @@
+{
+  "appPageId" : "b82c533e-f9b2-43a4-b6ea-72afea6fed42",
+  "componentName" : "community_layout:sldsFlexibleLayout",
+  "dataProviders" : [ ],
+  "id" : "c9b51e15-a562-4001-ab23-797cfc1a342d",
+  "label" : "Political Risk Dashboard",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"30c133bf-6340-47e8-9776-254ab8c57d4b\",\"columns\":[{\"UUID\":\"3468a96f-5a88-4ccd-a5c5-988507d45fcc\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "30c133bf-6340-47e8-9776-254ab8c57d4b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:clientPortal_RiskDashboard",
+          "id" : "c8aacc44-d493-4c0d-ab2c-353f2a029098",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3468a96f-5a88-4ccd-a5c5-988507d45fcc",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    } ],
+    "id" : "7e8708f9-5b38-4d96-8709-d316ac01dcfe",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "pageTitle" : "Political Risk Dashboard",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "community_builder:seoAssistant",
+      "id" : "7cd27e20-f4d9-4fac-8cd3-37cd70fc429c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c8c0694c-6bf7-4c11-9ea7-15b3c5f0ae31",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "akRwTwsy489pPgokBPUiNEbUB7cjWI",
+  "type" : "view",
+  "viewType" : "custom-political-risk-dashboard"
+}

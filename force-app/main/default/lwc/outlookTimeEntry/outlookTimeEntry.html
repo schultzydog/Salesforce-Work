@@ -53,11 +53,12 @@
                         <p class={matchStatusClass}>{matchStatus}</p>
                     </template>
 
+                    <div class={fieldsClass}>
                     <lightning-input
                         type="date"
                         label="Date"
                         value={workDate}
-                        disabled={isDateReadOnly}
+                        disabled={isDateDisabled}
                         onchange={handleDateChange}
                         required
                     ></lightning-input>
@@ -67,6 +68,7 @@
                         object-api-name="Account"
                         value={accountId}
                         placeholder="Search accounts"
+                        disabled={isFieldsLocked}
                         onchange={handleAccountChange}
                     ></lightning-record-picker>
 
@@ -77,6 +79,7 @@
                             value={projectId}
                             filter={projectFilter}
                             placeholder="Search projects"
+                            disabled={isFieldsLocked}
                             onchange={handleProjectChange}
                         ></lightning-record-picker>
                     </template>
@@ -96,6 +99,7 @@
                             value={projectTaskId}
                             filter={taskFilter}
                             placeholder="Search project tasks"
+                            disabled={isFieldsLocked}
                             onchange={handleTaskChange}
                         ></lightning-record-picker>
                     </template>
@@ -115,6 +119,7 @@
                         step="0.25"
                         min="0"
                         formatter="decimal"
+                        disabled={isFieldsLocked}
                         onchange={handleHoursChange}
                         required
                     ></lightning-input>
@@ -122,6 +127,7 @@
                     <lightning-textarea
                         label="Notes"
                         value={notes}
+                        disabled={isFieldsLocked}
                         onchange={handleNotesChange}
                     ></lightning-textarea>
 
@@ -134,6 +140,7 @@
                             onclick={handleSubmit}
                             disabled={isSubmitDisabled}
                         ></lightning-button>
+                    </div>
                     </div>
 
                     <template lwc:if={isSubmitting}>

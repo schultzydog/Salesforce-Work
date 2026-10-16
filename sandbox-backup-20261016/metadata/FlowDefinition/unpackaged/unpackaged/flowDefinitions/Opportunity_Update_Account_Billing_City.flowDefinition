@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>To support the Sage Intacct integration, Account Billing City is required. This flow updates the related account with the Bill To Contact Mailing City value if there isn&apos;t already a value there.</description>
+    <masterLabel>Opportunity: Update Account Billing City</masterLabel>
+</FlowDefinition>

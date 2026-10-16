@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Opportunity.Zapier_create_MSA_zap</members>
+        <members>Opportunity.Zapier_create_SOW_zap</members>
+        <name>WorkflowOutboundMessage</name>
+    </types>
+    <version>62.0</version>
+</Package>

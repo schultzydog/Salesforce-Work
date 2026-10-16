@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Contract.Contract_Approval_by_Finance_Department</members>
+        <members>Contract_Adjustments__c.Contract_Adjust_Approval</members>
+        <members>Contract_Adjustments__c.Contract_Adjustment_Approval_Process</members>
+        <members>Customer_Id__c.Customer_Id_approval</members>
+        <members>Opportunity.Approve_Gloma_Oppties</members>
+        <members>Opportunity.Approve_Gloma_Renewal_Oppties</members>
+        <members>Opportunity.Approve_Gloma_Won_Opportunities</members>
+        <members>Opportunity.Approve_Non_Gloma_Oppties</members>
+        <members>Opportunity.Approve_Non_Gloma_Won_Opportunities</members>
+        <members>Opportunity.Lock_Opportunity</members>
+        <members>Opportunity.Lost_Renewal_Opportunity</members>
+        <members>Opportunity_Request__c.Request_Approval</members>
+        <members>Travel_Request__c.Travel_Request_approval</members>
+        <members>Travel_Request__c.Travel_Request_approval_research</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <version>62.0</version>
+</Package>

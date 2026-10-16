@@ -1,0 +1,5 @@
+{!01I3A000002LhY8.00N3A00000C3JP5},<br><br>
+
+You've been assigned as an Analyst to {!Contact.FirstName} {!Contact.LastName} with a {!01I3A000002LhY8.00N3A00000C3JP7} contact frequency.<br><br>
+
+You can view this Contact record here - {!Contact.Link}

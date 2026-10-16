@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Adv_Scope_of_Work_required_for_Clients</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISPICKVAL(Type, &apos;Client&apos;) &amp;&amp; NOT(ISBLANK(TEXT(   Advisory_Scope_of_Work__c )))</errorConditionFormula>
+        <errorMessage>Please select a value for Advisory Scope of Work when updating the Type to Client</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Corporate_Sector_Team</fullName>
+        <active>true</active>
+        <description>corporate sector team required when business line = corporate</description>
+        <errorConditionFormula>AND(
+ISBLANK( TEXT(Corporate_Sector_Team__c) ),
+ISPICKVAL( Business_Line__c , &apos;Corporate&apos;) ,
+(ISPICKVAL( Type , &apos;Client&apos;) || ISPICKVAL( Type , &apos;Prospect&apos;)),
+NOT CONTAINS($Profile.Name, &apos;Admin&apos;) 
+ )</errorConditionFormula>
+        <errorDisplayField>Corporate_Sector_Team__c</errorDisplayField>
+        <errorMessage>Please select a Corporate Sector Team value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Disable_all_Contacts_checkbox</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED( Status_Enable_Disable__c )  &amp;&amp; ISPICKVAL(Status_Enable_Disable__c  , &apos;Disabled&apos;) &amp;&amp;  
+ISPICKVAL(PRIORVALUE
+(Status_Enable_Disable__c), 
+&apos;Enabled&apos;) &amp;&amp;
+ Disable_Account_and_ALL_Contacts__c = FALSE</errorConditionFormula>
+        <errorDisplayField>Disable_Account_and_ALL_Contacts__c</errorDisplayField>
+        <errorMessage>When updating an Account from Enabled to Disabled, please check the Disable Account and ALL Contacts checkbox to confirm you want to disable all related Contact records</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Gloma_Client_Required_for_Gloma_Bus_Line</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ISBLANK( TEXT(Gloma_Client_Type__c) ),
+ISPICKVAL( Business_Line__c , &apos;Global Markets&apos;) ,
+(ISPICKVAL( Type , &apos;Client&apos;)) )</errorConditionFormula>
+        <errorDisplayField>Gloma_Client_Type__c</errorDisplayField>
+        <errorMessage>Please select a Gloma Client Type</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RequireBillingAddress</fullName>
+        <active>false</active>
+        <description>Address City,  Country are Reqruired</description>
+        <errorConditionFormula>AND(
+OR ( 
+ISBLANK(BillingCity),
+ISBLANK(BillingCountry)), 
+ ISPICKVAL(Type, &apos;Client&apos;) ,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;)</errorConditionFormula>
+        <errorDisplayField>BillingCity</errorDisplayField>
+        <errorMessage>ERROR: You must add a Billing City and Billing Country to the Billing Address of this Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Open_or_Won_opps_for_enablement</fullName>
+        <active>false</active>
+        <description>in order to set the status to enabled, it is required that the account has 1 or more open/won oppties</description>
+        <errorConditionFormula>Count_of_Open_Closed_Won_oppties__c &lt; 1  &amp;&amp;   ISPICKVAL(Status_Enable_Disable__c, &apos;Enabled&apos;) &amp;&amp; NOT ISPICKVAL(Type, &apos;Media&apos;) &amp;&amp; NOT ISPICKVAL(Type, &apos;Friend of Firm&apos;) &amp;&amp; NOT ISPICKVAL(Type, &apos;Friend of Ian&apos;) &amp;&amp;   ISBLANK(Contract_Holding_Account__c )</errorConditionFormula>
+        <errorDisplayField>Status_Enable_Disable__c</errorDisplayField>
+        <errorMessage>In order to set Status to Enabled, an Account requires an open Opportunity or a Closed Won Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Required_Primary_City_Seviced</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+ISBLANK(  Primary_City_Serviced__c  ), 
+ISPICKVAL(  Business_Line__c , &apos;Global Markets&apos;),
+ISPICKVAL( Type , &apos;Client&apos;))</errorConditionFormula>
+        <errorDisplayField>Primary_City_Serviced__c</errorDisplayField>
+        <errorMessage>Client accounts require a Primary City Serviced value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Short</fullName>
+        <active>false</active>
+        <description>Shorter than 6</description>
+        <errorConditionFormula>LEN(text(Industry)) &gt; 6</errorConditionFormula>
+        <errorDisplayField>Industry</errorDisplayField>
+        <errorMessage>Cant do that!</errorMessage>
+    </validationRules>
+</CustomObject>

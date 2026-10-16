@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account.Business_Line_Global_Markets</members>
+        <members>Opportunity.GZERO_Oppty_shares</members>
+        <members>Opportunity.Gloma_Oppty_Shares</members>
+        <members>Opportunity.One_Firm_Oppty_Shares</members>
+        <name>SharingCriteriaRule</name>
+    </types>
+    <version>62.0</version>
+</Package>

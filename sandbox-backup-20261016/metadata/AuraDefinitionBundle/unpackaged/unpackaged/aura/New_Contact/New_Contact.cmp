@@ -1,0 +1,3 @@
+<aura:component implements="force:lightningQuickAction" >
+	<ui:button label="New Contact" press="{!c.openActionWindow}"/>
+</aura:component>

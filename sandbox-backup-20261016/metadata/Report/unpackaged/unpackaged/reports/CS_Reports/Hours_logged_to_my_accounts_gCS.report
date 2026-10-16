@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>EG_Project__c.EG_Time_Entries__r$Hours_Worked__c</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EG_Project__c$Linked_Opportunity__c.Account</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Timesheet hours logged to my accounts</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>EG_Projects_and_EG_Time_Entries__c</reportType>
+    <scope>user</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EG_Project__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

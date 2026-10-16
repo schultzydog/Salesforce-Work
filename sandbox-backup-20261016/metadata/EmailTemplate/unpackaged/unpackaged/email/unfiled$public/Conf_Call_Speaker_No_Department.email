@@ -1,0 +1,5 @@
+{!Conference_Call_Speaker__c.Speaker_User__c} was added as a speaker on a conf call but does not have a department. 
+
+After adding a department, you can 'rattle' the speaker and call records by hitting Edit/Save and this should correct any data inaccuracies caused by the lack of department value. 
+
+{!Conference_Call_Speaker__c.Link}

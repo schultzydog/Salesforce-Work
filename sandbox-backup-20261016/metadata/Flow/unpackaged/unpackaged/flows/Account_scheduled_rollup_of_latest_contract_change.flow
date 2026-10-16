@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <decisions>
+        <name>SLR_Entries</name>
+        <label>SLR Entries?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Has_SLR_Entries</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_SLR_Entries</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account</targetReference>
+            </connector>
+            <label>Has SLR Entries</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>LatestContractChangeText</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!Get_SLR_Entries.Announcement_Date__c}) &amp; &apos; &apos; &amp;
+IF(NOT ISBLANK(TEXT({!Get_SLR_Entries.Renewal_Sub_type__c})), TEXT({!Get_SLR_Entries.Renewal_Sub_type__c}), null)  &amp; &apos; &apos; &amp;
+IF(NOT ISBLANK(TEXT({!Get_SLR_Entries.Announcement_Type__c})), TEXT({!Get_SLR_Entries.Announcement_Type__c}), null) &amp;&apos; &apos; &amp;
+IF({!Get_SLR_Entries.SLR_Amount_USD__c}&lt;&gt;0,  &apos;Amount $&apos; &amp; TEXT({!Get_SLR_Entries.SLR_Amount_USD__c}), null)</expression>
+    </formulas>
+    <interviewLabel>Account: scheduled rollup of latest contract change {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account: scheduled rollup of latest contract change</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_SLR_Entries</name>
+        <label>Get SLR Entries</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SLR_Entries</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 or 3)</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Announcement_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Renewal</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contract_Adjustment__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SLR_Entry__c</object>
+        <sortField>Announcement_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account</name>
+        <label>Update Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Latest_Contract_Change__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>LatestContractChangeText</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Latest_Contract_Change__c</field>
+            <value>
+                <elementReference>LatestContractChangeText</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_SLR_Entries</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Count_of_Closed_Won_Oppties__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <schedule>
+            <dayOfMonthToRun>0</dayOfMonthToRun>
+            <frequency>Daily</frequency>
+            <frequencyNumber>0</frequencyNumber>
+            <startDate>2025-05-19</startDate>
+            <startTime>16:46:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

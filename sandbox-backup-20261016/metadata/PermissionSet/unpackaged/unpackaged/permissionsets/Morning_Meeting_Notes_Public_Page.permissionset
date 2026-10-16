@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>MorningMeetingNotesCtrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>This PS is to assign Object/Field and Apex class permission to Guest user profile for Morning Meeting Notes - Public Page
+
+
+Object/Fields- Morning Meeting Notes
+Apex Class - MorningMeetingNotesCtrl</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Morning_Meeting_Note__c.Argument__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Morning_Meeting_Note__c.Morning_Meeting_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Morning_Meeting_Note__c.egContributors__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Morning Meeting Notes - Public Page</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Morning_Meeting_Note__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+</PermissionSet>

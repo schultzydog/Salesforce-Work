@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contracts$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contracts$Status</field>
+    </columns>
+    <columns>
+        <field>Account.Contracts.Opportunities$Type</field>
+    </columns>
+    <columns>
+        <field>Account.Contracts$Project_Code__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contracts$ContractNumber</field>
+    </columns>
+    <currency>USD</currency>
+    <description>List of all Contracts to date</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Contracts$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contracts$Revenue_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Recurring</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>All Active Recurring Contracts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_w_Contracts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Contracts$StartDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

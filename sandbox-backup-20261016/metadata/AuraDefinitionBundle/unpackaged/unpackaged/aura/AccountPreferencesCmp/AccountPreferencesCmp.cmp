@@ -1,0 +1,156 @@
+<!--
+ Date : 5/16/2022
+ Change: Layout updated to match with Contact Pref
+-->
+<aura:component controller="AccountPreferencesCtlr" implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" >
+	
+	<aura:attribute name="toggleSpinner" type="boolean" default="false"/>
+	<aura:attribute name="key" type="String" />
+	<aura:attribute name="id" type="String" />
+	<aura:attribute name="HelpText" type="String" />
+	<aura:attribute name="email" type="String" />
+	<aura:attribute name="isCommunity" type="Boolean" default="true" />
+    <aura:attribute name="isLicenseSalesforce" type="boolean" default="false"/>
+	<aura:attribute name="wrappers" type="AccountPreferencesCtlr.RootWrapper[]" />
+    <aura:attribute name="accountid" type="String" access="public" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!v.toggleSpinner}">
+        <div class="slds-spinner_container">
+            <div class="slds-spinner_brand  slds-spinner slds-spinner_large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+		</aura:if>
+		
+	<div class="cmp-wrapper slds-p-around_custom">
+		<lightning:layout horizontalAlign="spread">
+			<lightning:layoutItem size="3" class="slds-var-p-around_x-small">
+				<lightning:layout multipleRows="true">
+					<aura:if isTrue="{!v.isLicenseSalesforce}">
+						
+						<lightning:layoutItem size="12" class="slds-var-p-around_x-small">
+							<lightning:button variant="brand" label="Save" title="Save" onclick="{! c.save }"/>
+						</lightning:layoutItem>
+						<aura:if isTrue="{!v.isCommunity}">
+                            <lightning:layoutItem size="12" class="slds-var-p-around_x-small">
+                                <a class="slds-button slds-button_neutral" href="{!'mailto:'+v.accountOwnerEmail+'?Subject=Subscription%20Request'}" target="_top">Email Account Manager</a>
+                            </lightning:layoutItem>                                
+                        </aura:if>
+						<lightning:layoutItem size="12" class="slds-var-p-around_x-small">
+							<lightning:button label="Select All" title="Select All" onclick="{! c.selectAll }"/>
+						</lightning:layoutItem>
+						<lightning:layoutItem size="12" class="slds-var-p-around_x-small">
+							<lightning:button label="Clear All" title="Clear All" onclick="{! c.unselectAll }"/>
+						</lightning:layoutItem>						
+					</aura:if>
+					<lightning:layoutItem size="12" class="slds-p-top_large">
+						<b>Quick Select</b>
+					</lightning:layoutItem>
+					<lightning:layoutItem size="12" class="slds-var-p-around_x-small">
+						<lightning:button label="Developed Markets" title="Developed Markets" onclick="{! c.doDM }"/>
+					</lightning:layoutItem>
+					<lightning:layoutItem size="12" class="slds-var-p-around_x-small">
+						<lightning:button label="Emerging Markets" title="Emerging Markets" onclick="{! c.doEM }"/>
+					</lightning:layoutItem>
+				</lightning:layout>
+			</lightning:layoutItem>
+			<lightning:layoutItem size="9" class="slds-var-p-around_x-small">
+				<aura:if isTrue="{!v.isCommunity}">
+					{!v.HelpText}
+				</aura:if>
+				<aura:if isTrue="{!v.isLicenseSalesforce}">
+					<div class="slds-float_left" style="padding:7px;">
+						<a onclick="{!c.expandAll}">Expand All</a> | <a onclick="{!c.collapseAll}">Collapse All</a>
+					</div>                
+				</aura:if>
+				<aura:iteration items="{!v.wrappers}" var="wrapper" indexVar="i">
+					<table class="slds-table slds-table_bordered row-wrapper">
+						<tr class="row">
+							<th class="icon-cell">
+								<div class="slds-float_left padded-header" style="cursor: pointer;" data-id="{!i}" onclick="{!c.toggle}">
+									<div class="slds-show add" id="{!'add-'+i}">
+										<lightning:icon iconName="utility:add" size="x-small" alternativeText="Indicates add"/>
+									</div>
+									<div class="slds-hide dash" id="{!'dash-'+i}">
+										<lightning:icon iconName="utility:dash" size="x-small" alternativeText="Indicates dash"/>
+									</div>
+								</div>
+							</th>
+							<th class="label-cell">
+								<div class="section-header padded-header">{!wrapper.root.Name}<!-- - {!wrapper.state} --></div>
+							</th>
+							<th class="{!'table-left-cell slds-text-title_caps th-left th-left-'+wrapper.state}">
+								<div class="slds-truncate">
+									<div class="slds-form-element">
+									<label class="slds-checkbox_toggle slds-grid" style="width: 100%;">
+										<table>
+											<!--
+											<tr style="height:30px;">
+												<span class="slds-form-element__label slds-m-bottom_none header-label" style="color:white;">Add</span>
+											</tr>
+											-->
+											<tr >
+												<div class="center">
+													<div class="slds-button-group" role="group">
+														<button class="{!'slds-button slds-button_neutral check-button-'+wrapper.state}" onclick="{!c.checkAll}" data-id="{!'ind-'+wrapper.root.Id}">
+															<lightning:icon iconName="utility:check" size="x-small"/>
+														</button>
+														<button class="{!'slds-button slds-button_neutral x-button-'+wrapper.state}" onclick="{!c.uncheckAll}" data-id="{!'ind-'+wrapper.root.Id}">
+															<lightning:icon iconName="utility:close" size="x-small"/>
+														</button>
+													</div>
+													<!--
+													<input name="{!'checkbox-1-'+wrapper.root.Id}" type="checkbox" aria-describedby="{!'checkbox-1-'+wrapper.root.Id}" value="{!'checkbox-1-'+wrapper.root.Id}" data-id="{!'ind-'+wrapper.root.Name}" onchange="{!c.checkAllInd}" disabled="{!wrapper.disabled}"/>
+													<span id="{!'checkbox-1-'+wrapper.root.Id}" class="slds-checkbox_faux_container" aria-live="assertive">
+													<span class="slds-checkbox_faux"></span>
+													</span>
+													-->
+												</div>
+											</tr>
+										</table>
+									</label>
+									</div>
+								</div>
+							</th>
+						</tr>
+
+						<aura:iteration items="{!wrapper.libs}" var="lWrap" >
+							<tr class="{!'row slds-hide row-'+i}" aura:id="{!i}">
+								<td class="icon-cell">
+								</td>
+								<td class="label-cell">
+									<div class="section-header padded-sub-header">{!lWrap.lib.Name}</div>
+								</td>
+
+								<td class="{!'table-left-cell slds-text-title_caps th-left th-left-'+wrapper.state}" scope="col">
+									<div class="slds-truncate" >
+										<lightning:input name="ind"
+											type="checkbox"
+											messageToggleActive=""
+											messageToggleInactive=""
+											checked="{!lWrap.selected}" 
+											onchange="{!c.check}" />
+											<!--<span class="slds-form-element__label slds-m-bottom_none" style="margin-left:10px;color:white;"> Daily Summaries</span>-->
+									</div>
+								</td>
+
+							</tr>
+						</aura:iteration>
+					</table>
+
+				</aura:iteration>
+			</lightning:layoutItem>
+		</lightning:layout>
+
+		<div class="text-wrapper">
+				
+			
+		</div>	
+		
+	</div>
+
+</aura:component>

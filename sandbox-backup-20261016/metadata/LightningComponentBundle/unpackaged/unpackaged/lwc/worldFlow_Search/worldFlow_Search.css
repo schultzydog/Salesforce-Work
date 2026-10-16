@@ -1,0 +1,364 @@
+.slds-form-element{
+    margin-bottom:var(--dxp-g-spacing-xxsmall);
+}
+.slds-text-heading_large{
+    color: #1D4F91;
+    font-weight: 400;
+    font-size: large;
+}
+
+.scrollContainer {
+    max-height:800px;
+    overflow: auto;
+    position: relative;
+    border: 1px solid black;
+}
+.scrollArea {
+    position: relative;
+}
+
+
+
+.slds-text-heading_medium{
+    color: #000;
+    font-weight: 400;
+    font-size: .75rem;
+}
+.search-item{
+    min-height: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-item-heading{
+    color:#039be5;
+    font-size: .75rem;
+    line-height: 110%;
+    margin: 0.82rem 0 0.656rem
+}
+.slds-checkbox .slds-checkbox__label .slds-form-element__label{
+    font-size: .8125rem !important;
+}
+
+.search-item-subheading{
+    margin-right: 8em;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+    font-size: 0.75em;
+    max-height: 2.4em;
+
+}
+
+.search-param-button button{
+    width:25px;
+    height: 25px;
+    border: none;
+
+}
+
+.heading-button {
+    border: none;
+    background: none;
+    padding-bottom: 5px;
+}
+
+.search-panel{
+    background: #1D4F9122;
+}
+
+
+.input-nomargin{
+    margin:0px;
+    display: inline-table;
+}
+
+/*** Research Search CSS **/
+.research-blog-wrap.z-depth-1 {
+    box-shadow: none;
+    padding-bottom: 0.5rem;
+}
+
+.research-blog-wrap .document-headline-row {
+    font-size: 1em;
+}
+
+.research-blog-wrap p {
+    font-size: 0.75em;
+    /* max-height = line-height (1.2) * lines max number (2) */
+    max-height: 2.4em;
+}
+
+.research-widget h2.blue-heading {
+    margin-top: 0.75em;
+}
+
+.research-widget {
+    background-color: #F1F3F7;
+    padding: 0 2em;
+}
+
+.research-widget .eurasia-widget-body {
+    max-height: 340px;
+}
+
+.research-widget .infinite-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 340px;
+}
+
+.research-item {
+    min-height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+
+.document-analyst-row {
+    color: #666;
+    max-height: 10em !important;
+    line-height: 2em;
+}
+
+.document-analyst-row .flag-icon {
+    width: 1.8em;
+    height: 1.4em;
+    box-shadow: 1px 1px #aaa;
+    position: relative;
+    bottom: 3px;
+    margin-bottom: -3px;
+    margin-left: 5px;
+}
+
+.document-analyst-row img {
+    height: 18px;
+    position: relative;
+    top: 6px;
+    margin-left: 5px;
+}
+
+.compact-research-item .document-analyst-row {
+    margin: .25em 0;
+}
+
+.document-synopsis-row.block-with-text {
+    margin-right: 8em;
+}
+
+.compact-research-item .document-synopsis-row.block-with-text {
+    margin-right: 1em;
+}
+
+.document-bookmark {
+    color: #BE2846;
+    font-size: 2em;
+    margin-left: .3em;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.document-bookmark-spinner {
+    color: #BE2846;
+    position: relative;
+    right: 17px;
+    top: 13px;
+    margin-left: -6px;
+    text-shadow: 1px 1px rgba(0,0,0,0.1);
+    display: none;
+}
+
+
+.document-date-row {
+    margin-top: 2em;
+    color: #666;
+    text-align: right;
+}
+
+.compact-research-item .document-date-row {
+    float: right;
+    position: relative;
+    margin: 0;
+}
+
+.block-with-text:after {
+    background: none !important;
+}
+
+.right {
+    float: right !important;
+}
+
+a.document-menu, a.document-interactions {
+    color:#BE2846;
+    cursor:pointer;
+    font-size: 29px;
+    top: -9px;
+    margin-left: 0;
+    float: right;
+    position: relative;
+}
+
+div.document-menu-content {
+    display: none;
+    width: 220px;
+    line-height: 50px;
+    z-index: 100;
+    margin-left: -100px;
+    margin-top: 0px;
+    padding: 16px;
+    background-color: white;
+    border: 2px solid rgb(226, 232, 238);
+    border-radius: 4px;
+    position: absolute;
+    text-align: left;
+}
+
+.document-menu-content ul li {
+    margin-left:0px!important;
+    cursor:pointer;
+}
+
+.document-menu-content .document-bookmark{
+    color: unset;
+    font-size: 18px;
+    font-weight: 900;
+    margin-left: 0px;
+}
+
+.right-align{
+    text-align:right;
+}
+
+/*** Left Menu **/
+/*
+.filter-box:before {
+    content: '\f067';
+    font-family: 'FontAwesome', sans-serif;
+    float: right;
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    color: #022159;
+}
+
+.filter-box.open:before {
+    content: '\f068';
+}
+*/
+.filter-box i{
+    float: right;
+    position: relative;
+    bottom: 17px;
+    right: 17px;
+    color: #022159;
+}
+
+.subfilter-box {
+    margin: .25em 0;
+}
+
+.subfilter-box .form-group i{
+    font-size: .9em;
+    color: #022159;
+}
+/*
+.subfilter-box .form-group:after {
+    content: '\f0d7';
+    margin-left: 5px;
+    font-family: 'FontAwesome', sans-serif;
+    font-size: .9em;
+    color: #022159;
+}
+
+.subfilter-box.open .form-group:after {
+    content: '\f0d8';
+}*/
+
+.filter-box, .subfilter-box {
+    cursor: pointer;
+}
+/*
+.filter-box + .filter-box-sub-menu, .subfilter-box + .subfilter-box-sub-menu {
+    display: none;
+}
+
+.filter-box.open + .filter-box-sub-menu, .subfilter-box.open + .subfilter-box-sub-menu {
+    display: block;
+}
+*/
+
+.filter-box-sub-menu{
+    display: none;
+}
+.filter-box-sub-menu.open{
+    display: block;
+}
+.subfilter-box-sub-menu {
+    margin-left: 2em;
+}
+
+l.list-col-1 {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+}
+
+ul.list-col-2 {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+ul.list-col-3 {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
+
+ul.list-col-4 {
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+}
+
+ul.list-col-5 {
+    columns: 5;
+    -webkit-columns: 5;
+    -moz-columns: 5;
+}
+
+ul.list-col-6 {
+    columns: 6;
+    -webkit-columns: 6;
+    -moz-columns: 6;
+}
+
+ul.list-col-7 {
+    columns: 7;
+    -webkit-columns: 7;
+    -moz-columns: 7;
+}
+
+ul.list-col-avoid-breakage li {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+hr{
+    box-sizing: content-box;
+    border-top: 1px solid #ddd;
+    height: 0;
+    margin:1rem !important;
+}
+
+.subfilter-box-sub-menu{
+    display:  none;
+}
+
+.subfilter-box-sub-menu.open{
+    display: block;
+}

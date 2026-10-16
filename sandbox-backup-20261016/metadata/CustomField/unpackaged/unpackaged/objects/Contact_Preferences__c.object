@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Preferences__c</fullName>
+        <label>Account Preferences</label>
+        <referenceTo>Account_Preferences__c</referenceTo>
+        <relationshipName>Contact_Preferences</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Client_Portal_Political_Risk_Dashboard__c</fullName>
+        <formula>Account_Preferences__r.Client_Portal_Political_Risk_Dashboard__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Client_Portal_Political_Risk_Dashboard__</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_AcctPref_Concat__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact AcctPref Concat</label>
+        <length>36</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_AcctPref_Concat_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID( Contact__c ) +  CASESAFEID( Account_Preferences__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact AcctPref Concat formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Library_Concat__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Contact Library Concat</label>
+        <length>36</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Library_Concat_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID( Contact__c ) +  CASESAFEID( Account_Preferences__r.Library__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Library Concat formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Contact_Preferences</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>DL_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Library__r.Distribution_List_SubCategory__r.Distribution_List_Category__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DL Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Delete_due_to_age_of_disablement__c</fullName>
+        <formula>ISPICKVAL(Contact__r.Status__c, &apos;Disabled&apos;) &amp;&amp;  today() -datevalue(Contact__r.Latest_Status_Disablement_date__c) &gt; 120</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Delete due to age of disablement</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Delivery_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Summary_Emails__c &amp;&amp; !Individual_Emails__c, &apos;Summary Only&apos;, 
+IF(!Summary_Emails__c &amp;&amp; Individual_Emails__c, &apos;Individual Only&apos;,
+IF(Summary_Emails__c &amp;&amp; Individual_Emails__c, &apos;Both&apos;, null)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Delivery Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Distribution_Category_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Library__r.Distribution_List_SubCategory__r.Distribution_List_Category__r.Library_ID_18_Digit__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Distribution Category Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Edited_by_Client__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Edited by Client</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Flag_for_Deletion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Flag for Deletion</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Individual_Email_Not_Press_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(Contact__r.Press_User__c) &amp;&amp; Individual_Emails__c  , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Individual Email (Not Press User)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Individual_Email_Press_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Contact__r.Press_User__c &amp;&amp; Individual_Emails__c , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Individual Email (Press User)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Individual_Emails_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Individual_Emails__c , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Individual Emails Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Individual_Emails__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Individual Emails</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Active_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF((Individual_Emails__c  || Summary_Emails__c), 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Active Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_WF_Sync_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last WF Sync Date</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_WF_Sync_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Last WF Sync Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Library_Active__c</fullName>
+        <formula>Account_Preferences__r.Library__r.Active__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Library Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Library_ID__c</fullName>
+        <description>this field is used by the wf integration. do not edit or remove</description>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Library__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Library ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Library__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Library_18_char_id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Library</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mobile_Notification_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Mobile Notification Enabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Preference_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Preference_Type__c</formula>
+        <label>Preference Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Press_User__c</fullName>
+        <formula>Contact__r.Press_User__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Press User</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Quant_Product__c</fullName>
+        <formula>IF( CONTAINS(SortName__c, &apos;Global Navigator&apos;)||CONTAINS(SortName__c, &apos;Country Portfolio&apos;) ||CONTAINS(SortName__c, &apos;GPRI&apos;),true, false )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Quant Product</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Set_up_as_Trial_Subscription__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field should be checked as True when preferences are added for subscription trials often associated with new product releases</description>
+        <label>Set up as Trial Subscription</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SortName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Library__r.Name</formula>
+        <label>Library Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sum_of_Current_Contract_Amount__c</fullName>
+        <formula>Contact__r.Account.Sum_of_Active_Contracts_USD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Sum of Current Contract Amount as of 5/14/18</inlineHelpText>
+        <label>Sum of Current Contract Amount (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Summary_Email_Not_Press_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Summary_Emails__c &amp;&amp; Contact__r.Press_User__c == false, 1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Summary Email (Not Press User)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Summary_Email_Press_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Contact__r.Press_User__c &amp;&amp; Summary_Emails__c, 1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Summary Email (Press User)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Summary_Emails_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Summary_Emails__c , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Summary Emails Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Summary_Emails__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Summary Emails</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Trial__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Trial</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Validation_AP_Acct_CRM_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Account__r.IntegrationID__c</formula>
+        <label>Validation AP Acct CRM ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Validation_AP_Acct_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Account__r.Id</formula>
+        <label>Validation AP Acct ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Validation_AP_Acct_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Preferences__r.Account__r.Name</formula>
+        <label>Validation AP Acct Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Validation_Acct_Match__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Account_Preferences__r.Account__r.Id &lt;&gt;  Contact__r.Account.Id , &quot;Mismatched&quot;, &quot;Good Match&quot;)</formula>
+        <label>Validation Acct Match</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Worldflow_load_test_field__c</fullName>
+        <externalId>false</externalId>
+        <label>Worldflow load test field</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isActive__c</fullName>
+        <formula>Individual_Emails__c  ||  Summary_Emails__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>isActive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

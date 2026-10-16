@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>force__AgentforceServiceAgentUserPsg</members>
+        <members>force__CommerceUsers</members>
+        <members>force__Commerce_Shopper</members>
+        <members>force__CopilotSalesforceAdminPSG</members>
+        <members>force__CopilotSalesforceUserPSG</members>
+        <members>force__GeneralUsers</members>
+        <members>force__Manage_ASC_Analytics</members>
+        <members>force__MarketingUsers</members>
+        <members>force__PayNow_Shopper</members>
+        <members>force__SalesCloudCallCoachingSeller</members>
+        <members>force__SalesCloudSeller</members>
+        <members>force__SalesUsers</members>
+        <members>force__SalesWorkspacePSG</members>
+        <members>force__ScaleCenterUsers</members>
+        <members>force__ServiceUsers</members>
+        <members>force__SetupWithAgentforceUserPsg</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <version>62.0</version>
+</Package>

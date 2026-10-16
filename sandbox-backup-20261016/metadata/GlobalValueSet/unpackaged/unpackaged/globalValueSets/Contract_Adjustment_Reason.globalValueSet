@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cancellation</fullName>
+        <default>false</default>
+        <label>Cancellation</label>
+    </customValue>
+    <customValue>
+        <fullName>Correction</fullName>
+        <default>false</default>
+        <label>Correction</label>
+    </customValue>
+    <customValue>
+        <fullName>Mid-Year Downsell</fullName>
+        <default>false</default>
+        <label>Mid-Year Downsell</label>
+    </customValue>
+    <customValue>
+        <fullName>Mid-Year Upsell</fullName>
+        <default>false</default>
+        <label>Mid-Year Upsell</label>
+    </customValue>
+    <customValue>
+        <fullName>No Cost Extension</fullName>
+        <default>false</default>
+        <label>No Cost Extension</label>
+    </customValue>
+    <customValue>
+        <fullName>Subcontractor Costs</fullName>
+        <default>false</default>
+        <label>Subcontractor Costs</label>
+    </customValue>
+    <customValue>
+        <fullName>Voting Invoice Request</fullName>
+        <default>false</default>
+        <label>Voting Invoice Request</label>
+    </customValue>
+    <masterLabel>Contract Adjustment Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

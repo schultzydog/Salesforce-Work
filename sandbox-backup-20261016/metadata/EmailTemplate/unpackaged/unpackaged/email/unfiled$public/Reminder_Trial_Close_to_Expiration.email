@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">Hi,</span></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Your free trial to {!Account.Count_of_Contacts_Receiving_Research__c} user(s) at <b>{!Account.Name}</b>&nbsp;will expire in {!Opportunity.Days_Until_Trial_End__c} days:&nbsp;{!Opportunity.Link}</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><p class="MsoNormal"><span lang="EN-US" style="font-family: Arial, sans-serif;">Account managers are notified 14 and 7
+days prior to each trial’s expiration. Sales ops will additionally reach out
+with one last follow up to make sure extension requests are submitted in a
+timely manner. Going forward, all trials will be shut off automatically after
+90 days and it is the account manager’s responsibility to get approval to
+extend each trial from Rachel/Justin in advance. Sales ops will extend or turn
+trials/accounts back on if Rachel/Justin is copied on the request confirming
+the extension.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: Arial, sans-serif;">&nbsp;</span></p>
+
+<span lang="EN-US" style="font-size: 12pt; font-family: Arial, sans-serif;">If
+trial is not being extended, trial users will be moved to a&nbsp;marketing
+campaign list&nbsp;after disablement.</span></div><div style=""><br></div><div style=""><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></span></div><div style=""><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Thanks,</span></div><div style=""><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">SalesOps</span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><ul style="margin-top:0in" type="disc">
+</ul></div>]]></td>
+</tr>
+</table>

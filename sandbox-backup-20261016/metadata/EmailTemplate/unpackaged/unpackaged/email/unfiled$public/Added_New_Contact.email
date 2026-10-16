@@ -1,0 +1,8 @@
+Hi {!Case.Contact},
+
+We’ve just added you in our system. You should soon receive a welcome email outlining instructions on how to access our portal, as well as an email explaining how you can subscribe to notes on various regions and topics.
+
+Please let us know if we can help with anything else.
+
+Best,
+{!Case.Assigned_to__c}

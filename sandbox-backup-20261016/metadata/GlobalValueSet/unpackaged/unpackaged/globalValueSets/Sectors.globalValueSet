@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aerospace and Defense</fullName>
+        <default>false</default>
+        <label>Aerospace and Defense</label>
+    </customValue>
+    <customValue>
+        <fullName>AI</fullName>
+        <default>false</default>
+        <label>AI</label>
+    </customValue>
+    <customValue>
+        <fullName>Comparative Analytics</fullName>
+        <default>false</default>
+        <label>Comparative Analytics</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer and Retail</fullName>
+        <default>false</default>
+        <label>Consumer and Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Critical Minerals</fullName>
+        <default>false</default>
+        <label>Critical Minerals</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy, Climate, Resources</fullName>
+        <default>false</default>
+        <label>Energy, Climate, Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Geoecon</fullName>
+        <default>false</default>
+        <label>Geoecon</label>
+    </customValue>
+    <customValue>
+        <fullName>Geopolitics</fullName>
+        <default>false</default>
+        <label>Geopolitics</label>
+    </customValue>
+    <customValue>
+        <fullName>Geotechnology</fullName>
+        <default>false</default>
+        <label>Geotechnology</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare and Medical Devices</fullName>
+        <default>false</default>
+        <label>Healthcare and Medical Devices</label>
+    </customValue>
+    <customValue>
+        <fullName>Investor Education</fullName>
+        <default>false</default>
+        <label>Investor Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade and Supply Chain</fullName>
+        <default>false</default>
+        <label>Trade and Supply Chain</label>
+    </customValue>
+    <masterLabel>Sectors</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

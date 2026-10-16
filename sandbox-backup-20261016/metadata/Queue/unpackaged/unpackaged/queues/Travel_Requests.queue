@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>travelrequest@eurasiagroup.net</email>
+    <name>Travel Requests</name>
+    <queueMembers>
+        <users>
+            <user>schultz@eurasiagroup.net</user>
+            <user>lieber@eurasiagroup.net</user>
+            <user>shepherd@eurasiagroup.net</user>
+            <user>nelson.ne@eurasiagroup.net</user>
+            <user>tavares@eurasiagroup.net</user>
+            <user>kar.ne@eurasiagroup.net</user>
+            <user>consonery@eurasiagroup.net</user>
+            <user>ganguly@eurasiagroup.net</user>
+            <user>gangji@eurasiagroup.net</user>
+            <user>ubriaco@eurasiagroup.net</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Travel_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

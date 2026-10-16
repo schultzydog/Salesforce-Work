@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Clarity_score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( of_Reviews__c &gt; 0, Clarity_sum__c / of_Reviews__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Clarity score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clarity_sum__c</fullName>
+        <label>Clarity sum</label>
+        <summarizedField>Publication_Reviews__c.Clarity_score__c</summarizedField>
+        <summaryForeignKey>Publication_Reviews__c.Publication__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Emails_Read__c</fullName>
+        <externalId>false</externalId>
+        <label>Emails Read</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emails_Sent__c</fullName>
+        <externalId>false</externalId>
+        <label>Emails Sent</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Format_score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( of_Reviews__c &gt; 0, Format_sum__c / of_Reviews__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Format score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Format_sum__c</fullName>
+        <label>Format sum</label>
+        <summarizedField>Publication_Reviews__c.Format_score__c</summarizedField>
+        <summaryForeignKey>Publication_Reviews__c.Publication__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Full_Title__c</fullName>
+        <label>Full Title</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Lead_analyst__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead analyst</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Length_score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( of_Reviews__c &gt; 0, Length_sum__c / of_Reviews__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Length score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Length_sum__c</fullName>
+        <label>Length sum</label>
+        <summarizedField>Publication_Reviews__c.Length_score__c</summarizedField>
+        <summaryForeignKey>Publication_Reviews__c.Publication__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_article_in_portal__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://library.eurasiagroup.net/document/view/&quot;&amp;Worldflow_Document_Id__c &amp;&quot;/&quot;&amp;Worldflow_Document_Id__c&amp;&quot;.html&quot;,&quot;Link to article&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Link to article in portal</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Novelty_score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( of_Reviews__c &gt; 0, Novelty_sum__c /  of_Reviews__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Novelty score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Novelty_sum__c</fullName>
+        <label>Novelty sum</label>
+        <summarizedField>Publication_Reviews__c.Novelty_score__c</summarizedField>
+        <summaryForeignKey>Publication_Reviews__c.Publication__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_replies__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of replies</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portal_Reads__c</fullName>
+        <externalId>false</externalId>
+        <label>Portal Reads</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Publication_Date__c</fullName>
+        <label>Publication Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Template_name__c</fullName>
+        <externalId>false</externalId>
+        <label>Template name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title_score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( of_Reviews__c &gt; 0, Title_sum__c / of_Reviews__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Title score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title_sum__c</fullName>
+        <label>Title sum</label>
+        <summarizedField>Publication_Reviews__c.Title_score__c</summarizedField>
+        <summaryForeignKey>Publication_Reviews__c.Publication__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Worldflow_Document_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Worldflow Document Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>of_Reviews__c</fullName>
+        <label># of Reviews</label>
+        <summaryForeignKey>Publication_Reviews__c.Publication__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+</CustomObject>

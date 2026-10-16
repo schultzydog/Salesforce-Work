@@ -1,0 +1,3 @@
+User {!Target_User.Name} has been frozen (email alert flow)
+
+{!User.Link}

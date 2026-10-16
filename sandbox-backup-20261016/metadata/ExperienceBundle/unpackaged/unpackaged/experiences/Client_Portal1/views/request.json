@@ -1,0 +1,60 @@
+{
+  "appPageId" : "b82c533e-f9b2-43a4-b6ea-72afea6fed42",
+  "componentName" : "community_layout:sldsFlexibleLayout",
+  "dataProviders" : [ ],
+  "id" : "e1466316-a594-4c91-87da-bdb47585158a",
+  "label" : "Request",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "backgroundImageConfig" : "",
+        "backgroundImageOverlay" : "rgba(0,0,0,0)",
+        "sectionConfig" : "{\"UUID\":\"1b29c31f-2e7a-4147-8848-7ffcb192e33d\",\"columns\":[{\"UUID\":\"5f1d8f6b-799c-4b28-b028-e4e1b85d569b\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "1b29c31f-2e7a-4147-8848-7ffcb192e33d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:clientPortal_RequestForm",
+          "id" : "ae74fc72-7227-4c83-9b97-31fd06c9fdcc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5f1d8f6b-799c-4b28-b028-e4e1b85d569b",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    } ],
+    "id" : "96c9830f-81d1-4a82-9542-a13bb9b9cc8b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "pageTitle" : "Request",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "community_builder:seoAssistant",
+      "id" : "d9ab8973-6c29-4766-bb91-4e8b621db2b6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6649ce73-c089-4e7a-a3f3-5e0791e97e5a",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "4Sncf9GZNoT20Q7ohiI4No8ieNiwrb",
+  "type" : "view",
+  "viewType" : "custom-request"
+}

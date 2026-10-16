@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Baena_Share</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Baena Share</label>
+        <sharedTo>
+            <group>Diogo_shares</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Jonathan_Baena</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Gerry_Shares</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Gerry Shares</label>
+        <sharedTo>
+            <group>Gerry_Sharers</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Gerry_Butts</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>OOP_Tracking</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>OOP Tracking</label>
+        <sharedTo>
+            <group>OOP</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

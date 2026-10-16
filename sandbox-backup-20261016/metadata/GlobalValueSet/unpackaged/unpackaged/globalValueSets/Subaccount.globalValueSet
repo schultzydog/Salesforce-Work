@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Global Markets - Japan</fullName>
+        <default>false</default>
+        <label>Global Markets - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - Industrials</fullName>
+        <default>false</default>
+        <label>Corporate - Industrials</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Markets - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>Global Markets - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of the President</fullName>
+        <default>false</default>
+        <label>Office of the President</label>
+    </customValue>
+    <customValue>
+        <fullName>Gzero World</fullName>
+        <default>false</default>
+        <label>Gzero World</label>
+    </customValue>
+    <customValue>
+        <fullName>Gzero Media</fullName>
+        <default>false</default>
+        <label>Gzero Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Markets - General</fullName>
+        <default>false</default>
+        <label>Global Markets - General</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - ECR</fullName>
+        <default>false</default>
+        <label>Corporate - ECR</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - Financial</fullName>
+        <default>false</default>
+        <label>Corporate - Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - Technology</fullName>
+        <default>false</default>
+        <label>Corporate - Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - Japan</fullName>
+        <default>false</default>
+        <label>Corporate - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Markets - North America</fullName>
+        <default>false</default>
+        <label>Global Markets - North America</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Markets - Asia (non JP)</fullName>
+        <default>false</default>
+        <label>Global Markets - Asia (non JP)</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - Healthcare</fullName>
+        <default>false</default>
+        <label>Corporate - Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - General</fullName>
+        <default>false</default>
+        <label>Corporate - General</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Markets - EMEA</fullName>
+        <default>false</default>
+        <label>Global Markets - EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - Retail</fullName>
+        <default>false</default>
+        <label>Corporate - Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate - Brazil/Latam</fullName>
+        <default>false</default>
+        <label>Corporate - Brazil/Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan BD</fullName>
+        <default>false</default>
+        <label>Japan BD</label>
+    </customValue>
+    <customValue>
+        <fullName>Brazil/Latam BD</fullName>
+        <default>false</default>
+        <label>Brazil/Latam BD</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Signal</fullName>
+        <default>false</default>
+        <label>Signal</label>
+    </customValue>
+    <customValue>
+        <fullName>In 60 Seconds</fullName>
+        <default>false</default>
+        <label>In 60 Seconds</label>
+    </customValue>
+    <customValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </customValue>
+    <masterLabel>Subaccount</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Chatter_Only_User_profile</fullName>
+        <active>true</active>
+        <errorConditionFormula>Profile.Id = &apos;00e30000001Yo0n&apos;</errorConditionFormula>
+        <errorDisplayField>ProfileId</errorDisplayField>
+        <errorMessage>The Research profile is required for Chatter Only users</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Department_Picklist</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(TEXT(  Department__c )) &amp;&amp;  CONTAINS(Email, &apos;eurasiagroup.net&apos;) &amp;&amp;  IsActive &amp;&amp;  ISPICKVAL(UserType, &apos;Standard&apos; )</errorConditionFormula>
+        <errorDisplayField>Department__c</errorDisplayField>
+        <errorMessage>Department Picklist required for eg email users</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Contact: Whitelisting Issues</name>
+    <style>freeForm</style>
+    <subject>Guide IP Whitelisting</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Apologies for the inconvenience.
+
+Our records indicate that after we last confirmed your access, the notes that you should have received are being delivered as expected.
+
+If you are unable to locate those in your inbox, then I suspect it may be a whitelisting issue. I’ve attached instructions on how you can manually permission the Eurasia Group domain to deliver to your inbox. You may also want to send it on to your IT department to make sure they are not blocking messages on the corporate level.
+
+If you are able to locate the notes in the inbox, then I might recommend you set up additional email notifications for EG content. You can opt into various region and topic offerings here.
+
+Please let me know if you continue to experience issues, I would be happy to connect with your IT team directly.
+
+Best,
+{!EmailMessage.FromName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

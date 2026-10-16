@@ -1,0 +1,4 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <ltng:require scripts="{!$Resource.plotly +'/plotly.min.js'}" afterScriptsLoaded="{!c.setup}" />    
+    <div id="plotly" style="height:600px; width:850px;"></div>
+</aura:component>

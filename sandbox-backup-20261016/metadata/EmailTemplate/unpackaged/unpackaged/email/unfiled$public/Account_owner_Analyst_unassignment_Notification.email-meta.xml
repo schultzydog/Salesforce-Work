@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notifies analyst when an analyst has been removed from a greenlight assignment re</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Account owner Analyst unassignment Notification</name>
+    <style>none</style>
+    <subject>An analyst has been unassigned from a Greenlight Assignment record for {!Contact.FirstName} {!Contact.LastName}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

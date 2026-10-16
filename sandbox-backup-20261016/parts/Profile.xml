@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>API Only</members>
+        <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
+        <members>Analytics Cloud Security User</members>
+        <members>Anypoint Integration</members>
+        <members>B2BMA Integration User</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Free User - Custom</members>
+        <members>Chatter Moderator User</members>
+        <members>Chatter Only User</members>
+        <members>Client Portal %28External%29</members>
+        <members>Client Portal Guest Profile</members>
+        <members>Client Services</members>
+        <members>Client Services - restricted access</members>
+        <members>Contact Preferences Profile</members>
+        <members>ContractManager</members>
+        <members>Corporates Leadership</members>
+        <members>Customer Community User</members>
+        <members>Delete Profile</members>
+        <members>Einstein Agent User</members>
+        <members>Executive Leadership</members>
+        <members>External Apps Login User</members>
+        <members>External Einstein Agent User</members>
+        <members>Finance</members>
+        <members>Finance Clone for JP - Admin lite</members>
+        <members>GZero</members>
+        <members>Gloma</members>
+        <members>Guest License User</members>
+        <members>HR</members>
+        <members>Identity User</members>
+        <members>Intern</members>
+        <members>MarketingProfile</members>
+        <members>Minimum Access - API Only Integrations</members>
+        <members>Minimum Access - Salesforce</members>
+        <members>Preferences Management Profile</members>
+        <members>Research</members>
+        <members>Research - Outlook Panel Test</members>
+        <members>Sales Insights Integration User</members>
+        <members>Salesforce API Only System Integrations</members>
+        <members>SalesforceIQ Integration User</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>Survey Host Profile</members>
+        <members>System Admin - Digital Operations</members>
+        <members>Webhook API Profile</members>
+        <name>Profile</name>
+    </types>
+    <version>62.0</version>
+</Package>

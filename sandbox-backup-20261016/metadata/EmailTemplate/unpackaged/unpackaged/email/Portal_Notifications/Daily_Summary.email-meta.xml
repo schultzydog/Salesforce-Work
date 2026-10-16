@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>System compiled daily summary</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>Daily Summary</name>
+    <style>freeForm</style>
+    <subject>EG Research Summary for {!Today}</subject>
+    <textOnly>{!Contact.00N3A00000CmkBQ}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

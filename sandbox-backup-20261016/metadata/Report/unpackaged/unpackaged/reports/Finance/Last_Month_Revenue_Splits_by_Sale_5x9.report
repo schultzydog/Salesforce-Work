@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SLR_Entry__c$Announcement_Date__c</field>
+    </columns>
+    <columns>
+        <field>SLR_Entry__c$Announcement_Type__c</field>
+    </columns>
+    <columns>
+        <field>SLR_Entry__c$Renewal_Sub_type__c</field>
+    </columns>
+    <columns>
+        <field>SLR_Entry__c$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>SLR_Entry__c$SLR_Amount_USD__c</field>
+    </columns>
+    <columns>
+        <field>SLR_Entry__c$End_Date__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>SLR_Entry__c$Announcement_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_MONTH</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SLR_Entry__c$Business_Line__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Last Month Revenue Splits by Sale</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>SLR_Entries__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>SLR_Entry__c$Opportunity__c.Contract_Start_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

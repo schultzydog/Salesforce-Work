@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>SFDC_Default_Navigation_Client_Portal</members>
+        <members>SFDC_Default_Navigation_Contact_Preferences</members>
+        <members>SFDC_Default_Navigation_Survey_Host</members>
+        <name>NavigationMenu</name>
+    </types>
+    <version>62.0</version>
+</Package>

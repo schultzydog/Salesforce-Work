@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Advisor</fullName>
+        <default>false</default>
+        <label>Advisor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Closer</fullName>
+        <default>false</default>
+        <label>Closer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Co-Relationship Manager</fullName>
+        <default>false</default>
+        <label>Co-Relationship Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Managing Director</fullName>
+        <default>false</default>
+        <label>Managing Director</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opportunity Owner</fullName>
+        <default>false</default>
+        <label>Opportunity Owner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Originating Analyst</fullName>
+        <default>false</default>
+        <label>Originating Analyst</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Practice Head</fullName>
+        <default>false</default>
+        <label>Practice Head</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Primary Relationship Manager</fullName>
+        <default>false</default>
+        <label>Primary Relationship Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Researcher</fullName>
+        <default>false</default>
+        <label>Researcher</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Secondary Relationship Manager</fullName>
+        <default>false</default>
+        <label>Secondary Relationship Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Senior Analyst</fullName>
+        <default>false</default>
+        <label>Senior Analyst</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Source</fullName>
+        <default>false</default>
+        <label>Source</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Analyst</fullName>
+        <default>false</default>
+        <label>Analyst</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Account Coordinator</fullName>
+        <default>false</default>
+        <label>Account Coordinator</label>
+    </standardValue>
+</StandardValueSet>

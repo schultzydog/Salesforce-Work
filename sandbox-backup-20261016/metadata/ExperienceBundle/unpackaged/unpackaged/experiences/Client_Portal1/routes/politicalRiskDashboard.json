@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "c9b51e15-a562-4001-ab23-797cfc1a342d",
+  "appPageId" : "b82c533e-f9b2-43a4-b6ea-72afea6fed42",
+  "configurationTags" : [ ],
+  "devName" : "Political_Risk_Dashboard__c",
+  "id" : "f52d6528-7c07-4fa4-a1d2-c45462b588c9",
+  "label" : "Political Risk Dashboard",
+  "routeType" : "custom-political-risk-dashboard",
+  "type" : "route",
+  "urlPrefix" : "political-risk-dashboard"
+}

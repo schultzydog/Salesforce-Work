@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Markets</fullName>
+        <default>false</default>
+        <label>Markets</label>
+    </customValue>
+    <customValue>
+        <fullName>Politics</fullName>
+        <default>false</default>
+        <label>Politics</label>
+    </customValue>
+    <masterLabel>Email Category 3</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

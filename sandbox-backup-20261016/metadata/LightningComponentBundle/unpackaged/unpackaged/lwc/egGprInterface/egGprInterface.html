@@ -1,0 +1,303 @@
+<!--
+   @description       : Geopolitical Risk countryRating Interface
+   @last modified on  : 07-24-2023
+-->
+<template>
+
+  <lightning-card title="EG's Country Outlook Rating Tool" icon-name="action:map">
+    <div slot="actions">
+      <template if:true={selectedCountry}>
+          <lightning-button-group>
+            <lightning-button label="Save Draft" title="Save Draft" onclick={handleDraft}></lightning-button>
+            <lightning-button variant="brand" label="Publish" title="Publish" onclick={handlePublish}></lightning-button>
+          </lightning-button-group>
+        </template>
+    </div>
+
+    <template if:true={showWait}>
+      <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+
+
+    <!-- Header for Month, Year and Country options-->
+    <lightning-layout multiple-rows class="slds-m-left_xx-small">
+      <lightning-layout-item  padding="around-small">
+        <div class="slds-form-element__control">
+          <div class="slds-form-element__static">
+            <lightning-combobox name="month" value={selectedMonth} placeholder="Select Month" options={monthOptions}
+              onchange={handlePeriodChange} style="float:left;width:150px;padding-right:10px">
+            </lightning-combobox>
+
+            <lightning-combobox name="year" value={selectedYear} placeholder="Select Year" options={yearOptions}
+              onchange={handlePeriodChange} style="float:left;width:150px;padding-right:10px">
+            </lightning-combobox>
+            <lightning-combobox name="country" value={selectedCountry} placeholder="Select Country"
+              options={countryOptions.data} onchange={handlePeriodChange}
+              style="float:left;width:250px;padding-right:10px">
+            </lightning-combobox>
+          </div>
+        </div>
+      </lightning-layout-item>
+      <template if:true={selectedCountry}>
+      <lightning-layout-item  padding="around-small">
+        <div class="slds-form-element__control">
+          <div class="slds-form-element__static" style="padding-top:19px;">
+            <div class="slds-text-heading_small">Current Status:&nbsp;
+                <template if:true={isNew}>
+                  <span class="slds-button slds-button_neutral">New</span>
+                </template>
+                <template if:true={isDraft}>
+                 <span class="slds-button slds-button_brand">Draft</span>
+                </template>
+                <template if:true={isPublished}>
+                  <span class="slds-button slds-button_success">Published</span>
+                </template>
+            </div>
+            
+         
+          </div>
+          </div>
+      </lightning-layout-item>
+      </template>
+    </lightning-layout>
+
+    <!--Structural Weights, Impact and Outlook-->
+    <template if:true={selectedCountry}>
+      <lightning-layout multiple-rows class="slds-m-left_xx-small">
+        <lightning-layout-item size="5" padding="around-small" class="slds-box slds-box_xx-small">
+          <lightning-card title="Structural Weights">
+            <lightning-layout multiple-rows key={item.id}>
+              <lightning-layout-item padding="around-small" size="12">
+                <table class="slds-table">
+                  <thead>
+                    <tr>
+                      <th colspan="9" style="text-align:center"> Importance </th>
+                    </tr>
+                    <tr>
+                      <th>Absolute</th>
+                      <th>Much</th>
+                      <th >Moderate</th>
+                      <th>Slight</th>
+                      <th style="text-align:right">Equal</th>
+                      <th style="text-align:right">Slight</th>
+                      <th style="text-align:right">Moderate</th>
+                      <th style="text-align:right">Much</th>
+                      <th style="text-align:right">Absolute</th>
+                    </tr>
+                    
+                  </thead>
+                </table>
+                <hr />
+              </lightning-layout-item>
+              <template for:each={sliders} for:item="item">
+                <lightning-layout-item padding="around-small" size="12" key={item.id}>
+                  <div class="slds-form-element">
+                    <label class="slds-form-element__label">
+                      <span class="slds-slider-label">
+                        <span class="slds-slider-label__label"><b>{item.label}</b></span>
+                      </span>
+                    </label>
+                    <label class="slds-form-element__label" style="float:right">
+                      <span class="slds-slider-label">
+                        <span class="slds-slider-label__label"><b>{item.rightLabel}</b></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="slds-form-element" style="z-index: 100;">
+                    <div class="slds-form-element__control">
+                      <div class="slds-slider">
+                        
+                        <input type="range" data-id={item.id} class="slds-slider__range" min="-4" max="4" step="1"
+                          onchange={handleWeightChange} disabled={isReadOnly} value={item.value} />
+                      </div>
+                    </div>
+                  </div>
+                  <table class="" style="position: relative;top: -7px;z-index: 0;">
+                      <tr>
+                        <td class="sliderlayover" style="text-align:left;">&nbsp;</td>
+                        <td class="sliderlayover">|</td>
+                        <td class="sliderlayover">|</td>
+                        <td class="sliderlayover">|</td>
+                        <td class="sliderlayover">|</td>
+                        <td class="sliderlayover" >|</td>
+                        <td class="sliderlayover" >|</td>
+                        <td class="sliderlayover" >|</td>
+                        <td class="sliderlayover" style="text-align:right;">&nbsp;</td>
+                      </tr>
+                  </table>
+
+                  <!--lightning-slider label={item.label} value={item.value} step="1" max="4" min="-4" onchange={handleChange}
+                                data-id={item.id} variant="label-hidden"></lightning-slider-->
+                </lightning-layout-item>
+              </template>
+            </lightning-layout>
+
+          </lightning-card>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="7">
+          <lightning-layout multiple-rows class="slds-m-left_xx-small">
+            <lightning-layout-item size="12" padding="around-small" class="slds-box slds-box_xx-small">
+              <lightning-card title="Political countryRating">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+                  aria-label="Political countryRating">
+                  <thead>
+                    <tr class="slds-line-height_reset">
+                      <th class="" scope="col" rowspan="2" width="10%">
+                        Dimension
+                      </th>
+                      <th class="" scope="col" rowspan="2" width="5%">
+                        <div class="wordwrap" title="Structural Weight">Structural Weight</div>
+                      </th>
+                      <th class="" scope="col" colspan="2" width="42%" style="text-align:center">
+                        <div class="wordwrap" title="Short-terms (6 months) Political countryRating">Short Terms (6
+                          months)</div>
+                      </th>
+                      <th class="" scope="col" colspan="2" width="42%" style="text-align:center">
+                        <div class="wordwrap" title="Short-terms (6 months) Political countryRating">Long Terms (24
+                          months)</div>
+                      </th>
+                    </tr>
+                    <tr>
+
+                      <th class="" scope="col" width="10%"
+                        style="border-left:var(--lwc-borderWidthThin,1px) solid var(--lwc-colorBorder,rgb(229, 229, 229))">
+                        <div class="wordwrap" title="Outlook">Outlook</div>
+                      </th>
+                      <th class="" scope="col" width="30%">
+                        <div class="wordwrap" title="Impact: macro business environment">Impact</div>
+                      </th>
+                      <th class="" scope="col" width="10%">
+                        <div class="wordwrap" title="Outlook">Outlook</div>
+                      </th>
+                      <th class="" scope="col" width="40%">
+                        <div class="wordwrap" title="Impact: macro business environment">Impact</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <template for:each={countryRatingList} for:item="countryRating">
+                      <tr class="slds-hint-parent" key={countryRating.id}>
+                        <th data-label="Risk each dimension" scope="row">
+                          <div class="wordwrap" title={countryRating.dimension}>
+                            {countryRating.dimesion}
+                          </div>
+                        </th>
+                        <td data-label="Structural Weight">
+                          <div class="wordwrap" title={countryRating.structuralWeight}>
+                            <lightning-formatted-number value={countryRating.structuralWeight} format-style="percent"  minimum-fraction-digits="1">
+                            </lightning-formatted-number>
+                          </div>
+                        </td>
+                        <td data-label="Outlook" class={countryRating.outlookShortTerm}>
+                          <div class="wordwrap" title="Outlook">
+
+                            <template if:false={isReadOnly}>
+                              <lightning-combobox name="outlook" value={countryRating.outlookShortTerm}
+                                placeholder="Outlook" data-id={countryRating.id} data-type="shortTerm"
+                                options={outlookOptions.data.values} onchange={handleRiskChange}
+                                style="min-width:100px;">
+                              </lightning-combobox>
+                            </template>
+                            <template if:true={isReadOnly}>
+                              <lightning-formatted-text value={countryRating.outlookShortTerm}></lightning-formatted-text>
+                            </template>
+                          </div>
+                        </td>
+                        <td data-label="Impact: macro business environment" class={countryRating.impactShortTerm}>
+                          <div class="wordwrap" title="Impact: macro business environment">
+
+                            <template if:false={isReadOnly}>
+                              <lightning-combobox name="impact" value={countryRating.impactShortTerm} placeholder="Impact"
+                                data-id={countryRating.id} data-type="shortTerm" options={impactOptions.data.values}
+                                onchange={handleRiskChange} style="min-width:100px;">
+                              </lightning-combobox>
+                            </template>
+                            <template if:true={isReadOnly}>
+                              <lightning-formatted-text value={countryRating.impactShortTerm}></lightning-formatted-text>
+                            </template>
+                          </div>
+                        </td>
+                        <td data-label="Outlook" class={countryRating.outlookLongTerm}>
+                          <div class="wordwrap" title="Outlook">
+                            <template if:false={isReadOnly}>
+                              <lightning-combobox name="outlook" value={countryRating.outlookLongTerm}
+                                placeholder="Outlook" data-id={countryRating.id} data-type="longTerm"
+                                options={outlookOptions.data.values} onchange={handleRiskChange}
+                                style="min-width:100px;">
+                              </lightning-combobox>
+                            </template>
+                            <template if:true={isReadOnly}>
+                              <lightning-formatted-text value={countryRating.outlookLongTerm}></lightning-formatted-text>
+                            </template>
+                          </div>
+                        </td>
+                        <td data-label="Impact: macro business environment" class={countryRating.impactLongTerm}>
+                          <div class="wordwrap" title="Impact: macro business environment">
+                            <template if:false={isReadOnly}>
+                              <lightning-combobox name="impact" value={countryRating.impactLongTerm} placeholder="Impact"
+                                data-id={countryRating.id} data-type="longTerm" options={impactOptions.data.values}
+                                onchange={handleRiskChange} style="min-width:100px;">
+                              </lightning-combobox>
+                            </template>
+                            <template if:true={isReadOnly}>
+                              <lightning-formatted-text value={countryRating.impactLongTerm}></lightning-formatted-text>
+                            </template>
+                          </div>
+                        </td>
+                      </tr>
+                    </template>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th colspan="2">
+                        Raw Score
+                      </th>
+                      <th colspan="2">
+                          <lightning-formatted-number value={shortTermRawScore}  maximum-fraction-digits="2" minimum-integer-digits="1"></lightning-formatted-number>
+                      </th>
+                      <th colspan="2">
+                          <lightning-formatted-number value={longTermRawScore} maximum-fraction-digits="2" minimum-integer-digits="1"></lightning-formatted-number>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th colspan="2" >
+                        Political Country Rating
+                      </th>
+                      <th colspan="2" class={shortTermRating}>
+                        {shortTermRating}
+                      </th>
+                      <th colspan="2" class={longTermRating}>
+                        {longTermRating}
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </lightning-card>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="12" padding="around-small" class="slds-box slds-box_xx-small">
+              <template if:false={isReadOnly}>
+                <lightning-textarea placeholder="type here..." label="Overview" max-length="255" value={overview}
+                  onchange={handleOverview}>
+                </lightning-textarea>
+              </template>
+              <template if:true={isReadOnly}>
+                <lightning-formatted-text value={overview}></lightning-formatted-text>
+              </template>
+            </lightning-layout-item>
+            <template if:false={isReadOnly}>
+              <lightning-layout-item size="12" padding="around-small" class="" style="text-align:right">
+                <lightning-button-group>
+                  <lightning-button label="Save Draft" title="Save Draft" onclick={handleDraft}></lightning-button>
+                  <lightning-button variant="brand" label="Publish" title="Publish" onclick={handlePublish}></lightning-button>
+              </lightning-button-group>
+              </lightning-layout-item>
+            </template>
+          </lightning-layout>
+        </lightning-layout-item>
+      </lightning-layout>
+    </template>
+
+  </lightning-card>
+</template>

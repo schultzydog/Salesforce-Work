@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Client Relationship Manager</fullName>
+        <default>false</default>
+        <label>Client Relationship Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Request</fullName>
+        <default>false</default>
+        <label>Client Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>External Referral</fullName>
+        <default>false</default>
+        <label>External Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Public Relations</fullName>
+        <default>false</default>
+        <label>Public Relations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Word of Mouth</fullName>
+        <default>false</default>
+        <label>Word of Mouth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ipreo</fullName>
+        <default>false</default>
+        <label>Ipreo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LinkedIn</fullName>
+        <default>false</default>
+        <label>LinkedIn</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bloomberg</fullName>
+        <default>false</default>
+        <label>Bloomberg</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Whitepaper</fullName>
+        <default>false</default>
+        <label>Whitepaper</label>
+    </standardValue>
+    <standardValue>
+        <fullName>2019 09 25 whitepaper</fullName>
+        <default>false</default>
+        <label>2019 09 25 whitepaper</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LATAM GZero Summit 2021</fullName>
+        <default>false</default>
+        <label>LATAM GZero Summit 2021</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Japan GZERO Summit 2021</fullName>
+        <default>false</default>
+        <label>Japan GZERO Summit 2021</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Company Sign Up Form</fullName>
+        <default>false</default>
+        <label>Company Sign Up Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Call</fullName>
+        <default>false</default>
+        <label>Conference Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Subscription Request Form</fullName>
+        <default>false</default>
+        <label>Subscription Request Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>US Canada Summit 2023</fullName>
+        <default>false</default>
+        <label>US Canada Summit 2023</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cvent</fullName>
+        <default>false</default>
+        <label>Cvent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email_List</fullName>
+        <default>false</default>
+        <label>Email List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Press Sign Up</fullName>
+        <default>false</default>
+        <label>Press Sign Up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact us - Geotech</fullName>
+        <default>false</default>
+        <label>Contact us - Geotech</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact us - Healthcare &amp; Medical Devices</fullName>
+        <default>false</default>
+        <label>Contact us - Healthcare &amp; Medical Devices</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact us - Consumer &amp; Retail</fullName>
+        <default>false</default>
+        <label>Contact us - Consumer &amp; Retail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact us - Global Sustainability, Biodiversity, &amp; Water</fullName>
+        <default>false</default>
+        <label>Contact us - Global Sustainability, Biodiversity, &amp; Water</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gloma landing page</fullName>
+        <default>false</default>
+        <label>Gloma landing page</label>
+    </standardValue>
+</StandardValueSet>

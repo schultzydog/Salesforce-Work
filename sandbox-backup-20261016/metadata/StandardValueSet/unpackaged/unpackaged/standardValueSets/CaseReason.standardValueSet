@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Billing Cycle</fullName>
+        <default>false</default>
+        <label>Billing Cycle</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Loss Business</fullName>
+        <default>false</default>
+        <label>Loss Business</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Update Address Information</fullName>
+        <default>false</default>
+        <label>Update Address Information</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Update Billing Information</fullName>
+        <default>false</default>
+        <label>Update Billing Information</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Update Contact Information</fullName>
+        <default>false</default>
+        <label>Update Contact Information</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

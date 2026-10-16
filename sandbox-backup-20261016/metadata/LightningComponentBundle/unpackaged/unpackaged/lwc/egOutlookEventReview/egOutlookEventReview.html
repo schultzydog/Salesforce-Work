@@ -1,0 +1,219 @@
+<template>
+    <div class="list-view">
+        <header class="list-header">
+            <div class="list-header-main">
+                <div class="list-title-block">
+                    <div class="list-title-row">
+                        <lightning-icon
+                            icon-name="standard:event"
+                            size="medium"
+                            alternative-text="Events"
+                        ></lightning-icon>
+                        <h1 class="list-title">Outlook Event Review and Time Entry</h1>
+                    </div>
+                    <p class="list-meta">{listMeta}</p>
+                </div>
+                <div class="list-header-controls">
+                    <div class="header-control">
+                        <lightning-combobox
+                            label="Time frame"
+                            value={eventWindow}
+                            options={eventWindowOptions}
+                            onchange={handleEventWindowChange}
+                        ></lightning-combobox>
+                    </div>
+                    <div class="header-control">
+                        <lightning-combobox
+                            label="Time entry"
+                            value={timeEntryFilter}
+                            options={timeEntryFilterOptions}
+                            onchange={handleTimeEntryFilterChange}
+                        ></lightning-combobox>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Headers sit outside the vertical scroller so they never move.
+             Horizontal scroll is on .table-x so head + body stay aligned. -->
+        <div class="table-shell">
+            <div class="table-x">
+                <div class="table-head">
+                    <table class="list-table">
+                        <colgroup>
+                            <col class="col-num" />
+                            <col class="col-date" />
+                            <col class="col-subject" />
+                            <col class="col-contacts" />
+                            <col class="col-account" />
+                            <col class="col-project" />
+                            <col class="col-task" />
+                            <col class="col-hours" />
+                            <col class="col-delete" />
+                        </colgroup>
+                        <thead>
+                            <tr class="group-row">
+                                <th class="col-date group-spacer" colspan="2" scope="col"></th>
+                                <th class="col-subject group-spacer" scope="col"></th>
+                                <th class="col-contacts group-spacer" scope="col"></th>
+                                <th class="col-account group-spacer" scope="col"></th>
+                                <th class="time-entry-group" colspan="3" scope="colgroup">
+                                    <div class="group-caption">
+                                        <span class="group-rule"></span>
+                                        <span class="group-label">Time entry columns</span>
+                                        <span class="group-rule"></span>
+                                    </div>
+                                </th>
+                                <th class="col-delete group-spacer" scope="col"></th>
+                            </tr>
+                            <tr class="column-row">
+                                <th class="col-num header-box" scope="col"></th>
+                                <th class={dateHeaderClass} onclick={handleSortDate} scope="col">
+                                    <span class="header-label">Start Date/Time</span>
+                                    <lightning-icon
+                                        class="sort-arrow slds-icon-text-brand"
+                                        icon-name={dateSortIcon}
+                                        size="xx-small"
+                                        alternative-text="Sort"
+                                    ></lightning-icon>
+                                </th>
+                                <th class={subjectHeaderClass} onclick={handleSortSubject} scope="col">
+                                    <span class="header-label">Subject</span>
+                                    <lightning-icon
+                                        class="sort-arrow slds-icon-text-brand"
+                                        icon-name={subjectSortIcon}
+                                        size="xx-small"
+                                        alternative-text="Sort"
+                                    ></lightning-icon>
+                                </th>
+                                <th class="col-contacts header-box" scope="col">Contacts</th>
+                                <th class={accountHeaderClass} onclick={handleSortAccount} scope="col">
+                                    <span class="header-label">Account</span>
+                                    <lightning-icon
+                                        class="sort-arrow slds-icon-text-brand"
+                                        icon-name={accountSortIcon}
+                                        size="xx-small"
+                                        alternative-text="Sort"
+                                    ></lightning-icon>
+                                </th>
+                                <th class="col-project header-box" scope="col">Project</th>
+                                <th class="col-task header-box" scope="col">Task</th>
+                                <th class="col-hours header-box" scope="col">Hours</th>
+                                <th class="col-delete header-box" scope="col"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-body">
+                    <table class="list-table">
+                        <colgroup>
+                            <col class="col-num" />
+                            <col class="col-date" />
+                            <col class="col-subject" />
+                            <col class="col-contacts" />
+                            <col class="col-account" />
+                            <col class="col-project" />
+                            <col class="col-task" />
+                            <col class="col-hours" />
+                            <col class="col-delete" />
+                        </colgroup>
+                        <tbody>
+                            <template for:each={visibleRows} for:item="row">
+                                <tr key={row.rowKey}>
+                                    <td class="col-num">{row.rowNumber}</td>
+                                    <td class="col-date">
+                                        <div class="date-primary">
+                                            <span class="date-line">{row.displayDate}</span
+                                            ><span class="time-sep">, </span
+                                            ><span class="time-line">{row.displayTime}</span>
+                                        </div>
+                                        <div class="day-sub">{row.dayName}</div>
+                                    </td>
+                                    <td class="col-subject">
+                                        <a href={row.recordUrl} target="_blank">{row.subject}</a>
+                                    </td>
+                                    <td class="col-contacts">
+                                        <template for:each={row.attendees} for:item="person">
+                                            <span key={person.id}
+                                                ><a href={person.url} target="_blank">{person.name}</a
+                                                >{person.separator}</span
+                                            >
+                                        </template>
+                                    </td>
+                                    <td class="col-account">
+                                        <c-eg-custom-lookup
+                                            type="Account"
+                                            value={row.accountId}
+                                            selection={row.accountName}
+                                            icon-name="standard:account"
+                                            placeholder="Search accounts"
+                                            data-row-id={row.id}
+                                            onselect={handleAccountChange}
+                                        ></c-eg-custom-lookup>
+                                    </td>
+                                    <td class="col-project">
+                                        <c-eg-custom-lookup
+                                            type="EG_Project__c"
+                                            value={row.suggestedProjectId}
+                                            selection={row.suggestedProjectName}
+                                            icon-name="standard:work_step"
+                                            placeholder="Search projects"
+                                            filter-field="Account__c"
+                                            filter-value={row.accountId}
+                                            data-row-id={row.id}
+                                            onselect={handleProjectChange}
+                                        ></c-eg-custom-lookup>
+                                    </td>
+                                    <td class="col-task">
+                                        <c-eg-custom-lookup
+                                            type="EG_Project_Task__c"
+                                            value={row.projectTaskId}
+                                            selection={row.projectTaskName}
+                                            icon-name="standard:work_order_item"
+                                            placeholder="Select task"
+                                            disabled={row.noProject}
+                                            filter-field="EG_Project__c"
+                                            filter-value={row.suggestedProjectId}
+                                            data-row-id={row.id}
+                                            onselect={handleTaskChange}
+                                        ></c-eg-custom-lookup>
+                                    </td>
+                                    <td class="col-hours">
+                                        <lightning-input
+                                            type="number"
+                                            label="Hours"
+                                            variant="label-hidden"
+                                            value={row.hours}
+                                            step="0.25"
+                                            min="0"
+                                            formatter="decimal"
+                                            data-row-id={row.id}
+                                            data-field="hours"
+                                            onblur={handleHoursBlur}
+                                        ></lightning-input>
+                                    </td>
+                                    <td class="col-delete">
+                                        <lightning-button-icon
+                                            icon-name="utility:delete"
+                                            alternative-text="Delete"
+                                            title="Delete"
+                                            variant="bare"
+                                            data-row-id={row.id}
+                                            onclick={handleDelete}
+                                        ></lightning-button-icon>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                    <template lwc:if={isEmpty}>
+                        <p class="empty-state">No events found.</p>
+                    </template>
+                    <template lwc:if={isLoading}>
+                        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,6 @@
+This email is to notify you that a new contact, {!Contact.Name}, has been created for {!Contact.AccountName__c} as a result of lead conversion. This contact has been created with Status Disabled. Please review and update as needed.
+
+You can view the contact here: {!Contact.Link}
+
+Lead Source  - {!Contact.LeadSource}
+Account Type - {!Account.Type}

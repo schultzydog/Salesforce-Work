@@ -1,0 +1,6 @@
+Your contract, {!Contract.Name}, which was previously submitted to Finance for approval has been returned unapproved with these comments:
+
+"{!ApprovalRequest.Comments}"
+
+
+Please log in to review the contract here: {!Contract.Link}

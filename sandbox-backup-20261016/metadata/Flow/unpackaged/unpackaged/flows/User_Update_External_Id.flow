@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>This flow ensures the External Id value of User is aligned to the Username value. Also syncs the Department field to the Department picklist field.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>ClientServicesTeam</name>
+        <dataType>String</dataType>
+        <expression>CASE( Text({!$Record.Department__c}) ,
+&apos;Brazil/Latin America Client Services&apos;,&apos;Brazil/Latin America Client Services&apos;,
+&apos;Communications &amp; Marketing&apos;,&apos;Shared Services &amp; Operations&apos;,
+&apos;Corporates Energy, Climate &amp; Resources&apos;,&apos;Corporates&apos;,
+&apos;Corporates Financial Institutions Group&apos;,&apos;Corporates&apos;,
+&apos;Corporates General&apos;,&apos;Corporates&apos;,
+&apos;Corporates Geo-technology&apos;,&apos;Corporates&apos;,
+&apos;Corporates Healthcare&apos;,&apos;Corporates&apos;,
+&apos;Corporates Industrial &amp; Consumer&apos;,&apos;Corporates&apos;,
+&apos;Events&apos;,&apos;Shared Services &amp; Operations&apos;,
+&apos;Executive Management&apos;,&apos;Executive Management&apos;,
+&apos;Finance&apos;,&apos;Shared Services &amp; Operations&apos;,
+&apos;Global Markets&apos;,&apos;Global Markets&apos;,
+&apos;GZERO Media&apos;,&apos;GZERO Media&apos;,
+&apos;Human Resources&apos;,&apos;Shared Services &amp; Operations&apos;,
+&apos;Information Technology&apos;,&apos;Shared Services &amp; Operations&apos;,
+&apos;Japan Client Services&apos;,&apos;Japan Client Services&apos;,
+&apos;Office of the President&apos;,&apos;Office of the President&apos;,
+&apos;Research Africa&apos;,&apos;Research&apos;,
+&apos;Research Brazil&apos;,&apos;Research&apos;,
+&apos;Research China &amp; Northeast Asia&apos;,&apos;Research&apos;,
+&apos;Research Editorial&apos;,&apos;Research&apos;,
+&apos;Research Eurasia&apos;,&apos;Research&apos;,
+&apos;Research Europe&apos;,&apos;Research&apos;,
+&apos;Research Global Macro-Geoeconomics&apos;,&apos;Research&apos;,
+&apos;Research Global Macro-Geopolitics&apos;,&apos;Research&apos;,
+&apos;Research Global Macro-Geostrategy&apos;,&apos;Research&apos;,
+&apos;Research Latin America&apos;,&apos;Research&apos;,
+&apos;Research Management&apos;,&apos;Research&apos;,
+&apos;Research Middle East &amp; North Africa&apos;,&apos;Research&apos;,
+&apos;Research South Asia&apos;,&apos;Research&apos;,
+&apos;Research Southeast Asia&apos;,&apos;Research&apos;,
+&apos;Research United States&apos;,&apos;Research&apos;,
+&apos;Shared Services &amp; Operations&apos;,&apos;Shared Services &amp; Operations&apos;,
+&apos;Trade and Customs&apos;,null,
+null)</expression>
+    </formulas>
+    <interviewLabel>User: Update External Id {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>User: Update fields</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_fields</name>
+        <label>Update fields</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <filterLogic>1 or 4 or (2 AND 3)</filterLogic>
+        <filters>
+            <field>External_Id__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Username</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Department</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Client_Services_Team__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>ClientServicesTeam</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Client_Services_Team__c</field>
+            <value>
+                <elementReference>ClientServicesTeam</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Department</field>
+            <value>
+                <elementReference>$Record.Department__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>External_Id__c</field>
+            <value>
+                <elementReference>$Record.Username</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_fields</targetReference>
+        </connector>
+        <object>User</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

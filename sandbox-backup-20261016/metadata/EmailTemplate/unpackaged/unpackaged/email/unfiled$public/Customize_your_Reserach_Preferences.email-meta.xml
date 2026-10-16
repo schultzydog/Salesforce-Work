@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>Customize your Reserach Preferences</name>
+    <style>freeForm</style>
+    <subject>Eurasia Group | Customize your research preferences</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+
+
+I&apos;m writing to kindly remind you to review and adjust your email subscription preferences for the Eurasia Group content you wish to receive.
+
+{!Contact.Preferences_Management_URL_w_Email_check__c} or use the “click here” link that can be found at the bottom of all our research emails.
+
+You may also navigate through Eurasia Group’s client portal at library.eurasiagroup.net and log in with your credentials, by following the steps below:
+
+Go to the “User” icon on the top right corner of the portal and select “Preferences.”
+Expand the sections to have a detailed view of the publications. Check or uncheck the boxes next to the titles, and then click on the “Save” icon at the bottom of the page.
+Do not forget to update your contact information (First/Last Name, City, Title, and Phone) by editing the &quot;My Profile&quot; section.
+
+
+Please do not hesitate to contact us if you have any queries.
+
+
+
+
+
+Best Regards,
+EG Sales Operations</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

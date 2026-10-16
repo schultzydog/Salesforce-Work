@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;a href=&quot;https://www.surveymonkey.com/r/?sm=EQFIaE3KopY50LlJkYMGZg_3D_3D&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;User-added image&quot; src=&quot;https://eurasiagroup--c.na45.content.force.com/servlet/servlet.FileDownload?file=0153A000004EAZI&quot;&gt;&lt;/img&gt;&lt;/a&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

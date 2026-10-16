@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Consulting</fullName>
+        <default>false</default>
+        <label>Project</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Digital Products</fullName>
+        <default>false</default>
+        <label>Digital Products</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sponsor</fullName>
+        <default>false</default>
+        <label>Sponsor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partnership</fullName>
+        <default>false</default>
+        <label>Partnership</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Poll</fullName>
+        <default>false</default>
+        <label>Poll</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advisory</fullName>
+        <default>false</default>
+        <label>Advisory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Publications</fullName>
+        <default>false</default>
+        <label>Publications</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GZERO</fullName>
+        <default>false</default>
+        <label>GZERO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Speaking Engagement</fullName>
+        <default>false</default>
+        <label>Speaking Engagement</label>
+    </standardValue>
+</StandardValueSet>

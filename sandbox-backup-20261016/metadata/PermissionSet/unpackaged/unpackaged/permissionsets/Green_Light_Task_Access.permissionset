@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows users with the permission set to view and edit Green Light Task records</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Green Light Task Access</label>
+    <license>Chatter Only</license>
+</PermissionSet>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Client Portal.Block_banned_keywords</members>
+        <members>Client Portal.Flag_banned</members>
+        <members>Client Portal.Freeze_for_frequent_posting</members>
+        <members>Client Portal.Replace_banned</members>
+        <members>Client Portal.Review_the_first_post</members>
+        <members>Contact Preferences.Block_banned_keywords</members>
+        <members>Contact Preferences.Flag_banned</members>
+        <members>Contact Preferences.Freeze_for_frequent_posting</members>
+        <members>Contact Preferences.Replace_banned</members>
+        <members>Contact Preferences.Review_the_first_post</members>
+        <members>Survey Host.Block_banned_keywords</members>
+        <members>Survey Host.Flag_banned</members>
+        <members>Survey Host.Freeze_for_frequent_posting</members>
+        <members>Survey Host.Replace_banned</members>
+        <members>Survey Host.Review_the_first_post</members>
+        <name>ModerationRule</name>
+    </types>
+    <version>62.0</version>
+</Package>

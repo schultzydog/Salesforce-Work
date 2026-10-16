@@ -1,0 +1,7 @@
+A new {!Opportunity_Request__c.Type__c} request for {!Opportunity_Request__c.Opportunity_Name__c} has been submitted for your approval. 
+
+You can view/approve the request here - 
+{!Opportunity_Request__c.Link}
+
+request comments - 
+{!Opportunity_Request__c.Comments__c}

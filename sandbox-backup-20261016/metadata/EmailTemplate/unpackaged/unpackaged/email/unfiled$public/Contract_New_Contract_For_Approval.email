@@ -1,0 +1,9 @@
+Contract Name: {!Contract.Name}
+Contract Amount: {!Contract.00N30000009Pj8B}
+Revenue Type: {!Contract.Revenue_Type__c}
+Business Line: {!Contract.00N3A00000CIZcK}
+Contract Owner: {!Contract.OwnerFullName}
+Start Date: {!Contract.StartDate}
+End Date: {!Contract.EndDate}
+
+Please log in to review and approve the contract here: {!Contract.Link}

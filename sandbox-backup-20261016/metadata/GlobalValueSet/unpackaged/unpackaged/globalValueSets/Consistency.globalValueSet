@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Entirely inconsistent</fullName>
+        <default>false</default>
+        <label>Entirely inconsistent</label>
+    </customValue>
+    <customValue>
+        <fullName>Very inconsistent</fullName>
+        <default>false</default>
+        <label>Very inconsistent</label>
+    </customValue>
+    <customValue>
+        <fullName>Inconsistent</fullName>
+        <default>false</default>
+        <label>Inconsistent</label>
+    </customValue>
+    <customValue>
+        <fullName>Consistent</fullName>
+        <default>false</default>
+        <label>Consistent</label>
+    </customValue>
+    <customValue>
+        <fullName>Very consistent</fullName>
+        <default>false</default>
+        <label>Very consistent</label>
+    </customValue>
+    <customValue>
+        <fullName>Entirely consistent</fullName>
+        <default>false</default>
+        <label>Entirely consistent</label>
+    </customValue>
+    <masterLabel>Consistency</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Contact URL Frame</masterLabel>
+    <description>Embeds an external website in an iframe, using a URL stored on the record.</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property
+                name="cardTitle"
+                type="String"
+                label="Card Title"
+                default="Contact Web View"
+                description="Heading shown on the card. Also used as the iframe's accessible title."
+            />
+            <property
+                name="urlFieldApiName"
+                type="String"
+                label="URL Field API Name"
+                default="Retool_Id__c"
+                description="Field on this record holding either a full https URL or an identifier to feed into the URL Template."
+            />
+            <property
+                name="urlTemplate"
+                type="String"
+                label="URL Template"
+                default="https://eurasiagroup.retool.com/apps/24e0b960-89a1-11f0-bba4-0f6e9a00864a/Admin%20Dashboard/ContactDetail?contactId={value}"
+                description="Destination URL, where {value} is replaced with the URL-encoded field value. Leave blank when the field already holds a full URL, or omit {value} for a fixed URL that is the same on every record."
+            />
+            <property
+                name="frameHeight"
+                type="Integer"
+                label="Frame Height (px)"
+                default="600"
+                min="200"
+                max="2000"
+                description="Height of the embedded frame in pixels."
+            />
+            <objects>
+                <object>Contact</object>
+            </objects>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

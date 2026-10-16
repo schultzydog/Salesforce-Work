@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Very positive</fullName>
+        <default>false</default>
+        <label>Very positive</label>
+    </customValue>
+    <customValue>
+        <fullName>Positive</fullName>
+        <default>false</default>
+        <label>Positive</label>
+    </customValue>
+    <customValue>
+        <fullName>Slightly positive</fullName>
+        <default>false</default>
+        <label>Slightly positive</label>
+    </customValue>
+    <customValue>
+        <fullName>Neutral</fullName>
+        <default>false</default>
+        <label>Neutral</label>
+    </customValue>
+    <customValue>
+        <fullName>Negative</fullName>
+        <default>false</default>
+        <label>Negative</label>
+    </customValue>
+    <customValue>
+        <fullName>Slightly negative</fullName>
+        <default>false</default>
+        <label>Slightly negative</label>
+    </customValue>
+    <customValue>
+        <fullName>Very negative</fullName>
+        <default>false</default>
+        <label>Very negative</label>
+    </customValue>
+    <description>Used in Trajectory for GPRI</description>
+    <masterLabel>Trajectory Outlook</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

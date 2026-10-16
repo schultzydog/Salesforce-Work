@@ -1,0 +1,6 @@
+A new task has been assigned to you from the client portal. 
+
+Subject: {!Task.Subject}
+Contact: {!Task.What}
+
+View it here: {!Task.Link}

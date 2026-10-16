@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Activity_Type__c</fullName>
+        <description>Custom field for activity type that is reportable</description>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>All_Conference_Call_Speakers__c</fullName>
+        <externalId>false</externalId>
+        <formula>Conference_Call__r.All_Speakers__c</formula>
+        <label>All Conference Call Speakers</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_To_Department__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Owner:User.Department__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Assigned To Department</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_To_Users__c</fullName>
+        <label>Selected EG Attendees</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_to_Email__c</fullName>
+        <description>Internal user email address</description>
+        <externalId>false</externalId>
+        <formula>Owner:User.Email</formula>
+        <label>Assigned to Email</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_to_User_Department__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT($User.Department__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Assigned to User Department</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attempted_Time_Entry_on_Archived_Project__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Attempted Time Entry on Archived Project</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AttendeeIDs__c</fullName>
+        <label>AttendeeIDs</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Business_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Line</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Conference_Call__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Conference Call</label>
+        <referenceTo>Conference_Call__c</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Lead__c</fullName>
+        <label>Contact/Lead</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contact</fullName>
+                    <default>false</default>
+                    <label>Contact</label>
+                </value>
+                <value>
+                    <fullName>Lead</fullName>
+                    <default>false</default>
+                    <label>Lead</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Created_Today__c</fullName>
+        <formula>DATEVALUE(CreatedDate) =  TODAY()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Created Today</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_with_Log_a_Call_UI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created with Log a Call UI</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EG_Event_Id_18_char__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID( Conference_Call__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EG Event Id - 18 char</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Flagged_for_Delete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To support our Einstein Activity Capture, we want to be able to decide which emails to NOT keep in salesforce. These are flagged as delete</description>
+        <label>Flagged for Delete</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Needs_Review__c</fullName>
+        <label>Needs Review?</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>true</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Opportunity Product</label>
+        <referenceTo>OpportunityLineItem</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Outlook_iCalUId__c</fullName>
+        <description>Stable Outlook/iCalendar UID from Office.js (getIcalUidAsync). Written only when blank.</description>
+        <externalId>true</externalId>
+        <label>Outlook iCal UID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Preparation_Notes__c</fullName>
+        <description>7/7/26 removed FLS while determining whether we need to keep this field</description>
+        <label>Notes</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

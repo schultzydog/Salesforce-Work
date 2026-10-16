@@ -1,0 +1,41 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US">Hi&nbsp;{!Contact.FirstName}</span><span style="font-family: Aptos, sans-serif; font-size: 12pt;">,</span></p><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US"><br></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US">Sorry to hear that. <o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US"><br></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US">We checked your account and found that an email hard bounce has occurred. &nbsp;</span></p><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US"><br></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US">We have removed the bounce so emails will resume
+flowing to you, but the best way to prevent a bounce is to work with your IT to
+implement the IP whitelisting rules in the attached doc.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US"><br></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US">Please let us know if the issue persists after following the
+instructions on how to whitelist EG emails.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US"><br></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Aptos&quot;,sans-serif;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US">Thank you,<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family: Aptos, sans-serif;">{!EmailMessage.FromName}</span></p>]]></td>
+</tr>
+</table>

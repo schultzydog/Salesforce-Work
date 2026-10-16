@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Inactive_Owner__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>Account.Count_of_Key_Contacts__c</field>
+    </columns>
+    <columns>
+        <field>Account.Business_Line__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Key/VIP contacts defined as Contact Type = 
+Executive Sponsor
+Gatekeeper
+Primary Contact
+Target User
+Influencer</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Status_Enable_Disable__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Enabled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Business_Line__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Global Markets</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Count_of_Key_Contacts__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>2</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>GLOMA Count of Key/VIP Contacts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Count_of_Key_Contacts__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

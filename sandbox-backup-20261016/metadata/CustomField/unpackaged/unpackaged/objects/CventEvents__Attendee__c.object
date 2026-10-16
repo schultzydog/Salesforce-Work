@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Attended__c</fullName>
+        <formula>IF(IsPickval( CventEvents__Attended__c ,&apos;YES&apos;), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attended</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attendee_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( CventEvents__Contact__c != null, &apos;Contact&apos;, &apos;Lead&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attendee Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Seniority_Level__c</fullName>
+        <label>Seniority Level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>C-Suite &amp; Board Leadership</fullName>
+                    <default>false</default>
+                    <label>C-Suite &amp; Board Leadership</label>
+                </value>
+                <value>
+                    <fullName>Senior Executive Leadership</fullName>
+                    <default>false</default>
+                    <label>Senior Executive Leadership</label>
+                </value>
+                <value>
+                    <fullName>Executive Leadership</fullName>
+                    <default>false</default>
+                    <label>Executive Leadership</label>
+                </value>
+                <value>
+                    <fullName>Director or Senior Manager</fullName>
+                    <default>false</default>
+                    <label>Director or Senior Manager</label>
+                </value>
+                <value>
+                    <fullName>Subject-Matter Expert or Advisor</fullName>
+                    <default>false</default>
+                    <label>Subject-Matter Expert or Advisor</label>
+                </value>
+                <value>
+                    <fullName>Program Support</fullName>
+                    <default>false</default>
+                    <label>Program Support</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+</CustomObject>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BCT_Year</members>
+        <members>Contact_Preferences_Help_Text</members>
+        <members>Morning_Meeting_instructions</members>
+        <members>Timesheet_Metrics_Compliance_Score_Help</members>
+        <members>Timesheets_Project_Task_Guidance</members>
+        <name>CustomLabel</name>
+    </types>
+    <version>62.0</version>
+</Package>

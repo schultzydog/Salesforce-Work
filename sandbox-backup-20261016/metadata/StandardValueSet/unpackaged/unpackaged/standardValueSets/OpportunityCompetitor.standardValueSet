@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Albright Stonebridge Group</fullName>
+        <default>false</default>
+        <label>Albright Stonebridge Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BCA Research</fullName>
+        <default>false</default>
+        <label>BCA Research</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Environment Risk Intelligence</fullName>
+        <default>false</default>
+        <label>Business Environment Risk Intelligence</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CEEMarketWatch</fullName>
+        <default>false</default>
+        <label>CEEMarketWatch</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Control Risks</fullName>
+        <default>false</default>
+        <label>Control Risks</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Critical Resource</fullName>
+        <default>false</default>
+        <label>Critical Resource</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Economist Intelligence Unit</fullName>
+        <default>false</default>
+        <label>Economist Intelligence Unit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FTI Consulting</fullName>
+        <default>false</default>
+        <label>FTI Consulting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gavekal</fullName>
+        <default>false</default>
+        <label>Gavekal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GlobalSource Partners</fullName>
+        <default>false</default>
+        <label>GlobalSource Partners</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IHS Markit</fullName>
+        <default>false</default>
+        <label>IHS Markit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medley Global Advisors</fullName>
+        <default>false</default>
+        <label>Medley Global Advisors</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Observatory Group</fullName>
+        <default>false</default>
+        <label>Observatory Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Oxford Analytica</fullName>
+        <default>false</default>
+        <label>Oxford Analytica</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pantheon Macroeconomics</fullName>
+        <default>false</default>
+        <label>Pantheon Macroeconomics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Predata</fullName>
+        <default>false</default>
+        <label>Predata</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Protection Group International (PGI)</fullName>
+        <default>false</default>
+        <label>Protection Group International (PGI)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRS Group</fullName>
+        <default>false</default>
+        <label>PRS Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Risk Advisory</fullName>
+        <default>false</default>
+        <label>Risk Advisory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stratfor - now RANE</fullName>
+        <default>false</default>
+        <label>Stratfor - now RANE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Teneo</fullName>
+        <default>false</default>
+        <label>Teneo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Verisk Maplecroft</fullName>
+        <default>false</default>
+        <label>Verisk Maplecroft</label>
+    </standardValue>
+</StandardValueSet>

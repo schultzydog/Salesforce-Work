@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>Account.Sum_of_Active_Contracts_USD__c</field>
+    </columns>
+    <columns>
+        <field>Account.Latest_Contract_Change__c</field>
+    </columns>
+    <columns>
+        <field>Account.Conf_call_attendance_12_24_mont__c</field>
+    </columns>
+    <columns>
+        <field>Account.Conf_Call_Attended_Last_12_Months__c</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Conf_Call_Total_Unique_Contacts__c</field>
+    </columns>
+    <columns>
+        <field>Account.Conf_Call_Attendees_to_Enabled_Contact__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>eurasia group</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Conf Call Account Summary</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Conf_Call_Attended_Last_12_Months__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,3 @@
+{!Account.OwnerFirstName},
+
+{!Contact.Name} has opted out of email.  You can view this contact record here: {!Contact.Link}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Africa</fullName>
+        <default>false</default>
+        <label>Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>Asia</fullName>
+        <default>false</default>
+        <label>Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada</fullName>
+        <default>false</default>
+        <label>Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>China</fullName>
+        <default>false</default>
+        <label>China</label>
+    </customValue>
+    <customValue>
+        <fullName>Eurasia</fullName>
+        <default>false</default>
+        <label>Eurasia</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>India</fullName>
+        <default>false</default>
+        <label>India</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan</fullName>
+        <default>false</default>
+        <label>Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Latam</fullName>
+        <default>false</default>
+        <label>Latam</label>
+    </customValue>
+    <customValue>
+        <fullName>MENA</fullName>
+        <default>false</default>
+        <label>MENA</label>
+    </customValue>
+    <customValue>
+        <fullName>Russia - Ukraine</fullName>
+        <default>false</default>
+        <label>Russia - Ukraine</label>
+    </customValue>
+    <customValue>
+        <fullName>UK</fullName>
+        <default>false</default>
+        <label>UK</label>
+    </customValue>
+    <customValue>
+        <fullName>US</fullName>
+        <default>false</default>
+        <label>US</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Australia</label>
+    </customValue>
+    <customValue>
+        <fullName>Antartica</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Antartica</label>
+    </customValue>
+    <customValue>
+        <fullName>South America</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>South America</label>
+    </customValue>
+    <customValue>
+        <fullName>North America</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>North America</label>
+    </customValue>
+    <masterLabel>Regions</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

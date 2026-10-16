@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Approved Excused</fullName>
+        <default>false</default>
+        <label>Approved Excused</label>
+    </customValue>
+    <customValue>
+        <fullName>Holiday</fullName>
+        <default>false</default>
+        <label>Holiday</label>
+    </customValue>
+    <customValue>
+        <fullName>HR-Approved Leave</fullName>
+        <default>false</default>
+        <label>HR-Approved Leave</label>
+    </customValue>
+    <customValue>
+        <fullName>In-office</fullName>
+        <default>false</default>
+        <label>In-office</label>
+    </customValue>
+    <customValue>
+        <fullName>Offsite / Event</fullName>
+        <default>false</default>
+        <label>Offsite / Event</label>
+    </customValue>
+    <customValue>
+        <fullName>PTO</fullName>
+        <default>false</default>
+        <label>PTO</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel / Client</fullName>
+        <default>false</default>
+        <label>Travel / Client</label>
+    </customValue>
+    <customValue>
+        <fullName>WFH</fullName>
+        <default>false</default>
+        <label>WFH</label>
+    </customValue>
+    <customValue>
+        <fullName>IO - Team</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>IO - Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Excused - Travel / Client</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Excused - Travel / Client</label>
+    </customValue>
+    <customValue>
+        <fullName>IO - All EG</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>IO - All EG</label>
+    </customValue>
+    <customValue>
+        <fullName>Excused - Offsite / Event</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Excused - Offsite / Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Excused - Sick WFH</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Excused - Sick WFH</label>
+    </customValue>
+    <customValue>
+        <fullName>Excused - Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Excused - Other</label>
+    </customValue>
+    <customValue>
+        <fullName>IO - Choice</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>IO - Choice</label>
+    </customValue>
+    <masterLabel>EG Time Card Locations</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

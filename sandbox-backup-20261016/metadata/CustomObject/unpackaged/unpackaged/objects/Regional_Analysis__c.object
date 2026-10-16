@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Analysis_Depth__c</fullName>
+        <label>Analysis Depth</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full</fullName>
+                    <default>true</default>
+                    <label>Full</label>
+                </value>
+                <value>
+                    <fullName>Basecase</fullName>
+                    <default>false</default>
+                    <label>Basecase</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Basecase__c</fullName>
+        <label>Basecase</label>
+        <length>2500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Basecase_confidence_level__c</fullName>
+        <label>Basecase confidence level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Low_Medium_High</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Directional_change_since_last_month__c</fullName>
+        <label>Directional change since last month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Directional_Change</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Estimated_risk_over_the_next_month__c</fullName>
+        <label>Estimated risk over the next month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Very_low_to_very_high</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Executive_Summary_Segment_for_Region__c</fullName>
+        <label>Executive Summary Segment for Region</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>GPRI__c</fullName>
+        <externalId>false</externalId>
+        <label>GPRI</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_month_s_events_to_basecase__c</fullName>
+        <label>Last month&apos;s events to basecase</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Consistency</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Long_term_political_trajectory__c</fullName>
+        <label>Long-term political trajectory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Directional_Change</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Month__c</fullName>
+        <externalId>false</externalId>
+        <label>Month</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Assessment__c</fullName>
+        <label>Net Assessment</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Political_Risk_Analysis__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Political Risk Analysis</label>
+        <referenceTo>Political_Risk_Analysis__c</referenceTo>
+        <relationshipLabel>Regional Analysis</relationshipLabel>
+        <relationshipName>Regional_Analysis</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Region</label>
+        <referenceTo>Library__c</referenceTo>
+        <relationshipLabel>Regional Analysis</relationshipLabel>
+        <relationshipName>Regional_Analysis</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Change_Domestic_Stability__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Risk_Score_Domestic_Stability__c &gt;= 3, &quot;Extremely positive&quot;,
+IF( Risk_Score_Domestic_Stability__c &gt;= 2, &quot;Significantly positive&quot;,
+IF( Risk_Score_Domestic_Stability__c &gt;= 1, &quot;Positive&quot;,
+IF( Risk_Score_Domestic_Stability__c &lt;= -3, &quot;Extremely negative&quot;,
+IF( Risk_Score_Domestic_Stability__c &lt;= -2, &quot;Significantly negative&quot;,
+IF( Risk_Score_Domestic_Stability__c &lt;= -1, &quot;Negative&quot;,
+&quot;Neutral&quot;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Change - Domestic Stability</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Change_Economy__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Risk_Score_Economy__c &gt;= 3, &quot;Extremely positive&quot;,
+IF( Risk_Score_Economy__c &gt;= 2, &quot;Significantly positive&quot;,
+IF( Risk_Score_Economy__c &gt;= 1, &quot;Positive&quot;,
+IF( Risk_Score_Economy__c &lt;= -3, &quot;Extremely negative&quot;,
+IF( Risk_Score_Economy__c &lt;= -2, &quot;Significantly negative&quot;,
+IF( Risk_Score_Economy__c &lt;= -1, &quot;Negative&quot;,
+&quot;Neutral&quot;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Change - Economy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Change_Global_Position__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Risk_Score_Global_Position__c &gt;= 3, &quot;Extremely positive&quot;,
+IF( Risk_Score_Global_Position__c &gt;= 2, &quot;Significantly positive&quot;,
+IF( Risk_Score_Global_Position__c &gt;= 1, &quot;Positive&quot;,
+IF( Risk_Score_Global_Position__c &lt;= -3, &quot;Extremely negative&quot;,
+IF( Risk_Score_Global_Position__c &lt;= -2, &quot;Significantly negative&quot;,
+IF( Risk_Score_Global_Position__c &lt;= -1, &quot;Negative&quot;,
+&quot;Neutral&quot;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Change - Global Position</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Change_Leadership_Intent__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Risk_Score_Leadership_Intent__c &gt;= 3, &quot;Extremely positive&quot;,
+IF( Risk_Score_Leadership_Intent__c &gt;= 2, &quot;Significantly positive&quot;,
+IF( Risk_Score_Leadership_Intent__c &gt;= 1, &quot;Positive&quot;,
+IF( Risk_Score_Leadership_Intent__c &lt;= -3, &quot;Extremely negative&quot;,
+IF( Risk_Score_Leadership_Intent__c &lt;= -2, &quot;Significantly negative&quot;,
+IF( Risk_Score_Leadership_Intent__c &lt;= -1, &quot;Negative&quot;,
+&quot;Neutral&quot;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Change - Leadership Intent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Change_Security__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Risk_Score_Security__c &gt;= 3, &quot;Extremely positive&quot;,
+IF( Risk_Score_Security__c &gt;= 2, &quot;Significantly positive&quot;,
+IF( Risk_Score_Security__c &gt;= 1, &quot;Positive&quot;,
+IF( Risk_Score_Security__c &lt;= -3, &quot;Extremely negative&quot;,
+IF( Risk_Score_Security__c &lt;= -2, &quot;Significantly negative&quot;,
+IF( Risk_Score_Security__c &lt;= -1, &quot;Negative&quot;,
+&quot;Neutral&quot;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Change - Security</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Color_Domestic_Stability__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Risk_Score_Domestic_Stability__c&gt;=5.0, &quot;#638C1C&quot;, /* darkest green */
+IF(Risk_Score_Domestic_Stability__c&gt;=4.5, &quot;#70972C&quot;,
+IF(Risk_Score_Domestic_Stability__c&gt;=4.0, &quot;#7EA23C&quot;,
+IF(Risk_Score_Domestic_Stability__c&gt;=3.5, &quot;#8BAE4C&quot;,
+IF(Risk_Score_Domestic_Stability__c&gt;=3.0, &quot;#99B95C&quot;,
+IF(Risk_Score_Domestic_Stability__c&gt;=2.5, &quot;#A6C46C&quot;,
+IF(Risk_Score_Domestic_Stability__c&gt;=2.0, &quot;#B4D07D&quot;,
+IF(Risk_Score_Domestic_Stability__c&gt;=1.5, &quot;#C1DB8D&quot;,
+IF(Risk_Score_Domestic_Stability__c&gt;=1.0, &quot;#CFE79D&quot;,
+IF(Risk_Score_Domestic_Stability__c&gt;=0.5, &quot;#DCF2AD&quot;, /* lightest green */
+
+IF(Risk_Score_Domestic_Stability__c&lt;=-5.0, &quot;#C10230&quot;, /* darkest red */
+IF(Risk_Score_Domestic_Stability__c&lt;=-4.5, &quot;#C71842&quot;,
+IF(Risk_Score_Domestic_Stability__c&lt;=-4.0, &quot;#CD2E55&quot;,
+IF(Risk_Score_Domestic_Stability__c&lt;=-3.5, &quot;#D44467&quot;,
+IF(Risk_Score_Domestic_Stability__c&lt;=-3.0, &quot;#DA5A7A&quot;,
+IF(Risk_Score_Domestic_Stability__c&lt;=-2.5, &quot;#E06F8C&quot;,
+IF(Risk_Score_Domestic_Stability__c&lt;=-2.0, &quot;#E6859F&quot;,
+IF(Risk_Score_Domestic_Stability__c&lt;=-1.5, &quot;#ED9BB1&quot;,
+IF(Risk_Score_Domestic_Stability__c&lt;=-1.0, &quot;#F3B1C4&quot;,
+IF(Risk_Score_Domestic_Stability__c&lt;=-0.5, &quot;#F9C7D6&quot;, /* lightest red */
+
+&quot;#EFEFEF&quot;)))))))))))))))))))) /* neutral grey */</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Color - Domestic Stability</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Color_Economy__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Risk_Score_Economy__c&gt;=5.0, &quot;#638C1C&quot;, /* darkest green */
+IF(Risk_Score_Economy__c&gt;=4.5, &quot;#70972C&quot;,
+IF(Risk_Score_Economy__c&gt;=4.0, &quot;#7EA23C&quot;,
+IF(Risk_Score_Economy__c&gt;=3.5, &quot;#8BAE4C&quot;,
+IF(Risk_Score_Economy__c&gt;=3.0, &quot;#99B95C&quot;,
+IF(Risk_Score_Economy__c&gt;=2.5, &quot;#A6C46C&quot;,
+IF(Risk_Score_Economy__c&gt;=2.0, &quot;#B4D07D&quot;,
+IF(Risk_Score_Economy__c&gt;=1.5, &quot;#C1DB8D&quot;,
+IF(Risk_Score_Economy__c&gt;=1.0, &quot;#CFE79D&quot;,
+IF(Risk_Score_Economy__c&gt;=0.5, &quot;#DCF2AD&quot;, /* lightest green */
+
+IF(Risk_Score_Economy__c&lt;=-5.0, &quot;#C10230&quot;, /* darkest red */
+IF(Risk_Score_Economy__c&lt;=-4.5, &quot;#C71842&quot;,
+IF(Risk_Score_Economy__c&lt;=-4.0, &quot;#CD2E55&quot;,
+IF(Risk_Score_Economy__c&lt;=-3.5, &quot;#D44467&quot;,
+IF(Risk_Score_Economy__c&lt;=-3.0, &quot;#DA5A7A&quot;,
+IF(Risk_Score_Economy__c&lt;=-2.5, &quot;#E06F8C&quot;,
+IF(Risk_Score_Economy__c&lt;=-2.0, &quot;#E6859F&quot;,
+IF(Risk_Score_Economy__c&lt;=-1.5, &quot;#ED9BB1&quot;,
+IF(Risk_Score_Economy__c&lt;=-1.0, &quot;#F3B1C4&quot;,
+IF(Risk_Score_Economy__c&lt;=-0.5, &quot;#F9C7D6&quot;, /* lightest red */
+
+&quot;#EFEFEF&quot;)))))))))))))))))))) /* neutral grey */</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Color - Economy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Color_Global_Position__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Risk_Score_Global_Position__c&gt;=5.0, &quot;#638C1C&quot;, /* darkest green */
+IF(Risk_Score_Global_Position__c&gt;=4.5, &quot;#70972C&quot;,
+IF(Risk_Score_Global_Position__c&gt;=4.0, &quot;#7EA23C&quot;,
+IF(Risk_Score_Global_Position__c&gt;=3.5, &quot;#8BAE4C&quot;,
+IF(Risk_Score_Global_Position__c&gt;=3.0, &quot;#99B95C&quot;,
+IF(Risk_Score_Global_Position__c&gt;=2.5, &quot;#A6C46C&quot;,
+IF(Risk_Score_Global_Position__c&gt;=2.0, &quot;#B4D07D&quot;,
+IF(Risk_Score_Global_Position__c&gt;=1.5, &quot;#C1DB8D&quot;,
+IF(Risk_Score_Global_Position__c&gt;=1.0, &quot;#CFE79D&quot;,
+IF(Risk_Score_Global_Position__c&gt;=0.5, &quot;#DCF2AD&quot;, /* lightest green */
+
+IF(Risk_Score_Global_Position__c&lt;=-5.0, &quot;#C10230&quot;, /* darkest red */
+IF(Risk_Score_Global_Position__c&lt;=-4.5, &quot;#C71842&quot;,
+IF(Risk_Score_Global_Position__c&lt;=-4.0, &quot;#CD2E55&quot;,
+IF(Risk_Score_Global_Position__c&lt;=-3.5, &quot;#D44467&quot;,
+IF(Risk_Score_Global_Position__c&lt;=-3.0, &quot;#DA5A7A&quot;,
+IF(Risk_Score_Global_Position__c&lt;=-2.5, &quot;#E06F8C&quot;,
+IF(Risk_Score_Global_Position__c&lt;=-2.0, &quot;#E6859F&quot;,
+IF(Risk_Score_Global_Position__c&lt;=-1.5, &quot;#ED9BB1&quot;,
+IF(Risk_Score_Global_Position__c&lt;=-1.0, &quot;#F3B1C4&quot;,
+IF(Risk_Score_Global_Position__c&lt;=-0.5, &quot;#F9C7D6&quot;, /* lightest red */
+
+&quot;#EFEFEF&quot;)))))))))))))))))))) /* neutral grey */</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Color - Global Position</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Color_Leadership_Intent__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Risk_Score_Leadership_Intent__c&gt;=5.0, &quot;#638C1C&quot;, /* darkest green */
+IF(Risk_Score_Leadership_Intent__c&gt;=4.5, &quot;#70972C&quot;,
+IF(Risk_Score_Leadership_Intent__c&gt;=4.0, &quot;#7EA23C&quot;,
+IF(Risk_Score_Leadership_Intent__c&gt;=3.5, &quot;#8BAE4C&quot;,
+IF(Risk_Score_Leadership_Intent__c&gt;=3.0, &quot;#99B95C&quot;,
+IF(Risk_Score_Leadership_Intent__c&gt;=2.5, &quot;#A6C46C&quot;,
+IF(Risk_Score_Leadership_Intent__c&gt;=2.0, &quot;#B4D07D&quot;,
+IF(Risk_Score_Leadership_Intent__c&gt;=1.5, &quot;#C1DB8D&quot;,
+IF(Risk_Score_Leadership_Intent__c&gt;=1.0, &quot;#CFE79D&quot;,
+IF(Risk_Score_Leadership_Intent__c&gt;=0.5, &quot;#DCF2AD&quot;, /* lightest green */
+
+IF(Risk_Score_Leadership_Intent__c&lt;=-5.0, &quot;#C10230&quot;, /* darkest red */
+IF(Risk_Score_Leadership_Intent__c&lt;=-4.5, &quot;#C71842&quot;,
+IF(Risk_Score_Leadership_Intent__c&lt;=-4.0, &quot;#CD2E55&quot;,
+IF(Risk_Score_Leadership_Intent__c&lt;=-3.5, &quot;#D44467&quot;,
+IF(Risk_Score_Leadership_Intent__c&lt;=-3.0, &quot;#DA5A7A&quot;,
+IF(Risk_Score_Leadership_Intent__c&lt;=-2.5, &quot;#E06F8C&quot;,
+IF(Risk_Score_Leadership_Intent__c&lt;=-2.0, &quot;#E6859F&quot;,
+IF(Risk_Score_Leadership_Intent__c&lt;=-1.5, &quot;#ED9BB1&quot;,
+IF(Risk_Score_Leadership_Intent__c&lt;=-1.0, &quot;#F3B1C4&quot;,
+IF(Risk_Score_Leadership_Intent__c&lt;=-0.5, &quot;#F9C7D6&quot;, /* lightest red */
+
+&quot;#EFEFEF&quot;)))))))))))))))))))) /* neutral grey */</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Color - Leadership Intent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Color_Security__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Risk_Score_Security__c&gt;=5.0, &quot;#638C1C&quot;, /* darkest green */
+IF(Risk_Score_Security__c&gt;=4.5, &quot;#70972C&quot;,
+IF(Risk_Score_Security__c&gt;=4.0, &quot;#7EA23C&quot;,
+IF(Risk_Score_Security__c&gt;=3.5, &quot;#8BAE4C&quot;,
+IF(Risk_Score_Security__c&gt;=3.0, &quot;#99B95C&quot;,
+IF(Risk_Score_Security__c&gt;=2.5, &quot;#A6C46C&quot;,
+IF(Risk_Score_Security__c&gt;=2.0, &quot;#B4D07D&quot;,
+IF(Risk_Score_Security__c&gt;=1.5, &quot;#C1DB8D&quot;,
+IF(Risk_Score_Security__c&gt;=1.0, &quot;#CFE79D&quot;,
+IF(Risk_Score_Security__c&gt;=0.5, &quot;#DCF2AD&quot;, /* lightest green */
+
+IF(Risk_Score_Security__c&lt;=-5.0, &quot;#C10230&quot;, /* darkest red */
+IF(Risk_Score_Security__c&lt;=-4.5, &quot;#C71842&quot;,
+IF(Risk_Score_Security__c&lt;=-4.0, &quot;#CD2E55&quot;,
+IF(Risk_Score_Security__c&lt;=-3.5, &quot;#D44467&quot;,
+IF(Risk_Score_Security__c&lt;=-3.0, &quot;#DA5A7A&quot;,
+IF(Risk_Score_Security__c&lt;=-2.5, &quot;#E06F8C&quot;,
+IF(Risk_Score_Security__c&lt;=-2.0, &quot;#E6859F&quot;,
+IF(Risk_Score_Security__c&lt;=-1.5, &quot;#ED9BB1&quot;,
+IF(Risk_Score_Security__c&lt;=-1.0, &quot;#F3B1C4&quot;,
+IF(Risk_Score_Security__c&lt;=-0.5, &quot;#F9C7D6&quot;, /* lightest red */
+
+&quot;#EFEFEF&quot;)))))))))))))))))))) /* neutral grey */</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Color - Security</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Score_Domestic_Stability__c</fullName>
+        <label>Risk Score - Domestic Stability</label>
+        <summarizedField>Key_Event__c.Risk_Score__c</summarizedField>
+        <summaryFilterItems>
+            <field>Key_Event__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Domestic stability</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Key_Event__c.Regional_Analysis__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Score_Economy__c</fullName>
+        <label>Risk Score - Economy</label>
+        <summarizedField>Key_Event__c.Risk_Score__c</summarizedField>
+        <summaryFilterItems>
+            <field>Key_Event__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Economy</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Key_Event__c.Regional_Analysis__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Score_Global_Position__c</fullName>
+        <label>Risk Score - Global Position</label>
+        <summarizedField>Key_Event__c.Risk_Score__c</summarizedField>
+        <summaryFilterItems>
+            <field>Key_Event__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Global position</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Key_Event__c.Regional_Analysis__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Score_Leadership_Intent__c</fullName>
+        <label>Risk Score - Leadership Intent</label>
+        <summarizedField>Key_Event__c.Risk_Score__c</summarizedField>
+        <summaryFilterItems>
+            <field>Key_Event__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Leadership intent</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Key_Event__c.Regional_Analysis__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Score_Security__c</fullName>
+        <label>Risk Score - Security</label>
+        <summarizedField>Key_Event__c.Risk_Score__c</summarizedField>
+        <summaryFilterItems>
+            <field>Key_Event__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Security</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Key_Event__c.Regional_Analysis__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Short_term_political_trajectory__c</fullName>
+        <label>Short-term political trajectory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Directional_Change</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Regional Analysis</label>
+    <listViews>
+        <fullName>All_Regional_Analysis</fullName>
+        <columns>NAME</columns>
+        <columns>Political_Risk_Analysis__c</columns>
+        <columns>Region__c</columns>
+        <columns>Analysis_Depth__c</columns>
+        <columns>Executive_Summary_Segment_for_Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Regional Analysis</label>
+    </listViews>
+    <nameField>
+        <label>Regional Analysis Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Regional Analysis</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

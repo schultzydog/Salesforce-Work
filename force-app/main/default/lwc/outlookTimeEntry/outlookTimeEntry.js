@@ -10,7 +10,8 @@ import activeProjectsForAccount from '@salesforce/apex/OutlookEventReviewControl
  * Outlook side-panel (lightning__Inbox). The only identifier it resolves is the
  * Salesforce Event, matched on owner, subject, and start time. Account comes
  * from that event; project, task, hours, and notes come only from the time
- * entry the event is linked to. Nothing is guessed when the panel opens.
+ * entry the event is linked to. A calendar item can be logged only after that
+ * Salesforce event exists. Nothing is guessed when the panel opens.
  */
 export default class OutlookTimeEntry extends LightningElement {
     _source;
@@ -127,6 +128,10 @@ export default class OutlookTimeEntry extends LightningElement {
         return this.isEvent;
     }
 
+    get isDateDisabled() {
+        return this.isDateReadOnly || this.isFieldsLocked;
+    }
+
     get hasLinkedEntry() {
         return !!this.timeEntryId;
     }
@@ -139,9 +144,21 @@ export default class OutlookTimeEntry extends LightningElement {
         return this.isEvent && this.matchChecked;
     }
 
+    /**
+     * No Salesforce event means no time entry. Fields stay grey, and nothing
+     * from this panel can be saved, until a match exists.
+     */
+    get isFieldsLocked() {
+        return this.isEvent && !this.matchedEventId;
+    }
+
+    get fieldsClass() {
+        return this.isFieldsLocked ? 'entry-fields entry-fields_locked' : 'entry-fields';
+    }
+
     get matchStatus() {
         if (!this.matchedEventId) {
-            return 'No matching Salesforce event. A time entry can still be created.';
+            return 'No matching Salesforce event. A time entry cannot be created until this event exists in Salesforce.';
         }
         if (this.timeEntryId) {
             return 'Editing the time entry linked to this Salesforce event.';
@@ -165,6 +182,7 @@ export default class OutlookTimeEntry extends LightningElement {
     get isSubmitDisabled() {
         return (
             this.isSubmitting ||
+            this.isFieldsLocked ||
             !this.workDate ||
             !(parseFloat(this.hoursWorked) > 0)
         );
@@ -371,6 +389,9 @@ export default class OutlookTimeEntry extends LightningElement {
 
     /** Saves silently from a lookup change, once there is enough to log. */
     async autoSaveEntry() {
+        if (this.isFieldsLocked) {
+            return;
+        }
         if (!this.projectId || !this.workDate || !(parseFloat(this.hoursWorked) > 0)) {
             return;
         }
@@ -382,6 +403,9 @@ export default class OutlookTimeEntry extends LightningElement {
     }
 
     async saveEntry(announce) {
+        if (this.isFieldsLocked) {
+            return;
+        }
         this.clearMessage();
         this.isSubmitting = true;
         try {

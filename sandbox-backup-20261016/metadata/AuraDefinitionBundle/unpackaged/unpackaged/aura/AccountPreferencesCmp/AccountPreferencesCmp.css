@@ -1,0 +1,243 @@
+.THIS {
+}
+
+.THIS.cmp-wrapper {
+    margin-bottom:200px;
+}
+
+.THIS .row {
+    border-bottom: solid 1px black;
+}
+
+.THIS .row.slds-show {
+    display:table-row;
+}
+
+.THIS .icon-cell {
+    width:5%;
+}
+
+.THIS .label-cell {
+    width:65%;
+    min-width:150px;
+}
+
+.THIS .table-left-cell {
+    width:30%;
+}
+
+.THIS .table-right-cell {
+    width:25%;
+}
+
+.THIS.slds-p-around_custom {
+    /* padding: 1.5rem 8.5rem; */
+    padding:20px 10%;
+}
+
+.THIS .section-header {
+    /* float:left; */
+}
+
+.THIS .padded-header {
+    font-size:12pt;
+    font-weight: bold;
+}
+
+.THIS .header-label {
+    color: white;
+    max-width: 130px;
+    word-wrap: normal;
+    white-space: normal;
+    text-align: center;
+}
+
+.THIS .table-header {
+    /* float:right; */
+    width:40%;
+    height:50px;
+    /* background-color:#276570;
+    color:white; */
+}
+
+.THIS .table-sub-header {
+    /* float:right; */
+    width:40%;
+    height:50px;
+    /* padding:5px; */
+}
+
+.THIS .table-header th{
+    /* border: 1px solid #DDD; */
+    height:50px;
+    width:40%;
+}
+.THIS .table-sub-header th{
+    /* border: 1px solid #DDD; */
+    height:50px;
+    width:40%;
+}
+
+.THIS .center {
+    text-align: center;
+    display: block;
+}
+
+.THIS .slds-scope .slds-form-element__label {
+    color:white !important;
+}
+
+.THIS .th-left {
+    background-color:#00205B;
+    color:white !important;
+    padding:0;
+    text-align:center;
+}
+
+.THIS .th-right {
+    background-color:#00A3E0;
+    color:white !important;
+    padding:0;
+    text-align:center;
+}
+/*
+.THIS .th-left-None {
+    background-color:#00205B;
+    color:white !important;
+    padding:0;
+    text-align:center;
+}
+
+.THIS .th-right-None {
+    background-color:#00A3E0;
+    color:white !important;
+    padding:0;
+    text-align:center;
+}
+
+.THIS .th-left-Some {
+    background-color:#CCCC00;
+    color:white !important;
+    padding:0;
+    text-align:center;
+}
+
+.THIS .th-right-Some {
+    background-color:#CCCC00;
+    color:white !important;
+    padding:0;
+    text-align:center;
+}
+
+.THIS .th-left-All {
+    background-color:#009900;
+    color:white !important;
+    padding:0;
+    text-align:center;
+}
+
+.THIS .th-right-All {
+    background-color:#009900;
+    color:white !important;
+    padding:0;
+    text-align:center;
+}
+*/
+.THIS .check-button-None {
+    background-color:white;
+}
+.THIS .check-button-Some {
+    background-color:#f8ff77;
+}
+.THIS .check-button-All {
+    background-color:#8cff7f;
+}
+.THIS .x-button-None {
+    background-color:#ff9999;
+}
+.THIS .x-button-Some {
+    background-color:white;
+}
+.THIS .x-button-All {
+    background-color:white;
+}
+.THIS .check-button-None:hover {
+    background-color:white;
+}
+.THIS .check-button-Some:hover {
+    background-color:#f8ff77;
+}
+.THIS .check-button-All:hover {
+    background-color:#8cff7f;
+}
+.THIS .x-button-None:hover {
+    background-color:#ff9999;
+}
+.THIS .x-button-Some:hover {
+    background-color:white;
+}
+.THIS .x-button-All:hover {
+    background-color:white;
+}
+.THIS .check-button-None:active {
+    background-color:white;
+}
+.THIS .check-button-Some:active {
+    background-color:#f8ff77;
+}
+.THIS .check-button-All:active {
+    background-color:#8cff7f;
+}
+.THIS .x-button-None:active {
+    background-color:#ff9999;
+}
+.THIS .x-button-Some:active {
+    background-color:white;
+}
+.THIS .x-button-All:active {
+    background-color:white;
+}
+.THIS .check-button-None:focus {
+    background-color:white;
+}
+.THIS .check-button-Some:focus {
+    background-color:#f8ff77;
+}
+.THIS .check-button-All:focus {
+    background-color:#8cff7f;
+}
+.THIS .x-button-None:focus {
+    background-color:#ff9999;
+}
+.THIS .x-button-Some:focus {
+    background-color:white;
+}
+.THIS .x-button-All:focus {
+    background-color:white;
+}
+
+.THIS .padded-header {
+    /* padding:1rem; */
+}
+.THIS .padded-sub-header {
+    /* padding:1rem; */
+    /* margin-left: 4%; */
+}
+
+.THIS .row-wrapper {
+    background-color:#DDD;
+    margin-bottom:10px;
+}
+
+.THIS .row-label {
+    /* float:left; */
+}
+
+.THIS .row-table {
+    /* float:right; */
+    width:50%;
+}
+
+.THIS .slds-checkbox_faux {
+    margin:auto !important;
+}

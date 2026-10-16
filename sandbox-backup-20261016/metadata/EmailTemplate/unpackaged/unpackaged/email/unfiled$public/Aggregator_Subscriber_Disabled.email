@@ -1,0 +1,5 @@
+{!Contact.Name} of {!Contact.AccountName__c} has been disabled and is subscribed to the following aggregator services:
+{!Contact.Selected_Aggregators__c}
+
+Salesforce contact record link-
+{!Contact.Link}

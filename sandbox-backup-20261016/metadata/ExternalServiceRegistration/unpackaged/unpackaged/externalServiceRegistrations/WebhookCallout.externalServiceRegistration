@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>WebhookCallout</label>
+    <namedCredentialReference>Portal_Webhook</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>portalx20webhookx20callout</name>
+    </operations>
+    <registrationProviderType>SchemaInferred</registrationProviderType>
+    <schema>{&quot;openapi&quot;:&quot;3.0.1&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;WebhookCallout&quot;,&quot;description&quot;:&quot;&quot;},&quot;paths&quot;:{&quot;/webhooks/salesforce&quot;:{&quot;post&quot;:{&quot;description&quot;:&quot;&quot;,&quot;operationId&quot;:&quot;Portal Webhook Callout&quot;,&quot;requestBody&quot;:{&quot;description&quot;:&quot;&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;operation&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;objectId&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;objectType&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;timestamp&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;format&quot;:&quot;date-time&quot;}}}}},&quot;required&quot;:true},&quot;responses&quot;:{&quot;2XX&quot;:{&quot;description&quot;:&quot;&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;queues&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;eventType&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;message&quot;:{&quot;type&quot;:&quot;string&quot;}}}}}}}}}}}</schema>
+    <schemaType>OpenApi3</schemaType>
+    <serviceBinding>{&quot;host&quot;:&quot;&quot;,&quot;basePath&quot;:&quot;/&quot;,&quot;allowedSchemes&quot;:[],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{},&quot;integrationFlags&quot;:null,&quot;extensions&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>8</systemVersion>
+</ExternalServiceRegistration>

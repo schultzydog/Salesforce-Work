@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Corporates Financial Institutions Group User</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Corporates_Financial_Institutions_Group_Leader</parentRole>
+</Role>

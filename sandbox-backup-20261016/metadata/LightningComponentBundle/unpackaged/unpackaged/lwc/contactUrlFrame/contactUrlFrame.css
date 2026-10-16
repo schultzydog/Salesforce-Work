@@ -1,0 +1,15 @@
+.embedded-frame {
+    display: block;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+}
+
+.frame-placeholder {
+    position: relative;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.25rem;
+    background-color: #fafaf9;
+}

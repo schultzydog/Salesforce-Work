@@ -1,0 +1,7 @@
+The following Renewal Opportunity has been set to Closed/Lost resulting in lost revenue for EG. 
+
+Name: {!Opportunity.Name}
+Record Link: https://eurasiagroup.my.salesforce.com/{!Opportunity.Id}
+Amount: {!Opportunity.Amount}
+Upsell/Downsell Amount: {!Opportunity.UpSell_DownSell_Annualized_Value_OC__c}
+Owner: {!Opportunity.OwnerFullName}

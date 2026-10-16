@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Contact Hard Bounce</name>
+    <style>freeForm</style>
+    <subject>Contact Hard Bounce</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+Sorry to hear that.
+
+
+
+We checked your account and found that an email hard bounce has occurred.
+
+
+
+We have removed the bounce so emails will resume flowing to you, but the best way to prevent a bounce is to work with your IT to implement the IP whitelisting rules in the attached file.
+
+
+
+Please let us know if the issue persists after following the instructions on how to whitelist EG emails.
+
+
+
+Thank you,
+
+{!EmailMessage.FromName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,13 @@
+Opportunity/Contract Name: {!Opportunity.Name}
+Contract Amount: {!Opportunity.Amount}
+Revenue Type: {!Opportunity.{!Opportunity.RevenueType__c}}
+Business Line: {!Opportunity.Business_Line__c}
+Contract Owner: {!Opportunity.OwnerFullName}
+Start Date: {!Opportunity.{!Opportunity.Contract_Start_Date__c}}
+End Date: {!Opportunity.{!Opportunity.Contract_End_Date__c}}
+
+Adjusted Contract Amount: {!Contract_Adjustments__c.New_Contract_Value_OC__c}
+Adjusted Start Date: {!Contract_Adjustments__c.New_Start_Date__c}
+Adjusted End Date: {!Contract_Adjustments__c.New_End_Date__c}
+
+Please log in to review and approve the contract here: {!Contract_Adjustments__c.Link}

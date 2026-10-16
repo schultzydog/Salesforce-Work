@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account.Standard_Rule_for_Duplicate_Accounts</members>
+        <members>Account_Preferences__c.Standard_rule_for_duplicate_Account_Preferences</members>
+        <members>Contact.Contact_Email_Duplicate_Rule</members>
+        <members>Contact.Standard_Rule_For_Dupe_Contacts</members>
+        <members>Contact.Standard_Rule_for_Contacts_with_Duplicate_Leads</members>
+        <members>Contact_Preferences__c.Standard_rule_for_duplicate_Contact_Preferences_matching_rule</members>
+        <members>Lead.Standard_Rule_for_Leads_with_Duplicate_Contacts</members>
+        <name>DuplicateRule</name>
+    </types>
+    <version>62.0</version>
+</Package>

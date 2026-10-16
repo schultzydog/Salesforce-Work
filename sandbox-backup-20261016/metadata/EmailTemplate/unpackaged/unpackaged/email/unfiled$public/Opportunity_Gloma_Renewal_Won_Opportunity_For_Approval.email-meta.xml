@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Opportunity: Gloma Renewal Won Opportunity For Approval</name>
+    <style>freeForm</style>
+    <subject>Salesforce Communication ***Won Opportunity Approval: {!Opportunity.Name} ***</subject>
+    <textOnly>Opportunity Name: {!Opportunity.Name}
+Opportunity Amount: {!Opportunity.Amount}
+Sales Type: {!Opportunity.Type}
+Renewal Sub-Type: {!Opportunity.Renewal_Sub_type__c}
+Upsell/Downsell Amount (USD): {!Opportunity.UpSell_DownSell_Annualized_Value_USD__c}
+Business Line: {!Opportunity.Business_Line__c}
+Opportunity Owner: {!Opportunity.OwnerFullName}
+Start Date: {!Opportunity.Contract_Start_Date__c}
+End Date: {!Opportunity.Contract_End_Date__c}
+
+Please log in to review and approve the opportunity here: {!Opportunity.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

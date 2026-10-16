@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Analysts</fullName>
+        <default>false</default>
+        <label>Analysts</label>
+    </customValue>
+    <customValue>
+        <fullName>Associate Directors</fullName>
+        <default>false</default>
+        <label>Associate Directors</label>
+    </customValue>
+    <customValue>
+        <fullName>Associates</fullName>
+        <default>false</default>
+        <label>Associates</label>
+    </customValue>
+    <customValue>
+        <fullName>Directors</fullName>
+        <default>false</default>
+        <label>Directors</label>
+    </customValue>
+    <customValue>
+        <fullName>Managing Directors</fullName>
+        <default>false</default>
+        <label>Managing Directors</label>
+    </customValue>
+    <customValue>
+        <fullName>Practice Heads</fullName>
+        <default>false</default>
+        <label>Practice Heads</label>
+    </customValue>
+    <customValue>
+        <fullName>Researchers</fullName>
+        <default>false</default>
+        <label>Researchers</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Analysts</fullName>
+        <default>false</default>
+        <label>Senior Analysts</label>
+    </customValue>
+    <masterLabel>Staff Class</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

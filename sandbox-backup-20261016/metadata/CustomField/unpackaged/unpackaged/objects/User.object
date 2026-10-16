@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.Account.Owner.FirstName  &amp; &apos; &apos;&amp;  Contact.Account.Owner.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Admin_user__c</fullName>
+        <formula>CONTAINS( Profile.Name , &apos;Admin&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Admin user</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Timecard_Compliance_Start_Date__c</fullName>
+        <defaultValue>today()</defaultValue>
+        <label>Annual Timecard Compliance Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Business_Line__c</fullName>
+        <label>Business Line</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Business_Line_users_contacts</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Check_Box__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Check Box</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Client_Services_Team__c</fullName>
+        <label>Client Services Team</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Client_Services_Team</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Created_by_Rippling_Email_automation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Created by Rippling Email automation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Department_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Text( Client_Services_Team__c ) ,
+&apos;Corporates&apos;, &apos;Corporate&apos;,
+&apos;Global Markets&apos;,&apos;Gloma&apos;,
+&apos;GZERO Media&apos;,&apos;Gzero Media&apos;,
+&apos;Office of the President&apos;,&apos;OOP&apos;,
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Department Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <label>Department Picklist</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>User_Department</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Does_not_require_FT_timesheet__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Does not require FT timesheet</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <defaultValue>$User.Username</defaultValue>
+        <description>this field was created to support loads of the KnowBe4 results. for unknown reasons, we are unable to consistently successfully upsert against the username field.</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Include_in_Analyst_picklist_value_set__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Include in Analyst picklist value set</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Frozen__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This will be true if user is frozen via UserLogin</description>
+        <label>Is Frozen</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Location_tracking_required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Location tracking required</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Manager.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Eurasia_Email__c</fullName>
+        <formula>NOT Contains (Email, &apos;eurasiagroup.net&apos;) ||  NOT Contains (Username, &apos;eurasiagroup.net&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Non-Eurasia Email</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Phone_Extension__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone Extension</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT($Api.Partner_Server_URL_340, FIND(&quot;/services&quot;, $Api.Partner_Server_URL_340)) &amp; Id</formula>
+        <label>Record Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remote__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Remote</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Rippling_automation_user_exists__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Rippling automation - user exists</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SF_License__c</fullName>
+        <externalId>false</externalId>
+        <formula>Profile.UserLicense.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SF_License</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Staff_Class__c</fullName>
+        <label>Staff Class</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Staff_Class</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Standard_Hours_per_week__c</fullName>
+        <defaultValue>40</defaultValue>
+        <externalId>false</externalId>
+        <label>Standard Hours per week</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Termination_date__c</fullName>
+        <label>Termination date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Timesheet_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>FT Timesheet Required</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Use_Scrollbars_on_Contact_Pref_Page__c</fullName>
+        <defaultValue>true</defaultValue>
+        <label>Use Scrollbars on Contact Pref Page</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_18_Digit_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User 18 Digit ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>create_time_card__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>create time card</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ConsumptionResourceTags_std_map_ConsumptionResourceTags_std_1772280092814</members>
+        <members>CurrencyType_Home_map_CurrencyType_Home_1768498833900</members>
+        <members>IndividualGDPRState_map_IndividualGDPRState_1768496647207</members>
+        <members>ProvisionedFeature_map_ProvisionedFeature_1768497287088</members>
+        <members>StaticCurrencyRates_Home_map_StaticCurrencyRates_Home_1768498964187</members>
+        <members>TenantBillingUsageEvent_map_TenantBillingUsageEvent_1768497270028</members>
+        <members>TenantEntitlementTransaction_map_TenantEntitlementTransaction_1768497280099</members>
+        <members>TenantUsageTypeMultiplier_map_TenantUsageTypeMultiplier_1768497275021</members>
+        <name>ObjectSourceTargetMap</name>
+    </types>
+    <version>62.0</version>
+</Package>

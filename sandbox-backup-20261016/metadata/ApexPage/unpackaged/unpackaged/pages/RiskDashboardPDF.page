@@ -1,0 +1,1188 @@
+<!--
+  @description       : Risk Dashboard PDF
+  @last modified on  : NOV 20 2022 - Bryan
+-->
+<apex:page showHeader="false"
+           sidebar="false"
+           standardController="Political_Risk_Analysis__c"  
+           extensions="ClientPortal_RiskDashboardPDF_Ctlr"
+           cache="false"
+           docType="html-5.0"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           standardStylesheets="false"
+           contentType="application/pdf"
+           renderAs="pdf">
+
+    <head>
+        <title>{!filename}</title>
+        <style>
+            /* Fonts */
+            @font-face { 
+                font-family: "Salesforce Sans"; 
+                src: url("{!fontSalesforceSansBoldUrl}");
+                font-weight: bold;
+                -fs-pdf-font-embed: embed;
+                -fs-pdf-font-encoding: Identity-H;
+            } 
+            @font-face { 
+                font-family: "Salesforce Sans"; 
+                src: url("{!fontSalesforceSansBoldItalicUrl}");
+                font-weight: bold;
+                font-style: italic;
+                -fs-pdf-font-embed: embed;
+                -fs-pdf-font-encoding: Identity-H;
+            } 
+            @font-face { 
+                font-family: "Salesforce Sans"; 
+                src: url("{!fontSalesforceSansItalicUrl}");
+                font-style: italic;
+                -fs-pdf-font-embed: embed;
+                -fs-pdf-font-encoding: Identity-H;
+            } 
+            @font-face { 
+                font-family: "Salesforce Sans"; 
+                src: url("{!fontSalesforceSansLightUrl}");
+                font-weight: 300;
+                -fs-pdf-font-embed: embed;
+                -fs-pdf-font-encoding: Identity-H;
+            } 
+            @font-face { 
+                font-family: "Salesforce Sans"; 
+                src: url("{!fontSalesforceSansLightItalicUrl}");
+                font-weight: 300;
+                font-style: italic;
+                -fs-pdf-font-embed: embed;
+                -fs-pdf-font-encoding: Identity-H;
+            } 
+            @font-face { 
+                font-family: "Salesforce Sans"; 
+                src: url("{!fontSalesforceSansRegularUrl}");
+                -fs-pdf-font-embed: embed;
+                -fs-pdf-font-encoding: Identity-H;
+            }                
+            @font-face { 
+                font-family: "Salesforce Sans"; 
+                src: url("{!fontSalesforceSansThinUrl}");
+                font-weight: 100;
+                -fs-pdf-font-embed: embed;
+                -fs-pdf-font-encoding: Identity-H;
+            } 
+            @font-face { 
+                font-family: "Salesforce Sans"; 
+                src: url("{!fontSalesforceSansThinItalicUrl}");
+                font-weight: 100;
+                font-style: italic;
+                -fs-pdf-font-embed: embed;
+                -fs-pdf-font-encoding: Identity-H;
+            } 
+
+            /* Standard Elements */
+            body {
+                color: rgb(24, 24, 24);
+                font-family: 'Salesforce Sans', sans-serif;
+                font-size: 9pt;
+            }
+            h1 {
+                color: #1D4F91;
+                margin-bottom: 10px;
+            }
+            h2 {
+                color: #1D4F91;
+            }
+            h3 {
+                color: #1D4F91;
+            }
+            p {
+                margin-block-start: 0 !important; /* no spacing before paragraphs, just like salesforce UI - Manual extra line required */
+                margin-block-end: 0 !important; /* no spacing after paragraphs, just like salesforce UI - Manual extra line required */
+                margin-top: 0 !important; /* no spacing before paragraphs, just like salesforce UI - Manual extra line required */
+                margin-bottom: 0 !important; /* no spacing after paragraphs, just like salesforce UI - Manual extra line required */
+            }
+
+            .force-standard-font *{ /* Used to force standard font where Salesforce Rich-Text Fields allow user-defined font and size */
+                color: rgb(24, 24, 24)!important;
+                font-family: 'Salesforce Sans', sans-serif!important;
+                font-size: 9pt!important;
+            }
+
+            /* Utilities */
+            @page landscape-page {
+                size: letter landscape;
+                page-break-before: always;
+            }
+            .landscape-page{
+                page: landscape-page;
+            }
+            .page-break {
+                page-break-before: always;
+                width: 6.75in;
+            }
+            .textvertical {
+                -moz-transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+            }
+            .center{
+                text-align: center;
+            } 
+            .slds-line-height_reset{
+                line-height: 1;
+            }
+
+            /* Table of Contents */
+            .toc a {
+                color: rgb(24, 24, 24);
+                text-decoration: none;
+            }
+            .toc a::after { 
+                content: leader(' ') target-counter(attr(href), page,decimal);
+            }
+            .toc{
+                list-style: none !important;
+                width: 6in;
+            }
+            .toctitle{
+                color:rgb(137,139,142);
+                border-bottom: solid 8px #ccc;
+                width:100%;
+                padding-bottom: 48px;
+            }
+            .tocheader{
+                font-size:18px;
+                font-weight:bold;
+                color:rgb(21,159,218);
+            }
+            .legal{
+                border-top: solid 8px #ccc;
+                padding-top: 32px;
+                width: 100%;
+                color: #aaa;
+            }
+
+            /* All Pages */
+            @page {
+                size: letter;
+                margin: 0.65in;
+                margin-bottom: 0.5in;
+                @bottom-right {
+                    content: "eurasia group | " counter(page);
+                    font-family: 'Salesforce Sans', sans-serif;
+                    font-size: 7pt;
+                }
+                @bottom-left {
+                    content: "{!month} {!year}";
+                    font-family: 'Salesforce Sans', sans-serif;
+                    font-size: 7pt;
+                }
+                @top-right {
+                    content: element(header-color)
+                }    
+            }
+
+            /* Cover Page */
+            @page:first {
+                size: letter;
+                margin: 0px;
+                background-color:rgb(21,159,218); 
+                @bottom-right {
+                    content: none;
+                }
+                @bottom-left {
+                    content: none;
+                }                
+                @top-right {
+                    content: element(header-white);
+                }                        
+            }
+            .coverpage{
+                padding: 1in;
+                padding-top: 3in;
+            }
+            .coverpage h1{
+                color: #ffffff;
+                font-weight: bold;                
+                font-size: 64px;
+                line-height: 64px;
+            }
+            .coverpage p{
+                color: #ffffff;
+                font-size:36px;
+            }
+
+            /* Logo */
+            .logo-color{
+                width: 100px;
+                margin-top: 0px;
+                margin-left: 600px;
+            }  
+            .logo-white{
+                width: 400px;
+                margin-top: -8px;
+                margin-left: 300px;
+            }  
+
+            /* Running Header */
+            div.header-color {
+                position: running(header-color);
+            }
+            div.header-white-large {
+                position: running(header-white-large);
+            }
+
+            /* Tables */
+            .tableBordered {
+                width: 100%;
+                background-color: #fff;
+                border-spacing: 0;
+                border-collapse: collapse; /* note: not respected with paginate, using border 0.5px to make less noticible */
+                -fs-table-paginate: paginate;
+            }
+            .tableBordered thead tr th {
+                background-color: #e5e5e5;
+                font-weight: bold;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 8px;
+                padding-right: 8px;
+                border: 0.5px solid #ccc;
+                word-wrap: break-word;
+                vertical-align: middle;
+            }            
+            .tableBordered tbody tr th { /* usually left-most column */
+                background-color: rgb(250, 250, 250);
+                font-weight: bold;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 8px;
+                padding-right: 8px;
+                border: 0.5px solid #e5e5e5;
+                word-wrap: break-word;
+                vertical-align: middle;
+            }
+            .tableBordered tbody tr td {
+                background-color: rgb(250, 250, 250);
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 8px;
+                padding-right: 8px;
+                border: 0.5px solid #e5e5e5;
+                word-wrap: break-word;
+                vertical-align: middle;
+            }
+            .tableBordered thead tr th{
+                background-color: #00205B;
+                color: #ffffff;
+            }
+            .tableBordered tbody tr th table thead tr th,
+            .tableBordered tbody tr td table thead tr th{
+                background-color: #d8d8d8;
+                color: #444444;
+            }
+            .heatmap-table thead th,
+            .heatmap-table thead td{
+                width: 62px !important;
+            }
+            .heatmap-table .slds-table--cell-buffer tr>td:last-child, 
+            .heatmap-table .heatmap-table .slds-table--cell-buffer tr>th:last-child, 
+            .slds-table_cell-buffer tr>td:last-child, 
+            .heatmap-table .slds-table_cell-buffer tr>th:last-child {
+                padding-right: 8px !important;
+            }
+
+            /* Flags */
+            .regionflag, .regionFlag {
+                border: solid 1px #ccc;
+            }
+            .regionFlagSmall {
+                width: 24px;
+                height: auto;
+                border: solid 1px #ccc;
+            }
+            
+            .riskchange{
+                width: 100% !important;
+                height: 32px !important;
+                margin: auto;
+            }
+            .icon{
+                width: 16px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .heatmap-icon{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 16px;
+                height: 16px;
+                margin-top: -8px; /* Half the height */
+                margin-left: -8px; /* Half the width */
+            }
+            /* Colors */
+            .Significantly.negative {
+                Xbackground-color: rgb(246, 103, 103) !important;
+                font-weight: bold;
+            }
+            .Negative {
+                Xbackground-color: rgb(255, 198, 198) !important;
+                font-weight: bold;
+            }
+            .Neutral {
+                Xbackground-color: rgb(243, 251, 152) !important;
+                font-weight: bold;
+            }
+            .Positive {
+                Xbackground-color: rgb(198, 255, 210) !important;
+                font-weight: bold;
+            }
+            .Significantly.positive {
+                Xbackground-color: rgb(246, 103, 103) !important;
+                font-weight: bold;
+            }
+
+            .Very.low {
+                Xbackground-color: red !important;
+                font-weight: bold;
+            }
+            .Low {
+                Xbackground-color: rgb(198, 255, 210) !important;
+                font-weight: bold;
+            }
+            .Medium {
+                Xbackground-color: rgb(243, 251, 152) !important;
+                font-weight: bold;
+            }
+            .High {
+                Xbackground-color: rgb(255, 198, 198) !important;
+                font-weight: bold;
+            }
+            .Very.high {
+                Xbackground-color: green !important;
+                font-weight: bold;
+            }
+
+            .Confidence.High{
+                xbackground-color: rgb(198, 255, 210) !important;
+            }
+            .Confidence.Low {
+                xbackground-color: rgb(255, 198, 198) !important;
+            }
+            .Positive{               
+                xbackground-color: rgb(198, 255, 210) !important;                
+            }
+
+            .riskchange{
+                position: relative;
+            }
+            .riskchange.Extremely.positive{
+                background-color: rgb(91, 205, 112) !important;
+            }
+            .riskchange.Significantly.positive{
+                background-color: rgb(128, 205, 142) !important;
+            }
+            .riskchange.Positive{
+                background-color: rgb(198, 255, 210) !important;
+            }
+            .riskchange.Neutral{
+                background-color: #efefef !important;
+            }
+            .riskchange.Negative{
+                background-color: rgb(255, 198, 198) !important;
+            }
+            .riskchange.Significantly.negative{
+                background-color: rgb(252, 152, 152) !important;
+            }
+            .riskchange.Extremely.negative{
+                background-color: rgb(246, 103, 103) !important;
+            }
+
+            .isnew{
+                background-color: rgb(255, 255, 213) !important;
+            }
+
+        </style>
+    </head>
+
+    <body class="slds-scope">
+        <div class="header-color">
+            <center>
+                <img src="{!URLFOR($Resource.ClientPortal, 'img/PDF_Header_Icon.png')}"  class="logo-color"/>
+            </center>
+        </div>
+        <div class="header-white">
+            <center>
+                <img src="{!URLFOR($Resource.ClientPortal, 'img/PDF_Header_Icon_White.png')}"  class="logo-white"/>
+            </center>
+        </div>
+
+        <div class="coverpage" >
+            <apex:outputpanel layout="none" rendered="{!!IsNull(runningUser.ContactId)}">
+                <h1>{!runningUser.Contact.Account.Account_Name_for_Risk_Dashboard_PDF__c}</h1>
+            </apex:outputpanel>
+            <h1>Political Risk Dashboard</h1>
+            <p>{!month} {!year}</p>
+        </div>
+
+        <div class="page-break">            
+            <div class="toctitle">
+                <h1 class="tocheader">Political Risk Dashboard</h1>
+                {!month} {!year}
+            </div>
+            <h3>CONTENTS</h3>
+            <nav>
+                <ol>
+                    <apex:outputPanel layout="none" rendered="{!isFullSubscriber}">
+                        <li class="toc" >
+                            <a href="#executiveSummary">Executive summary</a>
+                        </li>
+                    </apex:outputPanel>
+                    <li class="toc">
+                        <a href="#glossary">Glossary</a>
+                    </li>
+                    <li class="toc">
+                        <a href="#regionalNetAssessment">Regional net assessment</a>
+                    </li>
+                    <li class="toc">
+                        <a href="#regionalHeatmap">Regional heatmap</a>
+                    </li>
+                    <apex:outputPanel layout="none" rendered="{!AND(highriskSignposts!=null, highriskSignposts.size>0)}">
+                        <li class="toc">
+                            <a href="#highrisk">High risk upcoming events</a>
+                        </li>
+                    </apex:outputPanel>
+                    <apex:variable value="{!1}" var="rowNum" />
+                    <apex:repeat value="{!regionalAnalyses}" var="regionalAnalysis">
+                        <apex:outputPanel layout="none" rendered="{!(regionalAnalysis.Analysis_Depth__c=='Full')}">
+                            <li class="toc">
+                                <a href="#regionalAnalysis_{!rowNum}">{!regionalAnalysis.Region__r.Name}</a>
+                            </li>
+                        </apex:outputPanel>
+                        <apex:variable var="rowNum" value="{!rowNum + 1}" />
+                    </apex:repeat>
+                    <apex:outputPanel layout="none" rendered="{!hasBasecases}">
+                        <li class="toc">
+                            <a href="#geopoliticalBasecases">Geopolitical basecases</a>
+                        </li>
+                    </apex:outputPanel>
+                </ol>
+            </nav>
+            <div class="legal">
+                <p>This confidential report is intended solely for the internal use of Subscriber and is based on the opinions of Eurasia Group analysts and various in-country specialists. Eurasia Group is a private research and consulting firm that maintains no affiliations with governments or political parties.</p>
+                <p>© {!year} Eurasia Group, 149 Fifth Avenue, 15th Floor, New York, NY 10010</p>
+            </div>
+        </div>
+
+        
+        <apex:outputPanel layout="none" rendered="{!isFullSubscriber}">
+            <div class="page-break" id="executiveSummary">
+                <h1  class="textHeading">Executive summary</h1>
+                <div class="force-standard-font">
+                    <apex:outputField value="{!politicalRiskAnaysis.Executive_Summary__c}" />
+                    <apex:outputPanel layout="block" styleClass="wraptext">
+                        <apex:repeat value="{!regionalAnalyses}" var="regionalAnalysis">
+                            <apex:outputField rendered="{!!ISNULL(regionalAnalysis.Executive_Summary_Segment_for_Region__c)}" value="{!regionalAnalysis.Executive_Summary_Segment_for_Region__c}"/>
+                        </apex:repeat>            
+                    </apex:outputPanel>           
+                </div>
+            </div>
+        </apex:outputPanel>
+
+        <div class="page-break" id="glossary">
+            <h1  class="textHeading">Glossary</h1>
+            <apex:outputField value="{!politicalRiskAnaysis.Glossary__c}" />
+        </div>
+
+        <div class="page-break" id="regionalNetAssessment">
+            <h1 class="textHeading">Regional net assessment</h1>
+            <div class="net-assessment">
+                <table class="tableBordered" border="0" cellpadding="0" cellspacing="0" aria-label="">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="slds-cell-wrap" scope="col" style="width: 16%;">
+                                <div class="" title="">{!politicalRiskAnaysis.Month_Name__c} {!politicalRiskAnaysis.Year__c}
+                                </div>
+                            </th>
+                            <th class="slds-cell-wrap" scope="col" style="width: 13%;">
+                                <div class="" title="">Directional change since last month</div>
+                            </th>
+                            <th class="slds-cell-wrap" scope="col">
+                                <div class="" title="">Net assessment</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!regionalAnalyses}" var="regionalAnalysis">
+                            <apex:outputPanel layout="none" rendered="{!(regionalAnalysis.Analysis_Depth__c=='Full')}">
+                                <tr style="page-break-inside:avoid">
+                                    <th data-label="" scope="row">
+                                        <apex:image url="{!RIGHT(regionalAnalysis.Region__r.Flag_image_URL__c, LEN(regionalAnalysis.Region__r.Flag_image_URL__c)-FIND('/servlet/', regionalAnalysis.Region__r.Flag_image_URL__c)+1)}" styleClass="regionFlagSmall" />
+                                        <br/>
+                                        <span>{!regionalAnalysis.Region__r.Name}</span>                                        
+                                    </th>
+                                    <td data-label="" class="{!regionalAnalysis.Directional_change_since_last_month__c}">
+                                        <div class="center" >
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Directional_change_since_last_month__c,' ','-')}.png"/>
+                                            <br/>
+                                            {!regionalAnalysis.Directional_change_since_last_month__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="slds-cell-wrap">
+                                            {!regionalAnalysis.Net_Assessment__c}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </apex:outputPanel>
+                        </apex:repeat>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page-break landscape-page" id="regionalHeatmap">
+            <h1 class="textHeading">Regional heatmap</h1>
+            <div class="assessment-heatmap">
+                <table class="tableBordered heatmap-table" cellpadding="0" cellspacing="0" style="width: 9.25in;">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="borderbottom" scope="col" colspan="5" style="width: 60%;text-align:center;">
+                                {!politicalRiskAnaysis.Month_Name__c} {!politicalRiskAnaysis.Year__c}
+                            </th>
+                            <th class="borderbottom borderleft" scope="col" colspan="5" style="width: 40%;text-align:center;">
+                                Changes since last report
+                            </th>
+                        </tr>
+                        <tr class="slds-line-height_reset">
+                            <th class="slds-cell-wrap" scope="col" style="width: 150px;">
+                                <div class="" title="">Region</div>
+                            </th>
+                            <th class="slds-cell-wrap" scope="col">
+                                <div class="" title="">Relation of past month's events to our basecase</div>
+                            </th>
+                            <th class="slds-cell-wrap" scope="col">
+                                <div class="" title="">Basecase confidence level</div>
+                            </th>
+                            <th class="slds-cell-wrap" scope="col">
+                                <div class="" title="">Directional change since last month</div>
+                            </th>
+                            <th class="slds-cell-wrap" scope="col">
+                                <div class="" title="">Estimated risk over the next month</div>
+                            </th>
+                            <th class="borderleft" scope="col">
+                                <div class="textvertical" title="">Domestic
+                                    <br />stability</div>
+                            </th>
+                            <th class="slds-cell-wrap vertical-td" scope="col">
+                                <div class="textvertical" title="">Global
+                                    <br />position</div>
+                            </th>
+                            <th class="slds-cell-wrap vertical-td" scope="col">
+                                <div class="textvertical" title="">Security</div>
+                            </th>
+                            <th class="slds-cell-wrap vertical-td" scope="col">
+                                <div class="textvertical" title="">Leadership
+                                    <br />intent</div>
+                            </th>
+                            <th class="slds-cell-wrap vertical-td" scope="col">
+                                <div class="textvertical" title="">Economy</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!regionalAnalyses}" var="regionalAnalysis">
+                            <apex:outputPanel layout="none" rendered="{!(regionalAnalysis.Analysis_Depth__c=='Full')}">
+                            <!--if:true={regionalAnalysis.analysisDepthFull}-->
+                                <tr style="page-break-inside:avoid">
+                                    <th data-label="" scope="row">
+                                        <apex:image url="{!RIGHT(regionalAnalysis.Region__r.Flag_image_URL__c, LEN(regionalAnalysis.Region__r.Flag_image_URL__c)-FIND('/servlet/', regionalAnalysis.Region__r.Flag_image_URL__c)+1)}" styleClass="regionFlagSmall" />
+                                        <br/>
+                                        <span>{!regionalAnalysis.Region__r.Name}</span>
+                                    </th>
+                                    <td data-label="">
+                                        <div class="slds-cell-wrap" title="">
+                                            <!--class={regionalAnalysis.Last_month_s_events_to_basecase__iconClass}-->
+                                            <i></i>&nbsp;{!regionalAnalysis.Last_month_s_events_to_basecase__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="" class="{!regionalAnalysis.Basecase_confidence_level__c}">
+                                        <div class="center">
+                                            <!--class={regionalAnalysis.Basecase_confidence_level__iconClass}-->
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Basecase_confidence_level__c,' ','-')}.png"/>
+                                            <br/>
+                                            <i></i>&nbsp;{!regionalAnalysis.Basecase_confidence_level__c}
+                                        </div>
+                                    </td>
+                                    <!--class={regionalAnalysis.Directional_change_since_last_month__c}-->
+                                    <td data-label="" class="{!regionalAnalysis.Directional_change_since_last_month__c}">
+                                        <div class="center" >
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Directional_change_since_last_month__c,' ','-')}.png"/>
+                                            <br/>
+                                            {!regionalAnalysis.Directional_change_since_last_month__c}
+                                        </div>
+                                    </td>
+                                    <!--class={regionalAnalysis.Estimated_risk_over_the_next_month__c}-->
+                                    <td data-label="" class="{!regionalAnalysis.Estimated_risk_over_the_next_month__c}">
+                                        <div class="center">
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/r{!SUBSTITUTE(regionalAnalysis.Estimated_risk_over_the_next_month__c,' ','-')}.png"/>
+                                            <br/>
+                                            {!regionalAnalysis.Estimated_risk_over_the_next_month__c}
+                                        </div>
+                                    </td>
+                                    <td class="borderleft" data-label="">
+                                        <div class="riskchange {!regionalAnalysis.Risk_Change_Domestic_Stability__c}" style="{!'background-color: ' + regionalAnalysis.Risk_Color_Domestic_Stability__c +'!important;'}">
+                                            
+                                                <!--class={regionalAnalysis.Risk_Change_Domestic_Stability__iconClass}>-->
+                                                <img class="heatmap-icon" src="{!$Resource.ClientPortal}/icons/circle-arrow-{!SUBSTITUTE(TRIM(regionalAnalysis.Risk_Change_Domestic_Stability__c),' ','-')}.png"/>
+                                                <i>
+                                                </i>
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="riskchange {!regionalAnalysis.Risk_Change_Global_Position__c}" style="{!'background-color: ' + regionalAnalysis.Risk_Color_Global_Position__c +'!important;'}">
+                                                <!--class={regionalAnalysis.Risk_Change_Global_Position__iconClass}-->
+                                                <img class="heatmap-icon" src="{!$Resource.ClientPortal}/icons/circle-arrow-{!SUBSTITUTE(TRIM(regionalAnalysis.Risk_Change_Global_Position__c),' ','-')}.png"/>
+                                                <i></i>
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="riskchange {!regionalAnalysis.Risk_Change_Security__c}" style="{!'background-color: ' + regionalAnalysis.Risk_Color_Security__c +'!important;'}">
+                                                <!--class={regionalAnalysis.Risk_Change_Security__iconClass}-->
+                                                <img class="heatmap-icon" src="{!$Resource.ClientPortal}/icons/circle-arrow-{!SUBSTITUTE(TRIM(regionalAnalysis.Risk_Change_Security__c),' ','-')}.png"/>
+                                                <i></i>
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="riskchange {!regionalAnalysis.Risk_Change_Leadership_Intent__c}" style="{!'background-color: ' + regionalAnalysis.Risk_Color_Leadership_Intent__c +'!important;'}">
+                                                <!--class={regionalAnalysis.Risk_Change_Leadership_Intent__iconClass}-->
+                                                <img class="heatmap-icon" src="{!$Resource.ClientPortal}/icons/circle-arrow-{!SUBSTITUTE(TRIM(regionalAnalysis.Risk_Change_Leadership_Intent__c),' ','-')}.png"/>
+                                                <i></i>
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="riskchange {!regionalAnalysis.Risk_Change_Economy__c}" style="{!'background-color: ' + regionalAnalysis.Risk_Color_Economy__c +'!important;'}">
+                                                <!--{regionalAnalysis.Risk_Change_Economy__iconClass}-->
+                                                <img class="heatmap-icon" src="{!$Resource.ClientPortal}/icons/circle-arrow-{!SUBSTITUTE(TRIM(regionalAnalysis.Risk_Change_Economy__c),' ','-')}.png"/>
+                                                <i></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </apex:outputPanel>
+                        </apex:repeat>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <apex:outputPanel layout="none" rendered="{!AND(highriskSignposts!=null,  highriskSignposts.size>0)}">
+            <div class="page-break" id="highrisk">
+                <h1 class="textHeading">High risk upcoming events</h1>
+                <div class="highrisk">
+                    <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="">
+                        <thead>
+                            <tr class="slds-line-height_reset" style="page-break-inside:avoid">
+                                <th class="slds-cell-wrap" scope="col" style="width: 15%">
+                                    <div class="" title="">
+                                        Region
+                                    </div>
+                                </th>
+                                <th class="slds-cell-wrap" scope="col">
+                                    <div class="" title="">Upcoming Event</div>
+                                </th>
+                                <th class="slds-cell-wrap" scope="col" style="width: 15%">
+                                    <div class="" title="">Category</div>
+                                </th>
+                                <th scope="col" class="slds-cell-wrap" style="width: 10%">
+                                    <div class="" title="">Positive or negative for risk?</div>
+                                </th>
+                                <th scope="col" class="slds-cell-wrap" style="width: 10%">
+                                    <div class="" title="">Likelihood</div>
+                                </th>
+                                <th scope="col" class="slds-cell-wrap" style="width: 10%">
+                                    <div class="" title="">Impact</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!highriskSignposts}" var="signpost">
+                                <tr style="page-break-inside:avoid">
+                                    <th data-label="" scope="row">
+                                        <apex:image url="{!RIGHT(signpost.Regional_Analysis__r.Region__r.Flag_image_URL__c, LEN(signpost.Regional_Analysis__r.Region__r.Flag_image_URL__c)-FIND('/servlet/', signpost.Regional_Analysis__r.Region__r.Flag_image_URL__c)+1)}"
+                                            styleClass="regionFlagSmall" />
+                                        <br/>
+                                        <span>{!signpost.Regional_Analysis__r.Region__r.Name}</span>
+                                    </th>
+                                    <td data-label="" scope="row">
+                                        <div class="slds-cell-wrap" title="">
+                                            {!signpost.Event__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="slds-cell-wrap">
+                                            {!signpost.Category__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="" class="{!signpost.Positive_or_negative_for_risk__c}">
+                                        <apex:outputpanel layout="block" styleclass="center" rendered="{!!isnull(signpost.Positive_or_negative_for_risk__c)}">
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/sp{!SUBSTITUTE(signpost.Positive_or_negative_for_risk__c,' ','-')}.png"
+                                            />
+                                            <br/> {!signpost.Positive_or_negative_for_risk__c}
+                                        </apex:outputpanel>
+                                    </td>
+                                    <td data-label="" class="{!signpost.Likelihood__c}">
+                                        <apex:outputpanel layout="block" styleclass="center" rendered="{!!isnull(signpost.Likelihood__c)}">
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!IF(signpost.Positive_or_negative_for_risk__c=='Positive','','r') + IF(signpost.Likelihood__c=='Medium','sp','') + SUBSTITUTE(signpost.Likelihood__c,' ','-')}.png" />
+                                            <br/> {!signpost.Likelihood__c}
+                                        </apex:outputpanel>
+                                    </td>
+                                    <td data-label="" class="{!signpost.Impact__c}">
+                                        <apex:outputpanel layout="block" styleclass="center" rendered="{!!isnull(signpost.Impact__c)}">
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!IF(signpost.Positive_or_negative_for_risk__c=='Positive','','r') + IF(signpost.Impact__c=='Medium','sp','')+ SUBSTITUTE(signpost.Impact__c,' ','-')}.png" />
+                                            <br/> {!signpost.Impact__c}
+                                        </apex:outputpanel>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </apex:outputPanel>
+        
+        <!-- Region speciic section -->
+        <apex:variable var="rowNum" value="{!1}" />
+        <apex:repeat value="{!regionalAnalyses}" var="regionalAnalysis">
+            <apex:outputPanel layout="block" rendered="{!(regionalAnalysis.Analysis_Depth__c=='Full')}" styleclass="page-break">
+                <div class="textHeading" id="regionalAnalysis_{!rowNum}">
+                    <h1><apex:image url="{!RIGHT(regionalAnalysis.Region__r.Flag_image_URL__c, LEN(regionalAnalysis.Region__r.Flag_image_URL__c)-FIND('/servlet/', regionalAnalysis.Region__r.Flag_image_URL__c)+1)}" styleClass="regionFlag" />
+                        &nbsp;
+                        {!regionalAnalysis.Region__r.Name}
+                    </h1>
+                </div>
+
+                <div class="regional-analysis-net-assessment">
+                    <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="regioncontent" scope="col">
+                                    Net assessment
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="slds-hint-parent" style="page-break-inside:avoid">
+                                <td data-label="" scope="row" class="regioncontent">
+                                    <apex:outputField value="{!regionalAnalysis.Net_Assessment__c}" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+
+                <div class="regional-analysis-basecase">
+                    <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <div class="regioncontent">
+                                        Eurasia Group's political basecases</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="slds-hint-parent" style="page-break-inside:avoid">
+                                <td data-label="" scope="row" class="regioncontent">
+                                    <div>
+                                        <apex:outputField value="{!regionalAnalysis.Basecase__c}" />
+                                    </div>
+
+                                    <div class="basecase-confidence-level" style="display: inline-block; width: 40%">
+                                        <table class="tableBordered" aria-label="" style="margin:25px;">
+                                            <thead>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        Basecase confidence level
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="" scope="row" class=" regioncontent Confidence {!regionalAnalysis.Basecase_confidence_level__c}">
+                                                        <!--{!regionalAnalysis.Basecase_confidence_level__confidenceClass}-->
+                                                        <div class="center" title="">
+                                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Basecase_confidence_level__c,' ','-')}.png"/>
+                                                            <br/>
+                                                            <apex:outputField value="{!regionalAnalysis.Basecase_confidence_level__c}" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                    <div class="estimated-risk-next-month" style="display: inline-block; width: 40%; padding-left: 50px;">
+                                        <table class="tableBordered" aria-label="" style="margin:25px;">
+                                            <thead>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        Estimated risk over next month
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="slds-hint-parent">
+                                                    <td data-label="" scope="row" class="{!regionalAnalysis.Estimated_risk_over_the_next_month__c}">
+                                                        <div class="center">
+                                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/r{!SUBSTITUTE(regionalAnalysis.Estimated_risk_over_the_next_month__c,' ','-')}.png"/>
+                                                            <br/>
+                                                            {!regionalAnalysis.Estimated_risk_over_the_next_month__c}
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                        
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+                <div class="regional-analysis-trajectories">
+                    <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <div class="regioncontent">
+                                        Basecase trajectories
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="slds-hint-parent" style="page-break-inside:avoid">
+                                <td data-label="" scope="row">
+                                    <div class="slds-cell-wrap" title="">
+                                        <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="" style="width: 92%; margin:25px;">
+                                            <thead>
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col">
+                                                        <div class="regioncontent">Directional change since last month</div>
+                                                    </th>
+                                                    <th class="center" scope="col">
+                                                        <div class="regioncontent">Short term</div>
+                                                    </th>
+                                                    <th class="center" scope="col">
+                                                        <div class="regioncontent">Long term</div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="slds-hint-parent" >
+                                                    <td data-label="" scope="row" class="{!regionalAnalysis.Directional_change_since_last_month__c}" style="width: 33%">
+                                                        <!--class=-->
+                                                        <div class="center regioncontent">
+                                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Directional_change_since_last_month__c,' ','-')}.png"/>
+                                                            <br/>
+                                                            {!regionalAnalysis.Directional_change_since_last_month__c}
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="" class="{!regionalAnalysis.Short_term_political_trajectory__c}">
+                                                        <div class="center regioncontent" title="">
+                                                            <apex:outputPanel layout="none" rendered="{!NOT(ISBLANK(regionalAnalysis.Short_term_political_trajectory__c))}">
+                                                                <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Short_term_political_trajectory__c,' ','-')}.png"/>
+                                                                <br/>
+                                                                {!regionalAnalysis.Short_term_political_trajectory__c}  
+                                                            </apex:outputPanel>
+                                                            <apex:outputPanel layout="none" rendered="{!ISBLANK(regionalAnalysis.Short_term_political_trajectory__c)}">
+                                                                Eurasia Group does not assign trajectories for this locale   
+                                                            </apex:outputPanel>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="" class="{!regionalAnalysis.Long_term_political_trajectory__c}">
+                                                        <div class="center regioncontent" title="">
+                                                            
+                                                            <apex:outputPanel layout="none" rendered="{!NOT(ISBLANK(regionalAnalysis.Long_term_political_trajectory__c))}">
+                                                                <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Long_term_political_trajectory__c,' ','-')}.png"/>
+                                                                <br/>
+                                                                {!regionalAnalysis.Long_term_political_trajectory__c} 
+                                                            </apex:outputPanel>
+                                                            <apex:outputPanel layout="none" rendered="{!ISBLANK(regionalAnalysis.Long_term_political_trajectory__c)}">
+                                                                Eurasia Group does not assign trajectories for this locale   
+                                                            </apex:outputPanel>                                                            
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+                <div class="regional-analysis-assumptions">
+                    <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="">
+                        <thead>
+                            <tr class="slds-line-height_reset" style="page-break-inside:avoid">
+                                <th class="" scope="col">
+                                    <div class="" title="">
+                                        Key analytic assumptions
+                                    </div>
+                                </th>
+                                <th class="" scope="col" style="width: 25%">
+                                    <div class="" title="">Category</div>
+                                </th>
+                                <th class="center" scope="col" style="width: 50px;">
+                                    <div class="" title=""></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!regionalAnalysis.Key_Analytic_Assumptions__r}" var="assumption">
+                                <tr class="{!(IF(assumption.New_KAA__c=='Yes', 'isnew',''))}" style="page-break-inside:avoid">
+                                    <!--class="{!assumption.class}"-->
+                                    <td data-label="" scope="row" class="{!(IF(assumption.New_KAA__c=='Yes', 'isnew',''))}">
+                                        <div class="slds-cell-wrap" title="">
+                                            {!assumption.Assumption__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="" class="{!(IF(assumption.New_KAA__c=='Yes', 'isnew',''))}">
+                                        <div class="slds-cell-wrap">
+                                            {!assumption.Category__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="" class="{!(IF(assumption.New_KAA__c=='Yes', 'isnew',''))}">
+                                        <div class="center">
+                                            <apex:outputPanel layout="none" rendered="{!(assumption.New_KAA__c=='Yes')}">
+                                                <img class="icon" src="{!$Resource.ClientPortal}/icons/check.png" width="12" height="12" style="width: 12px; height: 12px;"/>&nbsp;New
+                                            </apex:outputPanel>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+                <div class="regional-analysis-events">
+                    <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="">
+                        <thead>
+                            <tr class="slds-line-height_reset" style="page-break-inside:avoid">
+                                <th class="slds-cell-wrap" scope="col">
+                                    <div class="">
+                                        Key events since last update
+                                    </div>
+                                </th>
+                                <th class="slds-cell-wrap" scope="col" style="width: 15%">
+                                    <div class="">Category</div>
+                                </th>
+                                <th scope="col" class="slds-cell-wrap" style="width: 15%">
+                                    <div class="">Assessment vs key analytic assumptions</div>
+                                </th>
+                                <th scope="col" class="slds-cell-wrap" style="width: 15%">
+                                    <div class="">Probable impact on risk (Negative = higher risk)</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!regionalAnalysis.Key_Events__r}" var="event">
+                                <!--class={event.class}-->
+                                <tr style="page-break-inside:avoid">
+                                    <td data-label="" scope="row">
+                                        <div class="slds-cell-wrap" title="">
+                                            <apex:outputPanel rendered="{!NOT(ISBLANK(event.Date_Text__c))}">[{!event.Date_Text__c}]&nbsp;</apex:outputPanel>{!event.Event__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="slds-cell-wrap">
+                                            {!event.Category__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="slds-cell-wrap">
+                                            {!event.Assessment_vs_key_analytic_assumptions__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="" class="{!event.Probable_impact_on_risk_negative_higher__c}">
+                                        <div class="center" title="">
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(event.Probable_impact_on_risk_negative_higher__c,' ','-')}.png"/>
+                                            <br/>
+                                            {!event.Probable_impact_on_risk_negative_higher__c}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+                <div class="regional-analysis-signposts">
+                    <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="">
+                        <thead>
+                            <tr class="slds-line-height_reset" style="page-break-inside:avoid">
+                                <th class="slds-cell-wrap" scope="col">
+                                    <div class="" title="">
+                                        Key signposts for next month
+                                    </div>
+                                </th>
+                                <th class="slds-cell-wrap" scope="col" style="width: 15%">
+                                    <div class="" title="">Category</div>
+                                </th>
+                                <apex:outputpanel layout="none" rendered="{!ISBLANK(regionalAnalysis.Key_Signposts__r[0].Impact__c)}">
+                                    <th scope="col" class="slds-cell-wrap" style="width: 15%">
+                                        <div class="" title="">Likely impact</div>
+                                    </th>
+                                </apex:outputpanel>
+                                <apex:outputpanel layout="none" rendered="{!NOT(ISBLANK(regionalAnalysis.Key_Signposts__r[0].Impact__c))}">
+                                    <th scope="col" class="slds-cell-wrap" style="width: 10%">
+                                        <div class="" title="">Positive or negative for risk?</div>
+                                    </th>
+                                    <th scope="col" class="slds-cell-wrap" style="width: 10%">
+                                        <div class="" title="">Likelihood</div>
+                                    </th>
+                                    <th scope="col" class="slds-cell-wrap" style="width: 10%">
+                                        <div class="" title="">Impact</div>
+                                    </th>
+                                </apex:outputpanel>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!regionalAnalysis.Key_Signposts__r}" var="signpost">
+                                <!-- class={signpost.class}-->
+                                <tr style="page-break-inside:avoid">
+                                    <td data-label="" scope="row">
+                                        <div class="slds-cell-wrap" title="">
+                                            {!signpost.Event__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="slds-cell-wrap">
+                                            {!signpost.Category__c}
+                                        </div>
+                                    </td>
+                                    <apex:outputpanel layout="none" rendered="{!ISBLANK(regionalAnalysis.Key_Signposts__r[0].Impact__c)}">
+                                        <td data-label="" class="{!signpost.Likely_impact__c}">
+                                            <apex:outputpanel layout="block" styleclass="center" rendered="{!!isnull(signpost.Likely_impact__c)}">
+                                                <img class="icon" src="{!$Resource.ClientPortal}/icons/r{!SUBSTITUTE(signpost.Likely_impact__c,' ','-')}.png"/>
+                                                <br/>
+                                                {!signpost.Likely_impact__c}
+                                            </apex:outputpanel>
+                                        </td>
+                                    </apex:outputpanel>
+                                    <apex:outputpanel layout="none" rendered="{!NOT(ISBLANK(regionalAnalysis.Key_Signposts__r[0].Impact__c))}">
+                                        <td data-label="" class="{!signpost.Positive_or_negative_for_risk__c}">
+                                            <apex:outputpanel layout="block" styleclass="center" rendered="{!!isnull(signpost.Positive_or_negative_for_risk__c)}">
+                                                <img class="icon" src="{!$Resource.ClientPortal}/icons/sp{!SUBSTITUTE(signpost.Positive_or_negative_for_risk__c,' ','-')}.png"
+                                                />
+                                                <br/> {!signpost.Positive_or_negative_for_risk__c}
+                                            </apex:outputpanel>
+                                        </td>
+                                        <td data-label="" class="{!signpost.Likelihood__c}">
+                                            <apex:outputpanel layout="block" styleclass="center" rendered="{!!isnull(signpost.Likelihood__c)}">
+                                                <img class="icon" src="{!$Resource.ClientPortal}/icons/{!IF(signpost.Positive_or_negative_for_risk__c=='Positive','','r') + IF(signpost.Likelihood__c=='Medium','sp','') + SUBSTITUTE(signpost.Likelihood__c,' ','-')}.png"
+                                                />
+                                                <br/> {!signpost.Likelihood__c}
+                                            </apex:outputpanel>
+                                        </td>
+                                        <td data-label="" class="{!signpost.Impact__c}">
+                                            <apex:outputpanel layout="block" styleclass="center" rendered="{!!isnull(signpost.Impact__c)}">
+                                                <img class="icon" src="{!$Resource.ClientPortal}/icons/{!IF(signpost.Positive_or_negative_for_risk__c=='Positive','','r') + IF(signpost.Impact__c=='Medium','sp','') + SUBSTITUTE(signpost.Impact__c,' ','-')}.png"
+                                                />
+                                                <br/> {!signpost.Impact__c}
+                                            </apex:outputpanel>
+                                        </td>
+                                    </apex:outputpanel>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </apex:outputPanel>
+            <apex:variable var="rowNum" value="{!rowNum + 1}" />
+        </apex:repeat>
+
+
+        <apex:outputPanel layout="none" rendered="{!hasBasecases}">
+            <div class="page-break" id="geopoliticalBasecases">
+                <h2 class="textHeading">Geopolitical basecases</h2>
+                <div class="basecases">
+                    <table class="tableBordered" cellpadding="0" cellspacing="0" aria-label="" style="page-break-inside:avoid">
+                        <thead>
+                            <tr class="slds-line-height_reset" style="page-break-inside:avoid">
+                                <th class="slds-cell-wrap" scope="col">
+                                    <div class="" title="">{!politicalRiskAnaysis.Month_Name__c} {!politicalRiskAnaysis.Year__c}
+                                    </div>
+                                </th>
+                                <th class="slds-cell-wrap" scope="col">
+                                    <div class="" title="">Relation of past month's events to our basecase</div>
+                                </th>
+                                <th class="slds-cell-wrap" scope="col">
+                                    <div class="" title="">Basecase confidence level</div>
+                                </th>
+                                <th class="slds-cell-wrap" scope="col">
+                                    <div class="" title="">Directional change since last month</div>
+                                </th>
+                                <th class="slds-cell-wrap" scope="col" style="width: 50%;">
+                                    <div class="" title="">Basecase</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!regionalAnalyses}" var="regionalAnalysis">
+                                <apex:outputPanel layout="none" rendered="{!regionalAnalysis.Analysis_Depth__c=='Basecase'}">
+                                <tr >
+                                    <th data-label="" scope="row">
+                                        <apex:image url="{!RIGHT(regionalAnalysis.Region__r.Flag_image_URL__c, LEN(regionalAnalysis.Region__r.Flag_image_URL__c)-FIND('/servlet/', regionalAnalysis.Region__r.Flag_image_URL__c)+1)}" styleClass="regionFlagSmall" />
+                                        <br/>
+                                        <span>{!regionalAnalysis.Region__r.Name}</span>
+                                    </th>
+                                    <td data-label="">
+                                        <div class="slds-cell-wrap" title="">
+                                            <!--class={regionalAnalysis.Last_month_s_events_to_basecase__iconClass}-->
+                                            <i></i>&nbsp;{!regionalAnalysis.Last_month_s_events_to_basecase__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="" class="{!regionalAnalysis.Basecase_confidence_level__c}">
+                                        <div class="center">
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Basecase_confidence_level__c,' ','-')}.png"/>
+                                            <br/>
+                                            {!regionalAnalysis.Basecase_confidence_level__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="" class="{!regionalAnalysis.Directional_change_since_last_month__c}">
+                                        <!--class={regionalAnalysis.Directional_change_since_last_month__iconClass}-->
+                                        <div class="center">
+                                            <img class="icon" src="{!$Resource.ClientPortal}/icons/{!SUBSTITUTE(regionalAnalysis.Directional_change_since_last_month__c,' ','-')}.png"/>
+                                            <br/>
+                                            {!regionalAnalysis.Directional_change_since_last_month__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="">
+                                        <div class="slds-cell-wrap">
+                                        {!regionalAnalysis.Basecase__c}
+                                        </div>
+                                    </td>
+                                </tr>
+                                </apex:outputPanel>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </apex:outputPanel>
+
+    </body>
+
+</apex:page>

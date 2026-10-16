@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>FTS_Opp_Rev_by_Date7sy4V000000oLkPQAU649225389713618</members>
+        <name>ForecastingTypeSource</name>
+    </types>
+    <version>62.0</version>
+</Package>

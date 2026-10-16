@@ -1,0 +1,144 @@
+<template>
+    <template if:true={showWait}>
+      <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+    </template>
+    <div class="scrollContainer" onscroll={handleScroll}>
+      <div class="scrollArea">
+        <lightning-layout class="slds-card">
+          <lightning-layout-item size="3" padding="around-small" class="search-panel">
+            <div class="slds-text-heading_large">Search Results</div>
+            <lightning-input type="text" label="Enter keyword" data-type="search" onkeyup={handleInputKey}></lightning-input>
+            <template if:true={searchResults}> Total research: <lightning-formatted-number value={searchResults.taggedSearchDTO.documentSize}></lightning-formatted-number>
+            </template>
+            <center>
+              <br />
+              <lightning-button-group>
+                <lightning-button label="Search" onclick={handleSearch}></lightning-button>
+                <lightning-button label="Reset" onclick={handleReset}></lightning-button>
+              </lightning-button-group>
+            </center>
+            <br />
+            <template if:true={searchParams}>
+
+                <!-- Region Filter -->
+                <hr></hr>
+                <div class={regionMenuCls} data-name="region"  >
+                    <h4 class="downriver small-sub-heading">Region/Country</h4>
+                    <i class={regionMenuIconCls} onclick={handleExpand} data-name="region" ></i>
+                </div>
+                <div class={regionSubMenuCls}>
+                    <template for:each={regionParams.regions} for:item="region">
+                        <template if:false={region.inactive} key={region.code}>
+                            <div class="subfilter-box" key={region.code} data-code={region.code} >
+                                <div class="form-group">
+                                    <lightning-input type="checkbox" class="input-nomargin" label={region.description} data-type="region" data-code={region.code}></lightning-input>
+                                    <i class="fad fa-angle-down" onclick={handleRegionToggle} data-code={region.code} ></i>
+                                  </div>
+                            </div>
+                            <div class="subfilter-box-sub-menu" key={region.code} name={region.code}>
+                              <ul class="list-col-2">
+                                  <template for:each={region.countries} for:item="country">
+                                      <template if:true={country.description} key={country.code}>
+                                          <li key={country.code}>
+                                              <div class="form-group">
+                                                  <lightning-input type="checkbox" label={country.description} data-type="country" data-code={country.code}></lightning-input>
+                                              </div>
+                                          </li>
+                                      </template>
+                                  </template>
+                              </ul>
+                          </div>
+                        </template>
+                    </template>
+                </div>
+
+
+            <!-- Topic Filter-->
+
+            <hr></hr>
+            <div class={topicMenuCls} data-name="topic">
+                <h4 class="downriver small-sub-heading">Topic</h4>
+                <i class={topicMenuIconCls} onclick={handleExpand} data-name="topic" ></i>
+            </div>
+            <div class={topicSubMenuCls}>
+                <ul class="list-col-1">
+                    <template for:each={searchParams.researchDocumentSearchParameters.sectors} for:item="tag">
+                        <template if:false={tag.inactive} key={tag.code}>
+                            <li key={tag.code}>
+                                <div class="form-group">
+                                    <lightning-input type="checkbox" class="input-nomargin" label={tag.description} data-type="tag" data-code={tag.code}></lightning-input>
+                                </div>
+                            </li>
+                        </template>
+                      </template>
+                </ul>
+            </div>
+            <!-- Author Filter-->
+            <hr></hr>
+            <div class={authorMenuCls} data-name="author" >
+                <h4 class="downriver small-sub-heading">Author</h4>
+                <i class={authorMenuIconCls} onclick={handleExpand} data-name="author" ></i>
+            </div>
+            <div class={authorSubMenuCls}>
+                <ul class="list-col-2">
+                    <template for:each={searchParams.researchDocumentSearchParameters.analysts} for:item="author">
+                        <li key={author.code}>
+                            <div class="form-group">
+                                <lightning-input type="checkbox" class="input-nomargin" label={author.firstAndLastName} data-type="author" data-code={author.code}></lightning-input>
+                                </div>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+              
+
+
+            </template>
+          </lightning-layout-item>
+          <lightning-layout-item size="9" padding="around-small">
+            <div class="custom-box slds-box
+                                      slds-p-around_medium">
+              <div id="search-result">
+                <div class="infinite-scroll">
+                  <div class="jscroll-inner">
+                    <template if:true={searchResults}>
+                      <template for:each={searchResults.taggedSearchDTO.documents} for:item="document">
+                        <div class="research-blog-wrap z-depth-1" key={document.code}>
+                          <div class="flex-parent research-item">
+                            <div class="flex-child slds-card slds-grid">
+                              <div class="slds-size_10-of-12">
+                                <a title="RUSSIA-UKRAINE: Crisis Watch: Weekly Update" href={document.docUrl} target="_blank">
+                                  <h5 class="document-headline-row no-margin truncate">{document.headline}</h5>
+                                </a>
+                                <p class="document-synopsis-row block-with-text"> {document.synopsis} </p>
+                              </div>
+                              <div class="slds-size_2-of-12 right-align">
+                                <!--i class="fad fa-bookmark-o document-bookmark" data-docid={document.code}></i-->
+                                <!--a class="document-menu" data-docid={document.code}>⋮</a-->
+                                <a title="Bookmark Document">
+                                  <i class="fad fa-bookmark-o document-bookmark" data-docid={document.code}></i>
+                                </a>
+                                <a title="Download PDF" href={document.pdfUrl} target="_blank">
+                                  <i class="fad fa-download"></i>
+                                </a>
+                                <!--div class="document-menu-content"><div class="menu-container"><div class="menu"><ul><-- Right hand side 
+                                                                                          <li id="megamenu-document-bookmark" class="megamenu-right"><a title="Bookmark Document"><i class="fad fa-bookmark-o document-bookmark" data-docid={document.code}></i></a></li><li id="megamenu-document-download" class="megamenu-right"><a title="Download PDF" href={document.pdfUrl} target="_blank"><i class="fad fa-download"></i></a></li></ul></div></div></div-->
+                                <p class="document-date-row">
+                                  <lightning-formatted-date-time value={document.publicationDate} year="2-digit" month="short" day="2-digit" hour="2-digit" minute="2-digit"></lightning-formatted-date-time>
+                                </p>
+                              </div>
+                              <!--p class="document-analyst-row"><span class="document-analyst">EG Russia Crisis</span><span class="opt-country-RU" id="opt-28194-country-RU"><a href="/category/country/russia"><span class="flag-icon flag-icon-ru tooltipped" data-tooltip="Russia" data-tooltip-id="0e6d504b-a941-bad5-cd5e-3441e918c9d7"></span></a></span><span class="opt-country-UA" id="opt-28194-country-UA"><a href="/category/country/ukraine"><span class="flag-icon flag-icon-ua tooltipped" data-tooltip="Ukraine" data-tooltip-id="1b3ddba8-067c-fc35-968a-807fa545a693"></span></a></span><span class="opt-sector-russia-ukraine-crisis" id="opt-28194-sector-russia-ukraine-crisis"><a href="/tag/sector/russia-ukraine-crisis"><span class="tooltipped" data-tooltip="Russia-Ukraine Crisis" data-tooltip-id="ee80e8dd-022d-74c2-4c52-eb2dde8940ba"><img src="/static/client/eurasia/img/icon-war.64b4e38.svg"></span></a></span></p-->
+                            </div>
+                          </div>
+                        </div>
+                      </template>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </lightning-layout-item>
+        </lightning-layout>
+      </div>
+    </div>
+  </template>

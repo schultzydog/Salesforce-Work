@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Client_Hours__c</fullName>
+        <label>Client Hours</label>
+        <summarizedField>EG_Time_Entry__c.Hours_Worked__c</summarizedField>
+        <summaryFilterItems>
+            <field>EG_Time_Entry__c.Time_Category__c</field>
+            <operation>equals</operation>
+            <value>Client</value>
+        </summaryFilterItems>
+        <summaryForeignKey>EG_Time_Entry__c.EG_Time_Card__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Client_Services_Team__c</fullName>
+        <label>Client Services Team</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Client_Services_Team</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Complete__c</fullName>
+        <formula>IF( Hours_Worked__c  &gt;=  40, 1, Hours_Worked__c/40)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Compliance_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(Does_not_require_FT_timesheet__c) &amp;&amp;  Hours_Worked__c &lt; 10, IMAGE(&quot;https://eurasiagroup.file.force.com/servlet/servlet.ImageServer?id=0154V000005RYL4&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446538000&quot;, &quot;red&quot;),
+
+IF( NOT(Does_not_require_FT_timesheet__c) &amp;&amp; Hours_Worked__c &lt; 40, IMAGE(&quot;https://eurasiagroup.file.force.com/servlet/servlet.ImageServer?id=0154V000005RYL9&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446525000&quot;, &quot;orange&quot;),
+
+IF(NOT(Does_not_require_FT_timesheet__c) &amp;&amp;  Hours_Worked__c &gt;= 40 , IMAGE(&quot;https://eurasiagroup.file.force.com/servlet/servlet.ImageServer?id=0154V000005RYLY&amp;oid=00DWL00000BtPgz&amp;lastMod=1656446470000&quot;, &quot;green&quot;),
+
+
+null)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Compliance Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Excused_Offsite_Event__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT( Location_Monday__c) = &apos;Excused - Offsite / Event&apos;, 1, 0) + 
+IF(TEXT( Location_Tuesday__c ) = &apos;Excused - Offsite / Event&apos;, 1, 0) +
+IF(TEXT( Location_Wednesday__c ) = &apos;Excused - Offsite / Event&apos;, 1, 0) +
+IF(TEXT( Location_Thursday__c ) = &apos;Excused - Offsite / Event&apos;, 1, 0) +
+IF(TEXT( Location_Friday__c ) = &apos;Excused - Offsite / Event&apos;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Excused - Offsite / Event</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Excused_Other__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT( Location_Monday__c) = &apos;Excused - Other&apos;, 1, 0) + 
+IF(TEXT( Location_Tuesday__c ) = &apos;Excused - Other&apos;, 1, 0) +
+IF(TEXT( Location_Wednesday__c ) = &apos;Excused - Other&apos;, 1, 0) +
+IF(TEXT( Location_Thursday__c ) = &apos;Excused - Other&apos;, 1, 0) +
+IF(TEXT( Location_Friday__c ) = &apos;Excused - Other&apos;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Excused - Other</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Excused_Sick_WFH__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT( Location_Monday__c) = &apos;Excused - Sick WFH&apos;, 1, 0) + 
+IF(TEXT( Location_Tuesday__c ) = &apos;Excused - Sick WFH&apos;, 1, 0) +
+IF(TEXT( Location_Wednesday__c ) = &apos;Excused - Sick WFH&apos;, 1, 0) +
+IF(TEXT( Location_Thursday__c ) = &apos;Excused - Sick WFH&apos;, 1, 0) +
+IF(TEXT( Location_Friday__c ) = &apos;Excused - Sick WFH&apos;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Excused - Sick WFH</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Excused_Travel_Client__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT( Location_Monday__c) = &apos;Excused - Travel / Client&apos;, 1, 0) + 
+IF(TEXT( Location_Tuesday__c ) = &apos;Excused - Travel / Client&apos;, 1, 0) +
+IF(TEXT( Location_Wednesday__c ) = &apos;Excused - Travel / Client&apos;, 1, 0) +
+IF(TEXT( Location_Thursday__c ) = &apos;Excused - Travel / Client&apos;, 1, 0) +
+IF(TEXT( Location_Friday__c ) = &apos;Excused - Travel / Client&apos;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Excused - Travel / Client</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Holiday__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT( Location_Monday__c) = &apos;Holiday&apos;, 1, 0) + 
+IF(TEXT( Location_Tuesday__c ) = &apos;Holiday&apos;, 1, 0) +
+IF(TEXT( Location_Wednesday__c ) = &apos;Holiday&apos;, 1, 0) +
+IF(TEXT( Location_Thursday__c ) = &apos;Holiday&apos;, 1, 0) +
+IF(TEXT( Location_Friday__c ) = &apos;Holiday&apos;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Holiday</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_PTO__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT( Location_Monday__c) = &apos;PTO&apos;, 1, 0) + 
+IF(TEXT( Location_Tuesday__c ) = &apos;PTO&apos;, 1, 0) +
+IF(TEXT( Location_Wednesday__c ) = &apos;PTO&apos;, 1, 0) +
+IF(TEXT( Location_Thursday__c ) = &apos;PTO&apos;, 1, 0) +
+IF(TEXT( Location_Friday__c ) = &apos;PTO&apos;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PTO</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_WFH__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT( Location_Monday__c) = &apos;WFH&apos;, 1, 0) + 
+IF(TEXT( Location_Tuesday__c ) = &apos;WFH&apos;, 1, 0) +
+IF(TEXT( Location_Wednesday__c ) = &apos;WFH&apos;, 1, 0) +
+IF(TEXT( Location_Thursday__c ) = &apos;WFH&apos;, 1, 0) +
+IF(TEXT( Location_Friday__c ) = &apos;WFH&apos;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WFH</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Department Lookup</label>
+        <referenceTo>Department__c</referenceTo>
+        <relationshipLabel>EG Time Cards</relationshipLabel>
+        <relationshipName>EG_Time_Cards</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Does_not_require_FT_timesheet__c</fullName>
+        <formula>Owner:User.Does_not_require_FT_timesheet__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Does not require FT timesheet</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dupe_Delete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Dupe Delete</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Username</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FT_Timesheet_Required__c</fullName>
+        <formula>Owner:User.Timesheet_Required__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FT Timesheet Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Month_End__c</fullName>
+        <formula>MONTH(Start_Date__c) != MONTH(End_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Month End?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hours_Worked__c</fullName>
+        <label>Hours worked</label>
+        <summarizedField>EG_Time_Entry__c.Hours_Worked__c</summarizedField>
+        <summaryForeignKey>EG_Time_Entry__c.EG_Time_Card__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>In_Current_Fiscal_Year__c</fullName>
+        <formula>DAYOFYEAR( Start_Date__c )  &gt;= 1   &amp;&amp; DAYOFYEAR(Start_Date__c ) &lt;=366</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>In Current Fiscal Year</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Hours__c</fullName>
+        <label>Internal Hours</label>
+        <summarizedField>EG_Time_Entry__c.Hours_Worked__c</summarizedField>
+        <summaryFilterItems>
+            <field>EG_Time_Entry__c.Time_Category__c</field>
+            <operation>equals</operation>
+            <value>Internal</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>EG_Time_Entry__c.Hours_Worked__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryForeignKey>EG_Time_Entry__c.EG_Time_Card__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Last_Weeks_Timecard__c</fullName>
+        <formula>TODAY() -  Start_Date__c &gt; 7 &amp;&amp; TODAY() -  Start_Date__c &lt; 14</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Week&apos;s Timecard</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Less_than_40_hours__c</fullName>
+        <formula>Hours_Worked__c &lt; 40 &amp;&amp; TODAY() &gt; End_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Less than 40 hours and past this week&apos;s end date</inlineHelpText>
+        <label>Less than 40 hours?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Location_Complete_Ratio__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(  Location_Completion__c ,
+0,&apos;0/5&apos;,
+20,&apos;1/5&apos;,
+40,&apos;2/5&apos;,
+60,&apos;3/5&apos;,
+80,&apos;4/5&apos;,
+100, &apos;5/5&apos;,
+
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location Complete Ratio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Complete__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+ISBLANK(TEXT(Location_Monday__c)) ||
+ISBLANK(TEXT(Location_Tuesday__c))||
+ISBLANK(TEXT(Location_Wednesday__c))|| 
+ISBLANK(TEXT(Location_Thursday__c))|| 
+ISBLANK(TEXT(Location_Friday__c))
+, &apos;No&apos;, &apos;Yes&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location Complete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Completion__c</fullName>
+        <formula>(Location_Monday_Counter__c  + Location_Tuesday_Counter__c  + Location_Wednesday_Counter__c + Location_Thursday_Counter__c + Location_Friday_Counter__c)/5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location Completion %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Location_Friday_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(TEXT(Location_Friday__c)), 0, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location Friday Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Friday__c</fullName>
+        <label>Location - Friday</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>EG_Time_Card_Locations</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location_Monday_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(TEXT(Location_Monday__c)), 0, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location Monday Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Monday__c</fullName>
+        <label>Location - Monday</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>EG_Time_Card_Locations</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location_Thursday_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(TEXT(Location_Thursday__c)), 0, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location Thursday Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Thursday__c</fullName>
+        <label>Location - Thursday</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>EG_Time_Card_Locations</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location_Tuesday_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(TEXT(Location_Tuesday__c)), 0, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location Tuesday Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Tuesday__c</fullName>
+        <label>Location - Tuesday</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>EG_Time_Card_Locations</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location_Wednesday_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(TEXT(Location_Wednesday__c)), 0, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location Wednesday Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Wednesday__c</fullName>
+        <label>Location - Wednesday</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>EG_Time_Card_Locations</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location_tracking_required__c</fullName>
+        <formula>Owner:User.Location_tracking_required__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location tracking required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_EG_Time_Entries_for_Week__c</fullName>
+        <label>Number of EG Time Entries for Week</label>
+        <summaryForeignKey>EG_Time_Entry__c.EG_Time_Card__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Owner_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.City</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_Country__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Country</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_Week_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>OwnerId  &amp;  TEXT(Start_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner-Week formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Percent_Client_Hours__c</fullName>
+        <formula>IF(Hours_Worked__c &gt; 0, Client_Hours__c /  Hours_Worked__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% Client Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Percent_Internal_hours__c</fullName>
+        <formula>IF(Hours_Worked__c &gt; 0, Internal_Hours__c /  Hours_Worked__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% Internal Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Percent_Research_Writing_Hours__c</fullName>
+        <formula>IF(Hours_Worked__c &gt; 0, Research_Writing_hours__c /  Hours_Worked__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% Research/Writing Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Remote__c</fullName>
+        <formula>Owner:User.Remote__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remote</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Research_Writing_hours__c</fullName>
+        <label>Research/Writing Hours</label>
+        <summarizedField>EG_Time_Entry__c.Hours_Worked__c</summarizedField>
+        <summaryFilterItems>
+            <field>EG_Time_Entry__c.Time_Category__c</field>
+            <operation>equals</operation>
+            <value>Research/Writing</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>EG_Time_Entry__c.Hours_Worked__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryForeignKey>EG_Time_Entry__c.EG_Time_Card__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Staff_Class__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Owner:User.Staff_Class__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Staff Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <label>Week Commencing</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TimeCardExternalId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>OwnerID + StartDate</description>
+        <externalId>true</externalId>
+        <label>TimeCardExternalId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Timesheets_Required__c</fullName>
+        <formula>Owner:User.Timesheet_Required__c &amp;&amp;  Owner:User.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Timesheets Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_Active__c</fullName>
+        <formula>Owner:User.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_Department__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Owner:User.Department__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Department</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

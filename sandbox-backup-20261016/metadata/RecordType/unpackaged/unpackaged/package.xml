@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account.Client_Services</members>
+        <members>Campaign.Marketing_Campaigns</members>
+        <members>Campaign.Parent_Campaigns</members>
+        <members>Case.Default</members>
+        <members>Contract.Default</members>
+        <members>Lead.Company_Referral</members>
+        <members>Lead.Global_Markets</members>
+        <members>Lead.Standard</members>
+        <members>Library_Product__c.Distribution_List</members>
+        <members>Library_Product__c.Distribution_List_Category</members>
+        <members>Library__c.DistributionList</members>
+        <members>Library__c.DistributionListCategory</members>
+        <members>Library__c.DistributionListSubCategory</members>
+        <members>Library__c.Portal_Region_Permission</members>
+        <members>Library__c.Portal_Sector_Permission</members>
+        <members>Opportunity.Lost_Business</members>
+        <members>Opportunity.New_Sale</members>
+        <members>Opportunity.Red_Flag</members>
+        <members>Opportunity.Renewal</members>
+        <members>Opportunity.Trial_Conversion</members>
+        <members>Task.Default</members>
+        <name>RecordType</name>
+    </types>
+    <version>62.0</version>
+</Package>

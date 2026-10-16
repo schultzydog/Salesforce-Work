@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>brideau@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Alex Brideau</label>
+    </customValue>
+    <customValue>
+        <fullName>korbey@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Allie Korbey</label>
+    </customValue>
+    <customValue>
+        <fullName>anku@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Amaka Anku</label>
+    </customValue>
+    <customValue>
+        <fullName>hsiao@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Amanda Hsiao</label>
+    </customValue>
+    <customValue>
+        <fullName>phan@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Anbinh Phan</label>
+    </customValue>
+    <customValue>
+        <fullName>villegas.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Andrea Villegas</label>
+    </customValue>
+    <customValue>
+        <fullName>espinosa.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Antonio Espinosa Calero</label>
+    </customValue>
+    <customValue>
+        <fullName>scotti@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Arthur Scotti</label>
+    </customValue>
+    <customValue>
+        <fullName>shen@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Ava Shen</label>
+    </customValue>
+    <customValue>
+        <fullName>bminovi@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Babak Minovi</label>
+    </customValue>
+    <customValue>
+        <fullName>hanson.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Blaise Hanson</label>
+    </customValue>
+    <customValue>
+        <fullName>dean@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Caitlin Dean</label>
+    </customValue>
+    <customValue>
+        <fullName>nietsche@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Carisa Nietsche</label>
+    </customValue>
+    <customValue>
+        <fullName>tambaro@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Celeste Tambaro</label>
+    </customValue>
+    <customValue>
+        <fullName>huguet@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Christina Huguet</label>
+    </customValue>
+    <customValue>
+        <fullName>wehrmann@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Christina Wehrmann</label>
+    </customValue>
+    <customValue>
+        <fullName>hilt@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Christine Hilt</label>
+    </customValue>
+    <customValue>
+        <fullName>garman@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Christopher Garman</label>
+    </customValue>
+    <customValue>
+        <fullName>allen@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Clayton Allen</label>
+    </customValue>
+    <customValue>
+        <fullName>kupchan@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Cliff Kupchan</label>
+    </customValue>
+    <customValue>
+        <fullName>frydenborg@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Conor Frydenborg</label>
+    </customValue>
+    <customValue>
+        <fullName>teles@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Daniela Teles</label>
+    </customValue>
+    <customValue>
+        <fullName>kerner@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Daniel Kerner</label>
+    </customValue>
+    <customValue>
+        <fullName>danip@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Dani Podgoretskaya</label>
+    </customValue>
+    <customValue>
+        <fullName>wang@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Dan Wang</label>
+    </customValue>
+    <customValue>
+        <fullName>gordon@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>David Gordon</label>
+    </customValue>
+    <customValue>
+        <fullName>meale@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>David Meale</label>
+    </customValue>
+    <customValue>
+        <fullName>saxena.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Dev Saxena</label>
+    </customValue>
+    <customValue>
+        <fullName>savoldi@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Djania Savoldi</label>
+    </customValue>
+    <customValue>
+        <fullName>chiu@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Dominic Chiu</label>
+    </customValue>
+    <customValue>
+        <fullName>peker@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Emre Peker</label>
+    </customValue>
+    <customValue>
+        <fullName>fish@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Erik Fish</label>
+    </customValue>
+    <customValue>
+        <fullName>yusoff.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Fadli Yusoff</label>
+    </customValue>
+    <customValue>
+        <fullName>sabet.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Farzan Sabet</label>
+    </customValue>
+    <customValue>
+        <fullName>santi@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Federico Santi</label>
+    </customValue>
+    <customValue>
+        <fullName>trisotto@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Fernanda Trisotto</label>
+    </customValue>
+    <customValue>
+        <fullName>maksad@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Firas Maksad</label>
+    </customValue>
+    <customValue>
+        <fullName>gbaguidi@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Franck Gbaguidi</label>
+    </customValue>
+    <customValue>
+        <fullName>michel.sa@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Frederic Michel</label>
+    </customValue>
+    <customValue>
+        <fullName>dipippo@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Gerard DiPippo</label>
+    </customValue>
+    <customValue>
+        <fullName>gmbutts@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Gerry Butts</label>
+    </customValue>
+    <customValue>
+        <fullName>thompson@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Graeme Thompson</label>
+    </customValue>
+    <customValue>
+        <fullName>brew@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Gregory Brew</label>
+    </customValue>
+    <customValue>
+        <fullName>west@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Heather West</label>
+    </customValue>
+    <customValue>
+        <fullName>gloystein@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Henning Gloystein</label>
+    </customValue>
+    <customValue>
+        <fullName>crowther@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Herbert Crowther</label>
+    </customValue>
+    <customValue>
+        <fullName>suleiman.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Hussein Suleiman</label>
+    </customValue>
+    <customValue>
+        <fullName>bremmer@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Ian Bremmer</label>
+    </customValue>
+    <customValue>
+        <fullName>jaoko.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Imani Jaoko</label>
+    </customValue>
+    <customValue>
+        <fullName>seixas@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Isadora Seixas</label>
+    </customValue>
+    <customValue>
+        <fullName>philipsborn@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jack Philipsborn</label>
+    </customValue>
+    <customValue>
+        <fullName>techau.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jan Techau</label>
+    </customValue>
+    <customValue>
+        <fullName>lieberman@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jared Lieberman</label>
+    </customValue>
+    <customValue>
+        <fullName>choi@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jasmine Choi</label>
+    </customValue>
+    <customValue>
+        <fullName>walter@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jason Walter</label>
+    </customValue>
+    <customValue>
+        <fullName>ramier@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jeanne Ramier</label>
+    </customValue>
+    <customValue>
+        <fullName>moon.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jeff Moon</label>
+    </customValue>
+    <customValue>
+        <fullName>larsen@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jens Larsen</label>
+    </customValue>
+    <customValue>
+        <fullName>chan@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jeremy Chan</label>
+    </customValue>
+    <customValue>
+        <fullName>renzullo_narvaez.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jesus Renzullo</label>
+    </customValue>
+    <customValue>
+        <fullName>lieber@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Jon Lieber</label>
+    </customValue>
+    <customValue>
+        <fullName>strohbecke@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Julian Strohbecke</label>
+    </customValue>
+    <customValue>
+        <fullName>thomson@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Julia Thomson</label>
+    </customValue>
+    <customValue>
+        <fullName>shepherd@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Justin Shepherd</label>
+    </customValue>
+    <customValue>
+        <fullName>walker@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Kendal Walker</label>
+    </customValue>
+    <customValue>
+        <fullName>morazzini@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Laura Morazzini</label>
+    </customValue>
+    <customValue>
+        <fullName>yasaitis@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Laura Yasaitis</label>
+    </customValue>
+    <customValue>
+        <fullName>meirareis@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Leonardo Meira Reis</label>
+    </customValue>
+    <customValue>
+        <fullName>eve@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Lucy Eve</label>
+    </customValue>
+    <customValue>
+        <fullName>aranha@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Luiza Aranha</label>
+    </customValue>
+    <customValue>
+        <fullName>valverde@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Majo Valverde</label>
+    </customValue>
+    <customValue>
+        <fullName>alvarenga@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Marcelo Alvarenga</label>
+    </customValue>
+    <customValue>
+        <fullName>gustafson@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Marc Gustafson</label>
+    </customValue>
+    <customValue>
+        <fullName>puig@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Maria Luisa Puig</label>
+    </customValue>
+    <customValue>
+        <fullName>melo@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Mariane Melo</label>
+    </customValue>
+    <customValue>
+        <fullName>sirio@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Marília Sírio</label>
+    </customValue>
+    <customValue>
+        <fullName>massey@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Mark Massey</label>
+    </customValue>
+    <customValue>
+        <fullName>msilva@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Martina Silva</label>
+    </customValue>
+    <customValue>
+        <fullName>gomezleautaud.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Matias Gomez Leautaud</label>
+    </customValue>
+    <customValue>
+        <fullName>hoe@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Melinda Hoe</label>
+    </customValue>
+    <customValue>
+        <fullName>oshomegie.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Melvin Oshomegie</label>
+    </customValue>
+    <customValue>
+        <fullName>rahman@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Mij Rahman</label>
+    </customValue>
+    <customValue>
+        <fullName>dempsey.sa@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Mike Dempsey</label>
+    </customValue>
+    <customValue>
+        <fullName>qiu@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Mingda Qiu</label>
+    </customValue>
+    <customValue>
+        <fullName>francischi@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Misia Francischi</label>
+    </customValue>
+    <customValue>
+        <fullName>wei@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Nancy (Linyi) Wei</label>
+    </customValue>
+    <customValue>
+        <fullName>weller@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Neil Weller</label>
+    </customValue>
+    <customValue>
+        <fullName>kraft@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Nick Kraft</label>
+    </customValue>
+    <customValue>
+        <fullName>reiners.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Nick Reiners</label>
+    </customValue>
+    <customValue>
+        <fullName>daponte-smith@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Noah Daponte-Smith</label>
+    </customValue>
+    <customValue>
+        <fullName>letticia.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Olga Letticia</label>
+    </customValue>
+    <customValue>
+        <fullName>montique@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Oliver Montique</label>
+    </customValue>
+    <customValue>
+        <fullName>raczova.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Orsolya Raczova</label>
+    </customValue>
+    <customValue>
+        <fullName>ceretti@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Peter Ceretti</label>
+    </customValue>
+    <customValue>
+        <fullName>mumford@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Peter Mumford</label>
+    </customValue>
+    <customValue>
+        <fullName>guglielmi@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Pietro Guglielmi</label>
+    </customValue>
+    <customValue>
+        <fullName>chaudhuri.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Pramit Chaudhuri</label>
+    </customValue>
+    <customValue>
+        <fullName>gangji@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Rachel Gangji</label>
+    </customValue>
+    <customValue>
+        <fullName>bhatia.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Rahul Bhatia</label>
+    </customValue>
+    <customValue>
+        <fullName>cohen@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Reed Cohen</label>
+    </customValue>
+    <customValue>
+        <fullName>aboulafia@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Richard Aboulafia</label>
+    </customValue>
+    <customValue>
+        <fullName>grais-targow@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Risa Grais-Targow</label>
+    </customValue>
+    <customValue>
+        <fullName>kahn@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Robert Kahn</label>
+    </customValue>
+    <customValue>
+        <fullName>rqiu.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Ruby Qiu</label>
+    </customValue>
+    <customValue>
+        <fullName>denney@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Samuel Denney</label>
+    </customValue>
+    <customValue>
+        <fullName>partoll@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Savannah Partoll</label>
+    </customValue>
+    <customValue>
+        <fullName>bade@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Scott Bade</label>
+    </customValue>
+    <customValue>
+        <fullName>young@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Scott Young</label>
+    </customValue>
+    <customValue>
+        <fullName>strauss@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Sebastian Strauss</label>
+    </customValue>
+    <customValue>
+        <fullName>cascione@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Silvio Cascione</label>
+    </customValue>
+    <customValue>
+        <fullName>osorio.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Sofia Osorio</label>
+    </customValue>
+    <customValue>
+        <fullName>lopes@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Sol Lopes</label>
+    </customValue>
+    <customValue>
+        <fullName>puko@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Timothy Puko</label>
+    </customValue>
+    <customValue>
+        <fullName>sparks@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Willis Sparks</label>
+    </customValue>
+    <customValue>
+        <fullName>lu@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Xiaomeng Lu</label>
+    </customValue>
+    <customValue>
+        <fullName>sun@eurasiagroup.net</fullName>
+        <default>false</default>
+        <label>Xuanqiao (Cindy) Sun</label>
+    </customValue>
+    <customValue>
+        <fullName>waters@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rick Waters</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Daily Brief</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Daily Brief</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Industrial &amp; Consumer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Industrial &amp; Consumer</label>
+    </customValue>
+    <customValue>
+        <fullName>EG LATAM Daily</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG LATAM Daily</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Top Calls</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Top Calls</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Analytics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Analytics</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Media</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Media</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Energy, Climate &amp; Resources Team</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Energy, Climate &amp; Resources Team</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Southeast Asia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Southeast Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>klein.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Allie Klein</label>
+    </customValue>
+    <customValue>
+        <fullName>stuurman.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ziyanda Stuurman</label>
+    </customValue>
+    <customValue>
+        <fullName>mavrikios.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Marie Mavrikios</label>
+    </customValue>
+    <customValue>
+        <fullName>monieb@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Omar Monieb</label>
+    </customValue>
+    <customValue>
+        <fullName>forsberg@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Alexander Forsberg</label>
+    </customValue>
+    <customValue>
+        <fullName>parks@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Alexa Parks</label>
+    </customValue>
+    <customValue>
+        <fullName>sitopu@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Melissya Sitopu</label>
+    </customValue>
+    <customValue>
+        <fullName>japaridze@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tinatin Japaridze</label>
+    </customValue>
+    <customValue>
+        <fullName>boling@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>David Boling</label>
+    </customValue>
+    <customValue>
+        <fullName>sieburg@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Michael Sieburg</label>
+    </customValue>
+    <customValue>
+        <fullName>sigalov@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Luciano Sigalov</label>
+    </customValue>
+    <customValue>
+        <fullName>mtierney@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Michael Tierney</label>
+    </customValue>
+    <customValue>
+        <fullName>friedman@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Shari Friedman</label>
+    </customValue>
+    <customValue>
+        <fullName>nepomuceno@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Carlos Nepomuceno</label>
+    </customValue>
+    <customValue>
+        <fullName>serfaty@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Alexis Serfaty</label>
+    </customValue>
+    <customValue>
+        <fullName>ubriaco@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tayse Ubríaco</label>
+    </customValue>
+    <customValue>
+        <fullName>gloudeman@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Lauren Gloudeman</label>
+    </customValue>
+    <customValue>
+        <fullName>hamker@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Anna-Carina Hamker</label>
+    </customValue>
+    <customValue>
+        <fullName>magalhaes@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bruno Magalhaes</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Geo-tech Advisory</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Geo-tech Advisory</label>
+    </customValue>
+    <customValue>
+        <fullName>EG China</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG China</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Brazil Research</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Brazil Research</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Africa</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Africa</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Europe</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Latin America</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Latin America</label>
+    </customValue>
+    <customValue>
+        <fullName>meranto@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sofia Meranto</label>
+    </customValue>
+    <customValue>
+        <fullName>verissimo@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Moises Paiva</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Turkey Research</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Turkey Research</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Brazil Daily</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Brazil Daily</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Mexico Daily</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Mexico Daily</label>
+    </customValue>
+    <customValue>
+        <fullName>EG US Daily</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG US Daily</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Japan</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>kamel@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ayham Kamel</label>
+    </customValue>
+    <customValue>
+        <fullName>David Meale</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>David Meale</label>
+    </customValue>
+    <customValue>
+        <fullName>hilali.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Younes Hilali</label>
+    </customValue>
+    <customValue>
+        <fullName>donnellan.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nicholas Donnellan</label>
+    </customValue>
+    <customValue>
+        <fullName>scheule.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Theresa Scheule</label>
+    </customValue>
+    <customValue>
+        <fullName>kisker.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Maria Kisker</label>
+    </customValue>
+    <customValue>
+        <fullName>tan.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Yingyi Tan</label>
+    </customValue>
+    <customValue>
+        <fullName>kupovich.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Andrew Kupovich</label>
+    </customValue>
+    <customValue>
+        <fullName>mcgreevey.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Jacqueline McGreevey</label>
+    </customValue>
+    <customValue>
+        <fullName>albuquerque@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ana Albuquerque</label>
+    </customValue>
+    <customValue>
+        <fullName>avritchir@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Beny Avritchir</label>
+    </customValue>
+    <customValue>
+        <fullName>gaither@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Natasha Gaither</label>
+    </customValue>
+    <customValue>
+        <fullName>thome@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Felipe Thome</label>
+    </customValue>
+    <customValue>
+        <fullName>newman@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Lindsay Newman</label>
+    </customValue>
+    <customValue>
+        <fullName>hasan@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Zahra Hasan</label>
+    </customValue>
+    <customValue>
+        <fullName>bowden@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sophie Bowden</label>
+    </customValue>
+    <customValue>
+        <fullName>schultz@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adam Schultz</label>
+    </customValue>
+    <customValue>
+        <fullName>smaletz@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rafael Smaletz</label>
+    </customValue>
+    <customValue>
+        <fullName>ganguly@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Oliver Ganguly</label>
+    </customValue>
+    <customValue>
+        <fullName>lang@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Jon Lang</label>
+    </customValue>
+    <customValue>
+        <fullName>vasquezmadueno@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Gabriela Vasquez Madueno</label>
+    </customValue>
+    <customValue>
+        <fullName>mcavinchey@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Dave McAvinchey</label>
+    </customValue>
+    <customValue>
+        <fullName>nickolova@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Christina Nickolova</label>
+    </customValue>
+    <customValue>
+        <fullName>jashapara.ne@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bansi Jashapara</label>
+    </customValue>
+    <customValue>
+        <fullName>holland@eurasiagroup.net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Anthony Holland</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Russia Crisis</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Russia Crisis</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Financial Institutions Group</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EG Financial Institutions Group</label>
+    </customValue>
+    <masterLabel>Analyst</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

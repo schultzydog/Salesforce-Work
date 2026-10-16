@@ -1,0 +1,9 @@
+{!Contact.Name} of {!Contact.AccountName__c} experienced a hard bounce on {!Contact.Worldflow_Last_Bounced_Email__c}. This means that emails will no longer be sent to this user from Worldflow until the bounce is cleared in that system.
+
+Typically bounces occur because employees have left their organization and their email is no longer active. If this is the case for this user, please update their Salesforce Contact Type to 'No Longer with Firm'.
+
+If you think this bounce occurred in error, please ensure your client has applied the EG email whitelisting rules and reach out to Jaque at oliveira@eurasiagroup.net to clear the bounce in Worldflow.  
+
+Record in Salesforce - {!Contact.Link}
+
+***THIS EMAIL WAS AUTOMATICALLY SENT FROM SALESFORCE***

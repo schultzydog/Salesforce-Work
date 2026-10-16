@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Notify_Oppty_Owner_and_Project_Lead</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Notify Oppty Owner and Project Lead</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/flow/Deliverable_Notify_Oppty_Team?projectId={!Project__c.Id}</url>
+    </webLinks>
+</CustomObject>

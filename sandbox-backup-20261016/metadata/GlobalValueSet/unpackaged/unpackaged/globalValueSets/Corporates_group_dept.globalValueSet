@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Board</fullName>
+        <default>false</default>
+        <label>Board</label>
+    </customValue>
+    <customValue>
+        <fullName>Government Affairs</fullName>
+        <default>false</default>
+        <label>Government Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>Risk</fullName>
+        <default>false</default>
+        <label>Risk</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategy</fullName>
+        <default>false</default>
+        <label>Strategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Corporates Main Groups/Depts</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

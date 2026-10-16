@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>Error_Message__c</columns>
+        <columns>Source__c</columns>
+        <columns>Stack_Trace__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Company_Sign_up_for_Errors</fullName>
+        <columns>NAME</columns>
+        <columns>Source__c</columns>
+        <columns>Error_Message__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Source__c</field>
+            <operation>equals</operation>
+            <value>EG Update Company Referral Form</value>
+        </filters>
+        <label>Company Sign up form Errors</label>
+    </listViews>
+</CustomObject>

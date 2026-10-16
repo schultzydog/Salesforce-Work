@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <fullName>Clear Batch apex checkbox</fullName>
+        <actions>
+            <name>Clear_Batch_apex_checkbox</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Batch_apex_job_is_running__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Clear Pref Usage Counter</fullName>
+        <actions>
+            <name>Clear_Usage_fields_Asia</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_ECR</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_Eurasia</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_Europe</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_Geo_technology</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_Global_Macro</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_Japan</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_MENA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_SSAfrica</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_data</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Count_of_Enabled_Contacts__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Clear Pref Usage Counter2</fullName>
+        <actions>
+            <name>Clear_Usage_fields_Global_Strategy</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_Healthcare</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_LATAM</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Usage_fields_North_America</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Count_of_Enabled_Contacts__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <description>SF has a 10 field update limit on workflow so creating 2nd wf to complete the action</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify for Contact Review</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Audience__c</field>
+            <operation>equals</operation>
+            <value>test</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify on Account disablement</fullName>
+        <actions>
+            <name>Notify_of_Account_Disablement</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISNEW()) &amp;&amp;  ISPICKVAL( Status_Enable_Disable__c , &apos;Disabled&apos;) &amp;&amp;  ISCHANGED( Status_Enable_Disable__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify on Owner Change</fullName>
+        <actions>
+            <name>Notify_on_Account_Owner_Change</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED( OwnerId )  &amp;&amp;   ISPICKVAL( Type , &apos;Client&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

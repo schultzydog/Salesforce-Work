@@ -1,0 +1,5 @@
+Dear {!Contract.OwnerFullName}, 
+
+Contract {!Contract.Name} to expire on {!Contract.EndDate}
+
+Thank You

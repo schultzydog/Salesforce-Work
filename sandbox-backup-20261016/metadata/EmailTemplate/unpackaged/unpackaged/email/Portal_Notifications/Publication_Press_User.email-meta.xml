@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>Publication Press User</name>
+    <style>freeForm</style>
+    <subject>EG: {!01I3A000002bShp.00N3A00000CmkBo}</subject>
+    <textOnly>New content available for: {!01I3A000002bShp.00N3A00000CmkBn}
+
+{!01I3A000002bShp.00N3A00000CmkBo}
+{!Email_Notification__c.Author__r.Name}
+
+{!01I3A000002bShp.00N3A00000CmkBm}
+
+View the full article in the attached PDF.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Global Advisory</fullName>
+        <default>false</default>
+        <label>Global Advisory</label>
+    </customValue>
+    <customValue>
+        <fullName>Limited/Top Markets Advisory</fullName>
+        <default>false</default>
+        <label>Limited/Top Markets Advisory</label>
+    </customValue>
+    <customValue>
+        <fullName>EM FM Advisory</fullName>
+        <default>false</default>
+        <label>EM FM Advisory</label>
+    </customValue>
+    <customValue>
+        <fullName>DM Advisory</fullName>
+        <default>false</default>
+        <label>DM Advisory</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Region</fullName>
+        <default>false</default>
+        <label>Single Region</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Country Advisory</fullName>
+        <default>false</default>
+        <label>Single Country Advisory</label>
+    </customValue>
+    <customValue>
+        <fullName>EG Update Only</fullName>
+        <default>false</default>
+        <label>EG Update Only</label>
+    </customValue>
+    <customValue>
+        <fullName>Pubs Only</fullName>
+        <default>false</default>
+        <label>Pubs Only</label>
+    </customValue>
+    <customValue>
+        <fullName>Legacy EGX  scalable</fullName>
+        <default>false</default>
+        <label>Legacy EGX  scalable</label>
+    </customValue>
+    <customValue>
+        <fullName>Hybrid EGX/Pubs</fullName>
+        <default>false</default>
+        <label>Hybrid EGX/Pubs</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Advisory Scope of Work</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

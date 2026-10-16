@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.Contact_Preferences__r$Account_Preferences__c.Library__c.Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.Contact_Preferences__r$Individual_Emails__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.Contact_Preferences__r$Summary_Emails__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6) AND 7</booleanFilter>
+        <criteriaItems>
+            <column>Account.Contacts$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Enabled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts.Contact_Preferences__r$Account_Preferences__c.Library__c.Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Energy,Climate &amp; Resources</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts.Contact_Preferences__r$Account_Preferences__c.Library__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Gas,Power,Infrastructure Monthly</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts.Contact_Preferences__r$Account_Preferences__c.Library__c.Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Oil</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts.Contact_Preferences__r$Account_Preferences__c.Library__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Power &amp; Utilities</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts.Contact_Preferences__r$Account_Preferences__c.Library__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Natural Gas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Id</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>00130000016FGzw</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>GM contscts with ECR Prefs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Preferences_and_Account_Owners_EG__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Case.Sales Ops Cases</members>
+        <members>Lead.Assign Subscription Request Leads</members>
+        <members>Lead.Conf Call Leads Assignment Rule</members>
+        <members>Lead.Lead Assignment Rules</members>
+        <name>AssignmentRule</name>
+    </types>
+    <version>62.0</version>
+</Package>

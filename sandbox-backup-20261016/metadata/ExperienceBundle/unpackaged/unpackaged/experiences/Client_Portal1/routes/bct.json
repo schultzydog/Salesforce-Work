@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "455f69f7-2298-43af-94d9-fdd8ca36a16a",
+  "appPageId" : "b82c533e-f9b2-43a4-b6ea-72afea6fed42",
+  "configurationTags" : [ ],
+  "devName" : "bct__c",
+  "id" : "ab5c2f01-5b6f-4aac-873e-e93a9173ff50",
+  "label" : "bct",
+  "routeType" : "custom-bct",
+  "type" : "route",
+  "urlPrefix" : "bct"
+}

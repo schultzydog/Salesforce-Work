@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>Pardot Test</name>
+    <style>freeForm</style>
+    <subject>EG Quick Take: {!01I3A000002bShp.00N3A00000CmkBo}</subject>
+    <textOnly>{!01I3A000002bShp.00N3A00000CmkBo}
+{!Email_Notification__c.Author__r.Name}
+{!01I3A000002bShp.00N3A00000CmkBn}
+
+{!01I3A000002bShp.00N3A00000CMKx5}
+
+View online in the portal: {!01I3A000002bShp.00N3A00000CmkBj}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

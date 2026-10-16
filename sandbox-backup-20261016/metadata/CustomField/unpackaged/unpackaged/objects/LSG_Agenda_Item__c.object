@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Business_Line__c</fullName>
+        <label>Business Line</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Business_Line</valueSetName>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <label>Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Existing_client_relationship_size__c</fullName>
+        <formula>Opportunity__r.Account.Sum_of_Active_Contracts_USD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Existing client relationship size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LSG_Agenda__c</fullName>
+        <label>LSG Agenda</label>
+        <referenceTo>LSG_Agenda__c</referenceTo>
+        <relationshipLabel>LSG Agenda Items</relationshipLabel>
+        <relationshipName>LSG_Agenda_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_date__c</fullName>
+        <label>Notes date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Notes_prep_field__c</fullName>
+        <label>Notes prep field</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Size__c</fullName>
+        <formula>Opportunity__r.Amount</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>LSG Agenda Items</relationshipLabel>
+        <relationshipName>LSG_Agenda_Items</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Presenter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Presenter</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>LSG_Agenda_Items</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Purpose_of_bringing_to_LSG__c</fullName>
+        <label>Purpose of bringing to LSG</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Opportunity</fullName>
+                    <default>false</default>
+                    <label>New Opportunity</label>
+                </value>
+                <value>
+                    <fullName>One Firm Opportunity</fullName>
+                    <default>false</default>
+                    <label>One Firm Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Ian Meeting Handoff</fullName>
+                    <default>false</default>
+                    <label>Ian Meeting Handoff</label>
+                </value>
+                <value>
+                    <fullName>Scoping Input Needed </fullName>
+                    <default>false</default>
+                    <label>Scoping Input Needed </label>
+                </value>
+                <value>
+                    <fullName>Progress Report</fullName>
+                    <default>false</default>
+                    <label>Progress Report</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sort_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Sort Order</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Client_active_contracts__c</fullName>
+        <label>Total Client active contracts</label>
+        <summarizedField>LSG_Agenda_Item_Opportunity__c.Sum_of_Active_Contracts__c</summarizedField>
+        <summaryForeignKey>LSG_Agenda_Item_Opportunity__c.LSG_Agenda_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Opportunity_size__c</fullName>
+        <label>Total Opportunity size</label>
+        <summarizedField>LSG_Agenda_Item_Opportunity__c.Opportunity_Amount__c</summarizedField>
+        <summaryForeignKey>LSG_Agenda_Item_Opportunity__c.LSG_Agenda_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+</CustomObject>

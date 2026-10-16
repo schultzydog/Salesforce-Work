@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Intraday</fullName>
+        <default>false</default>
+        <label>Intraday</label>
+    </customValue>
+    <customValue>
+        <fullName>Thematic</fullName>
+        <default>false</default>
+        <label>Thematic</label>
+    </customValue>
+    <customValue>
+        <fullName>Weekly only</fullName>
+        <default>false</default>
+        <label>Weekly only</label>
+    </customValue>
+    <masterLabel>Email Category 2</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

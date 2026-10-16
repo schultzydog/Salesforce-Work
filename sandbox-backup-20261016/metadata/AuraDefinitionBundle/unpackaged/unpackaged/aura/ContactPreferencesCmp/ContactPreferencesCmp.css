@@ -1,0 +1,336 @@
+.THIS {
+}
+
+.THIS .table-left-bigger-true{
+    width:50% !important;
+}
+.THIS .header-phone-true{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height:150px;
+    padding: none;
+    float:left;
+    vertical-align:bottom;
+    text-align: -moz-left;
+    text-align: left;
+    max-width:5%;
+}
+
+.THIS .group-header-phone-true{
+    font-size:8pt;
+    /* color:red; */
+    max-width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left:10px;
+}
+
+.THIS .label-cell-phone-true{
+    max-width: 80px;
+}
+
+.THIS .group-header-phone-false {
+    font-size:12pt;
+    font-weight: bold;
+}
+
+.THIS .sub-group-header-phone-true{
+    font-size:8pt;
+    /* color:green; */
+}
+
+.THIS .slds-button_neutral-phone-false{
+    padding-left:1rem;
+    padding-right:1rem;
+    vertical-align: middle;
+    border: 1px solid rgb(217, 219, 221);
+        border-top-color: rgb(217, 219, 221);
+        border-top-width: 1px;
+        border-right-color: rgb(217, 219, 221);
+        border-right-width: 1px;
+        border-bottom-color: rgb(217, 219, 221);
+        border-bottom-width: 1px;
+        border-left-color: rgb(217, 219, 221);
+        border-left-width: 1px;
+    transition: border .15s linear;
+    border-color: #d4d4d4;
+}
+
+.THIS .slds-button_neutral-phone-true{
+    padding-left:1px;
+    padding-right:1px;
+    vertical-align: middle;
+    border: 1px solid rgb(217, 219, 221);
+        border-top-color: rgb(217, 219, 221);
+        border-top-width: 1px;
+        border-right-color: rgb(217, 219, 221);
+        border-right-width: 1px;
+        border-bottom-color: rgb(217, 219, 221);
+        border-bottom-width: 1px;
+        border-left-color: rgb(217, 219, 221);
+        border-left-width: 1px;
+    transition: border .15s linear;
+    border-color: #d4d4d4;
+}
+
+.THIS .table-wrapper-true{
+    max-height: 700px;
+    overflow-y: scroll;
+}
+
+.THIS.cmp-wrapper {
+    margin-bottom:200px;
+}
+
+.THIS .row {
+    border-bottom: solid 1px black;
+}
+
+.THIS .row.slds-show {
+    display:table-row;
+}
+
+.THIS .icon-cell {
+    width:5%;
+}
+
+.THIS .label-cell {
+    width:45%;
+    min-width:150px;
+}
+
+.THIS .table-left-cell {
+    width:25%;
+}
+
+.THIS .table-right-cell {
+    width:25%;
+}
+
+.THIS.slds-p-around-custom-phone-false {
+    /* padding: 1.5rem 8.5rem; */
+    padding: 0% 20%;
+}
+
+.THIS .section-header {
+    /* float:left; */
+}
+
+.THIS .header-label {
+    color: white;
+    max-width: 130px;
+    word-wrap: normal;
+    white-space: normal;
+    text-align: center;
+}
+
+.THIS .table-header {
+    /* float:right; */
+    width:40%;
+    height:50px;
+    /* background-color:#276570;
+    color:white; */
+}
+
+.THIS .table-sub-header {
+    /* float:right; */
+    width:40%;
+    height:50px;
+    /* padding:5px; */
+}
+
+.THIS .table-header th{
+    /* border: 1px solid #DDD; */
+    height:50px;
+    width:40%;
+}
+.THIS .table-sub-header th{
+    /* border: 1px solid #DDD; */
+    height:50px;
+    width:40%;
+}
+
+.THIS .center {
+    text-align: center;
+    display: block;
+}
+
+.THIS .slds-scope .slds-form-element__label {
+    color:white !important;
+}
+
+.THIS .th-left {
+    background-color:#00205B;
+    color:white !important;
+    /* padding:0; */
+    text-align:center;
+}
+
+.THIS .th-right {
+    background-color:#00A3E0;
+    color:white !important;
+    /* padding:0; */
+    text-align:center;
+}
+
+/*
+.THIS .th-left-None {
+    background-color:#00205B;
+    color:white !important;
+    text-align:center;
+}
+
+.THIS .th-right-None {
+    background-color:#00A3E0;
+    color:white !important;
+    text-align:center;
+}
+
+.THIS .th-left-Some {
+    background-color:#CCCC00;
+    color:white !important;
+    text-align:center;
+}
+
+.THIS .th-right-Some {
+    background-color:#CCCC00;
+    color:white !important;
+    text-align:center;
+}
+
+.THIS .th-left-All {
+    background-color:#009900;
+    color:white !important;
+    text-align:center;
+}
+
+.THIS .th-right-All {
+    background-color:#009900;
+    color:white !important;
+    text-align:center;
+}
+*/
+
+.THIS .padded-header {
+    /* padding:1rem; */
+}
+.THIS .padded-sub-header {
+    /* padding:1rem; */
+    /* margin-left: 4%; */
+}
+
+.THIS .row-wrapper {
+    background-color:#DDD;
+    margin-bottom:10px;
+    border:none;
+    border-collapse:inherit;
+}
+
+.THIS .row-label {
+    /* float:left; */
+}
+
+.THIS .row-table {
+    /* float:right; */
+    width:50%;
+}
+
+.THIS .slds-checkbox_faux {
+    margin:auto !important;
+}
+
+.THIS .check-button-None {
+    background-color:white;
+}
+.THIS .check-button-Some {
+    background-color:#f8ff77;
+}
+.THIS .check-button-All {
+    background-color:#8cff7f;
+}
+.THIS .x-button-None {
+    background-color:#ff9999;
+}
+.THIS .x-button-Some {
+    background-color:white;
+}
+.THIS .x-button-All {
+    background-color:white;
+}
+.THIS .check-button-None:hover {
+    background-color:white;
+}
+.THIS .check-button-Some:hover {
+    background-color:#f8ff77;
+}
+.THIS .check-button-All:hover {
+    background-color:#8cff7f;
+}
+.THIS .x-button-None:hover {
+    background-color:#ff9999;
+}
+.THIS .x-button-Some:hover {
+    background-color:white;
+}
+.THIS .x-button-All:hover {
+    background-color:white;
+}
+.THIS .check-button-None:active {
+    background-color:white;
+}
+.THIS .check-button-Some:active {
+    background-color:#f8ff77;
+}
+.THIS .check-button-All:active {
+    background-color:#8cff7f;
+}
+.THIS .x-button-None:active {
+    background-color:#ff9999;
+}
+.THIS .x-button-Some:active {
+    background-color:white;
+}
+.THIS .x-button-All:active {
+    background-color:white;
+}
+.THIS .check-button-None:focus {
+    background-color:white;
+}
+.THIS .check-button-Some:focus {
+    background-color:#f8ff77;
+}
+.THIS .check-button-All:focus {
+    background-color:#8cff7f;
+}
+.THIS .x-button-None:focus {
+    background-color:#ff9999;
+}
+.THIS .x-button-Some:focus {
+    background-color:white;
+}
+.THIS .x-button-All:focus {
+    background-color:white;
+}
+
+/* .THIS .checkButton:active{
+    background-color:white;
+}
+.THIS .checkButton:focus{
+    background-color:white;
+} */
+
+.THIS .checkButton{
+    line-height: 12px;
+}
+
+.THIS .none-outer{
+    padding: 20px 10px;
+}
+
+.THIS .none-inner{
+    text-align: center;
+    border: 1px black solid;
+    border-radius:10px;
+    padding: 2%;
+}

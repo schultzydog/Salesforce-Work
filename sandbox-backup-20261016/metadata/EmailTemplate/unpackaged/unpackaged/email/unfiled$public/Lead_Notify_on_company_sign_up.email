@@ -1,0 +1,6 @@
+{!Lead.Name} of {!Lead.Company} signed up using the Company Sign Up form. Please review this Lead asap and convert into an Enabled Contact as you see fit! 
+
+{!Lead.Link}
+
+You can view your entire list of leads from the signup form here:
+https://eurasiagroup.lightning.force.com/lightning/o/Lead/list?filterName=00B4V00000ABJes

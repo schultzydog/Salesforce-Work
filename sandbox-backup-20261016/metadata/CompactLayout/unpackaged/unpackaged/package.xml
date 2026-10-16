@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account.Client_Services</members>
+        <members>Candidate__c.Custom</members>
+        <members>Conference_Call__c.Custom</members>
+        <members>Connector__c.Custom</members>
+        <members>Contact.Finance</members>
+        <members>Contract.Contract_Compact_Layout</members>
+        <members>Customer_Id__c.Custom</members>
+        <members>Lead.Custom</members>
+        <members>Opportunity.Custom</members>
+        <members>OpportunityLineItem.Custom</members>
+        <members>Opportunity_Request__c.Custom</members>
+        <members>Publication__c.Custom</members>
+        <members>SLR_Entry__c.Custom</members>
+        <members>Top_Risk__c.Custom</members>
+        <members>Travel_Request__c.Custom</members>
+        <name>CompactLayout</name>
+    </types>
+    <version>62.0</version>
+</Package>

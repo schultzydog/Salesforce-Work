@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Alert</name>
+        <label>Send Alert</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>Conference_Call_Speaker__c.Conf_Call_Speaker_Alert_on_No_Department</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Conference_Call_Speaker__c.Conf_Call_Speaker_Alert_on_No_Department</nameSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <description>When a conference call speaker from Eurasia Group is added and doesn&apos;t have a Department Picklist value, send an alert</description>
+    <environments>Default</environments>
+    <interviewLabel>Conf Call Speaker: Alert on No Department {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Conf Call Speaker: Alert on No Department</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Alert</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Speaker_Department__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Speaker_Company__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Eurasia Group</stringValue>
+            </value>
+        </filters>
+        <object>Conference_Call_Speaker__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

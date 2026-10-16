@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>Client User Registration Form Invite</name>
+    <style>freeForm</style>
+    <subject>Eurasia Group - new user registration form link</subject>
+    <textOnly>Dear {{!Lead.FirstName},
+
+Your request for access to Eurasia Group research has been received. We will review your eligibility under the {!Lead.Company} user group and if confirmed, activate your access within 24 hours.
+
+Best regards,
+
+{!Lead.OwnerFullName}
+{!Lead.OwnerEmail}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

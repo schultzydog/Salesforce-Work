@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>EG Event Survey Submissions</relationshipLabel>
+        <relationshipName>EG_Event_Survey_Submissions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>EG Event Survey Submissions</relationshipLabel>
+        <relationshipName>EG_Event_Survey_Submissions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Counter_How_easy_to_access_call__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(How_easy_was_it_to_access_call__c, 
+&apos;Very easy&apos;, 5, 
+&apos;Somewhat easy&apos;, 4,
+&apos;Neutral&apos;, 3,
+&apos;Somewhat difficult&apos;, 2,
+&apos;Very difficult&apos;, 1,
+
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Counter - How easy to access call</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Counter_Recommendation_scale__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Recommendation_scale__c ,
+&apos;10&apos;, 10,
+&apos;9&apos;, 9,
+&apos;8&apos;, 8,
+&apos;7&apos;, 7,
+&apos;6&apos;, 6,
+&apos;5&apos;, 5,
+&apos;4&apos;, 4,
+&apos;3&apos;, 3,
+&apos;2&apos;, 2,
+&apos;1&apos;, 1,
+&apos;0&apos;, 0,
+
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Counter - Recommendation scale</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Counter_Speaker_clarity__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Speaker_clarity_and_understandability__c ,
+&apos;Very clear&apos;, 5,
+&apos;Somewhat clear&apos;, 4,
+&apos;Neutral&apos;, 3,
+&apos;Somewhat unclear&apos;, 2,
+&apos;Very unclear&apos;, 1,
+
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Counter - Speaker clarity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Counter_Usefulness__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(  Usefulness_of_content__c ,
+&apos;Extremely useful&apos;, 5,
+&apos;Very useful&apos;, 4,
+&apos;Moderately useful&apos;, 3,
+&apos;Slightly useful&apos;, 2,
+&apos;Not useful at all&apos;, 1,
+
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Counter - Usefulness</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EG_Event__c</fullName>
+        <label>EG Event</label>
+        <referenceTo>Conference_Call__c</referenceTo>
+        <relationshipLabel>Survey Submissions</relationshipLabel>
+        <relationshipName>EG_Event_Survey_Submissions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>How_can_we_do_better__c</fullName>
+        <description>How can we do better?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How can we do better?</inlineHelpText>
+        <label>How can we do better?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>How_easy_was_it_to_access_call__c</fullName>
+        <description>How easy was it to access this call?</description>
+        <inlineHelpText>How easy was it to access this call?</inlineHelpText>
+        <label>How easy was it to access call?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Very easy</fullName>
+                    <default>false</default>
+                    <label>Very easy</label>
+                </value>
+                <value>
+                    <fullName>Somewhat easy</fullName>
+                    <default>false</default>
+                    <label>Somewhat easy</label>
+                </value>
+                <value>
+                    <fullName>Somewhat difficult</fullName>
+                    <default>false</default>
+                    <label>Somewhat difficult</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Very difficult</fullName>
+                    <default>false</default>
+                    <label>Very difficult</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>EG Event Survey Submissions</relationshipLabel>
+        <relationshipName>EG_Event_Survey_Submissions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Recommendation_scale__c</fullName>
+        <description>On a scale of 0 to 10, how likely are you to recommend Eurasia Group conference calls to someone else?</description>
+        <inlineHelpText>On a scale of 0 to 10, how likely are you to recommend Eurasia Group conference calls to someone else?</inlineHelpText>
+        <label>Recommendation scale</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                    <label>10</label>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                    <label>9</label>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                    <label>8</label>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                    <label>7</label>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                    <label>6</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                    <label>0</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Speaker_clarity_and_understandability__c</fullName>
+        <description>Were the speakers during the call clear and easy to understand?</description>
+        <inlineHelpText>Were the speakers during the call clear and easy to understand?</inlineHelpText>
+        <label>Speaker clarity and understandability</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Very clear</fullName>
+                    <default>false</default>
+                    <label>Very clear</label>
+                </value>
+                <value>
+                    <fullName>Somewhat clear</fullName>
+                    <default>false</default>
+                    <label>Somewhat clear</label>
+                </value>
+                <value>
+                    <fullName>Somewhat unclear</fullName>
+                    <default>false</default>
+                    <label>Somewhat unclear</label>
+                </value>
+                <value>
+                    <fullName>Neutral</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>Very unclear</fullName>
+                    <default>false</default>
+                    <label>Very unclear</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Submitted_Date_and_Time__c</fullName>
+        <label>Submitted Date and Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Usefulness_of_content__c</fullName>
+        <description>How useful was the content on this call?</description>
+        <inlineHelpText>How useful was the content on this call?</inlineHelpText>
+        <label>Usefulness of content</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Extremely useful</fullName>
+                    <default>false</default>
+                    <label>Extremely useful</label>
+                </value>
+                <value>
+                    <fullName>Moderately useful</fullName>
+                    <default>false</default>
+                    <label>Moderately useful</label>
+                </value>
+                <value>
+                    <fullName>Very useful</fullName>
+                    <default>false</default>
+                    <label>Very useful</label>
+                </value>
+                <value>
+                    <fullName>Not useful at all</fullName>
+                    <default>false</default>
+                    <label>Not useful at all</label>
+                </value>
+                <value>
+                    <fullName>Slightly useful</fullName>
+                    <default>false</default>
+                    <label>Slightly useful</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>EG Event Survey Submission</label>
+    <nameField>
+        <displayFormat>ESS-{0000}</displayFormat>
+        <label>EG Event Survey Submission Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>EG Event Survey Submissions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

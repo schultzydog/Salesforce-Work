@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountRatingTrigger</members>
+        <members>AccountTrigger</members>
+        <members>ContactPreferenceTrigger</members>
+        <members>ContactTrigger</members>
+        <members>ContentDocumentLinkTrigger</members>
+        <members>DeliverableTrigger</members>
+        <members>EventTrigger</members>
+        <members>LibraryTrigger</members>
+        <members>MMNotesTrigger</members>
+        <members>confCallSpeakerTrigger</members>
+        <members>conferenceCallTrigger</members>
+        <members>leadTrigger</members>
+        <members>opportunityAmountTrigger</members>
+        <members>opportunityTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <version>62.0</version>
+</Package>

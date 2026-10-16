@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Corporate Advisory Services</fullName>
+        <default>false</default>
+        <label>Corporate Advisory Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Advisory Services, Japan</fullName>
+        <default>false</default>
+        <label>Corporate Advisory Services, Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>EGA</fullName>
+        <default>false</default>
+        <label>EGA</label>
+    </customValue>
+    <customValue>
+        <fullName>egX</fullName>
+        <default>false</default>
+        <label>egX</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Markets</fullName>
+        <default>false</default>
+        <label>Global Markets</label>
+    </customValue>
+    <customValue>
+        <fullName>GZERO</fullName>
+        <default>false</default>
+        <label>GZERO</label>
+    </customValue>
+    <customValue>
+        <fullName>Media</fullName>
+        <default>false</default>
+        <label>Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>EG Business Line</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Contract Codes</relationshipLabel>
+        <relationshipName>Contract_Codes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active_Contract_End_Date__c</fullName>
+        <label>Active Contract End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Code_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Contract Code Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Code_End_Date__c</fullName>
+        <label>Contract Code End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Code_Start_Date__c</fullName>
+        <label>Contract Code Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Code_Tenure__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Active_Contract_End_Date__c -  Contract_Code_Start_Date__c ) / 365</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Tenure is the number of years (to the nearest tenth) from the first Project Code&apos;s Contract Start Date to the Contract End Date of the currently Active contract, or the last active contract if there is no current contract.</inlineHelpText>
+        <label>Contract Code Tenure</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Contract Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Include_in_Scan_Code_Tenure__c</fullName>
+        <defaultValue>true</defaultValue>
+        <label>Include in Scan Code Tenure</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Latest_Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Latest Project Code</label>
+        <length>8</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Contracts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Number of Contracts</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Renewals__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This field displays the number of times a new Project Code was created against this Contract Code</inlineHelpText>
+        <label>Number of Renewals</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scan_Code__c</fullName>
+        <label>Scan Code</label>
+        <referenceTo>Scan_Code__c</referenceTo>
+        <relationshipLabel>Contract Codes</relationshipLabel>
+        <relationshipName>Contract_Codes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Subaccount__c</fullName>
+        <label>Subaccount</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Subaccount</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Trigger_rollups__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Trigger rollups</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

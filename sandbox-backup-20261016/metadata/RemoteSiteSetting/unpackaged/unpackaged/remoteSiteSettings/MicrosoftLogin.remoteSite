@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Authorization endpoint to log the integration user into SharePoint</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>false</isActive>
+    <url>https://login.microsoftonline.com</url>
+</RemoteSiteSetting>

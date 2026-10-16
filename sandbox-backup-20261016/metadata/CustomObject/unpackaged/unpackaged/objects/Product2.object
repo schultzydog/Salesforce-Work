@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PreviewProductAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PreviewProductAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PreviewProductAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Product_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Automate_Entitlement_Creation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Automate Entitlement Creation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CanUseRevenueSchedule</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>DisplayUrl</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ExternalDataSourceId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ExternalId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Family</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Has_Product_Libraries__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Has Product Libraries</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>casesafeid(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Managing_Director__c</fullName>
+        <label>Managing Director</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dr. Evan Medeiros</fullName>
+                    <default>false</default>
+                    <label>Dr. Evan Medeiros</label>
+                </value>
+                <value>
+                    <fullName>Christopher Garman</fullName>
+                    <default>false</default>
+                    <label>Christopher Garman</label>
+                </value>
+                <value>
+                    <fullName>Alexander Kazan</fullName>
+                    <default>false</default>
+                    <label>Alexander Kazan</label>
+                </value>
+                <value>
+                    <fullName>Cliff Kupchan</fullName>
+                    <default>false</default>
+                    <label>Cliff Kupchan</label>
+                </value>
+                <value>
+                    <fullName>Dr. Robert Johnston</fullName>
+                    <default>false</default>
+                    <label>Dr. Robert Johnston</label>
+                </value>
+                <value>
+                    <fullName>Mujtaba Rahman</fullName>
+                    <default>false</default>
+                    <label>Mujtaba Rahman</label>
+                </value>
+                <value>
+                    <fullName>Sean West</fullName>
+                    <default>false</default>
+                    <label>Sean West</label>
+                </value>
+                <value>
+                    <fullName>Willis Sparks</fullName>
+                    <default>false</default>
+                    <label>Willis Sparks</label>
+                </value>
+                <value>
+                    <fullName>Callum Henderson</fullName>
+                    <default>false</default>
+                    <label>Callum Henderson</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>NumberOfRevenueInstallments</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Poll__c</fullName>
+        <formula>CONTAINS(  Name , &apos;Poll&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Poll</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Price_range__c</fullName>
+        <externalId>false</externalId>
+        <label>Price range</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+        <businessStatus>Active</businessStatus>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Project_Template__c</fullName>
+        <label>Project Template</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Project_Template</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>QuantityUnitOfMeasure</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <label>Region</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Asia</fullName>
+                    <default>false</default>
+                    <label>Asia</label>
+                </value>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>Brazil</label>
+                </value>
+                <value>
+                    <fullName>Canada</fullName>
+                    <default>false</default>
+                    <label>Canada</label>
+                </value>
+                <value>
+                    <fullName>Europe</fullName>
+                    <default>false</default>
+                    <label>Europe</label>
+                </value>
+                <value>
+                    <fullName>Global</fullName>
+                    <default>false</default>
+                    <label>Global</label>
+                </value>
+                <value>
+                    <fullName>Latin America</fullName>
+                    <default>false</default>
+                    <label>Latin America</label>
+                </value>
+                <value>
+                    <fullName>North America</fullName>
+                    <default>false</default>
+                    <label>North America</label>
+                </value>
+                <value>
+                    <fullName>NY/DC</fullName>
+                    <default>false</default>
+                    <label>NY/DC</label>
+                </value>
+                <value>
+                    <fullName>NYC</fullName>
+                    <default>false</default>
+                    <label>NYC</label>
+                </value>
+                <value>
+                    <fullName>Other International</fullName>
+                    <default>false</default>
+                    <label>Other International</label>
+                </value>
+                <value>
+                    <fullName>Other U.S.</fullName>
+                    <default>false</default>
+                    <label>Other U.S.</label>
+                </value>
+                <value>
+                    <fullName>UK</fullName>
+                    <default>false</default>
+                    <label>UK</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RevenueInstallmentPeriod</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>RevenueScheduleType</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Revenue_Type__c</fullName>
+        <label>Revenue Type</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Revenue_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Senior_Advisor__c</fullName>
+        <label>Senior Advisor</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alec Ross</fullName>
+                    <default>false</default>
+                    <label>Alec Ross</label>
+                </value>
+                <value>
+                    <fullName>Dr. David Gordon</fullName>
+                    <default>false</default>
+                    <label>Dr. David Gordon</label>
+                </value>
+                <value>
+                    <fullName>Hon. Enrico Letta</fullName>
+                    <default>false</default>
+                    <label>Hon. Enrico Letta</label>
+                </value>
+                <value>
+                    <fullName>Hon. John Baird</fullName>
+                    <default>false</default>
+                    <label>Hon. John Baird</label>
+                </value>
+                <value>
+                    <fullName>Hon. Kevin Rudd</fullName>
+                    <default>false</default>
+                    <label>Hon. Kevin Rudd</label>
+                </value>
+                <value>
+                    <fullName>Hon. Radoslaw Sikorshi</fullName>
+                    <default>false</default>
+                    <label>Hon. Radoslaw Sikorshi</label>
+                </value>
+                <value>
+                    <fullName>Lord Mark Malloch Brown</fullName>
+                    <default>false</default>
+                    <label>Lord Mark Malloch Brown</label>
+                </value>
+                <value>
+                    <fullName>Robert D. Kaplan</fullName>
+                    <default>false</default>
+                    <label>Robert D. Kaplan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StockKeepingUnit</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Taxable__c</fullName>
+        <formula>IF(  ISPICKVAL(Family, &apos;Publications&apos;) || ISPICKVAL(Family, &apos;Advisory&apos;)  , TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Taxable</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Billing_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Billing Template</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ia_crm__Billing_Template__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Billing_Template__c.ia_crm__Status__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Billing_Template__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Billing_method__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Billing method</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed price</fullName>
+                    <default>false</default>
+                    <label>Fixed price</label>
+                </value>
+                <value>
+                    <fullName>Quantity based</fullName>
+                    <default>false</default>
+                    <label>Quantity based</label>
+                </value>
+                <value>
+                    <fullName>Project T&amp;M</fullName>
+                    <default>false</default>
+                    <label>Project time &amp; materials</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Change_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Change Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>ia_crm__MRR__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New MRR</fullName>
+                    <default>false</default>
+                    <label>New MRR</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+                <value>
+                    <fullName>Add on MRR</fullName>
+                    <default>false</default>
+                    <label>Add on MRR</label>
+                </value>
+                <value>
+                    <fullName>Renewal upgrade</fullName>
+                    <default>false</default>
+                    <label>Renewal upgrade</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>New MRR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Cancelled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Add on MRR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>checked</controllingFieldValue>
+                <valueName>Renewal upgrade</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Cost_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Cost Method</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>FIFO</fullName>
+                    <default>false</default>
+                    <label>FIFO</label>
+                </value>
+                <value>
+                    <fullName>LIFO</fullName>
+                    <default>false</default>
+                    <label>LIFO</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Description_On_Sales_Transactions__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Description On Sales Transactions</label>
+        <length>400</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Flat_fixed_amount_frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Flat/fixed amount frequency</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>One-time</fullName>
+                    <default>false</default>
+                    <label>One-time</label>
+                </value>
+                <value>
+                    <fullName>Use billing template</fullName>
+                    <default>false</default>
+                    <label>Use billing template</label>
+                </value>
+                <value>
+                    <fullName>Include with every invoice</fullName>
+                    <default>false</default>
+                    <label>Include with every invoice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Entity_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( ia_crm__Intacct_Entity__r.ia_crm__Entity_Type__c , &apos;Entity&apos;), ia_crm__Intacct_Entity__r.ia_crm__Intacct_Entity_ID__c , &apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Intacct Entity Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Entity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Intacct Entity</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Entity_Type__c</field>
+                <operation>equals</operation>
+                <value>Entity</value>
+            </filterItems>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Entity_Type__c</field>
+                <operation>equals</operation>
+                <value>Top level</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Intacct_Entity__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Sync_Errors__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Intacct Sync Errors</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Sync_Status_Image__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASE( ia_crm__Intacct_Sync_Status__c , &quot;OK&quot;, IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;OK&quot;), &quot;Error&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Error&quot;), &quot;Warning&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Warning&quot;), TEXT(ia_crm__Intacct_Sync_Status__c))</formula>
+        <label>Intacct Sync Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Intacct_Sync_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Intacct Sync Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>OK</fullName>
+                    <default>false</default>
+                    <label>OK</label>
+                </value>
+                <value>
+                    <fullName>In Process</fullName>
+                    <default>false</default>
+                    <label>In Process</label>
+                </value>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                    <label>Error</label>
+                </value>
+                <value>
+                    <fullName>Warning</fullName>
+                    <default>false</default>
+                    <label>Warning</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Item_GL_Group__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Item GL Group</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Auto GL Group</fullName>
+                    <default>false</default>
+                    <label>Auto GL Group</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Item_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Item Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Non-Inventory (Sales only)</fullName>
+                    <default>false</default>
+                    <label>Non-Inventory (Sales only)</label>
+                </value>
+                <value>
+                    <fullName>Non-Inventory</fullName>
+                    <default>true</default>
+                    <label>Non-Inventory</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Item_tax_group__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Item tax group</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Auto Tax Group</fullName>
+                    <default>false</default>
+                    <label>Auto Tax Group</label>
+                </value>
+                <value>
+                    <fullName>Not taxable</fullName>
+                    <default>false</default>
+                    <label>Not taxable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ia_crm__MRR__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>MRR</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Reporting_Entity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Reporting Entity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ia_crm__Intacct_Entity__c.ia_crm__Hidden__c</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>ia_crm__Intacct_Entity__c</referenceTo>
+        <relationshipLabel>Products (Reporting Entity)</relationshipLabel>
+        <relationshipName>Products1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Review_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Review Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__SFDC_Product_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <label>SFDC Product ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Standard_cost__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Standard cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Sync_with_Intacct__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Sync With Intacct</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Synced_With_Intacct_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Synced With Intacct Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Taxable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Taxable</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ia_crm__Unit_Of_Measure__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Unit Of Measure</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllProducts</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <columns>Price_range__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Active Products</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Products</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Products</label>
+    </listViews>
+    <listViews>
+        <fullName>I_C_Products</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Price_range__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.NAME</field>
+            <operation>contains</operation>
+            <value>I&amp;C</value>
+        </filters>
+        <label>I&amp;C Products</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>PRODUCT2.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.DESCRIPTION</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.FAMILY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.FAMILY</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.DESCRIPTION</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.FAMILY</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Prevent_edit_by_non_admin</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(Contains($Profile.Name , &apos;Admin&apos;))</errorConditionFormula>
+        <errorMessage>Only System Admins are permitted to make changes to Product entries</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Cost_Method_Required_Inventory</fullName>
+        <active>true</active>
+        <description>Cost Method should be required if item type is inventory.</description>
+        <errorConditionFormula>AND( ISPICKVAL(ia_crm__Item_Type__c, &apos;Inventory&apos;),  IsPICKVAL( ia_crm__Cost_Method__c, &apos;&apos; ) )</errorConditionFormula>
+        <errorMessage>Cost method is required for Inventory products.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ia_crm__Product_Code_Required</fullName>
+        <active>true</active>
+        <description>Enforces the user to add a value to &apos;Product Code&apos; field.</description>
+        <errorConditionFormula>ISBLANK(ProductCode)</errorConditionFormula>
+        <errorDisplayField>ProductCode</errorDisplayField>
+        <errorMessage>You must enter a value</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>ia_crm__Inventory_Status</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>850</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Inventory Status</masterLabel>
+        <openType>newWindow</openType>
+        <position>fullScreen</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>{!URLFOR($Site.Prefix + &apos;/apex/ia_crm__DataSyncronization?action=SHOW_INVSTATUS&amp;recordId=&apos; + Product2.Id)}</url>
+        <width>1200</width>
+    </webLinks>
+    <webLinks>
+        <fullName>ia_crm__Sync_Selected_Records</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Sync Selected Records</masterLabel>
+        <openType>sidebar</openType>
+        <page>ia_crm__ProductSyncInformation</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>ia_crm__Sync_to_Intacct</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Sync to Intacct</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Site.Prefix + &apos;/apex/ia_crm__DataSyncronization?action=SYNC_PRODUCT&amp;recordId=&apos; + Product2.Id)}</url>
+    </webLinks>
+</CustomObject>

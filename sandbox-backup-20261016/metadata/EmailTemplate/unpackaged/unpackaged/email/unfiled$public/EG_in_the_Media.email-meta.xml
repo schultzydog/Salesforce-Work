@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>15.0</apiVersion>
+    <available>true</available>
+    <description>Eurasia Group in the Media</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>EG in the Media</name>
+    <style>none</style>
+    <subject>Eurasia Group in the Media</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Agriculture</fullName>
+        <default>false</default>
+        <label>Agriculture</label>
+    </customValue>
+    <customValue>
+        <fullName>Climate and Environment</fullName>
+        <default>false</default>
+        <label>Climate and Environment</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy</fullName>
+        <default>false</default>
+        <label>Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Services</fullName>
+        <default>false</default>
+        <label>Financial Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Fiscal Policy/Budget</fullName>
+        <default>false</default>
+        <label>Fiscal Policy/Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>Geotech</fullName>
+        <default>false</default>
+        <label>Geotech</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare</fullName>
+        <default>false</default>
+        <label>Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Industry</fullName>
+        <default>false</default>
+        <label>Industry</label>
+    </customValue>
+    <customValue>
+        <fullName>Labor Policy</fullName>
+        <default>false</default>
+        <label>Labor Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Logistics &amp; Infrastructure</fullName>
+        <default>false</default>
+        <label>Logistics &amp; Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>Oil &amp; Gas</fullName>
+        <default>false</default>
+        <label>Oil &amp; Gas</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Administration</fullName>
+        <default>false</default>
+        <label>Public Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Public security</fullName>
+        <default>false</default>
+        <label>Public security</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail</fullName>
+        <default>false</default>
+        <label>Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Social policy</fullName>
+        <default>false</default>
+        <label>Social policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax Policy</fullName>
+        <default>false</default>
+        <label>Tax Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecom</fullName>
+        <default>false</default>
+        <label>Telecom</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade</fullName>
+        <default>false</default>
+        <label>Trade</label>
+    </customValue>
+    <customValue>
+        <fullName>Fiscal Regime</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fiscal Regime</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial sector</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Financial sector</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology and Telecommunications</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Technology and Telecommunications</label>
+    </customValue>
+    <customValue>
+        <fullName>Mining</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mining</label>
+    </customValue>
+    <customValue>
+        <fullName>Electricity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Electricity</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax Regime</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tax Regime</label>
+    </customValue>
+    <description>brazil congressional tracker sector values</description>
+    <masterLabel>BCT_Sector</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

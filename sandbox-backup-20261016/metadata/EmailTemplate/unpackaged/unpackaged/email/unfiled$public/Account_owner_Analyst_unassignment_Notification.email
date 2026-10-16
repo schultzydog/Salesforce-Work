@@ -1,0 +1,5 @@
+{!Account.OwnerFirstName}, 
+
+An analyst has been unassigned from a Greenlight Assignment record for {!Contact.FirstName} {!Contact.LastName}. 
+
+The Greenlight Assignment record can be found here {!01I3A000002LhY8.Link}

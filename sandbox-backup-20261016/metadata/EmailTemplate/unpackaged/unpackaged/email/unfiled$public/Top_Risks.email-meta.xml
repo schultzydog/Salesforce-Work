@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Eurasia_Group_Logo</letterhead>
+    <name>Top Risks</name>
+    <style>freeForm</style>
+    <subject>Eurasia Group Conference Call: Top Risks for 2013 (Today, 7 January, 10:00 New York)</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+Please join Ian Bremmer and David F. Gordon as they discuss Eurasia Group&apos;s Top 10 Risks for 2013. This call will provide an overview of the key geopolitical areas to watch for global investors, business leaders, and market participants. There will be an opportunity to ask questions after the presentation.
+
+During the following two weeks, Eurasia Group will host daily conference calls with senior analysts to focus in detail on each of the Top 10 Risks for 2013.
+
+
+Date and Time:
+
+
+7 January 2013 10:00 (New York)
+7 January 2013 15:00 (London)
+
+
+Speaker(s):
+
+Ian Bremmer, President
+David F. Gordon, Head of Research
+
+
+Topics:
+
+Top Risks for 2013
+
+
+Call-in:
+
++1.866.837.9789 (US, Canada, Puerto Rico)
++1.703.639.1425 (International)
+Passcode: Eurasia Group Conference Call
+
+
+Replay:
+
+Recording available two hours after call on Eurasia Group Portal
+
+If you have any questions or need help accessing the portal, please contact Jacob Metzger at +1.212.500.4798 or metzger@eurasiagroup.net
+
+
+© 2013 Eurasia Group. All rights reserved. This material was produced by Eurasia Group for use by the recipient. This is intended as general background research and is not intended to constitute advice on any particular commercial investment or trade matter or issue and should not be relied upon for such purposes. It is not to be made available to any person other than the recipient. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic or otherwise, without the prior consent of Eurasia Group.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

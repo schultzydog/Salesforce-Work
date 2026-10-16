@@ -1,0 +1,9 @@
+<messaging:emailTemplate subject="Eurasia Group in the Media" recipientType="User" >
+<messaging:htmlEmailBody >
+
+<c:EG_in_the_Media >
+</c:EG_in_the_Media>
+
+</messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

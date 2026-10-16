@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "e1466316-a594-4c91-87da-bdb47585158a",
+  "appPageId" : "b82c533e-f9b2-43a4-b6ea-72afea6fed42",
+  "configurationTags" : [ ],
+  "devName" : "Request__c",
+  "id" : "12709975-ccba-407d-815b-42051b6a3e37",
+  "label" : "Request",
+  "routeType" : "custom-request",
+  "type" : "route",
+  "urlPrefix" : "request"
+}

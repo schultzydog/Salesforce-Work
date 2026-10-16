@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Conference_Call__c.Total_Number_of_Attendees__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Conference_Call__c.Avg_Speaker_clarity__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Conference_Call__c.Avg_Recommendation_scale__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Conference_Call__c.Avg_Usefulness__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Conference_Call__c.Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>EG Conference Call</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Conference_Call__c.Speaker_Names__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Survey responses average score by speake</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>CustomEntity$Conference_Call__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Conference_Call__c.Date__c</dateColumn>
+        <endDate>2025-08-22</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2024-08-01</startDate>
+    </timeFrameFilter>
+</Report>

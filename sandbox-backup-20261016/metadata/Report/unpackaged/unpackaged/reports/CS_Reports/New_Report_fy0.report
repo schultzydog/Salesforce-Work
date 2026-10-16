@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.EG_Projects__r.EG_Time_Entries__r$Owner__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.EG_Projects__r.EG_Time_Entries__r$Time_Entry_Department__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.EG_Projects__r.EG_Time_Entries__r$Opportunity_Owner_Department__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.EG_Projects__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.EG_Projects__r.EG_Time_Entries__r$EG_Project_Task__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.EG_Projects__r.EG_Time_Entries__r$Hours_Worked__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.EG_Projects__r.EG_Time_Entries__r$Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Gloma_Client_Type__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Geography__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$Account</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Eurasia Group</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Business_Line__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>GZERO,Global Markets,Other,OOP,Corporate,Summit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.EG_Projects__r.EG_Time_Entries__r$Opportunity_Owner_Department__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Brazil/Latin America Client Services,Communications &amp; Marketing,Corporates Financial Institutions Group,Corporates General,Corporates Geo-technology,Corporates Healthcare,Corporates Industrial &amp; Consumer,Events,Executive Management,Finance,Global Markets,GZERO Media,Human Resources,Information Technology,Japan Client Services,Office of the President,Research Africa,Research Brazil,Research China &amp; Northeast Asia,Research Editorial,Research Eurasia,Research Europe,Research Latin America,Research Management,Research Middle East &amp; North Africa,Research United States,Shared Services &amp; Operations,Trade and Customs,Research South Asia,Research Southeast Asia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.EG_Projects__r.EG_Time_Entries__r$Opportunity_Owner_Team__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Brazil/Latin America Client Services,Shared Services &amp; Operations,Corporates,Executive Management,Global Markets,GZERO Media,Japan Client Services,Office of the President,Research</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$Business_Line__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Top Client Time Entries</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_with_EG_Projects_and_EG_Time_Entries__c</reportType>
+    <roleHierarchyFilter>All_Access</roleHierarchyFilter>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Opportunity.EG_Projects__r.EG_Time_Entries__r$Hours_Worked__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.EG_Projects__r.EG_Time_Entries__r$Week_Start_Date__c</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

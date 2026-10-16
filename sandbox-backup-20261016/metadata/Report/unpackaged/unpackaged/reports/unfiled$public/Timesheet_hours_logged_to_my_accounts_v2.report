@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.EG_Projects__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.EG_Projects__r$Linked_Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>Account.EG_Projects__r$Contract_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.EG_Projects__r$Contract_End_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.EG_Projects__r$Total_Hours_Worked__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account.EG_Projects__r$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Timesheet hours logged to my accounts v2</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_EG_Projects__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.EG_Projects__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
