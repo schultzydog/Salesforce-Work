@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Post-destructive cleanup after the tab becomes a Lightning Component tab.
+  Deploy with the UI package first, then this, so the tab no longer
+  references the page:
+
+    sf project deploy start \
+      --manifest manifest/changeset-outlook-event-review/package-ui-only.xml \
+      --post-destructive-changes manifest/changeset-outlook-event-review/destructiveChanges.xml
+-->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Outlook_Event_Review</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>EGNoFlexipageHeader</members>
+        <name>StaticResource</name>
+    </types>
+    <version>62.0</version>
+</Package>

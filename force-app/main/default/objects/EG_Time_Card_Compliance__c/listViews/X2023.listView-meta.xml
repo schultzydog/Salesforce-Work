@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023</fullName>
+    <columns>NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Compliance_Score__c</columns>
+    <columns>Owner_Department__c</columns>
+    <columns>Number_of_Time_Cards__c</columns>
+    <columns>Number_of_Time_Cards_in_Compliance__c</columns>
+    <columns>Time_Card_Weeks_This_Year__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Year__c</field>
+        <operation>equals</operation>
+        <value>2023</value>
+    </filters>
+    <filters>
+        <field>User_Timesheets_Required__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>2023</label>
+</ListView>

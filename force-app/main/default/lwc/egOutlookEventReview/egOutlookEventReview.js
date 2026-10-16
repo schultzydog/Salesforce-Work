@@ -1,8 +1,6 @@
 import { LightningElement } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { loadStyle } from 'lightning/platformResourceLoader';
 import LightningConfirm from 'lightning/confirm';
-import NO_FLEXIPAGE_HEADER from '@salesforce/resourceUrl/EGNoFlexipageHeader';
 import getMyActivities from '@salesforce/apex/OutlookEventReviewController.getMyActivities';
 import updateEventAccount from '@salesforce/apex/OutlookEventReviewController.updateEventAccount';
 import activeProjectsForAccount from '@salesforce/apex/OutlookEventReviewController.activeProjectsForAccount';
@@ -12,6 +10,26 @@ import saveTimeEntry from '@salesforce/apex/OutlookEventReviewController.saveTim
 import deleteEvent from '@salesforce/apex/OutlookEventReviewController.deleteEvent';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
+
+/* The component tab still sits in the LEX workspace. Lock scroll on body
+   while this panel is open so the viewport-sized list does not rubber-band.
+   Component CSS cannot reach those nodes, so the rules go on document.body
+   and come off in disconnectedCallback. */
+const WORKSPACE_LOCK_CSS = `
+body.eg-outlook-event-review-lock,
+body.eg-outlook-event-review-lock .viewport,
+body.eg-outlook-event-review-lock .stage,
+body.eg-outlook-event-review-lock .slds-template_default,
+body.eg-outlook-event-review-lock .oneCenterStage,
+body.eg-outlook-event-review-lock .centerstage,
+body.eg-outlook-event-review-lock .scroller,
+body.eg-outlook-event-review-lock .slds-scrollable,
+body.eg-outlook-event-review-lock .slds-scrollable_y {
+    overscroll-behavior: none !important;
+}
+body.eg-outlook-event-review-lock {
+    overflow: hidden !important;
+}`;
 
 export default class EgOutlookEventReview extends LightningElement {
     allRows = [];
@@ -39,8 +57,9 @@ export default class EgOutlookEventReview extends LightningElement {
     ];
 
     connectedCallback() {
-        // Hides the standard app-page header; only reachable from a global stylesheet.
-        loadStyle(this, NO_FLEXIPAGE_HEADER);
+        this._lockStyle = document.createElement('style');
+        this._lockStyle.innerText = WORKSPACE_LOCK_CSS;
+        document.body.appendChild(this._lockStyle);
         document.body.classList.add('eg-outlook-event-review-lock');
         this.fromDate = this.toIsoDate(new Date(Date.now() - 180 * DAY_MS));
         this.toDate = this.toIsoDate(new Date(Date.now() + 90 * DAY_MS));
@@ -59,6 +78,10 @@ export default class EgOutlookEventReview extends LightningElement {
 
     disconnectedCallback() {
         document.body.classList.remove('eg-outlook-event-review-lock');
+        if (this._lockStyle) {
+            this._lockStyle.remove();
+            this._lockStyle = null;
+        }
         if (this.nowTimer) {
             clearInterval(this.nowTimer);
             this.nowTimer = null;

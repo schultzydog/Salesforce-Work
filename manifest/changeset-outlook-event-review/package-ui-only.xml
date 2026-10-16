@@ -17,9 +17,5 @@
         <members>Outlook_Event_Review</members>
         <name>CustomTab</name>
     </types>
-    <types>
-        <members>Outlook_Event_Review</members>
-        <name>FlexiPage</name>
-    </types>
     <version>62.0</version>
 </Package>

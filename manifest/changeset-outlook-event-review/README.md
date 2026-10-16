@@ -38,8 +38,7 @@ fifth-part key logic that is in those classes today.
 ### Checklist A — UI only (`package-ui-only.xml`)
 
 - [ ] Lightning Component Bundle: `egOutlookEventReview`
-- [ ] Tab: `Outlook_Event_Review`
-- [ ] Lightning Page: `Outlook_Event_Review`
+- [ ] Tab: `Outlook_Event_Review` (Lightning Component tab, not a Lightning Page)
 
 ### Checklist B — full panel as currently in sandbox (`package.xml`)
 
@@ -51,8 +50,7 @@ fifth-part key logic that is in those classes today.
 
 **Tab / page**
 
-- [ ] Tab `Outlook_Event_Review`
-- [ ] FlexiPage `Outlook_Event_Review`
+- [ ] Tab `Outlook_Event_Review` (Lightning Component tab, not a Lightning Page)
 
 **Apex**
 

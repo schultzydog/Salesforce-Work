@@ -241,9 +241,13 @@ public without sharing class egTimesheet_Ctlr {
 
         System.debug('saveTimesheetApex: ' + timeCardId + ',' + timeCardUserId + ',' + startDate + ',' + rows + ',' + workingLocations);
 
+        //Only the rows this grid owns. An entry created from an Event carries the
+        //event in its ExternalID__c, which the grid never regenerates below, so
+        //without this filter the delete sweep would remove it on every save.
         List<EG_Time_Entry__c> existingEntries = [SELECT Id, ExternalID__c 
                                                   FROM EG_Time_Entry__c 
-                                                  WHERE EG_Time_Card__c = :timeCardId];
+                                                  WHERE EG_Time_Card__c = :timeCardId
+                                                  AND Source_Event_Id__c = null];
 
         Map<String, EG_Time_Entry__c> existingEntryMap = new Map<String, EG_Time_Entry__c>();
         for (EG_Time_Entry__c timeEntry : existingEntries) {
